@@ -47,7 +47,6 @@ entry/src/main/ets
 │   ├── home/         # HomeScreen
 │   ├── mood/         # MoodOrbitCarousel + gesture model
 │   ├── recall/       # ClassifyScreen, NowNoteScreen, PastTimeScreen
-│   ├── share/        # ShareCardScreen
 │   └── timeline/     # TimelineScreen, DetailScreen, CardScreen
 └── pages/Index.ets   # Root navigation + draft hydration
 ```
@@ -77,12 +76,9 @@ The generated `oh-package-lock.json5` pins `@ohos/hypium` 1.0.28 and `@ohos/hamo
 /Applications/DevEco-Studio.app/Contents/tools/node/bin/node --test tests/shell-contract.test.mjs
 ```
 
-The unsigned debug HAP is generated at `entry/build/default/outputs/default/entry-default-unsigned.hap`; the signed release HAP at `entry/build/release/outputs/default/entry-default-signed.hap`. Signing must remain local and is intentionally not committed.
+Without a local signing file, `assembleHap` produces an unsigned HAP at `entry/build/default/outputs/default/entry-default-unsigned.hap`. Signing stays on the machine that builds a store package and is intentionally not committed.
 
-Signing materials (all local, never committed):
-
-- debug: `~/.ohos/config/default_harmony_*.p12/.cer/.p7b` (auto-generated via `devecocli signature generate`)
-- release: `~/.ohos/config/release_harmony_milo.cer` + `release_harmony_milo.p7b` (AGC 发布证书 `milo_release.cer` + 发布 Profile `milo_release`, both valid to 2029-09-12), signing with the same debug p12 keypair; wired as the `release` product/signingConfig in `build-profile.json5`
+Copy `signing-configs.local.json.example` to `signing-configs.local.json` (gitignored) or point `MILO_HARMONY_SIGNING_FILE` at another JSON file with the same `signingConfigs` array. `hvigorfile.ts` loads that file in `afterNodeEvaluate` and assigns `default` to the debug product and `release` to the release product when those names exist. Passwords may be DevEco ciphertext or local secrets; never commit them. Use a release certificate and profile from AppGallery Connect, and a release `.p12` that is not the debug key. A previously committed debug keystore and its encrypted passwords must be treated as compromised: generate a new release key before the next store upload.
 
 ## Verification matrix
 

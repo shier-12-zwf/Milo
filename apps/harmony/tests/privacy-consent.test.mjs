@@ -90,6 +90,25 @@ test('constructing AGC provider and all SDK operations stay inert before consent
   assert.deepEqual(calls, previous);
 });
 
+test('AGC config decode reads only the raw-file byte view', async () => {
+  let seen = '';
+  const auth = {
+    init(_context, json) { seen = json; },
+    async requestVerifyCode() { return undefined; },
+  };
+  const { AgcAuthProvider } = load('core/auth/AgcAuthProvider.ets', {
+    '@kit.ArkTS': { buffer: Buffer },
+    '@hw-agconnect/auth': { __esModule: true, default: auth, VerifyCodeAction: { RESET_PASSWORD: 2, REGISTER_LOGIN: 1 } },
+    './AuthProvider': load('core/auth/AuthProvider.ets'),
+  });
+  const padding = Buffer.from('xxxx{}yyyy');
+  const view = new Uint8Array(padding.buffer, padding.byteOffset + 4, 2);
+  const context = { resourceManager: { getRawFileContentSync() { return view; } } };
+  const provider = new AgcAuthProvider(context, () => true);
+  assert.equal((await provider.sendCode('test@example.test', 'sign-in')).ok, true);
+  assert.equal(seen, '{}');
+});
+
 test('both new and restored sessions are behind consent, with offline policies available before login', () => {
   const index = source('pages/Index.ets');
   assert.ok(index.indexOf('if (!this.privacyAccepted)') < index.indexOf("this.authGate === 'signedOut'"));
@@ -108,7 +127,7 @@ test('both new and restored sessions are behind consent, with offline policies a
   assert.match(reader, /getRawFileContentSync/);
   for (const name of ['privacy-policy.txt', 'user-agreement.txt']) {
     const body = readFileSync(new URL(`../entry/src/main/resources/rawfile/${name}`, import.meta.url), 'utf8');
-    assert.match(body, /2026年10月11日/);
+    assert.match(body, /2026年11月2日/);
     assert.match(body, /1972375139@qq\.com/);
     assert.doesNotMatch(body, /\{\{|待填写|YOUR_|example\.com/);
   }

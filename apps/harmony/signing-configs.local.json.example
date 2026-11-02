@@ -1,0 +1,30 @@
+{
+  "signingConfigs": [
+    {
+      "name": "default",
+      "type": "HarmonyOS",
+      "material": {
+        "certpath": "/absolute/path/to/debug.cer",
+        "keyAlias": "debugKey",
+        "keyPassword": "REPLACE_WITH_DEVECO_CIPHERTEXT_OR_LOCAL_PASSWORD",
+        "profile": "/absolute/path/to/debug.p7b",
+        "signAlg": "SHA256withECDSA",
+        "storeFile": "/absolute/path/to/debug.p12",
+        "storePassword": "REPLACE_WITH_DEVECO_CIPHERTEXT_OR_LOCAL_PASSWORD"
+      }
+    },
+    {
+      "name": "release",
+      "type": "HarmonyOS",
+      "material": {
+        "certpath": "/absolute/path/to/release.cer",
+        "keyAlias": "releaseKey",
+        "keyPassword": "REPLACE_WITH_DEVECO_CIPHERTEXT_OR_LOCAL_PASSWORD",
+        "profile": "/absolute/path/to/release.p7b",
+        "signAlg": "SHA256withECDSA",
+        "storeFile": "/absolute/path/to/release.p12",
+        "storePassword": "REPLACE_WITH_DEVECO_CIPHERTEXT_OR_LOCAL_PASSWORD"
+      }
+    }
+  ]
+}

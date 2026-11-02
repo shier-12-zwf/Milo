@@ -3,11 +3,13 @@ import {
   EntryRepository,
   parseEnvelope,
   ENTRIES_STORAGE_KEY,
+  scopedEntriesKey,
 } from '../../../main/ets/core/data/EntryRepository';
 import {
   RecallSessionRepository,
   parseDraft,
   DRAFT_STORAGE_KEY,
+  scopedDraftKey,
 } from '../../../main/ets/core/data/RecallSessionRepository';
 import { MapKVStorage } from '../../../main/ets/core/data/KVStorage';
 import { type DiaryEntry, type StickerTemplateId, DEFAULT_STICKER_TEMPLATE } from '../../../main/ets/core/model/Domain';
@@ -229,6 +231,23 @@ function entryRepositorySuite() {
       expect(ids.join(',')).assertEqual('ok');
     });
 
+    it('moves legacy device entries to the first account and hides them from the next', 0, () => {
+      const storage = new MapKVStorage();
+      storage.hydrate(ENTRIES_STORAGE_KEY, JSON.stringify({
+        schemaVersion: 1,
+        entries: [rawRow('legacy', 1000, 'now')],
+      }));
+      const first = new EntryRepository(storage, 'uid-a');
+      expect(first.list().map((item) => item.id).join(',')).assertEqual('legacy');
+      expect(storage.read(ENTRIES_STORAGE_KEY)).assertEqual(undefined);
+      expect(storage.read(scopedEntriesKey('uid-a')) !== undefined).assertTrue();
+      const second = new EntryRepository(storage, 'uid-b');
+      expect(second.list().length).assertEqual(0);
+      first.save(entry('kept', 'now', 2000, false));
+      expect(new EntryRepository(storage, 'uid-b').list().length).assertEqual(0);
+      expect(new EntryRepository(storage, 'uid-a').list().map((item) => item.id).join(',')).assertEqual('kept,legacy');
+    });
+
     it('parseEnvelope returns [] for every malformed input', 0, () => {
       expect(parseEnvelope('').length).assertEqual(0);
       expect(parseEnvelope('null').length).assertEqual(0);
@@ -307,6 +326,19 @@ function recallSessionRepositorySuite() {
       expect(parseDraft(JSON.stringify(empty))).assertEqual(undefined);
       const noState: RawDraftEnvelope = { schemaVersion: 1 };
       expect(parseDraft(JSON.stringify(noState))).assertEqual(undefined);
+    });
+
+    it('moves a legacy draft to the first account only', 0, () => {
+      const storage = new MapKVStorage();
+      new RecallSessionRepository(storage).saveDraft(populatedDraft());
+      const legacy = storage.read(scopedDraftKey('local'));
+      expect(legacy !== undefined).assertTrue();
+      if (legacy !== undefined) storage.hydrate(DRAFT_STORAGE_KEY, legacy);
+      storage.remove(scopedDraftKey('local'));
+      const first = new RecallSessionRepository(storage, 'uid-a');
+      expect(first.loadDraft()!.draft.timeMark).assertEqual('去年夏天');
+      expect(storage.read(DRAFT_STORAGE_KEY)).assertEqual(undefined);
+      expect(new RecallSessionRepository(storage, 'uid-b').loadDraft()).assertEqual(undefined);
     });
 
     it('keeps damaged drafts from hiding previously saved entries', 0, () => {

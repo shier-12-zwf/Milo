@@ -57,9 +57,10 @@ export class PersonalFiles {
     const file = fs.openSync(paths[0], fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC);
     try {
       const bytes = new util.TextEncoder().encodeInto(text);
+      const view = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
       let offset = 0;
-      while (offset < bytes.byteLength) {
-        const written = fs.writeSync(file.fd, bytes.buffer.slice(offset));
+      while (offset < view.byteLength) {
+        const written = fs.writeSync(file.fd, view.slice(offset));
         if (written <= 0) throw new Error('导出文件未完整写入。');
         offset += written;
       }

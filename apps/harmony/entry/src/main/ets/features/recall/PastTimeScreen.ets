@@ -1,6 +1,7 @@
 import { MILO_COLORS } from '../../core/theme/MiloTheme';
 import { MiloBackNode, MiloPrimaryButton } from '../ui/MiloButtons';
 import { Haptics } from '../../core/system/Haptics';
+import { GATEWAY_MAX_TIME_MARK_LENGTH } from '../../core/network/AiGatewayClient';
 
 const PRESETS: string[] = [
   '昨天',
@@ -30,7 +31,8 @@ export struct PastTimeScreen {
 
   private mark(): string {
     const trimmed = this.custom.trim();
-    return trimmed.length > 0 ? trimmed : this.picked;
+    const value = trimmed.length > 0 ? trimmed : this.picked;
+    return value.length > GATEWAY_MAX_TIME_MARK_LENGTH ? value.slice(0, GATEWAY_MAX_TIME_MARK_LENGTH) : value;
   }
 
   private isOn(preset: string): boolean {
@@ -94,8 +96,11 @@ export struct PastTimeScreen {
       .margin({ bottom: 26 })
 
       TextInput({ placeholder: '比如，高三的雨季', text: this.custom })
+        .maxLength(GATEWAY_MAX_TIME_MARK_LENGTH)
         .onChange((value: string) => {
-          this.custom = value;
+          this.custom = value.length > GATEWAY_MAX_TIME_MARK_LENGTH
+            ? value.slice(0, GATEWAY_MAX_TIME_MARK_LENGTH)
+            : value;
         })
         .width('82%')
         .height(48)

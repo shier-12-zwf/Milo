@@ -37,8 +37,10 @@ export struct DiaryScreen {
   controller: ConversationController | null = null;
   onSave: (diary: string | undefined, enabled: boolean) => void = () => {};
   onBack: () => void = () => {};
+  private alive: boolean = false;
 
   aboutToAppear(): void {
+    this.alive = true;
     if (!this.diaryOn) {
       this.diary = '';
       this.generating = false;
@@ -48,13 +50,19 @@ export struct DiaryScreen {
     void this.generateDiary();
   }
 
+  aboutToDisappear(): void {
+    this.alive = false;
+  }
+
   private async generateDiary(): Promise<void> {
+    if (!this.alive) return;
     if (!AI_AVAILABLE || this.controller === null) {
       this.diary = fallbackDiary(this.draft);
       this.generating = false;
       return;
     }
     const result = await this.controller.createDiary(this.draft);
+    if (!this.alive) return;
     this.conversationState = result.state;
     this.diary = result.diary;
     this.generating = false;

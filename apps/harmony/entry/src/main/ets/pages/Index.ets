@@ -48,6 +48,7 @@ import { PersonalFiles } from '../core/system/PersonalFiles';
 import { PrivacyConsentRepository } from '../core/auth/PrivacyConsentRepository';
 import { PrivacyConsentScreen } from '../features/legal/PrivacyConsentScreen';
 import { common } from '@kit.AbilityKit';
+import BuildProfile from 'BuildProfile';
 
 type AuthGate = 'checking' | 'signedOut' | 'signedIn';
 
@@ -66,11 +67,13 @@ struct Index {
   @State privacyError: string = '';
   private storage: KVStorage = new PreferencesKVStorage(getContext(this));
   private privacyRepository: PrivacyConsentRepository = new PrivacyConsentRepository(this.storage);
-  private entryRepo: EntryRepository = new EntryRepository(this.storage);
-  private draftRepo: RecallSessionRepository = new RecallSessionRepository(this.storage);
+  private boundUid: string = '';
+  private entryRepo: EntryRepository | null = null;
+  private draftRepo: RecallSessionRepository | null = null;
   private authController: AuthController = new AuthController({
     provider: new AgcAuthProvider(getContext(this), () => this.privacyRepository.hasAccepted()),
     store: new AuthSessionStore(this.storage),
+    allowOwnerBackdoor: BuildProfile.DEBUG,
   });
   private gateway: AiGatewayClient | null = null;
   private chatController: ConversationController | null = null;
@@ -82,15 +85,47 @@ struct Index {
     const session = this.authController.restore();
     this.authGate = session !== undefined ? 'signedIn' : 'signedOut';
     this.accountOpen = this.authController.isDeletionPending();
-    this.refreshEntries();
+    if (session !== undefined) {
+      this.bindAccount(session.uid);
+    }
+  }
+
+  /** Diary and draft keys follow the signed-in uid. Legacy device data migrates on first read. */
+  private bindAccount(uid: string): void {
+    if (this.boundUid === uid && this.entryRepo !== null && this.draftRepo !== null) {
+      this.refreshEntries();
+      this.refreshEntryCaches();
+      return;
+    }
+    this.boundUid = uid;
+    const entries = new EntryRepository(this.storage, uid);
+    const drafts = new RecallSessionRepository(this.storage, uid);
+    this.entryRepo = entries;
+    this.draftRepo = drafts;
+    this.gateway = null;
+    this.chatController = null;
+    this.entries = entries.list();
     if (!this.hasRestored) {
       this.hasRestored = true;
-      const saved = this.draftRepo.loadDraft();
+      const saved = drafts.loadDraft();
       if (saved !== undefined) {
         this.state = saved;
       }
     }
     this.refreshEntryCaches();
+  }
+
+  private unbindAccount(): void {
+    this.boundUid = '';
+    this.entryRepo = null;
+    this.draftRepo = null;
+    this.entries = [];
+    this.detailEntry = undefined;
+    this.cardEntry = undefined;
+    this.state = initialRecallState();
+    this.hasRestored = false;
+    this.gateway = null;
+    this.chatController = null;
   }
 
   private buildChatController(): ConversationController {
@@ -135,17 +170,17 @@ struct Index {
   }
 
   private refreshEntries(): void {
-    this.entries = this.entryRepo.list();
+    this.entries = this.entryRepo !== null ? this.entryRepo.list() : [];
   }
 
   private refreshEntryCaches(): void {
     const id = this.state.screen.entryId;
-    if (this.state.screen.name === 'detail' && id !== undefined) {
+    if (this.entryRepo !== null && this.state.screen.name === 'detail' && id !== undefined) {
       this.detailEntry = this.entryRepo.get(id);
     } else {
       this.detailEntry = undefined;
     }
-    if (this.state.screen.name === 'card' && id !== undefined) {
+    if (this.entryRepo !== null && this.state.screen.name === 'card' && id !== undefined) {
       this.cardEntry = this.entryRepo.get(id);
     } else {
       this.cardEntry = undefined;
@@ -153,11 +188,11 @@ struct Index {
   }
 
   private persistDraft(): void {
-    this.draftRepo.saveDraft(this.state);
+    if (this.draftRepo !== null) this.draftRepo.saveDraft(this.state);
   }
 
   private clearDraft(): void {
-    this.draftRepo.clearDraft();
+    if (this.draftRepo !== null) this.draftRepo.clearDraft();
   }
 
   private pickMood(moodId: MoodId, labels: string[]): void {
@@ -198,6 +233,7 @@ struct Index {
 
   /** Web behavior: after saving, jump straight to the share-card page. */
   private saveAndShowCard(entry: DiaryEntry): void {
+    if (this.entryRepo === null) return;
     this.entryRepo.save(entry);
     this.clearDraft();
     const reset = transition(this.state, RecallEvents.reset());
@@ -257,11 +293,11 @@ struct Index {
   }
 
   private async signOut(): Promise<void> {
-    await this.authController.signOut();
+    const signedOut = await this.authController.signOut();
+    if (!signedOut) return;
     this.accountOpen = false;
     this.aiSettingsOpen = false;
-    this.gateway = null;
-    this.chatController = null;
+    this.unbindAccount();
     this.authGate = 'signedOut';
   }
 
@@ -294,7 +330,8 @@ struct Index {
       } else if (this.authGate === 'signedOut') {
         LoginScreen({
           controller: this.authController,
-          onSignedIn: (_session: AuthSession) => {
+          onSignedIn: (session: AuthSession) => {
+            this.bindAccount(session.uid);
             this.authGate = 'signedIn';
           },
         })
@@ -322,14 +359,11 @@ struct Index {
           onBack: () => { this.accountOpen = false; },
           onSignOut: () => { void this.signOut(); },
           onClearLocalData: () => {
-            this.entryRepo.clear();
+            if (this.entryRepo !== null) this.entryRepo.clear();
             this.clearDraft();
           },
           onDeleted: () => {
-            this.state = initialRecallState();
-            this.chatController = null;
-            this.refreshEntries();
-            this.refreshEntryCaches();
+            this.unbindAccount();
             this.accountOpen = false;
             this.authGate = 'signedOut';
           },
@@ -401,7 +435,7 @@ struct Index {
           },
           onBack: () => this.back(),
           onRemove: (id: string) => {
-            this.entryRepo.remove(id);
+            if (this.entryRepo !== null) this.entryRepo.remove(id);
             this.state = transition(this.state, RecallEvents.back());
             this.refreshEntries();
             this.refreshEntryCaches();
@@ -411,7 +445,7 @@ struct Index {
         CardScreen({
           entry: this.cardEntry,
           onSelect: (template: StickerTemplateId) => {
-            if (this.cardEntry !== undefined) {
+            if (this.cardEntry !== undefined && this.entryRepo !== null) {
               this.entryRepo.update(this.cardEntry.id, { stickerTemplate: template });
               this.refreshEntryCaches();
             }

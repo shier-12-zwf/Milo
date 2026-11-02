@@ -48,6 +48,10 @@ export class HarmonyHttpFetcher implements FetchLike {
       }
     };
     this.cancelOnSignal(init.signal, destroy);
+    if (init.signal !== undefined && init.signal.cancelled) {
+      destroy();
+      throw new Error('The AI request was cancelled.');
+    }
     try {
       const response = await request.request(input, {
         method: http.RequestMethod.POST,

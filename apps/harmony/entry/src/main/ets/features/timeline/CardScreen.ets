@@ -213,13 +213,16 @@ export struct CardScreen {
       await pixelMap.release();
       const path: string = `${context.cacheDir}/milo-card-${Date.now()}.png`;
       const file = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC);
-      fs.writeSync(file.fd, data);
-      fs.closeSync(file);
-      const helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-      const request: photoAccessHelper.MediaAssetChangeRequest =
-        photoAccessHelper.MediaAssetChangeRequest.createImageAssetRequest(context, `file://${path}`);
-      await helper.applyChanges(request);
-      this.saveState = 'saved';
+      try {
+        fs.writeSync(file.fd, data);
+        const helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+        const request: photoAccessHelper.MediaAssetChangeRequest =
+          photoAccessHelper.MediaAssetChangeRequest.createImageAssetRequest(context, `file://${path}`);
+        await helper.applyChanges(request);
+        this.saveState = 'saved';
+      } finally {
+        try { fs.closeSync(file); } catch (_closeError) {}
+      }
     } catch (e) {
       this.saveState = 'failed';
     }
