@@ -1,0 +1,440 @@
+{
+  "version": 2,
+  "phase": "web-native-20260929",
+  "referenceURL": "https://milo.huangtangai.top/app",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cases": [
+    {
+      "id": "login--email",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "login--password",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "login--code",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "login--reset",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "login--error",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "home--mood-calm",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "home--mood-joyful",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "home--mood-low",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "home--words-empty",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "home--words-three",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "classify--default",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "now-note--empty",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "now-note--written",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "now-note--keyboard-long",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "past-time--empty",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "past-time--preset",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "past-time--custom",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--opening",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--conversation",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--offline",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--keyboard",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--busy",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "diary--enabled",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "diary--disabled",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "diary--editing",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "diary--long",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "timeline--empty",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "timeline--populated",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--now",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--past",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--transcript-expanded",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--missing",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--delete-confirmation",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "card--planet-letter",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "card--orbit-theatre",
+      "category": "shared",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--local",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--remote",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--password-form",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--export",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--delete-confirmation",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--hosted",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--personal",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--missing-config",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--consent",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--connection-error",
+      "category": "native-only",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "home--words-three--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "now-note--keyboard-long--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--conversation--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "diary--long--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "timeline--populated--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--transcript-expanded--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--local--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--personal--large-text",
+      "category": "accessibility-stress",
+      "status": "pending",
+      "web": null,
+      "ios": null,
+      "review": null
+    }
+  ],
+  "implementationAuthors": [
+    "/root",
+    "/root/galaxy_native",
+    "/root/card_layout"
+  ]
+}

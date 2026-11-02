@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "limits": {
+    "maxAttemptsPerCheck": 3,
+    "maxNoProgress": 2,
+    "maxWallTimeMs": 3600000
+  },
+  "checks": [
+    {
+      "id": "specification",
+      "argv": [
+        "node",
+        "apps/ios/node_modules/@fission-ai/openspec/bin/openspec.js",
+        "validate",
+        "ios-harmony-product-parity",
+        "--strict",
+        "--no-interactive"
+      ],
+      "inputs": [
+        "openspec/changes/ios-harmony-product-parity",
+        "openspec/config.yaml",
+        "apps/ios/package-lock.json"
+      ],
+      "env": {
+        "OPENSPEC_TELEMETRY": "0"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "id": "framework-tests",
+      "argv": [
+        "node",
+        "--test",
+        ".agents/skills/specdrive/tests/runner.test.mjs"
+      ],
+      "inputs": [
+        ".agents/skills/specdrive/scripts",
+        ".agents/skills/specdrive/tests"
+      ],
+      "timeoutMs": 120000
+    },
+    {
+      "id": "core-tests",
+      "argv": [
+        "swift",
+        "test",
+        "--package-path",
+        "apps/ios/MiloCore"
+      ],
+      "inputs": [
+        "apps/ios/MiloCore"
+      ],
+      "timeoutMs": 600000
+    },
+    {
+      "id": "ai-cancellation-tests",
+      "argv": [
+        "bash",
+        "apps/ios/scripts/test-journal-ai.sh"
+      ],
+      "inputs": [
+        "apps/ios/App/JournalModel.swift",
+        "apps/ios/MiloCore",
+        "apps/ios/tests/journal-ai-check.swift",
+        "apps/ios/scripts/test-journal-ai.sh"
+      ],
+      "timeoutMs": 120000
+    },
+    {
+      "id": "parity-validator-tests",
+      "argv": [
+        "node",
+        "--test",
+        "apps/ios/tests/parity-evidence.test.mjs"
+      ],
+      "inputs": [
+        "apps/ios/scripts/parity-evidence.mjs",
+        "apps/ios/tests/parity-evidence.test.mjs"
+      ],
+      "timeoutMs": 60000
+    },
+    {
+      "id": "xcode-environment",
+      "kind": "preflight",
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "preflight"
+      ],
+      "inputs": [
+        "apps/ios/scripts/parity-native.mjs"
+      ],
+      "timeoutMs": 60000,
+      "maxAgeMs": 86400000
+    },
+    {
+      "id": "ios-build",
+      "dependsOn": [
+        "xcode-environment"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "build"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests"
+      ],
+      "timeoutMs": 600000
+    },
+    {
+      "id": "ios-journeys",
+      "dependsOn": [
+        "ios-build"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "journeys"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests"
+      ],
+      "timeoutMs": 900000
+    },
+    {
+      "id": "ios-captures",
+      "dependsOn": [
+        "ios-journeys"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "capture"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests",
+        "docs/visual-parity/cases.json"
+      ],
+      "timeoutMs": 1500000
+    },
+    {
+      "id": "full-visual-parity",
+      "dependsOn": [
+        "ios-captures"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "parity-gate"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests",
+        "docs/visual-parity"
+      ],
+      "timeoutMs": 30000
+    },
+    {
+      "id": "real-agc-auth",
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "external-auth"
+      ],
+      "inputs": [
+        "apps/ios/App/Account",
+        "apps/ios/scripts/parity-native.mjs"
+      ],
+      "timeoutMs": 10000
+    }
+  ]
+}

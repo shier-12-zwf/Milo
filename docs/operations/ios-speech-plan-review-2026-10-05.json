@@ -1,0 +1,211 @@
+{
+  "reviewedAtUTC": "2026-10-05T04:23:27.570154+00:00",
+  "reviewer": "independent speech_review agent",
+  "scope": "Read-only OpenSpec speech stability plan review; implementation review pending",
+  "verdict": "PASS",
+  "artifacts": [
+    {
+      "path": "openspec/changes/ios-speech-input-stability/design.md",
+      "sha256": "2ba038030d98313410158949e0a66f98f41bc8d37ef58e7bcfc5b3c83c9e4bb5"
+    },
+    {
+      "path": "openspec/changes/ios-speech-input-stability/proposal.md",
+      "sha256": "b4503220426753948f7ed132b2bcc1b06bfcae5b3bb6e212201f40c236112ced"
+    },
+    {
+      "path": "openspec/changes/ios-speech-input-stability/specs/ios-speech-stability/spec.md",
+      "sha256": "ecf1e263916225309427c1b0ec21651fd0c92522aa34da40586b3c5e7fbd83d9"
+    },
+    {
+      "path": "openspec/changes/ios-speech-input-stability/tasks.md",
+      "sha256": "2ab45eff9069a98b918b4f046fcaa1697f00a777241862f34bd1339e19db7f8c"
+    },
+    {
+      "path": "apps/ios/App/Journey/SpeechInputModel.swift",
+      "sha256": "bfaa5e1d171d8b69bc0e85c9b04dbae8462dc1c70c6e5d8903ed50d16f618e56"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/Milo-2026-10-04-220853.ips",
+      "sha256": "a70717787876be27995af1184071ec9081a0e2cc95b34d2953199866be7adc27"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/Milo-2026-10-05-120340.ips",
+      "sha256": "7623309b65aefc8cdd457d4257fc358d4bcbb737817ac758be8044341bc4920a"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/audio-start-crash.ips",
+      "sha256": "960c52871ef754ed32e999d5e3ae8ebe0ebce986b106a774e7360596e2083657"
+    }
+  ],
+  "crashFindings": [
+    {
+      "path": ".artifacts/ios/speech-20261005/Milo-2026-10-04-220853.ips",
+      "exception": {
+        "codes": "0x0000000000000001, 0x00000001801bbf5c",
+        "rawCodes": [
+          1,
+          6444269404
+        ],
+        "type": "EXC_BREAKPOINT",
+        "signal": "SIGTRAP"
+      },
+      "faultingQueue": "com.apple.root.default-qos",
+      "frames": [
+        "_dispatch_assert_queue_fail",
+        "dispatch_assert_queue$V2.cold.1",
+        "dispatch_assert_queue",
+        "_swift_task_checkIsolatedSwift",
+        "swift_task_isCurrentExecutorWithFlagsImpl(swift::SerialExecutorRef, swift::swift_task_is_current_executor_flag)",
+        "closure #1 in closure #1 in SpeechInputModel.start()",
+        "thunk for @escaping @callee_guaranteed (@unowned SFSpeechRecognizerAuthorizationStatus) -> ()"
+      ]
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/Milo-2026-10-05-120340.ips",
+      "exception": {
+        "codes": "0x0000000000000001, 0x00000001801bbf5c",
+        "rawCodes": [
+          1,
+          6444269404
+        ],
+        "type": "EXC_BREAKPOINT",
+        "signal": "SIGTRAP"
+      },
+      "faultingQueue": "com.apple.root.default-qos",
+      "frames": [
+        "_dispatch_assert_queue_fail",
+        "dispatch_assert_queue$V2.cold.1",
+        "dispatch_assert_queue",
+        "_swift_task_checkIsolatedSwift",
+        "swift_task_isCurrentExecutorWithFlagsImpl(swift::SerialExecutorRef, swift::swift_task_is_current_executor_flag)",
+        "closure #1 in closure #1 in SpeechInputModel.start()",
+        "thunk for @escaping @callee_guaranteed (@unowned SFSpeechRecognizerAuthorizationStatus) -> ()"
+      ]
+    }
+  ],
+  "assessment": {
+    "rootCause": "Both original simulator incidents terminate at Swift executor enforcement in SpeechInputModel.start authorization callback on a default background queue. Proposed explicit nonisolated Sendable factories address this boundary without disabling checks.",
+    "coverage": "Plan includes background callback dispatch, permission cancellation, stale generation events, resource ownership, interruption/background/navigation and editable keyboard fallback.",
+    "boundedRun": "Fresh scoped state with three executions per check, two identical no-progress failures and forty minutes active commands is suitable for native units, scoped speech UI and existing launch checks; prior states preserved.",
+    "nativeUILimit": "Public simulator/XCUI permission reset supports microphone; denied microphone will be actual UI, denied speech controlled production-model unit test. Real first-use speech authorization alert should be accepted if present. Report these scopes separately.",
+    "acceptance": "Recognition-unavailable fallback is acceptable on simulator only if original input stays editable and sendable; success is not fabricated and physical-device transcription is excluded.",
+    "secondCrash": "Actual real granted-permission testing revealed independent native audio-service timeout; revised design records original failure, setup/lifecycle hardening and environment-specific repair without expanding acceptance to Bluetooth or physical devices."
+  },
+  "implementationReviewFocus": [
+    "Ensure old pending-start defer cannot clear a newer generation state after cancel/restart.",
+    "Exercise actual production callback factories on background queues, including audio tap bridge, rather than only mocked model events.",
+    "Permission alert inactive scene phase must not cancel first-use request; background and navigation must cancel.",
+    "Release only owned audio resources and preserve accepted partial text on failure/interruption."
+  ],
+  "findings": [],
+  "reviewRound": 2,
+  "reviewHistory": [
+    {
+      "snapshotSha256": "daaf51e6577e7b097341d10ef96a8fce59eebf89191950523370b3cafe933098",
+      "review": {
+        "reviewedAtUTC": "2026-10-05T04:07:43.009410+00:00",
+        "reviewer": "independent speech_review agent",
+        "scope": "Read-only OpenSpec speech stability plan review; implementation review pending",
+        "verdict": "PASS",
+        "artifacts": [
+          {
+            "path": "openspec/changes/ios-speech-input-stability/design.md",
+            "sha256": "0158183759ea20936e0816adcdf9a155d1388ed85c9611712bb9db7cb5632b72"
+          },
+          {
+            "path": "openspec/changes/ios-speech-input-stability/proposal.md",
+            "sha256": "b4503220426753948f7ed132b2bcc1b06bfcae5b3bb6e212201f40c236112ced"
+          },
+          {
+            "path": "openspec/changes/ios-speech-input-stability/specs/ios-speech-stability/spec.md",
+            "sha256": "ecf1e263916225309427c1b0ec21651fd0c92522aa34da40586b3c5e7fbd83d9"
+          },
+          {
+            "path": "openspec/changes/ios-speech-input-stability/tasks.md",
+            "sha256": "2ab45eff9069a98b918b4f046fcaa1697f00a777241862f34bd1339e19db7f8c"
+          },
+          {
+            "path": "apps/ios/App/Journey/SpeechInputModel.swift",
+            "sha256": "b3aa8eb2bfc30a07fae29a83e3294ae1c40d184fe576f96b6f4e3b65555aa237"
+          },
+          {
+            "path": ".artifacts/ios/speech-20261005/Milo-2026-10-04-220853.ips",
+            "sha256": "a70717787876be27995af1184071ec9081a0e2cc95b34d2953199866be7adc27"
+          },
+          {
+            "path": ".artifacts/ios/speech-20261005/Milo-2026-10-05-120340.ips",
+            "sha256": "7623309b65aefc8cdd457d4257fc358d4bcbb737817ac758be8044341bc4920a"
+          }
+        ],
+        "crashFindings": [
+          {
+            "path": ".artifacts/ios/speech-20261005/Milo-2026-10-04-220853.ips",
+            "exception": {
+              "codes": "0x0000000000000001, 0x00000001801bbf5c",
+              "rawCodes": [
+                1,
+                6444269404
+              ],
+              "type": "EXC_BREAKPOINT",
+              "signal": "SIGTRAP"
+            },
+            "faultingQueue": "com.apple.root.default-qos",
+            "frames": [
+              "_dispatch_assert_queue_fail",
+              "dispatch_assert_queue$V2.cold.1",
+              "dispatch_assert_queue",
+              "_swift_task_checkIsolatedSwift",
+              "swift_task_isCurrentExecutorWithFlagsImpl(swift::SerialExecutorRef, swift::swift_task_is_current_executor_flag)",
+              "closure #1 in closure #1 in SpeechInputModel.start()",
+              "thunk for @escaping @callee_guaranteed (@unowned SFSpeechRecognizerAuthorizationStatus) -> ()"
+            ]
+          },
+          {
+            "path": ".artifacts/ios/speech-20261005/Milo-2026-10-05-120340.ips",
+            "exception": {
+              "codes": "0x0000000000000001, 0x00000001801bbf5c",
+              "rawCodes": [
+                1,
+                6444269404
+              ],
+              "type": "EXC_BREAKPOINT",
+              "signal": "SIGTRAP"
+            },
+            "faultingQueue": "com.apple.root.default-qos",
+            "frames": [
+              "_dispatch_assert_queue_fail",
+              "dispatch_assert_queue$V2.cold.1",
+              "dispatch_assert_queue",
+              "_swift_task_checkIsolatedSwift",
+              "swift_task_isCurrentExecutorWithFlagsImpl(swift::SerialExecutorRef, swift::swift_task_is_current_executor_flag)",
+              "closure #1 in closure #1 in SpeechInputModel.start()",
+              "thunk for @escaping @callee_guaranteed (@unowned SFSpeechRecognizerAuthorizationStatus) -> ()"
+            ]
+          }
+        ],
+        "assessment": {
+          "rootCause": "Both original simulator incidents terminate at Swift executor enforcement in SpeechInputModel.start authorization callback on a default background queue. Proposed explicit nonisolated Sendable factories address this boundary without disabling checks.",
+          "coverage": "Plan includes background callback dispatch, permission cancellation, stale generation events, resource ownership, interruption/background/navigation and editable keyboard fallback.",
+          "boundedRun": "Fresh scoped state with three executions per check, two identical no-progress failures and forty minutes active commands is suitable for native units, scoped speech UI and existing launch checks; prior states preserved.",
+          "nativeUILimit": "Public simulator/XCUI permission reset supports microphone; denied microphone will be actual UI, denied speech controlled production-model unit test. Real first-use speech authorization alert should be accepted if present. Report these scopes separately.",
+          "acceptance": "Recognition-unavailable fallback is acceptable on simulator only if original input stays editable and sendable; success is not fabricated and physical-device transcription is excluded."
+        },
+        "implementationReviewFocus": [
+          "Ensure old pending-start defer cannot clear a newer generation state after cancel/restart.",
+          "Exercise actual production callback factories on background queues, including audio tap bridge, rather than only mocked model events.",
+          "Permission alert inactive scene phase must not cancel first-use request; background and navigation must cancel.",
+          "Release only owned audio resources and preserve accepted partial text on failure/interruption."
+        ],
+        "findings": []
+      }
+    }
+  ],
+  "secondRoundAssessment": {
+    "pendingInputPreservation": "Chat input now disables for speech.isActive including pending authorization. Cancellation remains available; native UI verifies pending starting state and disabled editor at actual microphone alert. This resolves first review P2.",
+    "backgroundNotificationTransfer": "Interruption test constructs legacy non-Sendable Notification on background queue from Sendable integer case; captured cross-queue payload is no longer Notification.",
+    "nativeAudioHardening": "Backend uses playAndRecord/measurement/defaultToSpeaker, validates activated input availability/sample rate/channel count before engine.inputNode, caches acquired input node and removes tap through cached reference during stop. Existing failure cleanup is reached for throwing setup failures.",
+    "newCrashScope": "Original granted-permission UI failure is distinct SIGABRT at _ReportRPCTimeout/AURemoteIO.Initialize/inputNode. App hardening plus explicit builtin Simulator audio routing and reboot is within current plan. No universal AudioUnit fatal-timeout recovery is claimed.",
+    "runIntegrity": "First failed real UI run retained. Same corrected runner state and same original attempt/active-command limits reused after repair, according to requested execution context; final state/provenance acceptance deferred to evidence review.",
+    "evidenceAcceptance": "This PASS is planning/implementation acceptance only. Current second runner execution must finish before final tests and original attachments are independently accepted."
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "phase": "2026-09-30 functional parity",
+  "reviews": [
+    {
+      "round": 1,
+      "reviewedAt": "2026-09-29T16:17:28.636604+00:00",
+      "verdict": "CHANGES_REQUESTED",
+      "scope": "Source-only review before current full-app verification. Implementation was not frozen; hashes bind this snapshot, later edits require delta review.",
+      "files": [
+        {
+          "path": "apps/ios/App/Account/AGCAuthProvider.swift",
+          "sha256": "510890a11675ccd9edd5643cac47d7ec995963d51ad3077e7982bf0199b4b6e2"
+        },
+        {
+          "path": "apps/ios/App/Account/AccountModel.swift",
+          "sha256": "f815663077668b8838665f8882f9bf710f5b260319824418ad1cd2c54b211bf9"
+        },
+        {
+          "path": "apps/ios/App/Account/LoginView.swift",
+          "sha256": "289a540e446df34c3806780e298686161e6f38442bddf4a456ba8ee5e8a10e26"
+        },
+        {
+          "path": "apps/ios/App/Account/MiloSecureField.swift",
+          "sha256": "2c4f65b13e9cb4cff9b0508fd682b05b2b42832ca30994e2a185e2b2d104aa21"
+        },
+        {
+          "path": "apps/ios/App/Account/AccountView.swift",
+          "sha256": "540f6558f6580dfb3352c229128b8066643bdaa3189f9c1b2a8935cc78fe57ff"
+        },
+        {
+          "path": "apps/ios/App/Account/AISettingsView.swift",
+          "sha256": "4ae2a85d1b11d88f2b2ab1fe06cd120cafc7e9f8f0a50c03fcf46bebf497fb09"
+        },
+        {
+          "path": "apps/ios/App/JournalModel.swift",
+          "sha256": "23c453f4564c4176de8f327bdfe25d4ba98c4984c723a4765101e48a79429f84"
+        },
+        {
+          "path": "apps/ios/App/JournalView.swift",
+          "sha256": "894062f73b2d6e23352376afdbe771794f62d7aedc6abc07fc4d7f54c3a70b5b"
+        },
+        {
+          "path": "apps/ios/scripts/install-agc-sdk.py",
+          "sha256": "1ce48556fa4012c375bef086b25bcf68df659306c755eb6243d587c4aba5bcae"
+        },
+        {
+          "path": "apps/ios/agc-sdk-lock.json",
+          "sha256": "ddf7ce569f42d4a4b7825ed2fd868972cfd3cf90890a536f4fa721d1acba43bf"
+        },
+        {
+          "path": "apps/ios/project.yml",
+          "sha256": "b81b6e5ae7253b60b5e049a11803ae1ea3fb646f430dd1db6f5b6eaec1bdcd8b"
+        },
+        {
+          "path": "apps/ios/Milo.xcodeproj/project.pbxproj",
+          "sha256": "f1a755866ccd7b68bd333c6acd20eb6cec1d3b0a86ea4f4a68d11696e5680647"
+        },
+        {
+          "path": "apps/ios/Tests/AccountBehaviorTests.swift",
+          "sha256": "4bbe431b5a7ff7eb76f73ddce8258ef9c3af63578794754489c0e3d007f7c0ea"
+        },
+        {
+          "path": "apps/ios/UITests/AccountFunctionalTests.swift",
+          "sha256": "634b6189ad7c1ce8a7f23855221ab0cbc170adeab55d34dca8055f9eba1b7712"
+        },
+        {
+          "path": "apps/ios/tests/journal-ai-check.swift",
+          "sha256": "63bf5e98732c9ab737dfacfcc7f2deda8ecb2a2a2dd5e15ae8f5b071ef32c71e"
+        },
+        {
+          "path": ".github/workflows/ios-specdrive.yml",
+          "sha256": "1da8f00cda3da2fc76a9ed90987c97ed6f877e19bd4bd128be49fa53cab1e7f0"
+        }
+      ],
+      "findings": [
+        {
+          "id": "F-C1",
+          "priority": "P1",
+          "status": "open",
+          "title": "SDK resource plist is used as the application Info.plist",
+          "locations": [
+            {
+              "path": "apps/ios/Milo.xcodeproj/project.pbxproj",
+              "lines": [
+                671,
+                718
+              ]
+            },
+            {
+              "path": "apps/ios/project.yml",
+              "lines": [
+                25,
+                26,
+                27
+              ]
+            }
+          ],
+          "evidence": "Both Milo target configurations assign INFOPLIST_FILE to Vendor/AGConnect/1.9.4.300/AGCResources.bundle/Contents/Info.plist. Inspection of that actual vendor plist shows CFBundleIdentifier com.huawei.agconnect.AGConnectCredential, CFBundlePackageType BNDL, CFBundleName AGCResources and MacOSX platform metadata. XcodeGen inferred this nested resource plist while the app requests generated metadata.",
+          "impact": "The generated app target consumes another bundle identity/type/platform metadata, jeopardizing installation, iOS bundle configuration matching and release metadata. A SDK-only link probe does not test this app target.",
+          "fix": "Reference AGCResources.bundle as a bundle/file resource and prevent its Info.plist being inferred as Milo metadata; regenerate project and inspect the built app Info.plist for APPL, com.milo.echoes.ios and iOS platform."
+        },
+        {
+          "id": "F-C2",
+          "priority": "P2",
+          "status": "open",
+          "title": "Remote deletion success followed by local cleanup failure cannot be retried",
+          "locations": [
+            {
+              "path": "apps/ios/App/Account/AccountModel.swift",
+              "lines": [
+                200,
+                215
+              ]
+            },
+            {
+              "path": "apps/ios/App/Account/AGCAuthProvider.swift",
+              "lines": [
+                110,
+                112
+              ]
+            }
+          ],
+          "evidence": "deleteAccount always calls the remote provider before local cleanup, including after a previous remote success. AGCAuth.h documents deleteUser removes server user and cached session. Real adapter then rejects a retry when currentUser is nil. The model preserves remote identity and tells the user to retry if local callback, keychain or local file cleanup fails.",
+          "impact": "After a partial deletion the promised retry cannot reach the remaining local cleanup. Restart currently also loses knowledge of the completed remote step.",
+          "fix": "Track the remote-deletion-complete stage safely, including restart or clearly supported recovery, so retries complete local cleanup without attempting to delete a nonexistent remote user. Test remote success then local failure with a provider that loses its session; retain remote-failure no-local-delete assertions."
+        },
+        {
+          "id": "F-C3",
+          "priority": "P2",
+          "status": "open",
+          "title": "Clean CI checkout lacks newly required AGC SDK installation",
+          "locations": [
+            {
+              "path": ".github/workflows/ios-specdrive.yml",
+              "lines": [
+                26,
+                30
+              ]
+            },
+            {
+              "path": "apps/ios/.gitignore",
+              "lines": [
+                14
+              ]
+            }
+          ],
+          "evidence": "Vendor is ignored and the project directly links four Vendor/AGConnect/1.9.4.300 xcframeworks and AGCResources.bundle. Current CI moves from npm install and gate unit tests directly to xcodebuild dependency resolution and native runner, with no SDK installer step.",
+          "impact": "A clean CI checkout cannot build the app against the ignored SDK files that exist on this machine.",
+          "fix": "Run the pinned project-local SDK installer/verification before dependency resolution/native fingerprinting; keep app-specific authentication configuration optional and separate from dependency installation."
+        }
+      ],
+      "positiveSourceObservations": [
+        "Provider directly imports and invokes actual AGConnectAuth/Core/HMFoundation SDK APIs; no canImport substitute supplies production login success.",
+        "Configuration parsing rejects non-plist, absent/mismatching client.package_name, incomplete SDK fields and unknown routing before SDK initialization. It does not load the Harmony JSON config.",
+        "Code sign-in registration fallback occurs only for explicit UserNotRegistered result; wrong code and network errors do not trigger createUser. This is source/header inspection, not real server proof.",
+        "Password reset is now a separate operation, with explicit partial-success status and a return to password login that discards consumed code.",
+        "Remote sign-out cleanup failure no longer prevents local session removal; local cleanup failure returns false and preserves in-memory identity. Injected tests exercise remote failure and record/draft retention.",
+        "Password reveal fields retain autofill types and do not persist their contents; code/password user bindings clear old feedback.",
+        "New drafts use current account AI enabled default; restored drafts replace initial defaults. Settings save has an explicit callback into JournalModel, cancels generation and updates the draft choice.",
+        "Generation UUID and Task cancellation guards reject delayed old chat/diary output, including cancellation before provider invocation. Interrupted chat can resume after leaving settings.",
+        "SDK installer pins archive SHA256 and versions, stages installation under this repository, verifies contents and required arm64 variants, restricts extraction traversal/symlinks and serializes installs."
+      ],
+      "evidenceLimits": [
+        "No app, simulator, browser, build, test or real remote authentication was run by this reviewer.",
+        "AccountBehaviorTests use ControlledAuth injected into the actual AccountModel. They do not establish actual AGC server login, registration, password reset or account deletion.",
+        "Journal AI harness substitutes account storage/provider behavior while exercising real JournalModel. Its assertions are not real network completion evidence.",
+        "At snapshot, local sign-out filesystem-failure coverage and remote deletion partial-success coverage are absent; UI password/code feedback editing test was reported still being completed by coordinator.",
+        "Official SDK archive provenance and compile/link evidence supplied by another agent were not independently reproduced here.",
+        "Historical 51/53 capture, 8/11 journey and invalid stale motion runner results remain unresolved and are not accepted by this functional code review."
+      ]
+    },
+    {
+      "round": 2,
+      "reviewedAt": "2026-09-29T16:22:38.295861+00:00",
+      "verdict": "PASS_CODE_REVIEW_RUNTIME_PENDING",
+      "scope": "Read-only delta review of F-C1/F-C2/F-C3 and new functional runner/check configuration. Earlier findings and failed-history evidence remain intact.",
+      "files": [
+        {
+          "path": "apps/ios/App/Account/AccountModel.swift",
+          "sha256": "d7b805db35db1f11a859c6602516a9536e823414849b73c3c5a1bd2a3b4580ec"
+        },
+        {
+          "path": "apps/ios/App/Account/AGCAuthProvider.swift",
+          "sha256": "510890a11675ccd9edd5643cac47d7ec995963d51ad3077e7982bf0199b4b6e2"
+        },
+        {
+          "path": "apps/ios/App/Account/LoginView.swift",
+          "sha256": "289a540e446df34c3806780e298686161e6f38442bddf4a456ba8ee5e8a10e26"
+        },
+        {
+          "path": "apps/ios/App/Account/MiloSecureField.swift",
+          "sha256": "2c4f65b13e9cb4cff9b0508fd682b05b2b42832ca30994e2a185e2b2d104aa21"
+        },
+        {
+          "path": "apps/ios/App/Account/AccountView.swift",
+          "sha256": "540f6558f6580dfb3352c229128b8066643bdaa3189f9c1b2a8935cc78fe57ff"
+        },
+        {
+          "path": "apps/ios/App/Account/AISettingsView.swift",
+          "sha256": "4ae2a85d1b11d88f2b2ab1fe06cd120cafc7e9f8f0a50c03fcf46bebf497fb09"
+        },
+        {
+          "path": "apps/ios/App/JournalModel.swift",
+          "sha256": "23c453f4564c4176de8f327bdfe25d4ba98c4984c723a4765101e48a79429f84"
+        },
+        {
+          "path": "apps/ios/App/JournalView.swift",
+          "sha256": "894062f73b2d6e23352376afdbe771794f62d7aedc6abc07fc4d7f54c3a70b5b"
+        },
+        {
+          "path": "apps/ios/project.yml",
+          "sha256": "db5618e2ed1896451e71bd8b4e777f09d0e110ca6005f90234b84de5af798033"
+        },
+        {
+          "path": "apps/ios/Milo.xcodeproj/project.pbxproj",
+          "sha256": "5f4f3b4bdcd9631d5501d972910d499cabe0f4e3082a1621f864010dcfddad34"
+        },
+        {
+          "path": ".github/workflows/ios-specdrive.yml",
+          "sha256": "42859a2b8e3bd589ee84a812e69a273a16ca5b7905b00289b557acd7ed5720ee"
+        },
+        {
+          "path": "apps/ios/Tests/AccountBehaviorTests.swift",
+          "sha256": "13908b59480705c658981fe92659ca45da43ce567ef7efaa4fe5942e0ed27724"
+        },
+        {
+          "path": "apps/ios/UITests/AccountFunctionalTests.swift",
+          "sha256": "2ac5f3da22f41162f67697ad285f32f70f1a3259c7a16868316f0c823ef68059"
+        },
+        {
+          "path": "apps/ios/scripts/functional-native.mjs",
+          "sha256": "9cdc60fc7f05deb76669b55e2c20ae91873efc2ff522e67b4e056d3e081ed01e"
+        },
+        {
+          "path": "apps/ios/specdrive.functional.json",
+          "sha256": "00121e1f33374ab549956a8d7fce635aa08d60be969454fbe9e3d18555aa0c7d"
+        },
+        {
+          "path": "apps/ios/scripts/install-agc-sdk.py",
+          "sha256": "1ce48556fa4012c375bef086b25bcf68df659306c755eb6243d587c4aba5bcae"
+        },
+        {
+          "path": "apps/ios/agc-sdk-lock.json",
+          "sha256": "ddf7ce569f42d4a4b7825ed2fd868972cfd3cf90890a536f4fa721d1acba43bf"
+        }
+      ],
+      "findingUpdates": [
+        {
+          "id": "F-C1",
+          "status": "resolved-in-code",
+          "evidence": "project.yml explicitly references AGCResources.bundle as a file resource and sets application INFOPLIST_FILE to an empty string. Generated Milo Debug/Release settings now have INFOPLIST_FILE=\"\" (project.pbxproj lines 680/727), alongside generated app metadata. functional-native build additionally inspects actual built CFBundleIdentifier=com.milo.echoes.ios and CFBundlePackageType=APPL.",
+          "runtimeStatus": "No build executed by this reviewer; built metadata assertion must still run."
+        },
+        {
+          "id": "F-C2",
+          "status": "resolved-in-code",
+          "evidence": "AccountModel now records remoteDeletedUID after remote success, persists account-deletion.json before local cleanup, restores only a checkpoint matching stored identity.uid, and skips duplicate remote deletion. Successful cleanup clears the checkpoint. Added testRemoteDeletionCompletionSurvivesLocalFailureAndRelaunch reconstructs AccountModel after local cleanup fails, makes the provider reject further deletion, then asserts cleanup completes with exactly one remote delete call.",
+          "runtimeStatus": "Injected test source inspected, not executed here; actual AGC deletion remains unverified."
+        },
+        {
+          "id": "F-C3",
+          "status": "resolved-in-code",
+          "evidence": "ios-specdrive.yml installs pinned SDK archives through install-agc-sdk.py before dependency resolution/native source fingerprinting. Optional app authentication configuration is not required to download/link the SDK.",
+          "runtimeStatus": "Clean hosted CI execution not observed by this reviewer."
+        }
+      ],
+      "newBlockingFindings": [],
+      "runnerSourceAssessment": [
+        "functional-build requires sdk-integrity and Xcode preflight, and calls installer --verify again before actual parity-native build-for-testing. It does not substitute a source-only or link-probe result for the full app.",
+        "Build receipt binds functional source fingerprint, app bundle hash and both compiled XCTest binary hashes; duplicate compiled test copies must agree.",
+        "Before test-without-building, current app/source must match build receipt. Test classes hash their actual loaded executable via Bundle(for:Self.self), and runner rejects absent or mismatched loaded hashes, addressing the prior stale-test-bundle failure.",
+        "Account UI and unit selections are explicit. Nonzero test exit remains failure; logs and result bundle path are retained. Successful commands additionally require unchanged source and app bytes after execution.",
+        "After each successful test command, report provenance is distinguished from actual command exit; failed command logs are retained and cannot become a passed runner check.",
+        "Functional specdrive config keeps three attempts/check, two unchanged/no-progress, ninety-minute wall cap. It declares source, test, script, project and dependency lock inputs; this configuration does not reset or overwrite prior visual phase state.",
+        "real-agc-auth remains a required explicit external-auth check whose current implementation exits blocked. Injected unit tests, owner UI and linked SDK cannot make it pass."
+      ],
+      "additionalSourceCoverage": [
+        "Feedback UI test now edits the actual password and code field in separately named error fixtures, rather than editing email and inferring password behavior. Those fixtures remain explicitly distinct from normal-entry login/navigation tests.",
+        "Normal-entry UI tests still use only a UUID-isolated store and real owner login, persist AI disabled through restart, cancel/confirm local logout, then restore account preferences. They do not assert remote account service success."
+      ],
+      "remainingEvidenceAndLimits": [
+        "No tests/build/app/simulator/browser operations performed by reviewer. Current runtime logs, actual original screenshots, and independent visual inspection remain required.",
+        "AccountModel unit coverage remains injected-provider behavior. Actual service config, email registration/login/reset/deletion and physical-device checks remain separate gaps.",
+        "Checkpoint recovery applies after its atomic persistence succeeds. If the checkpoint write itself fails after remote deletion, in-memory remoteDeletedUID permits an in-session retry; a process crash before any successful checkpoint cannot be claimed as verified recovery.",
+        "Local sign-out filesystem-cleanup-failure branch is present in source but no explicit filesystem-failure assertion was found in AccountBehaviorTests at this snapshot.",
+        "The functional runner is source-reviewed, not itself executed or unit-tested by this reviewer. Its provenance reports do not count as validation until matching current executions exist.",
+        "No previous visual failure is closed: historical 51/53 captures, 8/11 journeys and stale motion test bundle remain unchanged. No merge, release or archive approval."
+      ]
+    }
+  ],
+  "currentCodeVerdict": "PASS_CODE_REVIEW_RUNTIME_PENDING",
+  "runtimeAcceptance": "blocked: model cleanup test failure and current product/source mismatch; no further build performed",
+  "postReviewDeltaNotes": [
+    {
+      "recordedAt": "2026-09-29T16:23:42.470897+00:00",
+      "scope": "Bounded correction to the reviewed build inputs and CI integration; not an additional plan-review round.",
+      "files": [
+        {
+          "path": "apps/ios/project.yml",
+          "sha256": "db5618e2ed1896451e71bd8b4e777f09d0e110ca6005f90234b84de5af798033"
+        },
+        {
+          "path": "apps/ios/Milo.xcodeproj/project.pbxproj",
+          "sha256": "5f4f3b4bdcd9631d5501d972910d499cabe0f4e3082a1621f864010dcfddad34"
+        },
+        {
+          "path": "apps/ios/scripts/functional-native.mjs",
+          "sha256": "9cdc60fc7f05deb76669b55e2c20ae91873efc2ff522e67b4e056d3e081ed01e"
+        },
+        {
+          "path": "apps/ios/specdrive.functional.json",
+          "sha256": "00121e1f33374ab549956a8d7fce635aa08d60be969454fbe9e3d18555aa0c7d"
+        },
+        {
+          "path": ".github/workflows/ios-specdrive.yml",
+          "sha256": "42859a2b8e3bd589ee84a812e69a273a16ca5b7905b00289b557acd7ed5720ee"
+        },
+        {
+          "path": "apps/ios/tests/AccountBehaviorTests.swift",
+          "sha256": "13908b59480705c658981fe92659ca45da43ce567ef7efaa4fe5942e0ed27724"
+        }
+      ],
+      "observations": [
+        "MiloAccountTests sources now names only tests/AccountBehaviorTests.swift. The standalone journal-ai-check.swift harness is no longer implicitly included by scanning the same case-insensitive Tests/tests directory.",
+        "functional-native source fingerprint consistently uses lowercase tests. Existing specdrive.functional.json retains its original Tests and tests input declarations; this local macOS filesystem resolves both to the same directory, and the change does not reset execution history.",
+        "CI now initializes/runs ci-functional and enforces its independent gate with if:always, while retaining ci-parity and its gate. Functional evidence/result bundles and state are uploaded alongside parity evidence.",
+        "No source-level P1/P2 introduced by this limited correction. Runtime status remains pending independent evidence inspection."
+      ],
+      "reportedNotIndependentlyVerified": [
+        "Coordinator reports second full app build passed and 36 coordinator checks passed. Reviewer has not run those checks or inspected their result artifacts here."
+      ]
+    },
+    {
+      "recordedAt": "2026-09-29T16:26:35.262433+00:00",
+      "scope": "Simulator Keychain verification-environment repair; no new plan-review round.",
+      "files": [
+        {
+          "path": "apps/ios/scripts/functional-native.mjs",
+          "sha256": "9cdc60fc7f05deb76669b55e2c20ae91873efc2ff522e67b4e056d3e081ed01e"
+        },
+        {
+          "path": "apps/ios/tests/AccountBehaviorTests.swift",
+          "sha256": "13908b59480705c658981fe92659ca45da43ce567ef7efaa4fe5942e0ed27724"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/keychain-signing-diagnostic.log",
+          "sha256": "bec1099e21a897bffcd14ed4352b7250612752ef98b3d2f6ff13f57ec38313ca"
+        }
+      ],
+      "observations": [
+        "securityd original diagnostic reports OSStatus -34018: neither application-identifier nor keychain-access-groups entitlements on the unit-test host. This corresponds to local Keychain cleanup failure, not proof remote deletion checkpoint called the provider twice.",
+        "functional-native now requires built DTPlatformName=iphonesimulator before applying a SIMULATOR.com.milo.echoes.ios ad-hoc application/keychain identity and get-task-allow; it fails outside simulator or if codesign fails.",
+        "Application hash is computed after signing. Current loaded-test SHA checks and production Keychain error handling are preserved; no test assertion is removed.",
+        "Unit failure assertions now include errorMessage to expose the actual failure reason. First failing runtime result remains failed; rerun result is still required."
+      ],
+      "verdict": "No new source P1/P2 found in this bounded environment repair; runtime pending."
+    },
+    {
+      "recordedAt": "2026-09-29T16:27:33.436069+00:00",
+      "scope": "Final rollback of failed simulator signing experiment, no new review round",
+      "files": [
+        {
+          "path": "apps/ios/scripts/functional-native.mjs",
+          "sha256": "9cdc60fc7f05deb76669b55e2c20ae91873efc2ff522e67b4e056d3e081ed01e"
+        },
+        {
+          "path": "apps/ios/tests/AccountBehaviorTests.swift",
+          "sha256": "13908b59480705c658981fe92659ca45da43ce567ef7efaa4fe5942e0ed27724"
+        }
+      ],
+      "observations": [
+        "Ad-hoc simulator signing experiment failed to launch the app; the source experiment and diagnostic assertion additions were reverted.",
+        "Read-only source fingerprint independently confirms exact restoration to b6d2abc12cc0f22f19b998c2439aabd54dee4641801b350cf2439a97a7d65ecf.",
+        "The current built product hash is still 925baa89342df15a0fb2d576476302b328ca66fa17665c1b219a354c0ed663e6 (experiment product), not the original unsigned passing-UI product.",
+        "Code-only finding closure remains scoped to source. Actual model/runtime acceptance is blocked; the earlier signing note was not runtime approval and its proposed repair is now withdrawn."
+      ],
+      "verdict": "CODE_RESTORED_RUNTIME_BLOCKED"
+    }
+  ]
+}

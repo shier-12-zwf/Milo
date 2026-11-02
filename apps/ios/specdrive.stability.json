@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "limits": {
+    "maxAttemptsPerCheck": 6,
+    "maxNoProgress": 2,
+    "maxWallTimeMs": 5400000
+  },
+  "checks": [
+    {
+      "id": "specification",
+      "argv": [
+        "node",
+        "apps/ios/node_modules/@fission-ai/openspec/bin/openspec.js",
+        "validate",
+        "ios-harmony-product-parity",
+        "--strict",
+        "--no-interactive"
+      ],
+      "inputs": [
+        "openspec/changes/ios-harmony-product-parity"
+      ],
+      "env": {
+        "OPENSPEC_TELEMETRY": "0"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "id": "core-tests",
+      "argv": [
+        "swift",
+        "test",
+        "--package-path",
+        "apps/ios/MiloCore"
+      ],
+      "inputs": [
+        "apps/ios/MiloCore"
+      ],
+      "timeoutMs": 300000
+    },
+    {
+      "id": "ai-coordinator",
+      "argv": [
+        "bash",
+        "apps/ios/scripts/test-journal-ai.sh"
+      ],
+      "inputs": [
+        "apps/ios/App/JournalModel.swift",
+        "apps/ios/App/Account/AIConnection.swift",
+        "apps/ios/MiloCore",
+        "apps/ios/tests/journal-ai-check.swift",
+        "apps/ios/scripts/test-journal-ai.sh"
+      ],
+      "timeoutMs": 120000
+    },
+    {
+      "id": "sdk-integrity",
+      "argv": [
+        "python3",
+        "apps/ios/scripts/install-agc-sdk.py",
+        "--verify"
+      ],
+      "inputs": [
+        "apps/ios/agc-sdk-lock.json",
+        "apps/ios/scripts/install-agc-sdk.py"
+      ],
+      "timeoutMs": 60000
+    },
+    {
+      "id": "native-preflight",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "preflight"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "kind": "preflight"
+    },
+    {
+      "id": "native-build",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "build"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-preflight",
+        "sdk-integrity"
+      ]
+    },
+    {
+      "id": "native-install",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "install"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build"
+      ]
+    },
+    {
+      "id": "native-unit",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "unit"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-launch",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "launch"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-accounts",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "accounts"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-journeys",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "journeys"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 900000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-motion",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "motion"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 900000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-capture",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "capture"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 1800000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    }
+  ]
+}

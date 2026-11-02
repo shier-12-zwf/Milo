@@ -1,0 +1,129 @@
+{
+  "reviewer": "independent specdrive_runtime agent",
+  "verdict": "pass",
+  "scope": "Static implementation and tests review, not native execution or visual acceptance",
+  "findingsAddressed": [
+    "Canonical screenshot and result bundle paths must stay under fingerprinted evidence",
+    "Software keyboard presence asserted",
+    "Minimum iOS simulator and Swift compiler versions checked",
+    "Largest Dynamic Type editor overlap fixed; visible editor intersection and software keyboard are required before typing"
+  ],
+  "nativeAcceptance": "pass for the offline first slice at tested commit e650fef889ae2569a563886d25e489afa6ff2a1b: actual iOS build, six UI tests, independent six-image visual review, and same-state final gate",
+  "sha256": {
+    "apps/ios/App/MiloApp.swift": "d28e273517bcced7002a509f5c7058256390935c3fb3ea382c17325b6a94fa42",
+    "apps/ios/App/JournalView.swift": "c4548852faa75d268123b2dd27f6fa6b2bba3f921001b2d915d3fb25b65a4e08",
+    "apps/ios/App/JournalModel.swift": "e890c450978f0b7f61ba351e9ad4f9800b6a7560571f6b508fb045279bab8b98",
+    "apps/ios/MiloCore/Sources/MiloCore/JournalRepository.swift": "10e2833c31902f12573e18a0ec903ceb19f91ede131081397f3b04bc10e495b3",
+    "apps/ios/MiloCore/Sources/MiloCore/JournalEntry.swift": "1f8a25adb450a485fbbf06bdfd0d5eb05bd6158abb60e4d96ee793d8978b03ec",
+    "apps/ios/MiloCore/Sources/MiloCore/Mood.swift": "b0a62e1f6f926a3f3802ee75f0c4462c8797b6f1c6aaafe29d6420a3a35617de",
+    "apps/ios/MiloCore/Tests/MiloCoreTests/JournalRepositoryTests.swift": "a09e635cd3b61f3e804531c4e9b4443277af8e0b011227773a49197c10fa4d89",
+    "apps/ios/UITests/MiloUITests.swift": "76a5bc62b643c0cb8f0ac897fb303124da954cee75a5ac5192edde15830b9afd",
+    "apps/ios/scripts/verify.mjs": "afa8408a0f7e3857d7fe1c1ee39af872ea52087b513da523341549f9892c6093",
+    ".github/workflows/ios-specdrive.yml": "cb5fa63d9f24e6c07734166e827e20fe1473a3325191ac0513f9ea54fb14cb5f",
+    "apps/ios/scripts/await-review.mjs": "cd6357657a2a228dfc3f2987aec8d953e49fc3d54a67a9295cb4c3114e47c3f5",
+    "apps/ios/scripts/await-review.test.mjs": "543f45922937aeec73318611ee3075cfbf8788a2ef59bc99df8327ce6b50833f"
+  },
+  "followupReview": {
+    "reviewer": "independent runtime_forward_test agent",
+    "verdict": "pass",
+    "scope": "Accessibility layout and interaction assertions (static review); subsequent native and visual results are recorded separately below"
+  },
+  "integrationReview": {
+    "reviewer": "root integration agent, independent of receipt transport author",
+    "verdict": "pass",
+    "scope": "Read-only CI review handoff, exact run and artifact binding, bounded timeout; seven behavior tests executed",
+    "files": [
+      ".github/workflows/ios-specdrive.yml",
+      "apps/ios/scripts/await-review.mjs",
+      "apps/ios/scripts/await-review.test.mjs"
+    ]
+  },
+  "environmentRecoveryReview": {
+    "reviewer": "independent specdrive_runtime agent",
+    "verdict": "pass",
+    "scope": "Bounded boot readiness and same-Xcode Simulator launch after a zero-test XCTest initialization failure (static review)",
+    "runtimeObservation": "Native UI tests executed successfully in cloud runs 36157364558 and 36159042524; this does not guarantee all future simulator starts"
+  },
+  "appearanceReview": {
+    "reviewer": "independent specdrive_runtime agent",
+    "verdict": "pass",
+    "scope": "Debug-only fixture theme override, real resolved environment assertion and nonidentical screenshot assertions (static review)"
+  },
+  "visualReview": {
+    "version": 1,
+    "runId": "36159042524",
+    "headSha": "e650fef889ae2569a563886d25e489afa6ff2a1b",
+    "sourceHash": "020231a34793dcdb91c06fb4e0d3444c7ce1835f8730f6f0727bc191df66e796",
+    "bundle": "ui-test-2026-09-25T16-14-57-409Z.xcresult",
+    "reviewer": "Codex independent visual reviewer /root/runtime_forward_test",
+    "reviewedAt": "2026-09-25T16:30:30Z",
+    "verdict": "pass",
+    "checks": {
+      "keyboardReachable": true,
+      "longChineseText": true,
+      "accessibilityText": true,
+      "lightAppearance": true,
+      "darkAppearance": true
+    },
+    "screenshots": [
+      {
+        "path": "screenshots/AAD51AD6-CC99-402E-8780-A479FD9AF11C.png",
+        "sha256": "795ae53ac10ae9360ebc25003e2e6443e665e00aacdb6218ef8e9d4b24f044fc"
+      },
+      {
+        "path": "screenshots/78B98153-DB1B-48AA-A963-1D9A68439DE2.png",
+        "sha256": "9cfb63cf0164ff15dbfb6176d3ef2274876aeed7905b691f6a121e936375948a"
+      },
+      {
+        "path": "screenshots/DD605181-52D0-4CB0-994B-3577FB6D734D.png",
+        "sha256": "67d6bdc0ebc2f28c9aae0bb26a4daee39fd4220637bc1a6616df5f507049d28e"
+      },
+      {
+        "path": "screenshots/4DC2A7CA-0B19-45AA-86C7-890BD796EA55.png",
+        "sha256": "66551c5b0bb8b4141f40d312719fe9462b4103ba4ae4702a0e49d09d2130c71d"
+      },
+      {
+        "path": "screenshots/131FABAE-A1CA-41EB-B262-8F65462BF0A0.png",
+        "sha256": "3eb9993630e9e8b5b4397c14e52b66e90dc1fa47cefb8a608630c1a340a8ef80"
+      },
+      {
+        "path": "screenshots/84828E0F-6DF9-47C9-99C0-C37BB7638760.png",
+        "sha256": "582d7d829f56164a370fccf25d11557b02cdbf2b6ba642646b35c55ef6443f2b"
+      }
+    ]
+  },
+  "nativeEvidence": {
+    "ciRunId": "36159042524",
+    "url": "https://github.com/horton2048/milo/actions/runs/36159042524",
+    "testedCommit": "e650fef889ae2569a563886d25e489afa6ff2a1b",
+    "sourceHash": "020231a34793dcdb91c06fb4e0d3444c7ce1835f8730f6f0727bc191df66e796",
+    "specdriveRunId": "2026-09-25T16-11-42-317Z-d16682bc",
+    "platform": {
+      "xcode": "16.4",
+      "swift": "6.1",
+      "ios": "18.5",
+      "simulator": "iPhone 16e"
+    },
+    "uiTests": {
+      "executed": 6,
+      "failures": 0
+    },
+    "bundle": "ui-test-2026-09-25T16-14-57-409Z.xcresult",
+    "receiptAcceptedAt": "2026-09-25T16:32:01Z",
+    "sameStateResume": "passed",
+    "fullGate": "passed",
+    "fullGatePassedAt": "2026-09-25T16:32:07Z",
+    "ciConclusion": "success",
+    "ciCompletedAt": "2026-09-25T16:32:25Z",
+    "preservedPriorRuns": [
+      "36153565983",
+      "36155819644",
+      "36157364558"
+    ],
+    "curatedEvidence": "docs/operations/ios-pilot-2026-09-25/verification-summary.json",
+    "localNativeEnvironment": "blocked: full Xcode unavailable; cloud state was not substituted into local evidence",
+    "scopeLimit": "Offline current-mood note, persistence, history and detail only; not full iOS parity, real-device, signing, TestFlight or App Store acceptance",
+    "archiveStatus": "deferred: verification commands still reference the active change path",
+    "revisionLimit": "Subsequent documentation/evidence-only commits do not enlarge native validation beyond the tested source revision"
+  }
+}

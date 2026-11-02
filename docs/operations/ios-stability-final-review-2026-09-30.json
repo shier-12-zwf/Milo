@@ -1,0 +1,2716 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "reviewedAt": "2026-10-01T04:12:00.358467+00:00",
+  "verdict": "PASS_SCOPED_SIMULATOR_STABILITY_NATIVE_REGRESSION_AND_SAMPLED_ORIGINAL_REVIEW",
+  "sourceHash": "9001f33c5a8d8f9257b227474b1c2502fac454581ef6b9eaaade0aa13b749dad",
+  "appHash": "0b43710f67bfd2c085916e0c75af96756be09316dfb48ac373cb49177a2e790c",
+  "expectedUITestHash": "be987cc0308093333b70c9e0b71f36a5b34841f39c5b4a6f2b0610fde5b227ca",
+  "history": [
+    {
+      "path": ".artifacts/ios/stability-20260930/reviews/second-native-review-source-9c878b65.json",
+      "sha256": "d6779fae2f508a15469429896ddc4b90b5b5ed04a1cb7bbecf2167e9c288959c",
+      "verdict": "INCOMPLETE_CAPTURE52_OF53_NEW_REPAIR_PENDING",
+      "sourceHash": "9c878b656966f02006181e4d58dca5714938d724fdae7da962e369568ae79f97"
+    },
+    {
+      "path": "docs/operations/ios-stability-evidence-review-2026-09-30.json",
+      "sha256": "fc49bf9e862f2f4a10153e2050078739f868bf5199728d8cc4105ec048c3dc4e"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "apps/ios/evidence/stability/unit-2026-10-01T03-41-02-467Z.json",
+      "sha256": "7bc36792b5cfc549062b8aff6bbd8525c559e87c3fa8215937d3043bf60e891f",
+      "action": "unit",
+      "log": "apps/ios/evidence/stability/unit-2026-10-01T03-41-02-467Z.log",
+      "logSha256": "afccbd789c526e8f4955fb47956b79e9866b0cc6618d6dd19a0d99d0d37f5725",
+      "loadedTestHash": "666e87518d399a575cda07db4f76d60df43a32b30002a7248797e196b1a2508c",
+      "sourceAppInstalledLoadedLogBindingsVerified": true,
+      "exitCode": 0,
+      "summaryLines": [
+        "Executed 16 tests, with 0 failures (0 unexpected) in 0.027 (0.030) seconds",
+        "Executed 2 tests, with 0 failures (0 unexpected) in 0.022 (0.022) seconds",
+        "Executed 18 tests, with 0 failures (0 unexpected) in 0.049 (0.052) seconds",
+        "Executed 18 tests, with 0 failures (0 unexpected) in 0.049 (0.053) seconds"
+      ]
+    },
+    {
+      "path": "apps/ios/evidence/stability/launch-2026-10-01T03-41-10-059Z.json",
+      "sha256": "e01494b56b9d1b1007809a2b2286b09150ba394694e369f7ecae69440c7bd099",
+      "action": "launch",
+      "log": "apps/ios/evidence/stability/launch-2026-10-01T03-41-10-059Z.log",
+      "logSha256": "b85b6c725264ecf1a2dd76a7349cfb47840bf5f7952ca152edee2c37a8632975",
+      "loadedTestHash": "be987cc0308093333b70c9e0b71f36a5b34841f39c5b4a6f2b0610fde5b227ca",
+      "sourceAppInstalledLoadedLogBindingsVerified": true,
+      "exitCode": 0,
+      "summaryLines": [
+        "Executed 2 tests, with 0 failures (0 unexpected) in 105.363 (105.366) seconds",
+        "Executed 2 tests, with 0 failures (0 unexpected) in 105.363 (105.366) seconds",
+        "Executed 2 tests, with 0 failures (0 unexpected) in 105.363 (105.368) seconds"
+      ]
+    },
+    {
+      "path": "apps/ios/evidence/stability/accounts-2026-10-01T03-43-01-570Z.json",
+      "sha256": "465e490428a33f4cddeba099a410f0e3b6646ba92d22a1bde5fabab753ecf33f",
+      "action": "accounts",
+      "log": "apps/ios/evidence/stability/accounts-2026-10-01T03-43-01-570Z.log",
+      "logSha256": "599fc55e01cd5c169df06808c5b2bea31e3c931e08b711dee3a9bd13782fd590",
+      "loadedTestHash": "be987cc0308093333b70c9e0b71f36a5b34841f39c5b4a6f2b0610fde5b227ca",
+      "sourceAppInstalledLoadedLogBindingsVerified": true,
+      "exitCode": 0,
+      "summaryLines": [
+        "Executed 3 tests, with 0 failures (0 unexpected) in 81.724 (81.725) seconds",
+        "Executed 3 tests, with 0 failures (0 unexpected) in 81.724 (81.726) seconds",
+        "Executed 3 tests, with 0 failures (0 unexpected) in 81.724 (81.726) seconds"
+      ]
+    },
+    {
+      "path": "apps/ios/evidence/stability/journeys-2026-10-01T03-44-29-551Z.json",
+      "sha256": "3a14bf915ff5e334ecb3976a7a0ed4751281c8a8571883784f74e1366390a40f",
+      "action": "journeys",
+      "log": "apps/ios/evidence/stability/journeys-2026-10-01T03-44-29-551Z.log",
+      "logSha256": "57cb83dca3af304ebcbba30431caebe6ee7e712a450999e206130a3fc50a3811",
+      "loadedTestHash": "be987cc0308093333b70c9e0b71f36a5b34841f39c5b4a6f2b0610fde5b227ca",
+      "sourceAppInstalledLoadedLogBindingsVerified": true,
+      "exitCode": 0,
+      "summaryLines": [
+        "Executed 11 tests, with 0 failures (0 unexpected) in 220.619 (220.627) seconds",
+        "Executed 11 tests, with 0 failures (0 unexpected) in 220.619 (220.628) seconds",
+        "Executed 11 tests, with 0 failures (0 unexpected) in 220.619 (220.629) seconds"
+      ]
+    },
+    {
+      "path": "apps/ios/evidence/stability/motion-2026-10-01T03-48-28-373Z.json",
+      "sha256": "3a01de3c40cda01cec7be161803db63f7d8f602446cfdf16f984fb9e7fc30db8",
+      "action": "motion",
+      "log": "apps/ios/evidence/stability/motion-2026-10-01T03-48-28-373Z.log",
+      "logSha256": "6a482ab835b04f27babac50c7ba005f8b445f3f37b2c98e55076ea5c6725ad50",
+      "loadedTestHash": "be987cc0308093333b70c9e0b71f36a5b34841f39c5b4a6f2b0610fde5b227ca",
+      "sourceAppInstalledLoadedLogBindingsVerified": true,
+      "exitCode": 0,
+      "summaryLines": [
+        "Executed 2 tests, with 0 failures (0 unexpected) in 78.570 (78.572) seconds",
+        "Executed 2 tests, with 0 failures (0 unexpected) in 78.570 (78.573) seconds",
+        "Executed 2 tests, with 0 failures (0 unexpected) in 78.570 (78.573) seconds"
+      ],
+      "video": {
+        "path": "apps/ios/evidence/stability/motion-2026-10-01T03-48-28-373Z.mp4",
+        "sha256": "3db143fe81d27ec24d2ffdcc9edae5ba611e8da119905d3290b6ca2281bf68d6",
+        "hashVerified": true,
+        "scope": "Video byte hash checked; temporal original screenshots/probes independently reviewed, not whole-video end-to-end viewing."
+      }
+    },
+    {
+      "path": "apps/ios/evidence/stability/capture-2026-10-01T03-49-55-810Z.json",
+      "sha256": "b773306331bd1a8b246d5b481bf3f9b654f7e0d5af862ca98a937ab9e109daa6",
+      "action": "capture",
+      "log": "apps/ios/evidence/stability/capture-2026-10-01T03-49-55-810Z.log",
+      "logSha256": "ad6290551912cd6ca6c1151ee6c1a9750604de2c79a0624329d0a7bf46c13e2b",
+      "loadedTestHash": "be987cc0308093333b70c9e0b71f36a5b34841f39c5b4a6f2b0610fde5b227ca",
+      "sourceAppInstalledLoadedLogBindingsVerified": true,
+      "exitCode": 0,
+      "passed": 53,
+      "total": 53,
+      "summaryLines": [
+        "Executed 53 tests, with 0 failures (0 unexpected) in 840.074 (840.108) seconds",
+        "Executed 53 tests, with 0 failures (0 unexpected) in 840.074 (840.109) seconds",
+        "Executed 53 tests, with 0 failures (0 unexpected) in 840.074 (840.110) seconds"
+      ]
+    }
+  ],
+  "visualSamples": [
+    {
+      "path": ".artifacts/ios/stability-20260930/launch-verified/7070954D-B5E4-40B3-AF8F-88E69AA1FEFE.png",
+      "sha256": "9d8dfe97d8ec350b2429d6fdaa08dede0a15f9e7d2a4261cc5d2bcef5c799212",
+      "actuallyViewed": true,
+      "observation": "Fifth logged-out cold launch shows complete readable login modes/email/code form."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/launch-verified/CE356437-0722-4535-A5FA-C8F49186DC73.png",
+      "sha256": "e3d781f378b956bbaf3e2ffa98384c724e37a32cb655b6ef194a9c4dc5be6d06",
+      "actuallyViewed": true,
+      "observation": "Actual SpringBoard correctly renders purple planet MILO icon and label."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/launch-verified/A5AB9463-F6F3-4F68-AA02-CBA0B4791BC7.png",
+      "sha256": "93abb3716e0ec395d2563b2939af12336727f54751cc967b66d703472d54e776",
+      "actuallyViewed": true,
+      "observation": "Third background return shows same AI settings view with enabled toggle and separate save action."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/journeys-verified/89610A0E-BBFE-4DA6-995E-91929170E220.png",
+      "sha256": "5666afeb90e3074148313a8fd2c3c98e2e6e8c4b9d09471e7e3f47f29ace2054",
+      "actuallyViewed": true,
+      "observation": "Actual typed last sentence fully visible at largest text above distinct Done/save rows and software keyboard. Caret blink may be off in static frame; live caret assertion passed in matched test."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/journeys-verified/9F6D7E1D-3B20-4621-B8F4-3D8B4F7F08AF.png",
+      "sha256": "27afd6d2b4b97d2ba58132306e365cf1c2d9587133b3935bf37c415a86327218",
+      "actuallyViewed": true,
+      "observation": "Largest-text planet template selected; columns aligned, descriptions and bottom controls unclipped."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/journeys-verified/9A8E4B49-D48C-4F90-B585-A97D78DEF756.png",
+      "sha256": "3a773de36693ff30839d6f6356b5c01b6881572bbbcce85fee36e8bf5afb43c3",
+      "actuallyViewed": true,
+      "observation": "Largest-text orbit template selected; selection does not lift column or overlap actions."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/accounts-verified/403B7358-B284-4F8C-8D0C-C616CA70F7D3.png",
+      "sha256": "e2101eeaaff15e4ef5d49554d2f2e3c1a3cd088916796a02b35cec0932d51605",
+      "actuallyViewed": true,
+      "observation": "AI disabled toggle and saved feedback visible; save button separate."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/accounts-verified/7DD242A6-C7A7-4F67-B9E3-972182944311.png",
+      "sha256": "27bdeae87fcba2d7297ce869b150303235271d758330f94b212de715b0f2aae9",
+      "actuallyViewed": true,
+      "observation": "Normal account entry shows local owner status, avatar, AI setting entry, logout/delete actions."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/journeys-verified/61977831-6922-4509-AB97-2DD99B312F10.png",
+      "sha256": "de8ed1469ff0b31a3044e4f846db407daf99932b21b6bf5ab5bd248316e8770a",
+      "actuallyViewed": true,
+      "observation": "Newly typed present record shows 今天散步很开心, date, mood and create-card action after real workflow."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/motion-verified/24410345-3C81-451A-80C0-446459FE1036.png",
+      "sha256": "70e9b5e872669496e4c3bc80cbba722b8a3717b62beb4a563e0e164057d5e9a6",
+      "actuallyViewed": true,
+      "observation": "Actual background SpringBoard with proper MILO icon."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/motion-verified/2324E6B2-9888-4B8C-9A89-69279F3609E1.png",
+      "sha256": "d607ff05cbe0d3a9b74fd62e8462a89a6d9ab41c4e0f537274e568e5c6fcedde",
+      "actuallyViewed": true,
+      "observation": "Settled resumed word-selection page keeps controls and starfield with advancing current clock probe."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/motion-verified/0D6EDD22-116D-4541-B6D7-A7ADEE943126.png",
+      "sha256": "b93cf6382d85e32341b11f5566c8d68a2ee718f7b38e6474f03b46422f76d895",
+      "actuallyViewed": true,
+      "observation": "Actual iOS Settings Reduce Motion enabled, corroborating real system setting path."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/capture-verified/62883F8D-E5D5-4A3C-8E20-AB0CEB4999DD.png",
+      "sha256": "a610ae13a7b52f4972b47c70a249aed4abd12221842d5c33bb04abd9d388079a",
+      "actuallyViewed": true,
+      "observation": "Largest-text actual bottom7727: ending text 我停下来，记住了这段安静的时间。 fully visible above distinct Done/save rows and real keyboard."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/capture-verified/CD83ECF2-26BD-41D2-B852-934E91484373.png",
+      "sha256": "f165a50af267fbfdc136b7c76c636bded7b657520de8bfd69985132d77230832",
+      "actuallyViewed": true,
+      "observation": "Penultimate largest-text viewport7693.333 confirms actual remaining33.667pt before final bottom; normal clipping of ongoing scroll content is not misreported as final crop."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/capture-verified/53EE549A-5B9B-4659-98CA-A574E36D91B9.png",
+      "sha256": "d384cb95a0d0cbe107fdaff08f90180e3ac913d6499a3146e470ab981cf00a84",
+      "actuallyViewed": true,
+      "observation": "Previously timed-out expanded transcript now bottom9323; last guide bubble and separate generate-card action visible at largest size."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/capture-verified/0B8FD56F-616B-423A-A7A2-33F038F7E0BA.png",
+      "sha256": "41e34f594744085b232e76102a4721b57be34e8024a606f85db8993740d7d7c0",
+      "actuallyViewed": true,
+      "observation": "Previously timed-out long diary now bottom8886; final paragraph, edit diary and collect action visible at largest size."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/normal-icon-desktop-final.png",
+      "sha256": "670feade430ba18c4371708d926e41db251930ebde2d5d45644fd2290986fd26",
+      "actuallyViewed": true,
+      "observation": "Actual SpringBoard has the purple planet MILO icon and label; dedicated test runner icon absent."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/normal-icon-cold-open-final.png",
+      "sha256": "67ee8e63f21e98cef206d26cd8cfafb5748ac50efcd28c2170f8aa0dd92836c3",
+      "actuallyViewed": true,
+      "observation": "Ordinary cold entry restores existing production detail dated 2026-09-26 with readable controls, without fixture content."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/normal-icon-cold-interactive-final.png",
+      "sha256": "eb7303b275befe15a7c654954514993eee49064435833811845add8474a33989",
+      "actuallyViewed": true,
+      "observation": "Normal Back navigation shows two existing 2026-09-26 records in collection."
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/normal-icon-home-final.png",
+      "sha256": "92d0a6604c3ba880ca0aadb7997cbfd2dfc91d60abe0120991165dc036fcda1c",
+      "actuallyViewed": true,
+      "observation": "Normal home after Back shows calm planet, mood labels, primary action and two-record count, without visible overlap."
+    }
+  ],
+  "exports": [
+    {
+      "path": ".artifacts/ios/stability-20260930/launch-verified/manifest.json",
+      "sha256": "4d4f99b3bf77cee7680b64956e8238623dd95dcb444fa69f30fe0e136856c05e",
+      "attachmentCount": 40,
+      "pngCount": 20,
+      "method": "Original xcresult export from third current-source run"
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/accounts-verified/manifest.json",
+      "sha256": "1eabb38b7a735e6f7911a1f310dd72d59f403e6f11c1a77014f5f653a8fdfa14",
+      "attachmentCount": 16,
+      "pngCount": 8,
+      "method": "Original xcresult export from third current-source run"
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/journeys-verified/manifest.json",
+      "sha256": "5290cf3082c36c56c7a870a3c76319a689ee1020fef59c0e0b45b15ce2f68789",
+      "attachmentCount": 37,
+      "pngCount": 26,
+      "method": "Original xcresult export from third current-source run"
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/motion-verified/manifest.json",
+      "sha256": "2e55dd4c3ded7123403b457399a124dbc4d3e555212d127f18504b50fcb708a9",
+      "attachmentCount": 56,
+      "pngCount": 29,
+      "method": "Original xcresult export from third current-source run"
+    },
+    {
+      "path": ".artifacts/ios/stability-20260930/capture-verified/manifest.json",
+      "sha256": "82555fffb2a0fddfc05609013720c2f47e506fa5ef80adfcb1a3a8e84cad94c6",
+      "attachmentCount": 665,
+      "pngCount": 223,
+      "method": "Original xcresult export from third current-source run; failed prior capture-final untouched"
+    }
+  ],
+  "pending": [],
+  "limitations": [
+    "Scoped simulator stability and sampled native visual review only; not complete paired Web/native53-state visual acceptance.",
+    "Account tests include mock-provider/local owner flows. Actual native Keychain tests are real; remote authentication and physical-device acceptance remain separate.",
+    "Adjustment attachments are diagnostics, never automatically continuous coverage.",
+    "Previous failures and review verdicts remain preserved. No test/App/simulator/build actions executed by independent reviewer."
+  ],
+  "signingBuildInstall": {
+    "buildReceipt": "apps/ios/evidence/stability/build-2026-10-01T03-40-54-458Z.json",
+    "sha256": "1e1612c22328d8ba064927970639b29418211c2dedfd8e92bb154dfa5b37fcee",
+    "buildLogHashVerified": true,
+    "signingEvidence": "apps/ios/evidence/stability/signing-2026-10-01T03-40-54-458Z.txt",
+    "signingSha256": "f0be397fe7b9ccc23b9aa633514a9fc5f6763d2ed25106e8401a70d176a3c6b8",
+    "hostRestrictedPermissionsAbsent": true,
+    "simulatedEntitlementsInTEXT": true,
+    "currentSourceProductReadOnlyHashMatch": true,
+    "installReceipt": "apps/ios/evidence/stability/install-2026-10-01T03-41-00-559Z.json",
+    "installSha256": "7599c58a2bdd551ad30ca87ff3fd19e0c516098fa5c0ea4fea04eec8cff5136c",
+    "beforeReceipt": "apps/ios/evidence/stability/install-before-2026-10-01T03-41-00-559Z.json",
+    "beforeSha256": "451285d49d4f2ff4395653b64497c88d7f34e0ef8f4aa76bb02d5ecf9deaf05a",
+    "backup": "apps/ios/evidence/stability/data-backup-2026-10-01T03-41-00-559Z",
+    "allOriginalBackupBytesVerified": true,
+    "allBeforeAfterRecordedHashesEqual": true,
+    "preservedFileCount": 764,
+    "productionMILOFileCount": 3,
+    "containerRenamed": true,
+    "scope": "Documents and Library/Application Support; contains test stores as well as production3 files. NativeKeychain tests separately verify actual Keychain; not all container paths claimed."
+  },
+  "motionEvidence": {
+    "probes": {
+      "motion-resumed-advancing-clock_0_81C5A127-32C9-48DB-8FBB-9A486A9ED450.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/24039F27-A86E-4864-9777-7B2E6293A75D.txt",
+        "sha256": "80b280e8c8687f452f7267dfd97775d3858b5938ccc319e86aa0cabe15aad649",
+        "raw": "{\"time\":12.129400583327516,\"active\":0.0,\"x\":0.5000000000011431,\"y\":0.27804107425057967,\"paused\":0,\"renderReady\":1,\"inactiveDuration\":5.549028458321118,\"clockInstance\":411458371,\"applicationState\":0,\"sceneActive\":1,\"pauseTime\":11.16273391666764,\"resumeTime\":11.16273391666764,\"pauseCount\":1,\"resumeCount\":2,\"touchPeakActive\":0.9978569308078882,\"touchDuration\":0.8107849166699452,\"touchSequence\":3}"
+      },
+      "motion-resumed-clock_0_75A3A6D7-9861-4A86-BBD6-1555C97D12C1.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/C280F2CB-63F9-4515-9720-1B4A643B363F.txt",
+        "sha256": "072b98897fc0c19e3a45efe0b9efaefda7717b9027a6675b89ae7456bd007fd3",
+        "raw": "{\"time\":11.429400583330427,\"active\":0.0,\"x\":0.5000000002453847,\"y\":0.278041074458787,\"paused\":0,\"renderReady\":1,\"inactiveDuration\":5.549028458321118,\"clockInstance\":411458371,\"applicationState\":0,\"sceneActive\":1,\"pauseTime\":11.16273391666764,\"resumeTime\":11.16273391666764,\"pauseCount\":1,\"resumeCount\":2,\"touchPeakActive\":0.9978569308078882,\"touchDuration\":0.8107849166699452,\"touchSequence\":3}"
+      },
+      "motion-fresh-resume-state-clock_0_3878445A-322A-4E44-8CAA-1B801C3472B6.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/4138FC60-8FA1-4060-AB89-ACE1A4C955A4.txt",
+        "sha256": "82b957918760e52f083e497e76682572301d7ccd523661d7a0dda3e4ceb442b5",
+        "raw": "{\"time\":11.296067249999034,\"active\":0.0,\"x\":0.500000000682317,\"y\":0.27804107483125656,\"paused\":0,\"renderReady\":1,\"inactiveDuration\":5.549028458321118,\"clockInstance\":411458371,\"applicationState\":0,\"sceneActive\":1,\"pauseTime\":11.16273391666764,\"resumeTime\":11.16273391666764,\"pauseCount\":1,\"resumeCount\":2,\"touchPeakActive\":0.9978569308078882,\"touchDuration\":0.8107849166699452,\"touchSequence\":3}"
+      },
+      "motion-actual-background-states_0_C701376D-E9E4-4E51-BD1A-B88C017DF13F.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/90DC9824-C47E-4B08-B09A-5D96EF60D001.txt",
+        "sha256": "61c8dd7d898195e756bccedd6829b685189bed59d0ee4ec8e29ede4f29bfaee2",
+        "raw": "original=3, observer=3, springboard=4, iconExists=true, iconHittable=true"
+      },
+      "motion-control-navigated-once-clock_0_A255E667-D718-45CB-9866-5F7C945D1F3B.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/5056AED8-9E12-4437-AAF3-15EC76613FBE.txt",
+        "sha256": "80e7d0b031c74ebaf06a04c12f04d0c36bc9758c003e6cd53a17d055d21d0e4b",
+        "raw": "{\"time\":10.896067250004855,\"active\":1.5552048648403153e-05,\"x\":0.5000000146690502,\"y\":0.2780410867544608,\"paused\":0,\"renderReady\":1,\"inactiveDuration\":0.14798187499400228,\"clockInstance\":411458371,\"applicationState\":0,\"sceneActive\":1,\"pauseTime\":0.0,\"resumeTime\":0.0,\"pauseCount\":0,\"resumeCount\":1,\"touchPeakActive\":0.9978569308078882,\"touchDuration\":0.8107849166699452,\"touchSequence\":3}"
+      },
+      "motion-reduced-after-clock_0_316E0701-5A4C-4DB9-AFDB-B68341FD7DD0.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/77E1B67D-0BF2-4C14-9B25-77BD23BEB22B.txt",
+        "sha256": "368f5e408031e8ad17c709bed642e9ed7a9a0812f083fb4e2bddbc4d63f38410",
+        "raw": "{\"time\":0.0,\"active\":0.0,\"x\":0.5,\"y\":0.5,\"paused\":1,\"renderReady\":1,\"inactiveDuration\":0.1218160416756291,\"clockInstance\":1577002937,\"applicationState\":0,\"sceneActive\":1,\"pauseTime\":0.0,\"resumeTime\":0.0,\"pauseCount\":0,\"resumeCount\":0,\"touchPeakActive\":0.0,\"touchDuration\":0.0,\"touchSequence\":0}"
+      },
+      "motion-reduced-before-clock_0_C383BEC4-03B1-4734-B171-FE9A103DC300.txt": {
+        "path": ".artifacts/ios/stability-20260930/motion-verified/2A60D441-9DD8-4A88-94EA-EB0E29C8FEE2.txt",
+        "sha256": "368f5e408031e8ad17c709bed642e9ed7a9a0812f083fb4e2bddbc4d63f38410",
+        "raw": "{\"time\":0.0,\"active\":0.0,\"x\":0.5,\"y\":0.5,\"paused\":1,\"renderReady\":1,\"inactiveDuration\":0.1218160416756291,\"clockInstance\":1577002937,\"applicationState\":0,\"sceneActive\":1,\"pauseTime\":0.0,\"resumeTime\":0.0,\"pauseCount\":0,\"resumeCount\":0,\"touchPeakActive\":0.0,\"touchDuration\":0.0,\"touchSequence\":0}"
+      }
+    },
+    "assessment": "Same clockInstance411458371; inactiveDuration0.147981875→5.549028458 (>2 increase); pauseTime=resumeTime11.1627339167; pauseCount0→1/resumeCount1→2. Reduced-motion before/after same instance1577002937,time0,active0,paused1 while current navigation assertions pass. Current live touch duration0.81078 and peak0.99786. No Web-motion aesthetic equivalence claim."
+  },
+  "deliveryStageBoundaries": {
+    "currentExecutedScope": "Simulator stability rounds1–3: all six native suites pass on current source/test/App bindings;53 automatedcapture and51 measuredregions verified;16 current originalPNG visual samples inspected. Final normal no-argument icon cold-launch receipt still pending.",
+    "laterUnverifiedStages": [
+      "4 real AGC account service integration",
+      "5 complete53-state paired Web/native visual and aesthetic review",
+      "6 actual iPhone acceptance",
+      "7 real signing/TestFlight/release"
+    ],
+    "planReview": "docs/operations/ios-stability-plan-review-2026-09-30.json",
+    "planReviewSha256": "5ace15464fd4a06ad0d962f2d1771bf4ee48f43c45000910c2472fbf0182f9fb",
+    "planApprovedDoesNotMeanExecuted": true,
+    "prStatus": "draft until complete agreed acceptance"
+  },
+  "captureGeometryReview": {
+    "method": "Raw chronological geometry, same existing progress>0.5/gap<=0.9viewport+1/heightwithin1/topbottomwithin1; diagnostics excluded from coverage order but counted in per-case60 limit. All keyboard raw before/after keys comparedwithin0.5.",
+    "caseCount": 53,
+    "pngCount": 223,
+    "ordinaryCandidatePNGs": 209,
+    "diagnosticAdjustmentPNGs": 14,
+    "measuredRegionCount": 51,
+    "allMeasuredRegionsReachedBottom": true,
+    "keyboardBracketCount": 73,
+    "allKeyboardBracketsMatched": true,
+    "pngIntegrity": "All223 original PNGs have1170x2532 dimensions; allchunkCRC and IDATdecompression checked successfully. This is file integrity, not aesthetic acceptance.",
+    "issues": [],
+    "budgets": [
+      {
+        "case": "ParityCaptureTests/test_account__delete_confirmation()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_account__export()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_account__local()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_account__local__large_text()",
+        "allImages": 7,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_account__password_form()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_account__remote()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__connection_error()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__consent()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__hosted()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__missing_config()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__personal()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__personal__large_text()",
+        "allImages": 8,
+        "diagnosticImages": 1
+      },
+      {
+        "case": "ParityCaptureTests/test_card__orbit_theatre()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_card__planet_letter()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__busy()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__conversation()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__conversation__large_text()",
+        "allImages": 8,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__keyboard()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__offline()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__opening()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_classify__default()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__delete_confirmation()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__missing()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__now()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__past()",
+        "allImages": 5,
+        "diagnosticImages": 1
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__transcript_expanded()",
+        "allImages": 4,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__transcript_expanded__large_text()",
+        "allImages": 24,
+        "diagnosticImages": 3
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__disabled()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__editing()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__enabled()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__long()",
+        "allImages": 7,
+        "diagnosticImages": 2
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__long__large_text()",
+        "allImages": 21,
+        "diagnosticImages": 3
+      },
+      {
+        "case": "ParityCaptureTests/test_home__mood_calm()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_home__mood_joyful()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_home__mood_low()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_home__words_empty()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_home__words_three()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_home__words_three__large_text()",
+        "allImages": 3,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_login__code()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_login__email()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_login__error()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_login__password()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_login__reset()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__empty()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__keyboard_long()",
+        "allImages": 11,
+        "diagnosticImages": 1
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__keyboard_long__large_text()",
+        "allImages": 59,
+        "diagnosticImages": 3
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__written()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_past_time__custom()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_past_time__empty()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_past_time__preset()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_timeline__empty()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_timeline__populated()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      },
+      {
+        "case": "ParityCaptureTests/test_timeline__populated__large_text()",
+        "allImages": 1,
+        "diagnosticImages": 0
+      }
+    ],
+    "regions": [
+      {
+        "case": "ParityCaptureTests/test_account__export()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 380.3333333333333,
+        "maxOffset": 380.33333333333326,
+        "viewportHeight": 539,
+        "totalContentHeight": 919.3333333333333,
+        "maximumActualStep": 207.66666666666666,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/361B9C97-0B78-4C58-AEDF-7F2645BC825A.json",
+            "sha256": "f0f9f7642b5afcdc4ad892a8d7b3eef5ea318e29368ff864d0a82697db66ff62",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/626900AE-54D8-45C0-A1EA-7AB3702B4656.json",
+            "sha256": "8356f15a579f17019e46b5949e0852ffc1eec0aed671b423f2c60c7cc7fdbd83",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0ECC267C-6D1C-4415-9FB9-3D400407F0B4.json",
+            "sha256": "ee9b42fb05db0d4dd78fe3d196054bec46ae6cce6fc64b7d2e127ae978210d84",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_account__local()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 380.3333333333333,
+        "maxOffset": 380.33333333333326,
+        "viewportHeight": 539,
+        "totalContentHeight": 919.3333333333333,
+        "maximumActualStep": 207.66666666666666,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/332D5BE2-84BF-42CB-8E29-3D47937AC26F.json",
+            "sha256": "f0f9f7642b5afcdc4ad892a8d7b3eef5ea318e29368ff864d0a82697db66ff62",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CB0220CC-090F-41CD-93B5-7022F208668C.json",
+            "sha256": "8356f15a579f17019e46b5949e0852ffc1eec0aed671b423f2c60c7cc7fdbd83",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/60E2B999-F544-467D-9472-F73F0E006AD7.json",
+            "sha256": "ee9b42fb05db0d4dd78fe3d196054bec46ae6cce6fc64b7d2e127ae978210d84",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_account__local__large_text()",
+        "region": "page",
+        "coverageImages": 7,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 2404.6666666666665,
+        "maxOffset": 2404.6666666666665,
+        "viewportHeight": 466,
+        "totalContentHeight": 2870.6666666666665,
+        "maximumActualStep": 416.3333333333333,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9C1A5D42-5BA2-45DD-807D-BFAE033A3D12.json",
+            "sha256": "a1c2c21bd78d892081cf51bfefd6c00c154829d95df77f9e7144525abb192502",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/81189BF5-3FC5-4626-B78B-D2F1A6292BEF.json",
+            "sha256": "c9e260f836164683d8d07125227a0d1d45af17a0cc3b9e88f15de8efa79f8d5f",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A857F894-C437-467F-B50E-00D320B21C1D.json",
+            "sha256": "b0f939214850245f8878a5f734ed7f835ca73fafaad89c9995435bab75f9a3d1",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/FAB0BE86-BB81-450E-A2CE-2697B6A0D74B.json",
+            "sha256": "18bd114961db81125b7a4c21c99d7764cda05ed6bd1456cf8f44520619f9aee2",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/32433787-C7E4-47BD-81C0-39E343F0AC15.json",
+            "sha256": "55f6fcfddccb0b41d05719ebb54e6585e2a5d43f5db4ccf59c191fb1ef5d93a2",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/2B185B02-E263-4768-BD59-8009F0076753.json",
+            "sha256": "6d5bc5a30412cb3676cb517eb46780c3f05e31911bd06bfc06f7086ed8f7d50e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/ECF7B02C-8F81-4A16-9324-447628C94ABB.json",
+            "sha256": "b62a12badf2e02315d95d250e20a9a91118756f3a6cae9f1226bdafdc4e9c3e9",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_account__password_form()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 798,
+        "maxOffset": 798,
+        "viewportHeight": 539,
+        "totalContentHeight": 1337,
+        "maximumActualStep": 483,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/BFE74439-6840-4152-A3EA-74B95AC3960B.json",
+            "sha256": "61ae00ff86cbf584faf04921d2f655480b668d62d17e5cd08c5933b39b7294e7",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/748E24E8-7D36-4A32-9A77-F576BF335910.json",
+            "sha256": "6156090fbd4b75e3d8d03d21de3aa65d093e500d0a67a4f790e9eb94968a187b",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/43C2C918-A2BE-41E0-91E5-5253F1B0DA3A.json",
+            "sha256": "ae7dfe27188b63264c3433003933ff563c59cff5e5dda30ab96ca9a166a140ea",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_account__remote()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 393.6666666666667,
+        "maxOffset": 393.66666666666663,
+        "viewportHeight": 539,
+        "totalContentHeight": 932.6666666666666,
+        "maximumActualStep": 215.00000000000003,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7DC33ABE-E400-4066-A009-9D6A9A9CE06E.json",
+            "sha256": "cadbfc30a3098829b22ce45e9913a400d073b7ed686cd2bc2707702698c4fa75",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/90BE36E3-0FC4-47E0-A309-28F3294F87A4.json",
+            "sha256": "8e87d924339e8365d0670e8634ef3e5cf05ae43782fd3460e2b01ee94b8d7465",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/92182776-E2AC-4E40-A7C9-B3F159A1B45F.json",
+            "sha256": "61df560b9508399c2322682750b74d7fac20dab8233f233b9b7d56466ab8c9e5",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__connection_error()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 234.33333333333334,
+        "maxOffset": 234.33333333333326,
+        "viewportHeight": 559.3333333333334,
+        "totalContentHeight": 793.6666666666666,
+        "maximumActualStep": 131.33333333333334,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/EE43A297-80AF-4F8D-A491-A0CB76CE6BDF.json",
+            "sha256": "27a209505d8d73344faf0e108ac9ace28759683b0cc96712f67c3fa22e888758",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/AC230F0F-DFEF-482F-A2FE-6EC1EC6BC196.json",
+            "sha256": "d2116424794e6a5ae30cb70621ea601daab022fd4fddfab8fec55cb2ede1f4da",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9AC2F775-12C9-4049-947F-C0F1FA98C4BB.json",
+            "sha256": "eb0faeb63423dbae4735c177f8608e8b7c3c0b1a54f3004cb87a111f36ba40d7",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__consent()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 202.66666666666666,
+        "maxOffset": 202.66666666666663,
+        "viewportHeight": 591,
+        "totalContentHeight": 793.6666666666666,
+        "maximumActualStep": 111.33333333333333,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/46F85773-3F20-426D-B126-9F89F5695D64.json",
+            "sha256": "0531ae134fc7c6928c420d84af9c322223dce266130fa95d321422a3c8732a63",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/FC9A6A4A-AFE4-468D-83B8-2F0FD75B1F17.json",
+            "sha256": "c146e070a46aad2264ca77262cc60405922997ddee73aeb5522c3c3ad1d2c310",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A08EAC13-500F-4142-8201-8EC19D8CCB19.json",
+            "sha256": "6346c753f63ab52c3dce2b90afc9031c5b0d2e8266d0b1bcc285990f0cdc2af5",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__hosted()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 34.666666666666664,
+        "maxOffset": 34.66666666666663,
+        "viewportHeight": 591,
+        "totalContentHeight": 625.6666666666666,
+        "maximumActualStep": 27.333333333333332,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/288C206C-4A82-4258-A8BD-D5C42A4FD4AF.json",
+            "sha256": "e2f22cfc9853ed277a0f5a742d851d5b0bee803c14093c55df5bef1447bd02b9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/BAEA7DEB-08A2-4D35-BD7C-99FCB9688B02.json",
+            "sha256": "b43d803cdcf52ff84f496c192c9d1ff9a95a314f2d20ab9922ee0f195eef19af",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E373E190-AEE4-43CD-8087-B702BEDD2E50.json",
+            "sha256": "6666acfc833e2ec05f0e2c933bbc2820c640156c0a8693f8d67255dca80d64ac",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__missing_config()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 34.666666666666664,
+        "maxOffset": 34.66666666666663,
+        "viewportHeight": 591,
+        "totalContentHeight": 625.6666666666666,
+        "maximumActualStep": 27.666666666666664,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/34C2DC89-FBBD-48C3-93A4-9F8A40AAB63E.json",
+            "sha256": "e2f22cfc9853ed277a0f5a742d851d5b0bee803c14093c55df5bef1447bd02b9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/162874FE-54AA-4E22-A88E-8FC18DCC440F.json",
+            "sha256": "e0db3084ecb6eb2c4973ee48be212f41ad060491533a2fc1d451283106d49b5b",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/1116D86C-6215-4137-8672-65AFC02DF833.json",
+            "sha256": "6666acfc833e2ec05f0e2c933bbc2820c640156c0a8693f8d67255dca80d64ac",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__personal()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 202.66666666666666,
+        "maxOffset": 202.66666666666663,
+        "viewportHeight": 591,
+        "totalContentHeight": 793.6666666666666,
+        "maximumActualStep": 111.33333333333333,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A628C2D8-9A37-443E-A0FB-EA3B342B047C.json",
+            "sha256": "0531ae134fc7c6928c420d84af9c322223dce266130fa95d321422a3c8732a63",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A63CE729-0BB4-4372-AFE4-C6C1F232F25C.json",
+            "sha256": "c146e070a46aad2264ca77262cc60405922997ddee73aeb5522c3c3ad1d2c310",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/C9E75DAE-98A2-40E6-BC7C-EE73523E8171.json",
+            "sha256": "6346c753f63ab52c3dce2b90afc9031c5b0d2e8266d0b1bcc285990f0cdc2af5",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_ai_settings__personal__large_text()",
+        "region": "page",
+        "coverageImages": 7,
+        "diagnosticImages": 1,
+        "startOffset": 0,
+        "endOffset": 2263.6666666666665,
+        "maxOffset": 2263.6666666666665,
+        "viewportHeight": 526.6666666666666,
+        "totalContentHeight": 2790.333333333333,
+        "maximumActualStep": 473,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/961C1EFD-B968-46D3-83D2-645E7123C028.json",
+            "sha256": "970b7ed605d2f9e52c908fa9b5d2042882c76d42c6e13521ade6ecd78408482a",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A44A99D2-CBAD-4A9B-9A4D-B0481210295D.json",
+            "sha256": "3f7e8fd8779748d1ce22c8572a90946e1b73540200dc592db6f3efb619831222",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/276F2545-4125-43DB-AB8C-CFE36E59C6CF.json",
+            "sha256": "87104fc958e6f14b1cd55361398713cab2f990ac86235270211fd0c2e9ceae3d",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CE121762-DBBC-4EF8-8364-2ECB91442DD3.json",
+            "sha256": "b586bcaf52da0da96425ebe206b6391543e1eae7f9d617a6985db25d9b3a28d5",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3A897C41-C04F-4753-9612-D4DB9CAF006F.json",
+            "sha256": "4b76a306de3716718d86279eca28eda75f9e17edf921412faa2dfc91506d058f",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7847D0EB-906E-4D07-89D7-060EAFEF4A90.json",
+            "sha256": "e3209057da1020d7e4a6c149ef443ae3a40fc5962b7f41e89e33fce98397d122",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/759A7E1F-0D06-4873-A9E9-50A44BB9DA9B.json",
+            "sha256": "098deab103f850f0793fa1ec42075b7b899c4cbab06208d40bedc17ecf7437b8",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/22C5AE10-5DB3-4A80-978D-0C26211CD2C8.json",
+            "sha256": "c35234da8f2ad90beb70f48feea3cd468924566956783739141ac4d2da247e06",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_card__orbit_theatre()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 229.66666666666666,
+        "maxOffset": 229.66666666666663,
+        "viewportHeight": 675,
+        "totalContentHeight": 904.6666666666666,
+        "maximumActualStep": 128.66666666666666,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9560AB71-A844-4BAE-A2A9-061B1AE617C8.json",
+            "sha256": "f5ca6e866310d03390bc910998d69563df18c9975e9cd89ed94a026350d722f1",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/8D2AB2E3-1391-41BC-9C5E-7D4FEA0E287A.json",
+            "sha256": "9a54fa149c17876752f65ba39da609697dd76eb89ecd100c9018308c46949262",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/87578696-B4C2-4EED-94E6-7A27884CDD81.json",
+            "sha256": "34bd28a909c5eb3e1adb3d3889d2322ea470c12bce3bd5c047f0d93ca132f928",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_card__planet_letter()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 199,
+        "maxOffset": 199,
+        "viewportHeight": 675,
+        "totalContentHeight": 874,
+        "maximumActualStep": 111.33333333333334,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/EEEEBD9A-0CC3-4147-A906-938EF593E9EE.json",
+            "sha256": "b12931b1cecc93d029d60bdd5801cac227506b069deff313fc64982d05106c76",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CF2A7186-A321-455E-B92A-7636009CF536.json",
+            "sha256": "af2852f7590b1e15cf01ea1753eb4d45dfef1cc9b27ce76d3e35a9a1d6bbcd31",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/599FE661-0366-4912-B2FC-9D64C46C5CA1.json",
+            "sha256": "17cb8d46a068af1f7107c4befec543d726342dbcd861e033b845bbe2434576a7",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__busy()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 589.6666666666666,
+        "totalContentHeight": 368,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/18506C18-7F98-42C2-80B3-E6CEDB9124D1.json",
+            "sha256": "3ac129d7af109b7f272b369e9c795d4ee903b6c55aca25445b0810b37a247581",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__conversation()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 527.6666666666666,
+        "totalContentHeight": 330,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/6D4B59D4-8CC3-4F02-90C7-A0A36E086976.json",
+            "sha256": "25ce19a14ee28dbf628d067cd7785c276be2cd8dd869eb0d7bbd1965b9854051",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__conversation__large_text()",
+        "region": "page",
+        "coverageImages": 8,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 717.6666666666666,
+        "maxOffset": 717.7777777777777,
+        "viewportHeight": 196.22222222222229,
+        "totalContentHeight": 914,
+        "maximumActualStep": 107.00000000000006,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E5D93BB2-AD5B-4EB9-8178-1545756BF896.json",
+            "sha256": "afd396cfe8179dfbe9f8a819a90bfd63414c99b44d63fb7cefac96348566b7f3",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7494A5F6-792A-48AE-B186-37AE3D63CB33.json",
+            "sha256": "1dc1ef7cba6eaefb317202ce37497bdb9c38a02984a6919b2c9a39c902e07a81",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/47909E95-3491-4BA1-954E-49C881C42192.json",
+            "sha256": "5752ccb2b691dbb799fb29b037e439d6070dec7fb69fdb67bf49fc852cd0dd3e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9C2FBE02-78A6-438C-B839-ACEE67062EF7.json",
+            "sha256": "ee7dff194555f13bc4f1bb2901f213c6830c9e591eecb6006e782d8e84874895",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/8DC6C70D-E510-4AEF-8C04-F099EFD42935.json",
+            "sha256": "644e60d7a6fb515c59a679df3f32cd8211414a34e9204c726d0fa84b30665bce",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D09A750A-A1BB-456E-A268-DA9715007D2B.json",
+            "sha256": "987cd69e1f24c37bf172a99beec9af9b4ed319b6f60bbd212e62dacfc91e3cbe",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/35B6F6FF-7F2C-459F-A5E6-6F2F0CA11836.json",
+            "sha256": "4e5a79de39d0bef64ff5c130141150d1b6077410ca76672f5d7ddf166d42833e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DEC7FB62-87B0-4CB0-A672-06E21DCE22B9.json",
+            "sha256": "24673d22b2825d69ed80b6547a4d89333df98598f372001f586b05cee25e54ca",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__keyboard()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 77.33333333333333,
+        "maxOffset": 77.33333333333334,
+        "viewportHeight": 252.66666666666666,
+        "totalContentHeight": 330,
+        "maximumActualStep": 48.66666666666666,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DA6F3733-8644-49D1-9FF1-0DBD9A712037.json",
+            "sha256": "869e8f8294d2cd520440b6d93d8d6d586b91afe1adcb4e8253db25b40deaae30",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/8F7DEF8E-8603-443D-A19D-FA9F3FF874DD.json",
+            "sha256": "2bcf4d0bc28d3722132031a5421af82abfc291ae9ee1bc343b4c57c9ff2897ee",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/44A237A8-472E-465D-A4CA-DE938DE0826F.json",
+            "sha256": "aa0031d49e8fb031e6a1abd9dd343a7cd1e501497e54b48e5517dded5cac1295",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__offline()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 527.6666666666666,
+        "totalContentHeight": 330,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/5200F465-B13C-468F-B7A6-BE9ABD1508C9.json",
+            "sha256": "25ce19a14ee28dbf628d067cd7785c276be2cd8dd869eb0d7bbd1965b9854051",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_chat__opening()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 589.6666666666666,
+        "totalContentHeight": 162,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E546E994-6832-4E32-B15D-EFCB5DE2E7BD.json",
+            "sha256": "20d0a4f0740cea37c26e7d8b3930192b77cea5e1bf556308e79f44762cd567ff",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_classify__default()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 437.66666666666663,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/49D71A84-61D1-4C06-9756-9344E16D497E.json",
+            "sha256": "0f254d251e914116b86eac9aa8d094153ccb4c7d7d5117cb0734c01911d48c2e",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__now()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 623,
+        "totalContentHeight": 366,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7FA9D9E1-54F1-4C8C-8DFC-A90396CEE28F.json",
+            "sha256": "1357b012c417054a1e782b2af0c8c1d7ad834da06752b0c1b7bb9393627546a1",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__past()",
+        "region": "page",
+        "coverageImages": 4,
+        "diagnosticImages": 1,
+        "startOffset": 0,
+        "endOffset": 1272.6666666666667,
+        "maxOffset": 1272.6666666666665,
+        "viewportHeight": 623,
+        "totalContentHeight": 1895.6666666666665,
+        "maximumActualStep": 554.3333333333334,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/36C399F3-6FB7-4CDE-B7D1-9FCE0B53FF7B.json",
+            "sha256": "3ea1eb666fe4efc2e56f825c2c8836ca47dbe8ebe4c9a95047a909d60ba87838",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F587EFBB-6F72-4D39-88D1-CC5DE476BF1E.json",
+            "sha256": "61c5c8507290e027ed473dc11ab1f15e8941f843b608abef4d04880dc2223dd1",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/93E46FB4-3635-43C1-B026-F118F51EBA89.json",
+            "sha256": "4175763278d3d6b786527a2573242a28151bbd5582d722c96ed40ac8f2d1a686",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/67F2FBFB-360B-41DF-98FB-552D0B7D7F9B.json",
+            "sha256": "5fdb68d22033199221eddb17b5d0eb3de5a2566a834ef6f5c9ffa0c5f39791f9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/979779BF-AEF0-49F4-8375-B1119B86F55B.json",
+            "sha256": "008a7a4a369a81ef54801b286bf16cf2d1a3b52e804e9150ac8cd7990f607ccf",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__transcript_expanded()",
+        "region": "page",
+        "coverageImages": 4,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 1430.6666666666667,
+        "maxOffset": 1430.6666666666665,
+        "viewportHeight": 623,
+        "totalContentHeight": 2053.6666666666665,
+        "maximumActualStep": 554.3333333333334,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F89511C4-8014-4719-93F2-4D6D8BF94FD8.json",
+            "sha256": "cc16d0c817dbc1ac74eef4b059512a772aa4b35b4c23fe69e5a8bea3e99192d6",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B39A64A5-19ED-4E83-856E-F9BED2E6066A.json",
+            "sha256": "64a0a8535d57edbb7b0db30ddb571a13dc222ff09db672bd470feba5d66c4fc2",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/1F7757F8-C768-40C6-BBE2-35ACB46E394F.json",
+            "sha256": "676b36f49837c495e663ab6d4b73261188e322fe576ec6cd33282842c0f6de85",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3E28634D-AF7D-4C88-8E67-03ABD1C5801F.json",
+            "sha256": "fd56812d3fa962f66c68b7d1246c078d59be8820df16c75c568f65d70cdeeac1",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_detail__transcript_expanded__large_text()",
+        "region": "page",
+        "coverageImages": 21,
+        "diagnosticImages": 3,
+        "startOffset": 0,
+        "endOffset": 9323,
+        "maxOffset": 9323,
+        "viewportHeight": 567,
+        "totalContentHeight": 9890,
+        "maximumActualStep": 508.66666666666697,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E3D26A8F-B4A2-4003-894C-D15581EDA26C.json",
+            "sha256": "6a913cece8c18eea3bafa421c0c00b3f3f57a9af63d3f63235a59f8c855e853b",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0F1271B6-0981-44C6-BCC4-43698464C23D.json",
+            "sha256": "b0d5c809508d6b03638d93f6cc0e97ddfa885f4f8f0024063fc80881b93e03c6",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0D33DC08-1347-42BE-A56B-540ECD125A1B.json",
+            "sha256": "1f53cfffd6ed1d5ef9db0249477a8fd93186f6fd5238a5aa57bf84e068faa636",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/AB18BF1A-E0BC-40A9-9C51-BBB2B05A33B4.json",
+            "sha256": "2dc9614fe2a0e35a48fefa70297fb744f7a7bc47cec2a9795334feab33877fb5",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7F55FAEE-BF65-4963-84D7-0A1168BB23DC.json",
+            "sha256": "ead6729bab4346935625552a885c08e039069ee1a0373fb3bf0e0feb679fda60",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0C2A6855-6C71-4095-8753-1363F8D3542A.json",
+            "sha256": "3f82870f25e11466769dd70e30a3245e39b4c7a94691c11fb0a5982084d80958",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/83320004-8046-47E3-B53D-3EFC736BC10E.json",
+            "sha256": "d90f10a3858167d21f35be9e978ec43956b2dc6f318a7626004e5bfa11302d7f",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/48EA4019-1662-45D4-B13E-AA1C2DDDE6DA.json",
+            "sha256": "ab9aa0180e75d7d43f99105802415dc812483a0011edae07ca95efd7e1b07995",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3E648974-71D3-4C6C-8C11-FBF2FCFB8912.json",
+            "sha256": "f7239d232f4c18c7e74ddbf230afa528a560b2dde45638c363e39e0d580c633f",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/2BEE09B3-638F-4987-937E-06277A061E28.json",
+            "sha256": "7d8e0a47fa593e391ec04ef8ae5f9afbbb385aad01166a1ef183ccbb32a6d9c0",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7E7FA634-7762-4A24-A894-CAC8F782D1E0.json",
+            "sha256": "712faa2c94f5898bf1705de7cc9590b46bcd0e6534c0db3782fd43a6ee2293b9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/47889B7E-E72C-41D9-B840-6F6346B58E60.json",
+            "sha256": "a2f3abd9d4260c32c69564b6300b71c2880358f0650256a9b3af083d1a604f2e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/53D2F05A-98E5-4FE9-A3B7-B831A669C693.json",
+            "sha256": "fe4b3bb13a89441d89a8ce0eed6439da6acce000db5abd5d799dcb5cce0c808c",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CB745711-14BF-4977-9112-045520F23393.json",
+            "sha256": "027f750520dccd11d3694a3fa8f3836fa3df2127c903e5494511d2776462e044",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/4ED0165C-8C69-4B68-BD58-E658EE6E7AAC.json",
+            "sha256": "ef8b6b82778c4ee64285bb2d640c8d9d3468ab0168163f4ef864d10acdc1fe53",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/C0A2D2EE-AF35-44CE-8ED2-1833E75C33B9.json",
+            "sha256": "71687ae8843d356720dfd303e770bbf1f02d9ec9963a1a7d8f0bd3077731439e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D41DD3F7-B09A-47A4-9181-FA0258A84208.json",
+            "sha256": "339a9cc462473b29a1a341d03fc3dc8128c6695d5532cfa26850fc254171c268",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7ADA346F-A5B9-4C81-94AC-C0DCCA3F01C0.json",
+            "sha256": "24f3cd2edb92cb428eb304fe16e864077d482df2e9c9eb1740a7131b95be27cd",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B2D73857-EAD3-4134-AE43-F9254D043D8A.json",
+            "sha256": "38685a8cd95c60b777bfab4b95b80e5b5151624acfd6d5e4e93a18245335d381",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B5E85885-36BB-49E5-9341-BB8CCFB847A4.json",
+            "sha256": "bc6b48cfed78933fe727cb01b5d131174cb9e52ec811dbcda1562c5384a634d3",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9DF58F4A-701D-4441-B5D3-EC5A94FAAD0A.json",
+            "sha256": "78aea4860478d26e80ddfa6bec415bd613ac9c2eabef758339f6a683fbe3c06d",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0ECC142D-CC36-4BB7-860E-91BE262E2E60.json",
+            "sha256": "e8514c76107a4a92195e346dd68e11c4c2e73f1e5148abfa939f2f736e0b1435",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/95AA122F-1EA3-4587-832B-11AE6FC64F59.json",
+            "sha256": "2f66949ec1eb74c92c2fe6c13beef1dd9952c8df8273468f6a3d8bef2425b8fc",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A28EBDCE-75C0-49D3-97F1-C3A9B3A29629.json",
+            "sha256": "d9b21aedf9dccc1d378c5acbd95c206da5e80304046213612dc3b1dd61f66eda",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__disabled()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 314.66666666666663,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D0B1F8EB-F602-4A12-86C2-5DBAF6328993.json",
+            "sha256": "5242146d526f2c68af1dd35eb7cff520a2561f186b3e0b1c34e598d9c47aab7d",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__editing()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 642,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/FCD65780-6FC7-4244-BF8F-38A8DB35D273.json",
+            "sha256": "0b7e29d028e6755f1e90ebdfc0ce2db4d60cbfb6ab3c59c291d57322d9378f0a",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__enabled()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 466.3333333333333,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/327DF3A2-6254-46BB-BA9B-64BDF91AE41E.json",
+            "sha256": "762ee38b9009f71584e6c62adf102352a39d9f573202cf1a27e684c712fa9e10",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__long()",
+        "region": "page",
+        "coverageImages": 5,
+        "diagnosticImages": 2,
+        "startOffset": 0,
+        "endOffset": 1603,
+        "maxOffset": 1603,
+        "viewportHeight": 675,
+        "totalContentHeight": 2278,
+        "maximumActualStep": 602.6666666666666,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DEF5EB66-78F6-44C0-9EB8-C74E4F57C541.json",
+            "sha256": "fce91834f7f71af70a5ad57b801b4ee65ce76f4ec312219c11a229d9f2a2d07c",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0730E172-18A9-42D9-9227-9CA9A921D571.json",
+            "sha256": "b435cbec864aa78f650c5f0ffdfe7cdafb2526438b4040d07506b292533df3cb",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/FF93EB4D-60CF-4212-BFF6-1F05CC527042.json",
+            "sha256": "8215d4946f918b3313e3cfdb6242a275782781763620616c6a6d06a8bfe58812",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/21E201CF-0E14-4E68-9005-4F8EB4D395D5.json",
+            "sha256": "064008b8ba8279e3a171539349dc01c9edc51be468cfc0fbcebf1d5319a10773",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/4C005920-FAB8-4D8A-9FC1-9D55F7F4EC7F.json",
+            "sha256": "607c74ff29bd35946959db82a303d1138be5ec0dedbae543449b21483171b000",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/682E85D0-23BC-474E-9D39-4C061E922E44.json",
+            "sha256": "c6c89879986057c884f47e1c55868b78a4249003d9d6305c3d7c178de43b26d6",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/6E36A7F7-C95A-4812-ABF3-8B453CDFEB87.json",
+            "sha256": "11aabc8d9a016d215a4c1672fd50d2770609a60205dff6a2f8a4345855c98d7f",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_diary__long__large_text()",
+        "region": "page",
+        "coverageImages": 18,
+        "diagnosticImages": 3,
+        "startOffset": 0,
+        "endOffset": 8886,
+        "maxOffset": 8886,
+        "viewportHeight": 633.6666666666667,
+        "totalContentHeight": 9519.666666666666,
+        "maximumActualStep": 568.6666666666665,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D9196E77-F719-4550-815F-7D45FF244411.json",
+            "sha256": "c3a0fc89161fdab532116e04e216bcda4b889cfb8f17d18e40529caa3b9b2b60",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/08802FEC-DAD2-4D28-8227-1A3E44D710A3.json",
+            "sha256": "6a9b6d1caeffc23c0cd2c511e159624461f3223f0d946149e00f7aa53c37d1ea",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B67B4F06-CBCD-4082-876C-7296DCB4A4F2.json",
+            "sha256": "7f8ca268bbb727db97f9cf3fb6afab033d0da7051fce6de12130a734360081f8",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/18316D31-3177-40A6-9EF7-E0507D975781.json",
+            "sha256": "b7148f3019e76402c2e99fe30358a381716e0bf459d24d4f5a19b5a7ba63bcef",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7AA27E8F-9559-4DDC-AA47-9EAE1C0D51A6.json",
+            "sha256": "3b3380ebd80e2c3e63e4f387eb6bd705ebb254d717c289d91b5ea40c0549d066",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/4414F79A-D108-48E1-850F-6B2051BAE83E.json",
+            "sha256": "9078f2ecc4faafc37f50de0adee2af772d3e63aaac0ff8fdde864fc782df83af",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0D6ECF64-6F42-4438-A50D-2D67FA372681.json",
+            "sha256": "25abc14485a4b7433676e4ab126e3b1fd214129e5049eccfe299f718604e7acf",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/8421D9C0-379B-424E-8369-1CC3F6109317.json",
+            "sha256": "6445ed01f83b01790bbcc620db7413ebe7b4f024672bee086bac5090df2317de",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/6D7C5E4F-4ACD-43B7-9EF8-568C80562781.json",
+            "sha256": "993cdd6f02f8443033d80e1b53e69660dad0e83e4916a22423885afa11c34189",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DEC7E0A4-99A1-4056-BA41-161966E02D76.json",
+            "sha256": "df4909abbffc62655f364af7ed539fa90e73b96b460be4c950bbae479449bbef",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9EEDA2DD-A2D7-4C4B-894A-561900BF9D5C.json",
+            "sha256": "dc63b2255f9a4eabb619ee5ce2b73e587a506c34d78ee6ff4b2d050973a452ed",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/45DD8CA5-1925-435E-B527-BD61FED9C3D2.json",
+            "sha256": "91b1f40e3348754b8f22a754bb65eb7e7319d477aa320a9a6097e9da062020e0",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3C115E9F-2EDE-45A3-89F9-8575046CAB06.json",
+            "sha256": "4bd8444d3dc6ba557780f9235b2a5c01431849c1c282fe1af24cfb0009609aec",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9302CEB3-2699-463E-BE55-465B61B6FE6F.json",
+            "sha256": "4242008e39e2931578a83a9cdb2cdfa4ed7fc4a9b427eea4052ba61fb70b78cd",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/BE729BBE-2B36-498B-9570-4C78FEC88E93.json",
+            "sha256": "b15fd4b62b532ce207cbd571fe2eeecd1cb3dfcd6357a957ecbde897f6fe46ea",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/55F829DF-1A64-4C99-A77A-765CD1CC1029.json",
+            "sha256": "6209273404ac0e4db9b1863613ee44960477229d7d0bd4077349ad22502bbbc0",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B336D640-3ABF-4C23-89D0-46EED8B93326.json",
+            "sha256": "cfa35ecb6efa28247865940af4b61ef30fcb394cad6d92ecadf24563de67ee25",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9DF0FF3A-B6C6-4419-A1D5-4EAEB7FB408B.json",
+            "sha256": "d7e0a12c56d7e761389c560348fef0d4e4bfcab9303270754d73a65c67d996c1",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3A31F1BE-4898-4291-94AA-E9FEC242BEF6.json",
+            "sha256": "f89192c8072177b234a33b692476d1ecb0e7fb3e0c8c806a6da75cfd707a4ca3",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F589ABC7-9404-425F-A4AD-D734B2F14608.json",
+            "sha256": "ee37cc0a64c8d2e53966a1d6c36f7e72c6e861060bb156a9a85f479f3dbdfd9d",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/19DF5601-E59D-43D1-BB1A-EB6E9FADF2D9.json",
+            "sha256": "b08e263baca07ec4d7d93703046bc5db0f64301d5079b62f38a5a50f4b82f27a",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_home__mood_calm()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 743,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/043047C9-B18C-4858-8D4A-CCE4860FA5A0.json",
+            "sha256": "4de80cd842188239d4462df789cd02c46e9917bc446d5466871c2c830cb8f412",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_home__mood_joyful()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 743,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/840718F7-D402-4E86-A16C-8C2EBAA10410.json",
+            "sha256": "4de80cd842188239d4462df789cd02c46e9917bc446d5466871c2c830cb8f412",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_home__mood_low()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 743,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DE388F3F-CA6D-47C4-995F-BCF0A3DD8373.json",
+            "sha256": "4de80cd842188239d4462df789cd02c46e9917bc446d5466871c2c830cb8f412",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_home__words_empty()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 743,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/016F732A-F70D-4A32-9283-4DBBF36F204A.json",
+            "sha256": "4de80cd842188239d4462df789cd02c46e9917bc446d5466871c2c830cb8f412",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_home__words_three()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 743,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/923CE264-3FF3-4BA5-B17A-3FC28E0F27F5.json",
+            "sha256": "4de80cd842188239d4462df789cd02c46e9917bc446d5466871c2c830cb8f412",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_home__words_three__large_text()",
+        "region": "page",
+        "coverageImages": 3,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 815.6666666666666,
+        "maxOffset": 815.6666666666665,
+        "viewportHeight": 763,
+        "totalContentHeight": 1578.6666666666665,
+        "maximumActualStep": 611.3333333333334,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/FB2121D6-A84D-4046-8EA6-A3C0399C2D0E.json",
+            "sha256": "8b4fce401d59da2ba2c7a18e1028795e1017960f1e651a823271a2a069697e91",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DFA59A6F-9090-4C79-9D55-B92FE6C1446B.json",
+            "sha256": "ac6c99d7ea421b1b57a970672ce2002ee7323315b5923894e9f6b67baec67a7d",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/72BDBADA-5765-447D-B7A1-9C483075C2CA.json",
+            "sha256": "79e0f0708d67201fb09dd11c204e12efbbfdde8e6cd230130b3568b2b634ea00",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_login__code()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 492.3333333333333,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D925D32C-2B5E-434A-8A99-4C894DC25D54.json",
+            "sha256": "778ea4181f654d3c0328c0a7599ad6c23c4d2f01f6e4176dc716f2a3d8eb4dd1",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_login__email()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 493,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B1FEE9B6-96A7-4F13-B977-FD160DD7D1B0.json",
+            "sha256": "30ff6c3869b8a40ae5f15070201af109dd570a4d401db882f015fddb9bd5a1f8",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_login__error()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 548,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/0B73A571-4AF7-4C55-A09F-1799DC7BD229.json",
+            "sha256": "97ded84c37d6d728c7cc6749db8ff87dd47ff45fba9c07196f16b3b9ce59b203",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_login__password()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 603.3333333333333,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/083993CB-843D-4171-8AA6-EBEF339A6BCF.json",
+            "sha256": "8e86d073f2c907ac1ffcea6eb89d391f7469348b6535c0734426ee349cdd739f",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_login__reset()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 763,
+        "totalContentHeight": 582.3333333333333,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/5619F144-9FD2-4D87-8D41-D52B34630107.json",
+            "sha256": "776d951e5cabc4e329fa6c2a62cdb74b5748cec3463699290bcc50ff9c58d6a3",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__empty()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 579,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A2B21253-8FF3-465C-BE48-654D6C63E4AA.json",
+            "sha256": "cf07cd128ee4889285a4121f9b8dd5181d9c9bacc304385478963921aa661038",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__keyboard_long()",
+        "region": "page",
+        "coverageImages": 4,
+        "diagnosticImages": 1,
+        "startOffset": 0,
+        "endOffset": 411,
+        "maxOffset": 411,
+        "viewportHeight": 320,
+        "totalContentHeight": 731,
+        "maximumActualStep": 232,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/85C2FC7C-8986-4843-8D21-EB999877493C.json",
+            "sha256": "407b2fa84f1a020c44426c4ceae507a52e9fd218985cfd2b2334054518de729f",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/83E0C764-2872-4A31-9E28-771724C0E944.json",
+            "sha256": "a8b367e8cdceeb9bd7df0057c37130dd80e25211b8d250de0432fe7d4b2e2207",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/53E8C84E-02B7-46DE-A582-C0CC06ABECF5.json",
+            "sha256": "52997d79649e80285833bc6ea2b4b0c76a40b3d2f602bb33a36685b7582b4fc6",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F4E0E691-91CE-45B2-A77F-A2823B0EE8B1.json",
+            "sha256": "f829bcbc60605e2752e6b60d3353ae0e3491a52143ccc383f9ac99463c334f35",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/45E233E3-9F4D-40C0-B7B3-7D2B42E1C2C4.json",
+            "sha256": "a8b367e8cdceeb9bd7df0057c37130dd80e25211b8d250de0432fe7d4b2e2207",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__keyboard_long()",
+        "region": "editor",
+        "coverageImages": 6,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 955,
+        "maxOffset": 955,
+        "viewportHeight": 272,
+        "totalContentHeight": 1227,
+        "maximumActualStep": 223.33333333333337,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/40F974BC-AE83-48F4-BEDF-35D02A41953C.json",
+            "sha256": "5872773d7130a775fcdd4dc08f8f61d3f3a492302167689281ab6771be90f23c",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F4FFACBA-8C70-4533-9257-AB04ADAD0CC0.json",
+            "sha256": "02ab0b1a61d4643a3506c4df7c9aed3edbf85707a523ed8bd74e2a34e4b21bdc",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D8E6176F-D004-443E-9FEA-CE61B4DFB7F2.json",
+            "sha256": "023404f6dd69363b9656b6aeaf59cc7edd07ca0466d885b64125bcfb9946b4b1",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/2A152EFA-958C-4276-98B3-663733C9E5B4.json",
+            "sha256": "ba2c4d7d75ff7dc9b2d6989798dfcd79e96d6311bda33e0225af9b11fb33c402",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E19F5DE8-673E-405B-8804-4C6430E4C012.json",
+            "sha256": "61fd3295709a6153eba3235eeab6da068e9ed49d10093b70a2cbf0b2b9253502",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/28A18547-691B-4F47-A9B0-B28CF325E97B.json",
+            "sha256": "4bbaa4d169696a1d547e63faee99a56776883ca0664d4215657be84958191c98",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__keyboard_long__large_text()",
+        "region": "page",
+        "coverageImages": 5,
+        "diagnosticImages": 3,
+        "startOffset": 0,
+        "endOffset": 489.6666666666667,
+        "maxOffset": 489.66666666666663,
+        "viewportHeight": 244,
+        "totalContentHeight": 733.6666666666666,
+        "maximumActualStep": 137,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CBE8C4C6-B9E3-469C-A4FC-47D75C5C9247.json",
+            "sha256": "98903a5a57ea2b5bef27c6738fc21416025680878faf80d4ca6833dd470435e9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A8F6F4E1-6995-44A9-98F0-937CE5281F57.json",
+            "sha256": "c853f18b025a4dae3fb97e63aaed56f8a1c8c57876671153e38fe21cdeb5716d",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CD9B8BB9-A5F5-4712-8917-C7E1C191CF2A.json",
+            "sha256": "2028032e83e0c22ccc220fe6ff21f055e678bc7f07de039ff3e28471b7b444c1",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D0046120-BEA9-4BCA-962E-C01A68C07EDD.json",
+            "sha256": "298a2ff6fe2091bee9c1902d6869b1a2bd054de6a35bb3d3e5e6de31c56c222c",
+            "diagnostic": true
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/518922EF-D537-40D7-8568-04546F17FE98.json",
+            "sha256": "c1ec1399a402769fe6274a8160ab93a7e56f72af1ead94685c70440a4e13e678",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D6A10678-1F14-4A53-B6DE-436CAC81E20A.json",
+            "sha256": "3d94d491cc37306200d8596e2f206eee62bc67dac1aa88fa783bed705f8a66ed",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/697CEC76-1B05-41CA-A1C0-3DF8602CC7EF.json",
+            "sha256": "91a9a248d9f016f631217dd095b4a5e5d018ca470a64710436925555cdca6b65",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F5771BB8-97F9-4AAA-8767-2380E731CCBE.json",
+            "sha256": "c853f18b025a4dae3fb97e63aaed56f8a1c8c57876671153e38fe21cdeb5716d",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__keyboard_long__large_text()",
+        "region": "editor",
+        "coverageImages": 51,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 7727,
+        "maxOffset": 7727,
+        "viewportHeight": 196,
+        "totalContentHeight": 7923,
+        "maximumActualStep": 161.00000000000023,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/649E69D8-26C8-41D9-BCDB-806EB369C144.json",
+            "sha256": "f65677fae1b773a8a579661171b10b9e4a501ca09307007190044aa3c1eb8cf0",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/F7A21414-FB51-4E3F-BDD3-CBB8419B7925.json",
+            "sha256": "a53d8d4c912768126accb8e18c091017289541b34deaf0c98e808af476606f2d",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E541977D-1BA7-4EC6-A092-7933212F9B5B.json",
+            "sha256": "e08e56ebd01becd04fc32749c85b912866a4d2d34ce680df0048c10ab7c02a62",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/4DCD9E1D-E5F4-4E94-9328-BFF69C4D6E1B.json",
+            "sha256": "d999305d42f922f22aecff96a2cbf9a9a247c302e6c4d0f6ec3b3c7df2b202dc",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3AC5AFFB-A6D3-4568-8CD9-F6C9D6944789.json",
+            "sha256": "b191d3a2c34a9622c340ea9c19d14e4c004f77f88e79cb090227d511c751eda6",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/05DCAB76-AC3B-428A-BAAA-E35FC0433609.json",
+            "sha256": "173b7597e87336c243cf2c8f966b84ff56b26f7e4ca5253248c97ac76afbb7a8",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/CD35E0CE-4F93-4F2D-9414-D662358E49CA.json",
+            "sha256": "9d66b2589baa6ce6bf780f2135522422537e6cceb46f6e3475a4e3d93308c8c1",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DD4A3AA3-8970-4819-A207-198F78C546F9.json",
+            "sha256": "386a3f0229f64845f0bbe2df98efc874484fbe60b0df67fd800cc190c8924a44",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/501872F1-E950-4B82-9E7D-995B891016D3.json",
+            "sha256": "0655f5f6053923792f5d8e1718d0e51408ba9bde4c9ce291fabbbacc2b44fb16",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E3E1A438-B87F-4ACB-9779-E149450BDFA9.json",
+            "sha256": "93be516f5928c1085e347edef03278c69449aa6a388dd68346d00d9ce4fb6770",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/13139BB4-7E3C-49E9-889D-6439A3EC9019.json",
+            "sha256": "2df3f270cc38ab2aa8a3c5e22294701f36266c5b08839d73f353231999031d85",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/AAFA6DA4-3A20-4962-B65C-8C2EE74BC681.json",
+            "sha256": "8d113c45f45f707423d6ca5fb09382eccc4644802640759f4354b16b36b1210d",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/ED7C534C-157C-405C-AEE8-D32DF7EA7EFE.json",
+            "sha256": "f70ac5712c2fe0371bc03b6c61907dbd9d90d80c78e3fb326125a2f6475c0a1a",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3CE62AE7-3358-433B-905C-08AE35BEF022.json",
+            "sha256": "b1af9b2f7416098731b4c1e64ce8184bd49dd6b1107e4dac23e7dc1e86ffd98b",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/6DC29FC1-C9E2-41F2-B859-0293E13DFCEC.json",
+            "sha256": "4741211612c7c1d8f61578a0333e8b87ab2b35a7a56126309b7a8fd76d4c5fa2",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/C2C32422-9264-4DB9-B01B-2B3D576E3929.json",
+            "sha256": "b1a4942f24c05a962a4c2eb3b6fba9038ca64c2f88ecf9ddcc0a8e2862498565",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/343BFD3B-8174-4E46-BA98-350C27A55BE7.json",
+            "sha256": "6bb3c33caad6acf2d2601e23aebd6520cc9773464a16753fe6104377f03b46e6",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/40466DC4-80BC-4662-8E5C-1CC2A4A08356.json",
+            "sha256": "25824938ba685adb0fc79b93f2858821ebb24ebc03eb841bcdb31e336134efb4",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B31ADE98-0346-4DDA-B665-672D4EAF8F49.json",
+            "sha256": "7f9c5fff0cf06cb05e5a6b9155daddfb9bfae0a7f26cf7d53bde11facea49578",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7511F43E-5B90-4029-9457-22589062D99C.json",
+            "sha256": "a479e167a0154c0bf1468bab1e19797076e271b3634490dc6f6ae6bb9960ec54",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/87F9D94B-0BC0-49E1-8CE8-8636D6202C2F.json",
+            "sha256": "8e81eb658dc5886da5b54bf45cc0fb850632828332e9172a1da2f47f3d97481e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/80F464A5-3294-4265-95B0-022DE16461E8.json",
+            "sha256": "5be4647e9db67afb619c5f594a8c70f3d0718183ee6f638cad9e222fa10764e7",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/1105E997-CCC1-4231-879C-7B8AB6C383FE.json",
+            "sha256": "6d3614be2ec0993480e3de35df6f5d9443cdc04df7f43902abc9256ebb8e0ba4",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/1AC87B07-1B76-4065-8504-C90CA0986A46.json",
+            "sha256": "c2535b1c867b6db11d228b7c73102f4f910831011ba4a3d4c00dbfb496e0c367",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/725B31AE-8E1B-46F9-A11F-F26AEA567F07.json",
+            "sha256": "449ac95436e9c95da279fff95de2f7c128d923aef86f56a492691c690298cbe2",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/2EF3035F-FA46-4AFD-9C7F-21CE9C0E848D.json",
+            "sha256": "e46e150b0d55c6982b037c580f98ccfcb60960301f1037be11ffb9e917b92675",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/91CE4D8C-7B0C-412E-A146-AAC905365BD0.json",
+            "sha256": "1a81af9d16bc8fad362c0a6ea8ff96404a4e390a90c81cd088de90017bf61aee",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/4E8D4072-E8ED-4F9D-AA3F-0D981A812AB6.json",
+            "sha256": "9c4ca0f529438d1825490f938473bd159fddcc7312ad6a257e61753c4ddc37e8",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/5F8F82C6-3CD6-40A1-BDE4-186B18DF1A08.json",
+            "sha256": "53bed687cf44e04f521d62334b2839c6ef8c2da8eabbd6b7add27165a4eeb5d0",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9C0CDFDA-9DE1-4516-A24F-4D89BBAA6E7F.json",
+            "sha256": "c3e31c46a4888406cead73ed8c0e61d2c52de221ca0c7d35ec50dead0cb36a65",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/EEA73884-C91A-4AF9-86AC-49D7CCFA297D.json",
+            "sha256": "3fc143f303896354d468668a2a1f066cbe71d5ea6eb298caa7e5e2c2a965d49e",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B4DE8182-E416-4DDE-B7B5-72C0E8DDC206.json",
+            "sha256": "1b392a7d89265ab16726b280d3dae99bdd0dba4c76050285fcd8c3692dc207f9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/07E4A7A6-61A2-40DA-AF7E-95B171DFA3B2.json",
+            "sha256": "d9d37fbd20d166448ba0b0d0eb8a5c65d0bee9284b30d49937b197690a9c67c9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/08E13FC9-7724-4DD6-90FC-A0F269474556.json",
+            "sha256": "286bee5c2c5fe23b0e9dcd4c7323614402bfe60d40da46ad47c89262a5df3f09",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/766FFCB5-B3C4-44A7-8733-271EABD4FFEE.json",
+            "sha256": "38d15e7bad4358d24a67b7029de89072428c2826a1da431eaed79c2f1e223297",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/70260729-1017-486B-9F64-396927FB8D26.json",
+            "sha256": "64ec55545fad7f6889e3fe29a71055e30836ba3ecbad48b6e365e61a77a9db9c",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/30D30953-FAD4-4CDF-8C5F-112EA19BCA24.json",
+            "sha256": "ed41a0e48868360abf51f2837ed048bad2b407c4652b312f0b77bc983b023193",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/EBC8D51B-11A2-4C21-9D84-662D30C3255E.json",
+            "sha256": "1fa7145b7e033e3a42129a051c909c2f67dee61dc7a2809ebd233c01cd7b0112",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/6364F44B-7A69-4765-A20C-58C721B23E94.json",
+            "sha256": "e8e5358ad2360640e7f7ddfdf0cd6907f93a5c05bc3610296e25ec323387712a",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/22C8E296-6B41-4E8B-B834-72A5067AF140.json",
+            "sha256": "eecaea94316e5b5d957b4d90c8f97796af04613d2357ca0ba72b587b6913c4fb",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/9DC21ED3-ABB8-444D-B381-BD309B18DE5D.json",
+            "sha256": "53159f80fbc51cc3946ed603747860bc2be8b756e3dd6c28bf390c0a075a034f",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/E8963BCF-CC11-4301-A094-A4FF883FA55B.json",
+            "sha256": "5633789e9d547bbe17cb31557f6ac467e01fefe24cb5802a78d65bed2a5dc85c",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/A94CAEFD-4EEB-474D-8440-371935326B2B.json",
+            "sha256": "76c7b032b124eb9cc038e5605cb667ebafc060eaf4dd0a7ddae54213748a3adf",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/C6406544-66F4-463C-A5F3-32041C8AA493.json",
+            "sha256": "f4b0982f51d6aa165ee2b80b623bd7c9890a2a0dfe3f50a01bf8d3549d357ea9",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B5003FA8-5425-4615-8CBD-1DEDFDA3D223.json",
+            "sha256": "b77c22e18de73be458a898e17f1b1ff77df420d87ff3085c13a0508f06ef5647",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/777C9B9D-9A30-4830-A3CC-3C143E5797E5.json",
+            "sha256": "fb806d3fbfbe05006a53ee40fba6c47cb84b76ddb90ac833d15e32a5c0dd8f24",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/8096DC5A-768C-48B3-A37A-DC70E7785569.json",
+            "sha256": "ac095e5451d0cc25ec785fbf4c76c969a99dd329738fac81e100927660d559de",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/254DF057-41D2-4285-B2E6-A7EF2918BF93.json",
+            "sha256": "6f021bb04c2af3c628e01610afa15bab14a14670bebe523176632942dd49011c",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3945AD4D-6765-4C56-9867-23120299FA1E.json",
+            "sha256": "2ddbf60327044b903ae9160c38dc958a3fac806a566e98b176e4d950c9938fec",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/3936956A-1E85-4DC8-AB5E-D4DAD26CD32B.json",
+            "sha256": "e9803383a8acb056deb25720681f6a841770b746319b77d87ec02647c08e7e75",
+            "diagnostic": false
+          },
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/7B2F8841-98C2-4421-A90E-B76DD1126490.json",
+            "sha256": "b8381b5375ad72bf8e68c72554147fb994a27ba2e0de4d73fafe18dd482ecc2e",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_now_note__written()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 579,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/D4AB8FC9-97B6-42E7-8BB7-49D5C3CB1469.json",
+            "sha256": "cf07cd128ee4889285a4121f9b8dd5181d9c9bacc304385478963921aa661038",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_past_time__custom()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 467.66666666666663,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/123F8D9B-3EB0-4634-A2D2-443294ABBF46.json",
+            "sha256": "6e79de8fc4d2329995d504cb96a2c164cda79711c11e5b2109a668ec7c2f9b1a",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_past_time__empty()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 467.66666666666663,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/B6690175-85C0-4648-9BA7-ED278AEB5F33.json",
+            "sha256": "6e79de8fc4d2329995d504cb96a2c164cda79711c11e5b2109a668ec7c2f9b1a",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_past_time__preset()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 675,
+        "totalContentHeight": 467.66666666666663,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/DBC44B2B-5904-4E32-B16D-250036300C50.json",
+            "sha256": "6e79de8fc4d2329995d504cb96a2c164cda79711c11e5b2109a668ec7c2f9b1a",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_timeline__populated()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 711,
+        "totalContentHeight": 164,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/12C403FE-AC76-47F0-9E32-960E9722909E.json",
+            "sha256": "54377d139f95c066d3985558e319b976a62cff9095abafeafd77efce44e16f01",
+            "diagnostic": false
+          }
+        ]
+      },
+      {
+        "case": "ParityCaptureTests/test_timeline__populated__large_text()",
+        "region": "page",
+        "coverageImages": 1,
+        "diagnosticImages": 0,
+        "startOffset": 0,
+        "endOffset": 0,
+        "maxOffset": 0,
+        "viewportHeight": 696.3333333333334,
+        "totalContentHeight": 484,
+        "maximumActualStep": 0,
+        "bottomReached": true,
+        "coverageGapChecksPass": true,
+        "geometry": [
+          {
+            "path": ".artifacts/ios/stability-20260930/capture-verified/703543A4-9DF1-4A33-A79A-2006C182CA50.json",
+            "sha256": "f2196bbb1f86fbb02752aff76e55dfaa563d2e57605fe6fcfcf9b0ce59fea87e",
+            "diagnostic": false
+          }
+        ]
+      }
+    ],
+    "previousFailureClosed": "Largest-text long-note total59 images:page5coverage+3diagnostic/editor51coverage; editor0→7727 actualmax with196viewport and7923content, maxstep161. Final original shows ending text; Done/save/keyboard separate."
+  },
+  "normalOrdinaryColdLaunch": {
+    "receipt": ".artifacts/ios/stability-20260930/normal-icon-cold-final.json",
+    "sha256": "e3e165ee1495bb75c6af6089b6b36b04e221ce9cf56bacfc568363c1b612c447",
+    "observations": {
+      "sourceHash": "9001f33c5a8d8f9257b227474b1c2502fac454581ef6b9eaaade0aa13b749dad",
+      "appHash": "0b43710f67bfd2c085916e0c75af96756be09316dfb48ac373cb49177a2e790c",
+      "device": "EAE7BE56-823B-4B27-93CE-2883A202DC1D",
+      "app": "/Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/0D34D26E-2E00-44EE-8DB9-B5378F28B146/Milo.app",
+      "container": "/Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Data/Application/B258BB55-A583-4A1C-9A6D-27B7836A17AB",
+      "production": {
+        "account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+        "draft.json": "ef18732f45ed61c0e4b2c3e6c04334039fb59a789313ad0698577465a99265ed",
+        "journal.json": "c5c23658ec50d86c12f0f30eafbb68a03b5f5cdbeba58bfbb86e78d27294184d"
+      },
+      "processesBefore": [],
+      "normalColdStart": true,
+      "launchMethod": "CUA actual SpringBoard MILO icon; no simctl launch/no DEBUG fixtures",
+      "runnerRemoved": "com.milo.echoes.ios.uitests.xctrunner",
+      "at": "2026-10-01T04:05:40.108Z",
+      "processAfterColdLaunch": "21060 /Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/0D34D26E-2E00-44EE-8DB9-B5378F28B146/Milo.app/Milo",
+      "productionAfterColdLaunch": {
+        "account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+        "draft.json": "ef18732f45ed61c0e4b2c3e6c04334039fb59a789313ad0698577465a99265ed",
+        "journal.json": "c5c23658ec50d86c12f0f30eafbb68a03b5f5cdbeba58bfbb86e78d27294184d"
+      },
+      "coldDataPreserved": true,
+      "visibleRoute": "Existing production memory detail dated 2026-09-26; actually viewed CUA screenshot",
+      "observedAt": "2026-10-01T04:07:47.810Z",
+      "processAfterInteraction": "21060 /Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/0D34D26E-2E00-44EE-8DB9-B5378F28B146/Milo.app/Milo",
+      "productionAfterInteraction": {
+        "account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+        "draft.json": "6721135b974e05b9f43a436e4e1cb5fa19f176c0cf022ca1d0cbc7ed02d0cc43",
+        "journal.json": "c5c23658ec50d86c12f0f30eafbb68a03b5f5cdbeba58bfbb86e78d27294184d"
+      },
+      "productionRecordAndAccountPreserved": true,
+      "draftChangedByNormalBackNavigation": true,
+      "interaction": "Cold entry restored existing detail; two actual Back taps entered collection and normal home with two prior records.",
+      "images": [
+        {
+          "path": ".artifacts/ios/stability-20260930/normal-icon-desktop-final.png",
+          "sha256": "670feade430ba18c4371708d926e41db251930ebde2d5d45644fd2290986fd26",
+          "actuallyViewed": true
+        },
+        {
+          "path": ".artifacts/ios/stability-20260930/normal-icon-cold-open-final.png",
+          "sha256": "67ee8e63f21e98cef206d26cd8cfafb5748ac50efcd28c2170f8aa0dd92836c3",
+          "actuallyViewed": true
+        },
+        {
+          "path": ".artifacts/ios/stability-20260930/normal-icon-cold-interactive-final.png",
+          "sha256": "eb7303b275befe15a7c654954514993eee49064435833811845add8474a33989",
+          "actuallyViewed": true
+        },
+        {
+          "path": ".artifacts/ios/stability-20260930/normal-icon-home-final.png",
+          "sha256": "92d0a6604c3ba880ca0aadb7997cbfd2dfc91d60abe0120991165dc036fcda1c",
+          "actuallyViewed": true
+        }
+      ],
+      "sameProcessSurvivalSeconds": 127.702,
+      "verdict": "PASS_NORMAL_SPRINGBOARD_COLD_ENTRY_AND_INTERACTION"
+    },
+    "imageHashesVerified": true,
+    "currentProductionFilesMatchPostInteraction": true,
+    "currentSourceProductAndInstalledHashesIndependentlyVerified": true,
+    "provenance": "Root performed actual CUA SpringBoard operation. Independent reviewer read receipt, actually viewed four originals, verified original hashes, current source/product/installed hashes and current production files; did not operate simulator.",
+    "scope": "Cold launch preserves all three production files. Subsequent real Back navigation updates only draft route; account and journal retained. 127.702-second survival is observed window, not indefinite stability."
+  },
+  "runnerFinal": {
+    "report": ".specdrive/stability-20260930/report.json",
+    "sha256": "d9bb1cb2064b19c95858b5d96caed48fb1963b7d3504e07770133339ae65bc54",
+    "state": ".specdrive/stability-20260930/state.json",
+    "stateSha256": "8bfc37c3cfc5f56c9fed7398b301d26f73b3f5e72d9f7814bd44731eb83fb113",
+    "status": "passed",
+    "passed": 13,
+    "total": 13,
+    "reportElapsedMs": 4756793,
+    "stateElapsedMs": 4757146,
+    "limits": {
+      "maxAttemptsPerCheck": 6,
+      "maxNoProgress": 2,
+      "maxWallTimeMs": 5400000
+    },
+    "attemptsAndLatestLogs": [
+      {
+        "check": "specification",
+        "attempts": 2,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "core-tests",
+        "attempts": 1,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "ai-coordinator",
+        "attempts": 1,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "sdk-integrity",
+        "attempts": 1,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-preflight",
+        "attempts": 5,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-build",
+        "attempts": 4,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-install",
+        "attempts": 4,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-unit",
+        "attempts": 3,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-launch",
+        "attempts": 3,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-accounts",
+        "attempts": 3,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-journeys",
+        "attempts": 3,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-motion",
+        "attempts": 3,
+        "latestLogHashVerified": true
+      },
+      {
+        "check": "native-capture",
+        "attempts": 3,
+        "latestLogHashVerified": true
+      }
+    ],
+    "scope": "Current required simulator checks only. Runner readyToArchive does not authorize whole OpenSpec parity archive/release; future external stages remain pending."
+  },
+  "boundedVisualSampleCount": 20,
+  "taskStatusReview": {
+    "path": "openspec/changes/ios-harmony-product-parity/tasks.md",
+    "sha256": "4fd5404bbf9da8cde7fac9be4b2e1171a7e589a49ac0b8042ee1ce05fd99c1f2",
+    "verdict": "CONSISTENT_WITH_SCOPED_EVIDENCE",
+    "observation": "Local stability tasks7.1-7.4 and real current native regressions checked. Full paired visual acceptance, remote account/device and release remain unchecked. Delivery checkboxes await actual PR update; no new plan-review round or budget reset."
+  },
+  "releaseVerdict": "NOT_RELEASE_ACCEPTANCE_PR_REMAINS_DRAFT"
+}

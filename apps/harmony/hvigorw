@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DEVECO_STUDIO_HOME="${DEVECO_STUDIO_HOME:-/Applications/DevEco-Studio.app/Contents}"
+export NODE_HOME="${NODE_HOME:-$DEVECO_STUDIO_HOME/tools/node}"
+export JAVA_HOME="${JAVA_HOME:-$DEVECO_STUDIO_HOME/jbr/Contents/Home}"
+
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+
+# Local device-test credentials must never be packaged as a public release.
+LOCAL_GATEWAY_CREDENTIAL="$PROJECT_ROOT/entry/src/main/resources/rawfile/gateway-credentials.local.json"
+if [[ -e "$LOCAL_GATEWAY_CREDENTIAL" || -L "$LOCAL_GATEWAY_CREDENTIAL" ]]; then
+  RELEASE_REQUESTED=0
+  ASSEMBLE_APP_REQUESTED=0
+  SAW_CLEAN=0
+  ONLY_CLEAN=1
+  EXPECT_OPTION_VALUE=0
+  for argument in "$@"; do
+    case "$argument" in
+      *assembleApp*) RELEASE_REQUESTED=1; ASSEMBLE_APP_REQUESTED=1 ;;
+      *product=release*|*buildMode=release*) RELEASE_REQUESTED=1 ;;
+    esac
+    if [[ "$EXPECT_OPTION_VALUE" == 1 ]]; then
+      EXPECT_OPTION_VALUE=0
+      continue
+    fi
+    case "$argument" in
+      clean|*:clean) SAW_CLEAN=1 ;;
+      --mode|-m|-p|--project-dir|--config|-c) EXPECT_OPTION_VALUE=1 ;;
+      -*|*=*) ;;
+      *) ONLY_CLEAN=0 ;;
+    esac
+  done
+  if [[ "$RELEASE_REQUESTED" == 1 ]] &&
+     [[ "$ASSEMBLE_APP_REQUESTED" == 1 || "$SAW_CLEAN" == 0 || "$ONLY_CLEAN" == 0 ]]; then
+    echo "Refusing release: local device-test gateway credential is not for public release; switch to user authentication before release." >&2
+    exit 1
+  fi
+fi
+
+# HarmonyOS SDK metadata and components are bundled with DevEco Studio under
+# its SDK root. `sdk-pkg.json` lives in `sdk/default`, so the SDK home that
+# hvigor scans must be the parent directory `sdk`.
+SDK_HOME_ROOT="$DEVECO_STUDIO_HOME/sdk"
+BUNDLED_SDK_ROOT="$DEVECO_STUDIO_HOME/sdk/default"
+
+if [[ ! -f "$BUNDLED_SDK_ROOT/sdk-pkg.json" ]]; then
+  echo "DevEco HarmonyOS SDK not found: $BUNDLED_SDK_ROOT" >&2
+  exit 1
+fi
+
+printf 'sdk.dir=%s\n' "$SDK_HOME_ROOT" > "$PROJECT_ROOT/local.properties"
+export DEVECO_SDK_HOME="$SDK_HOME_ROOT"
+export OHOS_SDK_HOME="$SDK_HOME_ROOT"
+export PATH="$JAVA_HOME/bin:$NODE_HOME/bin:$DEVECO_STUDIO_HOME/tools/ohpm/bin:$DEVECO_STUDIO_HOME/tools/hvigor/bin:$BUNDLED_SDK_ROOT/hms/toolchains:$PATH"
+
+exec "$DEVECO_STUDIO_HOME/tools/hvigor/bin/hvigorw" "$@"

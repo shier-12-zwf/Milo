@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "phase": "Simulator stability and delivery",
+  "reviews": [
+    {
+      "round": 1,
+      "reviewedAt": "2026-09-30T16:09:33.503124+00:00",
+      "verdict": "PASS_SCOPED_CODE_REVIEW_RUNTIME_PENDING",
+      "scope": "New stability driver/config/signing/AppIcon and launch/Keychain tests; prior journey/motion/capture assertion diff checked. Separate from plan review round 1.",
+      "files": [
+        {
+          "path": "apps/ios/scripts/stability-native.mjs",
+          "sha256": "6427fc4c73b93e483ce2a80ea8fb38bf93b57d690cfb2c53d76ed75be22cab19"
+        },
+        {
+          "path": "apps/ios/specdrive.stability.json",
+          "sha256": "6f20da1afcde97d7e1f024a07c3a77305bc77fb98df5176cca15d9b05c972f68"
+        },
+        {
+          "path": "apps/ios/project.yml",
+          "sha256": "d80fc2b6a0b761bcc4fcf9031725b21247b61cf6ee67977777b8874e770e0f54"
+        },
+        {
+          "path": "apps/ios/Milo.xcodeproj/project.pbxproj",
+          "sha256": "cbdf9205cfcd03ae5eb9d782f2a9477cdf986e4289ba2ee7ddef8bea7885c08d"
+        },
+        {
+          "path": "apps/ios/UITests/LaunchStabilityTests.swift",
+          "sha256": "9d0619fd86c88aed6282037fcff947f4af94d56e8c1a5e516d56cffe758454d5"
+        },
+        {
+          "path": "apps/ios/tests/NativeKeychainTests.swift",
+          "sha256": "0ce7a3d97107ddf2bc9ca3159c3d5a60d46ecb4014254aac2b6d60415ecee7f1"
+        },
+        {
+          "path": "apps/ios/UITests/TestBundleProvenance.swift",
+          "sha256": "46ee6bcb2be911d2e43f85ac9f4c544b54083057671dd428c46ee420b8e1c7d3"
+        },
+        {
+          "path": "apps/ios/UITests/MiloUITests.swift",
+          "sha256": "e4b067a61ee9d295d95bb4c0806876dd17846abefc7e255d2db8661848bd85ac"
+        },
+        {
+          "path": "apps/ios/UITests/GalaxyMotionTests.swift",
+          "sha256": "5521b74efe0190d77a0015bf2b730b0408a7223ba52ed81e5dea7c8e8f08e24d"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureTests.swift",
+          "sha256": "c9caf3f576f71360e16937b0867322d50ebb50286d421f7994df79d6e9bc25f9"
+        },
+        {
+          "path": "apps/ios/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+          "sha256": "3725fefca1cc2f15dcff52b03b7db47884c8141e5be1d4e559367b76117f8c48"
+        },
+        {
+          "path": "apps/ios/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+          "sha256": "bee95a2b799e1351fb5883503073987f5cbbeebcf68a619d2730ee1a199cc366"
+        }
+      ],
+      "blockingP1P2Findings": [],
+      "assessments": [
+        {
+          "area": "Signing",
+          "result": "No manual signature mutation in new driver. Xcode build-for-testing/test-without-building receive simulator destination and CODE_SIGNING_ALLOWED=YES/CODE_SIGN_IDENTITY=-. Subsequent codesign commands only inspect/verify. Driver rejects restricted application-identifier/keychain-access-groups in the host signature and requires a simulated __entitlements Mach-O section. These assertions still need actual execution; section existence alone does not prove Keychain works."
+        },
+        {
+          "area": "Installation and production data",
+          "result": "simctl install replaces only the app; old/new data container paths must match when an old container exists. Only the separate UI test runner is uninstalled. Current production data values are not reset by this driver. Normal installation launch is explicitly reported as requiring later visible UI confirmation."
+        },
+        {
+          "area": "Build/source/installed/test provenance",
+          "result": "Prepared source and full app hashes must match. Test binaries are hashed from current products, duplicate copies must agree, executing tests print their own Bundle executable hash. Exit/provenance/current source/current product are asserted; installed full bundle fingerprint must match build hash before successful action completion. Fingerprint method uses bundle-relative paths so relocation is comparable."
+        },
+        {
+          "area": "Protected historical evidence",
+          "result": "stability-native writes receipts/logs/results only under apps/ios/evidence/stability and uses new apps/ios/DerivedData/stability. No code path references or writes docs/visual-parity/ios-source-build.json, and imported parity-evidence fingerprint/hash helpers are read-only when imported."
+        },
+        {
+          "area": "Launch tests",
+          "result": "Five unauthenticated and five persisted-owner cold cycles require notRunning before launch, a visible/hittable expected page, two seconds foreground survival and another hittable check. Three settings background cycles assert process survival and retained screen/toggle. UUID-isolated stores remain consistent across restarts and no preauthenticated fixture is used."
+        },
+        {
+          "area": "Real Keychain",
+          "result": "NativeKeychainTests use actual AccountKeychain operations with random directory-derived service, UID and destinations. Assertions cover insert/read/update, account/destination/store isolation, destination and whole-UID deletion, real owner deletion plus restart, retaining other UID data. Cleanup errors fail tests; no Keychain stub/plaintext fallback or swallowed assertion failures."
+        },
+        {
+          "area": "Existing strict checks",
+          "result": "Inspected diffs in MiloUITests, GalaxyMotionTests and ParityCaptureTests only add test bundle provenance to setUp. Existing long-tail, card, reduced-motion and 53 independent capture assertions remain unchanged. The new note-editor implementation itself was outside this limited infrastructure review."
+        },
+        {
+          "area": "Icon",
+          "result": "Actual AppIcon.png viewed individually: opaque purple planet/orbit/star on dark square background with clear safe margins. Metadata inspection confirms 1024x1024 and no Alpha. Universal iOS asset catalog and ASSETCATALOG_COMPILER_APPICON_NAME are connected; built metadata requires AppIcon and Assets.car. Actual SpringBoard rendering is still pending."
+        },
+        {
+          "area": "Execution limits",
+          "result": "New state configuration has six executions per check, two no-progress repeats and 5400000ms active wall limit; all native checks depend on current build/install. No old runner state reset or skills mutation in reviewed files."
+        }
+      ],
+      "remainingExternalEvidence": [
+        {
+          "id": "S-E1",
+          "status": "pending",
+          "description": "LaunchStabilityTests SpringBoard icon tap reactivates the already-running isolated process. It deliberately does not perform a cold no-argument icon launch. Final normal SpringBoard cold launch of the verified installed product remains a separate required observation; do not describe the warm tap as that cold-launch proof."
+        },
+        {
+          "id": "S-E2",
+          "status": "pending",
+          "description": "specdrive.stability.json records executable native checks but has no independent visual-review or final delivery receipt gate. A green runner therefore cannot replace independent image review, final installed preview check, or full 53-state/remote/device requirements. Those are explicitly retained in the plan."
+        },
+        {
+          "id": "S-E3",
+          "status": "pending",
+          "description": "All runtime signing/Keychain/startup/journey/motion/capture results and actual screenshot coverage remain unverified by this code-only review. Report failures without relaxing original assertions."
+        }
+      ],
+      "protectedReference": {
+        "path": "docs/visual-parity/ios-source-build.json",
+        "sha256": "a7120111bdeee3ff7146cfe75f5d85457d72570476c857b8ee3934d062c7e883",
+        "note": "Read-only snapshot of existing user-modified evidence file; no authorization to overwrite."
+      },
+      "notPerformed": [
+        "builds",
+        "tests",
+        "simulator/app/browser operations",
+        "implementation edits",
+        "historical evidence changes"
+      ],
+      "historicalFailuresPreserved": true
+    },
+    {
+      "round": 2,
+      "reviewedAt": "2026-10-01T03:20:08.427491+00:00",
+      "verdict": "PASS_SCOPED_DELTA_RUNTIME_PENDING",
+      "scope": "Second repair: production card clearance, bounded real capture gestures, background observation. Code review only; not visual or final acceptance.",
+      "files": [
+        {
+          "path": "apps/ios/App/Collection/MemoryCardView.swift",
+          "sha256": "a2739a2a202acd0116000107abe54bedd56e218b7a41149959c282e99daaffc5"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureGeometry.swift",
+          "sha256": "02be321c7e296d281edd15b8c1670b22a1e688df53929a7b4e39d91481abba11"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureTests.swift",
+          "sha256": "2d66636813472fdbb5ac9ee8d17c246f00481c19ad93b435172271bf1a3d00da"
+        },
+        {
+          "path": "apps/ios/UITests/LaunchStabilityTests.swift",
+          "sha256": "1744d972fa663a363f1a384d337892730fb49d1f93a54c88501a72bc6d488489"
+        },
+        {
+          "path": "apps/ios/UITests/GalaxyMotionTests.swift",
+          "sha256": "6ca6e6885c9d5d2f91ae571d01f1e25e5b9da047f8b17409e7f666ace099f992"
+        },
+        {
+          "path": "apps/ios/UITests/MiloUITests.swift",
+          "sha256": "e4b067a61ee9d295d95bb4c0806876dd17846abefc7e255d2db8661848bd85ac"
+        }
+      ],
+      "blockingP1P2Findings": [],
+      "assessments": [
+        {
+          "area": "Card production geometry",
+          "result": "MemoryCardView adds 8pt bottom padding around template region. Existing MiloUITests card bound remains strict; no tolerance or expected frame modification. This changes real layout, not the assertion."
+        },
+        {
+          "area": "Capture gestures",
+          "result": "Short public XCTest pan replaces long slow event synthesis; edge remains real screen coordinate. Up to six measured forward/reverse corrections seek an overlapping position. Adjustment originals are retained and each consumes the same total 60-image budget. Actual measured offsets are never rewritten."
+        },
+        {
+          "area": "Preserved capture checks",
+          "result": "All 53 independent cases remain. Largest text setting, top <=1, bottom within1, progress >0.5, gap <=90% viewport +1, stable viewport +/-1, actual keyboard visibility and pre/post screenshot geometry bracket are retained. Exhausted correction/image bounds still fail."
+        },
+        {
+          "area": "Background helper",
+          "result": "Launch and Galaxy synchronize on foreground SpringBoard, actual hittable MILO icon and independent app observer in background/suspended state. Original app and observer states plus desktop original screenshot are saved before assertions. Warm icon return is still not normal no-argument cold launch."
+        },
+        {
+          "area": "Motion lifecycle",
+          "result": "Same clock instance, inactiveDuration increment >2, increasing pause/resume counts, resumeTime==pauseTime at1e-6 and subsequent advancement remain. Settings-based Reduced Motion assertions remain. No lifecycle success is inferred from Home command alone."
+        }
+      ],
+      "evidenceBoundaries": [
+        "Adjustment diagnostic attachments must be distinguished from the monotonic accepted coverage sequence in downstream review; retain originals and budget accounting. No downstream evidence-parser delta was accepted by this review.",
+        "Second-repair runtime results are pending and first-round failures remain historical failures.",
+        "No App/simulator/test/build operations or implementation edits performed by reviewer."
+      ]
+    }
+  ],
+  "implementationDeltaReviews": [
+    {
+      "reviewedAt": "2026-10-01T03:11:34.276085+00:00",
+      "scope": "Install migration backup/byte preservation and available iPhone selection; no new plan round.",
+      "verdict": "PASS_BOUNDED_DATA_PRESERVATION_DELTA_RUNTIME_PENDING",
+      "file": {
+        "path": "apps/ios/scripts/stability-native.mjs",
+        "sha256": "311f816007fcf22ebdc610d21c880a618f8028c9b31d73ab730281dee5d8f921"
+      },
+      "observations": [
+        "persistentFiles inventories every regular file under Documents and Library/Application Support by relative path and SHA256, rejects encountered symlinks and returns deterministic sorted entries.",
+        "Before app replacement, both persistent directories are copied into project-local evidence. Backup inventory must exactly equal the original inventory before simctl install can execute. A mismatch throws and retains the backup; no automatic restore writes into the user container.",
+        "Before-install receipt records original container, inventory and backup path. After installation every original relative file must still have the same hash in the newly resolved container. Extra files are allowed; changed/missing original files fail.",
+        "The content check correctly replaces the incorrect assumption that CoreSimulator data-container UUID/path must never change. The first failed path-based attempt remains historical failure, not rewritten success.",
+        "App install still does not uninstall the product. Installed app bytes must independently match the prepared build before launching.",
+        "Preflight now falls back to any listed available iPhone if no booted/preferred 17e/16e exists; it still requires successful bootstatus and records actual device/runtime."
+      ],
+      "evidenceBoundaries": [
+        "The backup/preservation assertion covers Documents and Library/Application Support only; it does not assert Library/Preferences, Keychain contents or every simulator container file. Native Keychain tests remain separate.",
+        "The initial get_app_container call uses unchecked status and treats empty stdout as no existing container. A zero-file/no-old-container result must not be presented as proof existing data survived unless absence of a previous install is established; positive existing-container inventories support the narrower assertion.",
+        "Copying without stopping a currently writing app can fail exact backup verification; it fails safely before install rather than accepting inconsistent bytes. No live-copy atomicity claim.",
+        "No new build/install/test was executed by the reviewer, and no production data or implementation files were modified."
+      ]
+    },
+    {
+      "reviewedAt": "2026-10-01T03:42:01.123996+00:00",
+      "scope": "Routine final editor capture pan-only repair; no scope or plan change.",
+      "verdict": "PASS_SCOPED_CODE_DELTA_NEW_RUNTIME_PENDING",
+      "files": [
+        {
+          "path": "apps/ios/UITests/ParityCaptureGeometry.swift",
+          "sha256": "23bc64abdf20970c84c55d9a6542ae29ca5a2a55de5dc2c9baf63968d17966be"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureTests.swift",
+          "sha256": "1c75bdb2b9a3e5fefbf1e7967e4146bbaff2ec32f1b34d57db78b77487e1956f"
+        }
+      ],
+      "findings": [],
+      "observations": [
+        "New forwardSpan0.88 applies only editor region and first editor pan as well. Default page/correction pans remain0.6. Coordinate margins for0.88 are6% so gesture starts/ends inside actual measured viewport.",
+        "At measured196pt editor viewport, requested172.48pt pan less observed11–14pt recognition loss predicts158–161pt actual movement; roughly49scroll+1top+8page=58images. Prediction only, actual measurement and bottom remain authoritative.",
+        "Unchanged53 tests, samefixture/textsize, shared60-image budget, actualoffset, same gap<=0.9viewport+1/progress>0.5, screenshot bracket, maximum6corrections and truebottomwithin1. No production editor change in this repair.",
+        "Second run capture-final originals and failure must remain; next native source/installed/test hashes must be freshly bound. Future exports should use *-verified directories."
+      ]
+    }
+  ]
+}

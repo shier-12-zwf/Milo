@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-29T15:23:07.571491+00:00",
+  "motionResult": "failed; latest motion test implementation unverified",
+  "conclusion": "Motion run 3 loaded a retired old MiloUITests bundle, despite the new bundle being compiled and installed. Capture run 3 is independently confirmed to load the current new bundle.",
+  "mechanismLimit": "The retired path and old binary are proven. Why CoreSimulator/XCTest selected that retired bundle is not proven; cache/registration reuse is a hypothesis.",
+  "binaries": {
+    "retiredLoadedByMotion3": {
+      "path": "/Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Library/Caches/com.apple.containermanagerd/Dead/temp.nJjGzo/6F4F858B-6C42-41DD-A181-EE5463CF906F/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests",
+      "sha256": "49e2c4a22108ff663fcc5e06fe322734247e72c18a950d083717c155569381d2",
+      "sizeBytes": 984008,
+      "mtime": "2026-09-29T14:38:07.577426+00:00",
+      "machOUUID": "586ADE89-F8DE-39BF-A8F8-EE2578CB6063",
+      "markers": {
+        "motion-fresh-resume-state": false,
+        "motion-actual-background": false,
+        "motion-system-before-switch": false,
+        "motion-live-text-entry": false
+      }
+    },
+    "currentDerivedData": {
+      "path": "/Users/hut/Projects/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests",
+      "sha256": "57484d5c7413e1a1ee714e97d3fdaa1c4edcde77e2c64ed70a9c30776112c386",
+      "sizeBytes": 1109976,
+      "mtime": "2026-09-29T15:10:32.206500+00:00",
+      "machOUUID": "5BD397B1-CE4E-33CA-9055-290B69CF7ED5",
+      "markers": {
+        "motion-fresh-resume-state": true,
+        "motion-actual-background": true,
+        "motion-system-before-switch": true,
+        "motion-live-text-entry": true
+      }
+    },
+    "currentInstalled": {
+      "path": "/Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/73294D22-423F-4DE9-867E-37E3763A6103/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests",
+      "sha256": "57484d5c7413e1a1ee714e97d3fdaa1c4edcde77e2c64ed70a9c30776112c386",
+      "sizeBytes": 1109976,
+      "mtime": "2026-09-29T15:10:32.206500+00:00",
+      "machOUUID": "5BD397B1-CE4E-33CA-9055-290B69CF7ED5",
+      "markers": {
+        "motion-fresh-resume-state": true,
+        "motion-actual-background": true,
+        "motion-system-before-switch": true,
+        "motion-live-text-entry": true
+      }
+    }
+  },
+  "motion3": {
+    "path": "/Users/hut/Projects/milo/.artifacts/ios/motion-third-diagnostics/0_Test_iPhone 17e_Diagnostics/MiloUITests-46629E62-17C1-4F62-87F1-DBC81AB61166-Configuration-Test Scheme Action-Iteration-1/MiloUITests-F6EDF5B9-7731-4B8B-BD91-14D1E8578B53/Session-MiloUITests-2026-09-29_231453-E00rup.log",
+    "excerpts": [
+      {
+        "line": 66,
+        "text": "    \"activate_suspended\" = 1;"
+      },
+      {
+        "line": 105,
+        "text": "23:14:54.788 xcodebuild[19797:280124] EAE7BE56-823B-4B27-93CE-2883A202DC1D: Launched app with identifier: com.milo.echoes.ios.uitests.xctrunner (pid = 19812)"
+      },
+      {
+        "line": 146,
+        "text": "23:14:56.158 MiloUITests-Runner[19812:280405] Loading test bundle at: file:///Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Library/Caches/com.apple.containermanagerd/Dead/temp.nJjGzo/6F4F858B-6C42-41DD-A181-EE5463CF906F/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/"
+      },
+      {
+        "line": 151,
+        "text": "\t                  testBundleURL:file:///Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Library/Caches/com.apple.containermanagerd/Dead/temp.nJjGzo/6F4F858B-6C42-41DD-A181-EE5463CF906F/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/"
+      }
+    ],
+    "preservedBootstrap": {
+      "path": "/Users/hut/Projects/milo/.artifacts/ios/motion-third-provenance/motion3-session-bootstrap.txt",
+      "sha256": "1cd2ea2dda17c11f64109f055d8d2612aabe647b0d9c5c5d814c6f9347f3b54a",
+      "sourceLines": "1-155"
+    }
+  },
+  "capture3": {
+    "path": "/Users/hut/Projects/milo/apps/ios/evidence/parity/capture-2026-09-29T15-16-20-369Z.xcresult/Staging/1_Test/Diagnostics/MiloUITests-7A0C9A53-553B-44E1-A7A4-C26D3E027460-Configuration-Test Scheme Action-Iteration-1/MiloUITests-0E2E7E8E-2B03-4547-A607-1A37A2FA305E/Session-MiloUITests-2026-09-29_231626-GTctL5.log",
+    "excerpts": [
+      {
+        "line": 66,
+        "text": "    \"activate_suspended\" = 1;"
+      },
+      {
+        "line": 105,
+        "text": "23:16:28.360 xcodebuild[20110:287418] EAE7BE56-823B-4B27-93CE-2883A202DC1D: Launched app with identifier: com.milo.echoes.ios.uitests.xctrunner (pid = 20134)"
+      },
+      {
+        "line": 146,
+        "text": "23:16:29.804 MiloUITests-Runner[20134:287791] Loading test bundle at: file:///Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/73294D22-423F-4DE9-867E-37E3763A6103/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/"
+      },
+      {
+        "line": 151,
+        "text": "\t                  testBundleURL:file:///Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/73294D22-423F-4DE9-867E-37E3763A6103/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/"
+      }
+    ],
+    "runnerPID": 20134,
+    "liveLsofObservedAt": "2026-09-29T15:23:07.686438+00:00",
+    "liveLsofLines": [
+      "MiloUITes 20134  hut  txt      REG               1,15    1109976            12938654 /Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Bundle/Application/73294D22-423F-4DE9-867E-37E3763A6103/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests"
+    ],
+    "preservedBootstrap": {
+      "path": "/Users/hut/Projects/milo/.artifacts/ios/motion-third-provenance/capture3-session-bootstrap.txt",
+      "sha256": "e5657102c00c7b525278d4203ec375d889b0db1701e87d6a85d15f358ff1920a",
+      "sourceLines": "1-155"
+    }
+  },
+  "nextPhaseRecommendation": [
+    "After all current capture jobs finish, explicitly stop the stale UI test runner, uninstall only its com.milo.echoes.ios.uitests.xctrunner package, and install the freshly built runner; do not erase app data.",
+    "If stale runner registration remains, shut down and boot the dedicated simulator before the next authorized test phase.",
+    "For every test receipt, bind app binary/source hashes AND UI test bundle hash/Mach-O UUID, xctestrun hash, actual loaded bundle path, and result bundle. Fail provenance before claiming functional verification when loaded test bundle differs.",
+    "Keep motion run 3 failed and motion behavior unverified until a separately authorized fresh runner test passes. No fourth run performed here."
+  ],
+  "localEvidencePath": ".artifacts/ios/motion-third-provenance.json",
+  "preservedOldBinary": {
+    "path": "/Users/hut/Projects/milo/.artifacts/ios/motion-third-provenance/MiloUITests-retired-49e2c4a2",
+    "sha256": "49e2c4a22108ff663fcc5e06fe322734247e72c18a950d083717c155569381d2"
+  },
+  "build3": {
+    "path": "/Users/hut/Projects/milo/apps/ios/evidence/parity/build-2026-09-29T15-10-16-312Z.log",
+    "compileExcerpts": [
+      {
+        "line": 160,
+        "text": "SwiftCompile normal arm64 Compiling\\ GalaxyMotionTests.swift /Users/hut/Projects/milo/apps/ios/UITests/GalaxyMotionTests.swift (in target 'MiloUITests' from project 'Milo')"
+      },
+      {
+        "line": 161,
+        "text": "SwiftCompile normal arm64 /Users/hut/Projects/milo/apps/ios/UITests/GalaxyMotionTests.swift (in target 'MiloUITests' from project 'Milo')"
+      }
+    ]
+  }
+}

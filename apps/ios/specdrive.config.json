@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "limits": {
+    "maxAttemptsPerCheck": 5,
+    "maxNoProgress": 2,
+    "maxWallTimeMs": 1800000
+  },
+  "checks": [
+    {
+      "id": "specification",
+      "argv": [
+        "node",
+        "apps/ios/node_modules/@fission-ai/openspec/bin/openspec.js",
+        "validate",
+        "ios-offline-journal",
+        "--strict",
+        "--no-interactive"
+      ],
+      "inputs": [
+        "openspec/changes/ios-offline-journal",
+        "openspec/config.yaml",
+        "apps/ios/package-lock.json"
+      ],
+      "env": {
+        "OPENSPEC_TELEMETRY": "0"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "id": "framework-tests",
+      "argv": [
+        "node",
+        "--test",
+        ".agents/skills/specdrive/tests/runner.test.mjs"
+      ],
+      "inputs": [
+        ".agents/skills/specdrive/scripts",
+        ".agents/skills/specdrive/tests"
+      ],
+      "timeoutMs": 120000
+    },
+    {
+      "id": "portable-core",
+      "argv": [
+        "swift",
+        "test",
+        "--package-path",
+        "apps/ios/MiloCore"
+      ],
+      "inputs": [
+        "apps/ios/MiloCore/Package.swift",
+        "apps/ios/MiloCore/Sources",
+        "apps/ios/MiloCore/Tests",
+        "apps/ios/MiloCore/Package.resolved"
+      ],
+      "timeoutMs": 600000
+    },
+    {
+      "id": "xcode-environment",
+      "kind": "preflight",
+      "argv": [
+        "node",
+        "apps/ios/scripts/verify.mjs",
+        "xcode-preflight"
+      ],
+      "inputs": [
+        "apps/ios/scripts/verify.mjs"
+      ],
+      "timeoutMs": 60000,
+      "maxAgeMs": 86400000
+    },
+    {
+      "id": "ios-build",
+      "dependsOn": [
+        "xcode-environment"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/verify.mjs",
+        "build"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore/Package.swift",
+        "apps/ios/MiloCore/Package.resolved",
+        "apps/ios/MiloCore/Sources",
+        "apps/ios/MiloCore/Tests",
+        "apps/ios/Resources",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/evidence/environment.json"
+      ],
+      "timeoutMs": 600000
+    },
+    {
+      "id": "ios-ui",
+      "dependsOn": [
+        "ios-build"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/verify.mjs",
+        "ui-test"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore/Package.swift",
+        "apps/ios/MiloCore/Package.resolved",
+        "apps/ios/MiloCore/Sources",
+        "apps/ios/MiloCore/Tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/evidence/environment.json"
+      ],
+      "timeoutMs": 900000
+    },
+    {
+      "id": "visual-review",
+      "dependsOn": [
+        "ios-ui"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/verify.mjs",
+        "visual-review"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/MiloCore/Package.swift",
+        "apps/ios/MiloCore/Package.resolved",
+        "apps/ios/MiloCore/Sources",
+        "apps/ios/MiloCore/Tests",
+        "apps/ios/Resources",
+        "apps/ios/UITests",
+        "apps/ios/scripts",
+        "apps/ios/project.yml",
+        "apps/ios/evidence"
+      ],
+      "timeoutMs": 30000
+    }
+  ]
+}

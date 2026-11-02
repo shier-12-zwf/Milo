@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "reviewer": "ios_parity_core",
+  "independence": "审查者未实现 RecallViews；本次只查看原始截图与附件索引，不修改应用或测试源码。",
+  "repositoryRoot": "/Users/hut/Projects/milo-ios-validation",
+  "scope": "视觉修复第三轮的两张 iOS 最大字号编辑截图。",
+  "result": "limited-ios-visual-review",
+  "manifest": "apps/ios/evidence/parity/visual-repair-3-images/manifest.json",
+  "images": [
+    {
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/05760B26-5649-4545-B6E7-A7488459D176.png",
+      "sha256": "552ca5469f230a5203ab1b6142aa0bdf4c5589c451e47a4a7974941b10ee8916",
+      "viewedOriginal": true,
+      "dimensions": { "width": 1170, "height": 2532 },
+      "sourceTest": "MiloUITests/testLargeTextEditorTailRemainsVisibleAndPersists()",
+      "attachmentName": "large-text-editor-actual-tail_0_E6B6537F-BF76-4C08-90E4-C33F6EEDDC85.png",
+      "observations": {
+        "textTail": "实际输入的末句“这里是实际输入的最后一句。”完整分为三行显示，末尾句号可见；没有被编辑框底边或收藏栏裁掉。上方“间。”是前文尾部，不影响末句完整性。",
+        "caret": "此静态帧未能清楚辨认插入光标，不能从截图确认其可见位置，也没有足够证据判断光标被裁切。",
+        "keyboard": "系统键盘完整位于底部，未侵入编辑框或遮住两个操作按钮。",
+        "actions": "“收藏这一刻”按钮整行清晰，处于编辑框下方；“完成编辑”按钮位于其下方、键盘上沿之上，文字和轮廓均完整，两者互不重叠。",
+        "quality": "最大字号下文字保持较大可读尺寸，输入内容和主要操作的层次清楚。此帧未发现确定的 P1/P2 文字遮挡。"
+      }
+    },
+    {
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/1B956020-0C1A-4D0C-ADD2-BE52499F68EB.png",
+      "sha256": "867aaf6653d2f2efb6db1173988d7afd6c69d2ce9ae8c1a5e4d3870474e4113d",
+      "viewedOriginal": true,
+      "dimensions": { "width": 1170, "height": 2532 },
+      "sourceTest": "MiloUITests/testLargeTextKeyboardKeepsSaveReachable()",
+      "attachmentName": "now-note--keyboard-long--large-text--keyboard_0_065A66CE-4BE0-4A10-8272-8C10D3F8DC1D.png",
+      "observations": {
+        "textTail": "可见内容包含“大字号输入也要保留下来。”及其后的“路，风很温”。这是长文中段视口，不能证明整篇长文末尾已经展示。可见行未与下方收藏栏重叠。",
+        "caret": "此静态帧未能清楚辨认插入光标；不能据此确认光标位置或裁切情况。",
+        "keyboard": "键盘完整显示，位于操作栏下方，没有覆盖“完成编辑”。",
+        "actions": "“收藏这一刻”和“完成编辑”均完整显示，最大字号文案没有省略、挤出边框或相互遮挡。",
+        "quality": "此帧支持键盘打开时操作栏仍可见的视觉结论；未发现确定的 P1/P2 操作栏遮挡。"
+      }
+    }
+  ],
+  "findings": [],
+  "unverified": [
+    "光标会闪烁，两张静态帧未提供可辨认的光标像素；原生几何断言与静态视觉证据应分别记录，不能互相替代。",
+    "静态截图只证明当前帧的位置和显示，不能单独证明按钮可点击、数据持久化或全部滚动过程无问题。",
+    "第二张图不是全文末尾；第一张只确认其实际输入末句可见，不替代 53 状态所需的完整滚动覆盖。"
+  ],
+  "coverageLimits": {
+    "viewedImages": 2,
+    "platform": "iOS simulator only",
+    "harmonyComparison": "not-assessed-no-paired-harmony-images",
+    "physicalIPhone": "not-assessed",
+    "new53StateCollection": "not-complete",
+    "collectionBlocker": "本轮截图采集在 login--email 缺少几何 probe 处停止；两张 journey 附件不能代替新版 53 状态完整采集。",
+    "pairedReview": "53 paired cases remain pending; no cross-platform PASS or final aesthetic acceptance is asserted."
+  }
+}

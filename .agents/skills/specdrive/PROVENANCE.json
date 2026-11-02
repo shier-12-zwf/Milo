@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/horton2048/specdrive",
+  "sourceCommit": "b043533bb5ceea393f989408879c1f556914db93",
+  "pullRequest": "https://github.com/horton2048/specdrive/pull/1",
+  "installedAt": "2026-09-25",
+  "note": "Pinned source snapshot. Only skill, runner, tests and referenced documentation are vendored; upstream examples and CI are not needed to execute the skill.",
+  "sha256": {
+    "LICENSE": "413c663b9ea1ffb1d5c7ba42171009ad9bca9a1a5935629d3d07d1ca5ccaf80d",
+    "README.md": "da34255b5b3dd6b60262f9f03f3a7ffcde6837cd128f288125713ec7a1defd60",
+    "SKILL.md": "9d1863ec975bb876a719184b2e4c67880db61b1506bfba0aff76d01ba609bc9e",
+    "SKILL.zh.md": "9f65c090368f8cabc48e15d997e87c9d0da6ceb8d468f4bf88a56c959a18e1a3",
+    "docs/validation-2026-09-25.md": "88491c9c9241de57d311988ea8a6fe17661ddaaa25004b0644f9e8f5abf43b01",
+    "package.json": "dc36e1e942a0d0b56825586f73b3cdbcf0b710a4d753004bd58b03964780e967",
+    "references/ios.md": "60364ac88dd1b4ccd8af6ba3deee2e0ec049cfb158b4af2c0d7ff11a67a8ba57",
+    "references/runtime.md": "f2f7ffae8c571db37f6e66b9982db2c90746d7dd55d39c2c0d1707198861a944",
+    "references/workflow.md": "3aef9e3f572e93606096337e80ed4b664ed460492c10bba100bcc0dc534530a7",
+    "scripts/specdrive.mjs": "d590d58ca970415b2b982aab7b73dbac8d801657055dcd832c634d3bfb7398ce",
+    "tests/runner.test.mjs": "83b020b3710b9c0e490389f38f65abba722da1c148e8607c6b6e2f4aea0a9994"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "kind": "independent-planning-review",
+  "reviewer": "/root/ios_parity_gap",
+  "round": 2,
+  "reviewedAt": "2026-09-26T06:28:30.014050+00:00",
+  "verdict": "pass",
+  "implementationMayProceed": true,
+  "scope": "Planning and acceptance coverage only. This passes the planning gate and permits implementation within existing user authorization; it is not runtime, screenshot, product-completion or external-service acceptance.",
+  "artifacts": {
+    "openspec/changes/ios-harmony-product-parity/.openspec.yaml": "062e545e250441aa0692c22d7a65e07334f1c0f2e706c0e297f36065b6a0699c",
+    "openspec/changes/ios-harmony-product-parity/design.md": "7e7d7ad494e842d66ece8466208bc2d9c0d9caea0c122569986873c792c36b9a",
+    "openspec/changes/ios-harmony-product-parity/proposal.md": "384d96ad8a160f149baa1f2d4ec292135f4307e7875c094162f7a5f8e22bfbf6",
+    "openspec/changes/ios-harmony-product-parity/specs/cross-platform-visual-acceptance/spec.md": "931ac438877ed6fa793f0404d052e78fad30a32ae7fea9a25a2b34d3642dfb3b",
+    "openspec/changes/ios-harmony-product-parity/specs/ios-product-parity/spec.md": "8dcb483f2fd720549aa5ab60f8af854424922ab579edd77e89f30ad850f3ca7b",
+    "openspec/changes/ios-harmony-product-parity/tasks.md": "14c716cae2f9c554ec5e51559b0b6835b50e9b9bd078bca4e7d46eac4bfe8e91",
+    "docs/visual-parity/cases.json": "b2cdfbc6177c7889eb1179e0c5eed00ccd37de4a713249dc7ff91c77bf9d3590",
+    "docs/visual-parity/harmony-source.json": "a305b223bd8239bb731a5c25ddd7c9b0d2a6b46cd27332a102ff521b2b4f1a77"
+  },
+  "validation": {
+    "openspec": {
+      "command": "OPENSPEC_TELEMETRY=0 node /Users/hut/Projects/.specdrive-tools/node_modules/@fission-ai/openspec/bin/openspec.js validate ios-harmony-product-parity --type change --strict --no-interactive",
+      "exitCode": 0,
+      "result": "Change 'ios-harmony-product-parity' is valid"
+    },
+    "referenceFilesChecked": 74,
+    "referenceHashMismatches": [],
+    "unrecordedMainAndAppScopeProductFiles": [],
+    "signedHapHashMatches": true
+  },
+  "coverage": {
+    "requiredCases": 53,
+    "principalViews": 13,
+    "largestAccessibilityCases": 8,
+    "overflowCaptureCases": 20,
+    "caseIdsUnique": true,
+    "allCasesPending": true,
+    "realScreenshotPairsReviewed": 0
+  },
+  "findings": [],
+  "resolvedFindings": [
+    {
+      "id": "P1-complete-capture-contract",
+      "status": "resolved",
+      "evidence": "The manifest adds 8 explicit largest-accessibility cases across home, editor, chat, diary, timeline, detail, account and settings. Every case names textSize and checkpoints; 12 default-text and 8 accessibility cases require top, all-overflow-content and bottom. captureContract requires original overlapping viewport slices without omitted middle content, scroll offsets/content anchors, and actual OS text-size settings. The visual specification makes absent checkpoints or large-text evidence fail acceptance."
+    },
+    {
+      "id": "P2-reference-input-coverage",
+      "status": "resolved",
+      "evidence": "harmony-source.json now records all 74 files under entry/src/main and AppScope, including the 9 formerly omitted product/configuration files. All file hashes and the recorded signed HAP hash match actual disk bytes; sensitive configuration remains represented by hashes only."
+    }
+  ],
+  "remainingExecutionRequirements": [
+    "Implement all 53 required cases and their declared capture checkpoints; the validator must enforce this reviewed manifest, not merely count arbitrary screenshots.",
+    "Capture actual current HarmonyOS and iOS views and complete independent case-by-case review. All image/review fields are currently null and no screenshot pair has been approved by this planning review.",
+    "Record actual device, viewport, text scale and fixture data during capture; if a reference state is unavailable or diverges because of a documented native safety improvement, retain the source action evidence and explicit case-specific review.",
+    "Preserve the existing user-owned HarmonyOS working tree and isolate any DEBUG fixture storage. The emulator license/capture environment remains an execution dependency.",
+    "Task 3.5 remains blocked until the real bundle-matching iOS AGC provider configuration and authorized account checks exist; fixture rendering cannot satisfy external authentication verification.",
+    "Final acceptance still requires real now/past journeys, restart/storage failures, exports, current source-bound visual review and no unresolved required cases; simulator evidence cannot be reported as physical-device evidence."
+  ],
+  "history": [
+    {
+      "version": 1,
+      "kind": "independent-planning-review",
+      "reviewer": "/root/ios_parity_gap",
+      "round": 1,
+      "reviewedAt": "2026-09-26T06:25:42.126036+00:00",
+      "verdict": "changes-requested",
+      "scope": "Planning and acceptance coverage only. No implementation, runtime, screenshot or external-service approval.",
+      "artifacts": {
+        "openspec/changes/ios-harmony-product-parity/.openspec.yaml": "062e545e250441aa0692c22d7a65e07334f1c0f2e706c0e297f36065b6a0699c",
+        "openspec/changes/ios-harmony-product-parity/design.md": "7e7d7ad494e842d66ece8466208bc2d9c0d9caea0c122569986873c792c36b9a",
+        "openspec/changes/ios-harmony-product-parity/proposal.md": "384d96ad8a160f149baa1f2d4ec292135f4307e7875c094162f7a5f8e22bfbf6",
+        "openspec/changes/ios-harmony-product-parity/specs/cross-platform-visual-acceptance/spec.md": "4aea8030729ba3886fa0fd171384dc0cbe69e0d50b1298bb98fd2d660fb96742",
+        "openspec/changes/ios-harmony-product-parity/specs/ios-product-parity/spec.md": "8dcb483f2fd720549aa5ab60f8af854424922ab579edd77e89f30ad850f3ca7b",
+        "openspec/changes/ios-harmony-product-parity/tasks.md": "14c716cae2f9c554ec5e51559b0b6835b50e9b9bd078bca4e7d46eac4bfe8e91",
+        "docs/visual-parity/cases.json": "420b7dfa4d52af8ef924cda1bc9775df92f48c520dde210c47ffefe9248be8ab",
+        "docs/visual-parity/harmony-source.json": "bf8e5f0344ed78c012afeca4e979f25b9c906faa7f3f5f166974708b2b0c0051"
+      },
+      "validation": {
+        "openspec": {
+          "command": "OPENSPEC_TELEMETRY=0 node /Users/hut/Projects/.specdrive-tools/node_modules/@fission-ai/openspec/bin/openspec.js validate ios-harmony-product-parity --type change --strict --no-interactive",
+          "exitCode": 0,
+          "result": "Change 'ios-harmony-product-parity' is valid"
+        },
+        "referenceFilesChecked": 65,
+        "referenceHashMismatches": [],
+        "signedHapHashMatches": true
+      },
+      "coverage": {
+        "requiredCases": 45,
+        "principalViews": 13,
+        "allCasesPending": true,
+        "realScreenshotPairsReviewed": 0
+      },
+      "findings": [
+        {
+          "id": "P1-complete-capture-contract",
+          "severity": "blocking",
+          "files": [
+            "docs/visual-parity/cases.json",
+            "openspec/changes/ios-harmony-product-parity/design.md"
+          ],
+          "finding": "The 45-case ledger has no explicit accessibility text-size case/parameter and no required scroll-position or multi-capture coverage for tall product pages. A single first-viewport capture of account, personal-provider settings or a long diary can satisfy every named case while omitting product controls/content and the required large-text check.",
+          "evidence": "Design decision 7 and the visual specification require accessibility/keyboard stress checks. Every current case has only id/route/state/required/status/harmony/ios/review; no textSize/captureRegions/scroll-position contract is present.",
+          "requestedChange": "Add explicit large-text cases for representative ring/form/long-content layouts with documented text-size settings, and require top/bottom or identified content regions for scrolling account/settings/long-content cases. Bind all required captures to the future parity validator and review."
+        },
+        {
+          "id": "P2-reference-input-coverage",
+          "severity": "blocking",
+          "files": [
+            "docs/visual-parity/harmony-source.json"
+          ],
+          "finding": "The frozen source manifest omits runtime product resources/configuration that can change the rendered reference without changing the recorded source files. This leaves the required source-staleness rule incomplete.",
+          "evidence": {
+            "unrecordedMainAndAppScopeFiles": [
+              "apps/harmony/entry/src/main/module.json5",
+              "apps/harmony/entry/src/main/resources/base/profile/backup_config.json",
+              "apps/harmony/entry/src/main/resources/base/profile/main_pages.json",
+              "apps/harmony/entry/src/main/resources/dark/element/color.json",
+              "apps/harmony/entry/src/main/resources/rawfile/agconnect-services.json",
+              "apps/harmony/AppScope/app.json5",
+              "apps/harmony/AppScope/resources/base/media/background.png",
+              "apps/harmony/AppScope/resources/base/media/foreground.png",
+              "apps/harmony/AppScope/resources/base/media/layered_image.json"
+            ]
+          },
+          "requestedChange": "Include all relevant entry/src/main and AppScope product files, including dark resources, module/application descriptors and profiles, using file hashes only for sensitive configuration. Preserve the signed-HAP identity and require it to match the actual installed reference app."
+        }
+      ],
+      "nonBlockingObservations": [
+        "The proposal correctly replaces the small pilot acceptance with full product journeys and paired real screenshots, and preserves pilot evidence.",
+        "Schema migration, original assets, isolated DEBUG fixtures, meaningful aesthetic rubric and real versus simulated service claims are covered.",
+        "Harmony emulator license acceptance and actual screenshot capture remain pending external execution steps; this review does not imply they ran.",
+        "Task 3.5 remains blocked until a bundle-matching actual AGC iOS provider is configured and tested; a DEBUG remote-account fixture cannot resolve that task."
+      ]
+    }
+  ]
+}

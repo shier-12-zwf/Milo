@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "reviews": [
+    {
+      "reviewedAt": "2026-10-01T03:20:08.427491+00:00",
+      "run": "first completed stability suite before second repair",
+      "verdict": "INCOMPLETE_KEEP_DRAFT",
+      "receipts": [
+        {
+          "path": "apps/ios/evidence/stability/unit-2026-09-30T16-12-20-469Z.json",
+          "sha256": "8228ab5c96e008392716802aa904f7aa50840a05aa0167ed6158bdb8ec499f1b",
+          "sourceHash": "98e5108369992c0053e03421eecb4b8df61f67d67d4742708cbea804d558e3c7",
+          "recordedAppHash": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "expectedTestHash": "666e87518d399a575cda07db4f76d60df43a32b30002a7248797e196b1a2508c",
+          "loadedHashesVerified": true,
+          "log": "apps/ios/evidence/stability/unit-2026-09-30T16-12-20-469Z.log",
+          "logHash": "62cf8fcc86ab5a7ba2466bd53f2efadfebc6fd5e43d6c77bcbda76f49cf2053f",
+          "logHashVerified": true,
+          "exitCode": 0,
+          "passed": 18,
+          "total": 18,
+          "installedHashVerification": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "note": "Successful receipts include matching post-action installed hash; failed receipts omit post-action installed field. Do not infer its verification from missing data.",
+          "errors": []
+        },
+        {
+          "path": "apps/ios/evidence/stability/accounts-2026-09-30T16-14-09-693Z.json",
+          "sha256": "e9e99ccbaf64573fbeca680b7e7e6d4958ce40ffda8452018c6a75e2383328ab",
+          "sourceHash": "98e5108369992c0053e03421eecb4b8df61f67d67d4742708cbea804d558e3c7",
+          "recordedAppHash": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "expectedTestHash": "fe7e1b837e0f2955ec9b1c5bb3dee61f2fd669bfb8c8183835677ce74009ffcb",
+          "loadedHashesVerified": true,
+          "log": "apps/ios/evidence/stability/accounts-2026-09-30T16-14-09-693Z.log",
+          "logHash": "ff34c0b23e6bf0440094aa3cf6f2b883ca7e73f7a54812b320b7b3474d24460e",
+          "logHashVerified": true,
+          "exitCode": 0,
+          "passed": 3,
+          "total": 3,
+          "installedHashVerification": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "note": "Successful receipts include matching post-action installed hash; failed receipts omit post-action installed field. Do not infer its verification from missing data.",
+          "errors": []
+        },
+        {
+          "path": "apps/ios/evidence/stability/journeys-2026-09-30T16-15-37-988Z.json",
+          "sha256": "ce019369605686a38d352f2d270fa0ee484cc9e614172bfd851275ec548fd3f0",
+          "sourceHash": "98e5108369992c0053e03421eecb4b8df61f67d67d4742708cbea804d558e3c7",
+          "recordedAppHash": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "expectedTestHash": "fe7e1b837e0f2955ec9b1c5bb3dee61f2fd669bfb8c8183835677ce74009ffcb",
+          "loadedHashesVerified": true,
+          "log": "apps/ios/evidence/stability/journeys-2026-09-30T16-15-37-988Z.log",
+          "logHash": "b9b6d94d2ef9aa65e7d22cd19b1fbfdc069acdda92189bb262369b36efe48694",
+          "logHashVerified": true,
+          "exitCode": 65,
+          "passed": 9,
+          "total": 11,
+          "installedHashVerification": null,
+          "note": "Successful receipts include matching post-action installed hash; failed receipts omit post-action installed field. Do not infer its verification from missing data.",
+          "errors": [
+            "/Users/hut/Projects/milo/apps/ios/UITests/MiloUITests.swift:106: error: -[MiloUITests.MiloUITests testCardTemplateGeometryAndLoginErrorState] : XCTAssertLessThanOrEqual failed: (\"721.6666870117188\") is greater than (\"721.6500244140625\")",
+            "/Users/hut/Projects/milo/apps/ios/UITests/MiloUITests.swift:106: error: -[MiloUITests.MiloUITests testPastOfflineJourneyDiaryEditAndTemplatePersistence] : XCTAssertLessThanOrEqual failed: (\"721.6666870117188\") is greater than (\"721.6500244140625\")"
+          ]
+        },
+        {
+          "path": "apps/ios/evidence/stability/launch-2026-09-30T16-12-26-539Z.json",
+          "sha256": "182130d05f84613ad0e3d602e353737c0e8027a694a70ee77a9cb3fd48c3caef",
+          "sourceHash": "98e5108369992c0053e03421eecb4b8df61f67d67d4742708cbea804d558e3c7",
+          "recordedAppHash": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "expectedTestHash": "fe7e1b837e0f2955ec9b1c5bb3dee61f2fd669bfb8c8183835677ce74009ffcb",
+          "loadedHashesVerified": true,
+          "log": "apps/ios/evidence/stability/launch-2026-09-30T16-12-26-539Z.log",
+          "logHash": "2108d88909f4871140e20e369027a1940a390b9b56626803cdfa77c7d51c7b13",
+          "logHashVerified": true,
+          "exitCode": 65,
+          "passed": 1,
+          "total": 2,
+          "installedHashVerification": null,
+          "note": "Successful receipts include matching post-action installed hash; failed receipts omit post-action installed field. Do not infer its verification from missing data.",
+          "errors": [
+            "/Users/hut/Projects/milo/apps/ios/UITests/LaunchStabilityTests.swift:89: error: -[MiloUITests.LaunchStabilityTests testOwnerSurvivesFiveColdLaunchesAndThreeBackgroundReturns] : XCTAssertTrue failed"
+          ]
+        },
+        {
+          "path": "apps/ios/evidence/stability/motion-2026-09-30T16-19-02-680Z.json",
+          "sha256": "288eb6d1b7ee0e22395740f831374d83ff46d61890066135ae7cecba65f6e2ec",
+          "sourceHash": "98e5108369992c0053e03421eecb4b8df61f67d67d4742708cbea804d558e3c7",
+          "recordedAppHash": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "expectedTestHash": "fe7e1b837e0f2955ec9b1c5bb3dee61f2fd669bfb8c8183835677ce74009ffcb",
+          "loadedHashesVerified": true,
+          "log": "apps/ios/evidence/stability/motion-2026-09-30T16-19-02-680Z.log",
+          "logHash": "4a7482146b1e15547a6dde574c4394037278460f1d358a6f3c0f6b959082736f",
+          "logHashVerified": true,
+          "exitCode": 65,
+          "passed": 1,
+          "total": 2,
+          "installedHashVerification": null,
+          "note": "Successful receipts include matching post-action installed hash; failed receipts omit post-action installed field. Do not infer its verification from missing data.",
+          "errors": [
+            "/Users/hut/Projects/milo/apps/ios/UITests/GalaxyMotionTests.swift:92: error: -[MiloUITests.GalaxyMotionTests testLiveTouchNavigationAndResume] : XCTAssertTrue failed - MILO must actually leave the foreground"
+          ]
+        },
+        {
+          "path": "apps/ios/evidence/stability/capture-2026-09-30T16-20-25-578Z.json",
+          "sha256": "ed771e982b335b087e8960b6c2786db05efca4a1ed8129db9b67067aa03b0ac0",
+          "sourceHash": "98e5108369992c0053e03421eecb4b8df61f67d67d4742708cbea804d558e3c7",
+          "recordedAppHash": "5f11095ef802746828fa21950da308c20816ef4ea622729aa82e9a5b2e682550",
+          "expectedTestHash": "fe7e1b837e0f2955ec9b1c5bb3dee61f2fd669bfb8c8183835677ce74009ffcb",
+          "loadedHashesVerified": true,
+          "log": "apps/ios/evidence/stability/capture-2026-09-30T16-20-25-578Z.log",
+          "logHash": "99e4594cda5ae9864493fd40457ecaecb38a8f7b96c34c1e11ab06759f6a6314",
+          "logHashVerified": true,
+          "exitCode": 65,
+          "passed": 50,
+          "total": 53,
+          "installedHashVerification": null,
+          "note": "Successful receipts include matching post-action installed hash; failed receipts omit post-action installed field. Do not infer its verification from missing data.",
+          "errors": [
+            "/Users/hut/Projects/milo/apps/ios/UITests/ParityCaptureGeometry.swift:85: error: -[MiloUITests.ParityCaptureTests test_detail__transcript_expanded__large_text] : Failed to synthesize event: Timed out while synthesizing event.",
+            "/Users/hut/Projects/milo/apps/ios/UITests/ParityCaptureGeometry.swift:85: error: -[MiloUITests.ParityCaptureTests test_diary__long__large_text] : Failed to synthesize event: Timed out while synthesizing event.",
+            "/Users/hut/Projects/milo/apps/ios/UITests/ParityCaptureTests.swift:155: error: -[MiloUITests.ParityCaptureTests test_now_note__keyboard_long__large_text] : XCTAssertLessThanOrEqual failed: (\"489.6666666666667\") is greater than (\"220.6\") - Uninspected gap between screenshots: now-note--keyboard-long--large-text"
+          ]
+        }
+      ],
+      "visualSample": [
+        {
+          "path": ".artifacts/ios/stability-20260930/normal-icon-cold-first.png",
+          "sha256": "83c6bd2e9e76e2d054cd97a1156a49c674a5b8ea5515a6f7ac3a4445507c9dce",
+          "individuallyViewed": true,
+          "observation": "Production detail dated2026-09-26 rendered with back, release and create-memory-card actions visible. Static image does not independently prove cold tap or final repaired build hash."
+        },
+        {
+          "path": ".artifacts/ios/stability-20260930/launch-first/3FBBC310-2E53-4AE6-8853-9557C7ED4707.png",
+          "sha256": "9d8dfe97d8ec350b2429d6fdaa08dede0a15f9e7d2a4261cc5d2bcef5c799212",
+          "individuallyViewed": true,
+          "observation": "Fifth login cold-launch original: complete modes/email/code/signup layout; no obvious overlap in sampled state."
+        },
+        {
+          "path": ".artifacts/ios/stability-20260930/launch-first/9A620F12-C3E7-48FD-9C71-C9669AEB5F32.png",
+          "sha256": "677e5d10512d85482ada3895848009ef75a388a189683e136fb0df0dd0b8d66b",
+          "individuallyViewed": true,
+          "observation": "Fifth owner cold-launch original: calm home planet, mood labels, heading and primary button readable in sampled state."
+        },
+        {
+          "path": ".artifacts/ios/stability-20260930/capture-first/F56F52AD-D05B-4DAC-A865-3960EF0BD365.png",
+          "sha256": "6706dc7c8f4221a321b81955067d4f55ea277da7ca6a1ba89bd46c5575d4b064",
+          "individuallyViewed": true,
+          "observation": "Default long note editor top: genuine software keyboard, separate Done row and save row visibly unobscured. This is not large-text tail/bottom coverage proof."
+        }
+      ],
+      "boundedConclusions": [
+        "Unit18/18 includes16 AccountBehavior tests and2 actual native Keychain tests; not real remote AGC authentication.",
+        "Account UI3/3 passed with loaded test hash matching.",
+        "Journeys9/11: long editor tail visibility/persistence test passed; two card tests retain the real 0.01666259765625pt bound failure.",
+        "Launch1/2: ten cold cycles completed before owner test background assertion failed. Motion1/2: actual-background assertion failed; no lifecycle acceptance.",
+        "Capture50/53: two largest-text gesture synthesis timeouts and one largest-text note screenshot coverage gap489.6667>220.6. No full53-state visual acceptance.",
+        "Only four listed originals were visually reviewed in this bounded review; no other screenshot coverage claim.",
+        "All six original log hashes and printed loaded-test hashes match their receipts. Failed action receipts omit final installed verification, rather than reporting a mismatch.",
+        "Second-repair source differs from first-run source; neither first originals nor manual production launch image substitute for final same-build acceptance.",
+        "No tests/builds/apps/simulator operations or source modifications performed by reviewer."
+      ]
+    }
+  ]
+}

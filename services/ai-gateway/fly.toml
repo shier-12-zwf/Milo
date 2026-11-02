@@ -1,0 +1,36 @@
+# Fly.io configuration for the MILO AI gateway.
+# Usage:
+#   fly launch --copy-config --no-deploy   # first-time setup
+#   fly secrets set MINIMAX_API_KEY=...    # inject the secret
+#   fly deploy
+
+app = "milo-gateway"
+primary_region = "nrt"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  NODE_ENV = "production"
+  RATE_LIMIT_PER_MINUTE = "60"
+  MINIMAX_BASE_URL = "https://api.minimax.chat/v1"
+  MINIMAX_MODEL = "MiniMax-M2.7"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"

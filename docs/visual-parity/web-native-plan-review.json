@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/web_native_review",
+  "reviewType": "independent-plan-review",
+  "rounds": [
+    {
+      "round": 1,
+      "reviewedAt": "2026-09-29T14:01:41.745197+00:00",
+      "verdict": "changes_requested",
+      "files": [
+        {
+          "path": "docs/visual-parity/web-native-plan-2026-09-29.md",
+          "sha256": "0cdba3456fb57f7828ce8fc4086f71a02dd8c573c2d9d2dabe316c8ed410b423"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/proposal.md",
+          "sha256": "954996fd19d6497e11f51c3a578f043dd0dab8bb15562faebb18fdafa602adf7"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/design.md",
+          "sha256": "984902012022fbc578c7effed7490ee842fcf19a2524499c5186c3b67d69c097"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/tasks.md",
+          "sha256": "39d20096e68a1a54e585040fb067babe993285da8e6006deb082e5e03608a415"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/specs/ios-product-parity/spec.md",
+          "sha256": "a6916bde04fb9f193c565e936da95b5f70bd4fda55275240793277175ea41175"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/specs/cross-platform-visual-acceptance/spec.md",
+          "sha256": "7ff3f96196a8936e906cb99ea009f5d6dbf7d6406b07514c5f01700e237bf8a7"
+        }
+      ],
+      "findings": [
+        {
+          "id": "R1",
+          "priority": "P2",
+          "file": "openspec/changes/ios-harmony-product-parity/specs/cross-platform-visual-acceptance/spec.md",
+          "finding": "The amendment changes the reference platform, but normative frozen-reference and complete-paired-coverage requirements still require Harmony source/build identity and a reference screenshot for every native case. The generic amendment only explicitly supersedes runtime capture/worktree requirements; it does not give an executable Web provenance contract or native-only acceptance rule. A later validator could silently exclude cases or remain permanently unsatisfiable.",
+          "requiredChange": "Add explicit current-phase requirements: retain the exact 53 native case IDs; map each to shared Web/native-only/accessibility-stress with a reason; shared cases require actual Web+iOS originals, matching synthetic data and independent verdict; other cases still require iOS originals and behavior review. Record Web URL, capture timestamp, viewport/scale, locale, fixture, and available deployed asset/version identifiers or clearly label unknown deployment provenance. Explicitly state which historical Harmony clauses are superseded for this phase and that missing screenshot access blocks shared-case acceptance."
+        },
+        {
+          "id": "R2",
+          "priority": "P2",
+          "file": "docs/visual-parity/web-native-plan-2026-09-29.md",
+          "finding": "The motion plan lists desired shader features and live checks, but does not specify an identifiable evidence procedure or pass conditions for motion fidelity, touch interaction, reduced motion and background suspension. Static screenshot capture, especially frozen DEBUG fixtures, cannot establish these requirements.",
+          "requiredChange": "Define a separate unfrozen synthetic-data motion run with timestamped Web/iOS frames or video before/during/after comparable blank-area and actual-control touches, plus a scroll interaction. Require independent review of visible layer depth/twinkle/rotation and response/settling, successful original button/input/scroll behavior, and no sustained motion under Reduce Motion or while inactive. Record actual system setting/app lifecycle transitions and the source/build IDs; missing motion capture remains blocked. Avoid claiming identical particle positions or frame rate from screenshots."
+        }
+      ],
+      "assessments": {
+        "userScope": "The user clearly authorizes switching to actual Web reference, current-project-only work, cleanup, iOS native polish and PR merge. No additional account/release authorization is granted by this review.",
+        "executionBounds": "A genuinely changed Web+native-motion phase with preserved historic states and a declared 90-minute active-execution limit is justified; retain three total executions per check, including successes, and stop on two repeated no-progress failures. This is not permission to restart identical failed phases.",
+        "historicalEvidence": "The plan preserves old Harmony ledgers and failures, distinguishes code merge from release/final acceptance, and does not claim simulator evidence is physical-device evidence. Archive byte-verification is stated by the plan, not re-audited in this review.",
+        "knownCaptureBlocker": "Browser DOM works but screenshot API is currently unavailable, as reported by the integration owner. DOM access alone cannot satisfy visual evidence.",
+        "implementationAcceptance": "Not assessed or approved; no app/browser/build operations were performed."
+      }
+    },
+    {
+      "round": 2,
+      "reviewedAt": "2026-09-29T14:06:03.825244+00:00",
+      "verdict": "pass",
+      "files": [
+        {
+          "path": "docs/visual-parity/web-native-plan-2026-09-29.md",
+          "sha256": "251ced34c30426640d1b5ff4c748dc946ad33d9385dbe639cea9dd14163c5c13"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/proposal.md",
+          "sha256": "954996fd19d6497e11f51c3a578f043dd0dab8bb15562faebb18fdafa602adf7"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/design.md",
+          "sha256": "984902012022fbc578c7effed7490ee842fcf19a2524499c5186c3b67d69c097"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/tasks.md",
+          "sha256": "39d20096e68a1a54e585040fb067babe993285da8e6006deb082e5e03608a415"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/specs/ios-product-parity/spec.md",
+          "sha256": "a6916bde04fb9f193c565e936da95b5f70bd4fda55275240793277175ea41175"
+        },
+        {
+          "path": "openspec/changes/ios-harmony-product-parity/specs/cross-platform-visual-acceptance/spec.md",
+          "sha256": "7ff3f96196a8936e906cb99ea009f5d6dbf7d6406b07514c5f01700e237bf8a7"
+        },
+        {
+          "path": "docs/visual-parity/web-cases.json",
+          "sha256": "06bc80304d3418fdb220cec46861191014973cf017c79f4ec9225173d58a69b5"
+        },
+        {
+          "path": "docs/visual-parity/cases.json",
+          "sha256": "b2cdfbc6177c7889eb1179e0c5eed00ccd37de4a713249dc7ff91c77bf9d3590"
+        }
+      ],
+      "findings": [],
+      "resolvedFindings": [
+        {
+          "id": "R1",
+          "resolution": "The linked plan now explicitly supersedes historical Harmony runtime provenance/pairing only for the current phase, defines source-bound Web capture metadata and missing-capture failure, and requires all 53 original native cases. Independent set comparison confirms exactly 53 unique IDs, no missing/extra cases: 28 shared, 17 native-only, 8 accessibility-stress. All remain pending; native-only/stress cases require native original images and review rather than invented Web references."
+        },
+        {
+          "id": "R2",
+          "resolution": "The temporal contract now separates unfrozen motion tests from static snapshots, binds originals to source/build/device/launch/timestamps, requires multiple natural times and before/during/after touches, functional navigation and scrolling, reduced-motion stopping and inactive-time suspension with smooth resumption. Independent review of original temporal evidence is required."
+        }
+      ],
+      "checks": {
+        "originalCaseCount": 53,
+        "mappedCaseCount": 53,
+        "uniqueMappedCaseCount": 53,
+        "missingCases": [],
+        "extraCases": [],
+        "allCasesPending": true,
+        "counts": {
+          "shared": 28,
+          "native-only": 17,
+          "accessibility-stress": 8
+        },
+        "webHomeArtifact": {
+          "path": ".artifacts/ios/web-reference-20260929/home.png",
+          "sha256": "068451ce2aba05b1208e069f8b529a48a2de6d1a8a693081ae448e26215dca35",
+          "pngPixelSize": [
+            65536,
+            4292542531
+          ],
+          "scope": "File existence, hash and PNG dimensions checked only. Browser origin and visual fidelity were not independently verified in this plan review."
+        }
+      },
+      "implementationConstraints": [
+        "Capture records must distinguish available deployed Web source/version identity from the local checkout; never imply that a local source hash establishes the deployed build. Record unknown deployed identity honestly.",
+        "Record matching synthetic data, locale and actual viewport/scale with each capture. The 390x844 logical target must not be confused with physical PNG dimensions.",
+        "Native-only is the current documented reference availability classification, not evidence that those features cannot exist on Web. Revisit the mapping if live exploration shows equivalent states, without silently dropping native coverage.",
+        "Code/visual milestone merge requires the planned current checks and independent evidence review; this plan pass is neither merge certification nor full product/AGC/device/release acceptance.",
+        "Historical attempt counters remain immutable. The new justified phase retains three total executions per check and two no-progress attempts; do not recreate it to escape limits."
+      ],
+      "acceptanceGranted": false
+    }
+  ],
+  "currentVerdict": "pass",
+  "acceptanceGranted": false,
+  "planImplementationMayProceed": true
+}

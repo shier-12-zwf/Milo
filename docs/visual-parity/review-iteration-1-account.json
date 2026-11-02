@@ -1,0 +1,1141 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-ios-visual-review",
+  "reviewer": {
+    "agent": "/root/ios_parity_gap",
+    "role": "independent visual reviewer",
+    "method": "Actual view_image inspection of every within-case byte-distinct original; SHA-256 computed from original PNG bytes."
+  },
+  "reviewedAt": "2026-09-26T07:27:02.811Z",
+  "iteration": 1,
+  "verdict": "changes-requested",
+  "iosQualityVerdict": "changes-requested",
+  "crossPlatformParityVerdict": "not-assessed",
+  "aestheticImprovementOverHarmonyVerdict": "not-assessed",
+  "summary": "实际查看 17 个 case 的 37 张原图，跳过并登记 40 张同 case 字节完全重复图。发现 3 项 P2，无 P1。默认字号总体可读；最大字号账户状态和长页采集需要修正。缺少鸿蒙实际截图，不能判定复刻或美学提升通过。",
+  "sourceIndex": {
+    "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/image-index.json",
+    "sha256": "fa0378038aedc83f51e2ef5d9d8d73e9ef959924781dfea37ac06afb6ac72506"
+  },
+  "coverage": {
+    "caseCount": 17,
+    "indexedImages": 77,
+    "actuallyViewedImages": 37,
+    "sameCaseByteIdenticalSkipped": 40,
+    "prefixes": [
+      "login",
+      "account",
+      "ai-settings"
+    ],
+    "originalPixelDimensions": {
+      "width": 1170,
+      "height": 2532
+    },
+    "displayNote": "view_image returned original files rendered at 946×2048 in the review interface; no source image was modified."
+  },
+  "findings": [
+    {
+      "id": "IOS-ACCOUNT-01",
+      "priority": "P2",
+      "category": "required-state-not-shown",
+      "caseIDs": [
+        "login--error"
+      ],
+      "title": "登录错误态没有错误内容",
+      "observation": "唯一 login--error 图显示正常邮箱表单和获取验证码按钮，未出现可供审查的错误提示。",
+      "impact": "无法检查失败解释、恢复入口及错误文字换行，也不能将此图计为 error 状态覆盖。",
+      "requiredChange": "在截图前等待确定的登录错误 UI 可见，再重新采集该状态；不要仅凭 case 名称视为覆盖。",
+      "images": [
+        {
+          "name": "login--error--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/D2396198-DB3C-485D-8182-F3F8EED9E609.png",
+          "sha256": "46289365a2600343afb9cba8712f9b8fd318d774aec5449974095af19ef38d67"
+        }
+      ]
+    },
+    {
+      "id": "IOS-ACCOUNT-02",
+      "priority": "P2",
+      "category": "large-text-readability",
+      "caseIDs": [
+        "account--local--large-text"
+      ],
+      "title": "最大字号的邮箱绑定状态被省略号取代",
+      "observation": "scroll-1 的“绑定邮箱”右侧只显示“…”；默认字号对应值为“未绑定”。",
+      "impact": "大字号用户不能读出关键账户状态。",
+      "requiredChange": "辅助大字号将标签和值纵向排列，或让值获得完整换行空间；重拍未绑定及登录方式行。",
+      "images": [
+        {
+          "name": "account--local--large-text--scroll-1",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/021A75F4-9CF2-4AD7-AE94-B303F06AD620.png",
+          "sha256": "e5b87ef36a6e464ad55ca87ea37c28b5d5b662bc85836951662ee389191ce914"
+        },
+        {
+          "name": "account--local--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/CC12C228-16DC-4B8E-BD75-5CFC765D1E77.png",
+          "sha256": "55077398370968bc82a045c2760b135b90b9c5b5ed3d23204cf8108ee2578d32"
+        }
+      ]
+    },
+    {
+      "id": "IOS-ACCOUNT-03",
+      "priority": "P2",
+      "category": "scroll-evidence-gap",
+      "caseIDs": [
+        "account--local--large-text",
+        "account--password-form"
+      ],
+      "title": "长页滚动跳跃漏掉中间内容",
+      "observation": "账户大字号顶图仅显示登录方式行前部，而 scroll-1 已从绑定邮箱开始；密码表单顶图只露出首个新密码输入框上沿，scroll-1 已从该框下沿开始，后续图均没有完整展示该框。",
+      "impact": "即使末尾已可见，也不能据这些图证明 all-overflow-content 完整覆盖或控件无截断。",
+      "requiredChange": "按滚动视口实际高度分段采集并留重叠，确保登录方式整行及首个新密码输入框在至少一张图中完整可见；复核固定页头/页脚后的有效视口。",
+      "images": [
+        {
+          "name": "account--local--large-text--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/7CA8698C-3981-450D-8616-BBE8AA761AC0.png",
+          "sha256": "aa00c4d5dc7e8ec6454efb630e7ed3bb40ccc138b6b4f96f413bec3d62974052"
+        },
+        {
+          "name": "account--local--large-text--scroll-1",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/021A75F4-9CF2-4AD7-AE94-B303F06AD620.png",
+          "sha256": "e5b87ef36a6e464ad55ca87ea37c28b5d5b662bc85836951662ee389191ce914"
+        },
+        {
+          "name": "account--password-form--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0255FFAE-B273-40CE-A13C-9ED8EDDC299F.png",
+          "sha256": "b6aa5373b36b700acad42bf2f12afc093418a154c879458e50d9242f1e0bb632"
+        },
+        {
+          "name": "account--password-form--scroll-1",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/055D232A-3D33-455A-81DD-430738471F55.png",
+          "sha256": "cf57c556db60fe651f14cd9538ee8fdfdcb34a830f6320ba347dc3ef3d775f50"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "IOS-ACCOUNT-N01",
+      "priority": "P3",
+      "caseIDs": [
+        "ai-settings--personal--large-text"
+      ],
+      "type": "polish-and-interaction-verification",
+      "note": "最大字号两模型选项成为高度不同的胶囊；可改为等宽纵向选项以保持清晰层次。URL/模型输入值在未聚焦时截断，需要实际编辑/横向阅读验证，静态图不足以判为交互失效。",
+      "images": [
+        {
+          "name": "ai-settings--personal--large-text--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/D1C8B61B-3381-416D-868F-5842024075DB.png",
+          "sha256": "4e1358611d75ad4632577ec038eea9e903a9ac04f622c3ea1a02c56ffe05ce53"
+        },
+        {
+          "name": "ai-settings--personal--large-text--scroll-1",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8E743E4A-83B4-4937-9A7D-CC1F111F85BB.png",
+          "sha256": "979e0258974169d3c3bb4acdd748260aad11db5c33cb9168aa1464b46973668b"
+        }
+      ]
+    },
+    {
+      "id": "IOS-ACCOUNT-N02",
+      "caseIDs": [
+        "account--delete-confirmation"
+      ],
+      "type": "capture-state-limit",
+      "note": "只有顶图呈现注销弹窗；后续 scroll 图变为普通账户页。visible-state 可使用顶图，但后续图不可标为确认弹窗。",
+      "images": [
+        {
+          "name": "account--delete-confirmation--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B092F37C-E4FF-42D3-88E3-FCBC3D36824B.png",
+          "sha256": "06dd0ca455cf65dbdf3537984fa0527ebb3e21e2275f2ad08696b23d79265db8"
+        },
+        {
+          "name": "account--delete-confirmation--scroll-1",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/900B97A3-C703-49CA-846B-5BDBA7D0452C.png",
+          "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e"
+        }
+      ]
+    },
+    {
+      "id": "IOS-ACCOUNT-N03",
+      "caseIDs": [
+        "account--export",
+        "account--local",
+        "ai-settings--hosted",
+        "ai-settings--missing-config"
+      ],
+      "type": "cross-case-identical-bytes",
+      "note": "export 与 local 的对应顶图/末尾图完全相同；hosted 与 missing-config 对应图也相同。所有这些 case 的独特图都实际独立查看。只证明导出入口和默认模型配置缺失 UI，不代表导出完成或 hosted 服务成功。"
+    }
+  ],
+  "cases": [
+    {
+      "caseID": "account--delete-confirmation",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "account--delete-confirmation--top",
+        "account--delete-confirmation--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "account--delete-confirmation--scroll-2",
+        "account--delete-confirmation--scroll-3",
+        "account--delete-confirmation--scroll-4",
+        "account--delete-confirmation--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "account--export",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "account--export--top",
+        "account--export--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "account--export--scroll-2",
+        "account--export--scroll-3",
+        "account--export--scroll-4",
+        "account--export--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "account--local",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "account--local--top",
+        "account--local--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "account--local--scroll-2",
+        "account--local--scroll-3",
+        "account--local--scroll-4",
+        "account--local--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "account--local--large-text",
+      "iosVisualVerdict": "changes-requested",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [
+        "IOS-ACCOUNT-02",
+        "IOS-ACCOUNT-03"
+      ],
+      "reviewedImages": [
+        "account--local--large-text--top",
+        "account--local--large-text--scroll-1",
+        "account--local--large-text--scroll-2",
+        "account--local--large-text--scroll-3",
+        "account--local--large-text--scroll-4",
+        "account--local--large-text--scroll-5"
+      ],
+      "skippedSameCaseDuplicates": [],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "account--password-form",
+      "iosVisualVerdict": "changes-requested",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [
+        "IOS-ACCOUNT-03"
+      ],
+      "reviewedImages": [
+        "account--password-form--top",
+        "account--password-form--scroll-1",
+        "account--password-form--scroll-2"
+      ],
+      "skippedSameCaseDuplicates": [
+        "account--password-form--scroll-3",
+        "account--password-form--scroll-4",
+        "account--password-form--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "account--remote",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "account--remote--top",
+        "account--remote--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "account--remote--scroll-2",
+        "account--remote--scroll-3",
+        "account--remote--scroll-4",
+        "account--remote--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "ai-settings--connection-error--top",
+        "ai-settings--connection-error--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "ai-settings--connection-error--scroll-2",
+        "ai-settings--connection-error--scroll-3",
+        "ai-settings--connection-error--scroll-4",
+        "ai-settings--connection-error--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "ai-settings--consent--top",
+        "ai-settings--consent--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "ai-settings--consent--scroll-2",
+        "ai-settings--consent--scroll-3",
+        "ai-settings--consent--scroll-4",
+        "ai-settings--consent--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "ai-settings--hosted--top",
+        "ai-settings--hosted--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "ai-settings--hosted--scroll-2",
+        "ai-settings--hosted--scroll-3",
+        "ai-settings--hosted--scroll-4",
+        "ai-settings--hosted--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "ai-settings--missing-config--top",
+        "ai-settings--missing-config--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "ai-settings--missing-config--scroll-2",
+        "ai-settings--missing-config--scroll-3",
+        "ai-settings--missing-config--scroll-4",
+        "ai-settings--missing-config--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "ai-settings--personal--top",
+        "ai-settings--personal--scroll-1"
+      ],
+      "skippedSameCaseDuplicates": [
+        "ai-settings--personal--scroll-2",
+        "ai-settings--personal--scroll-3",
+        "ai-settings--personal--scroll-4",
+        "ai-settings--personal--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "ai-settings--personal--large-text--top",
+        "ai-settings--personal--large-text--scroll-1",
+        "ai-settings--personal--large-text--scroll-2",
+        "ai-settings--personal--large-text--scroll-3",
+        "ai-settings--personal--large-text--scroll-4"
+      ],
+      "skippedSameCaseDuplicates": [
+        "ai-settings--personal--large-text--scroll-5"
+      ],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "login--code",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "login--code--top"
+      ],
+      "skippedSameCaseDuplicates": [],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "login--email",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "login--email--top"
+      ],
+      "skippedSameCaseDuplicates": [],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "login--error",
+      "iosVisualVerdict": "changes-requested",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [
+        "IOS-ACCOUNT-01"
+      ],
+      "reviewedImages": [
+        "login--error--top"
+      ],
+      "skippedSameCaseDuplicates": [],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "login--password",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "login--password--top"
+      ],
+      "skippedSameCaseDuplicates": [],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    },
+    {
+      "caseID": "login--reset",
+      "iosVisualVerdict": "no-blocking-visual-finding-in-supplied-images",
+      "crossPlatformVerdict": "not-assessed",
+      "findingIDs": [],
+      "reviewedImages": [
+        "login--reset--top"
+      ],
+      "skippedSameCaseDuplicates": [],
+      "limits": [
+        "Static screenshot review only; no functional completion or external-service success inferred."
+      ]
+    }
+  ],
+  "imagesReviewed": [
+    {
+      "caseID": "account--delete-confirmation",
+      "name": "account--delete-confirmation--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B092F37C-E4FF-42D3-88E3-FCBC3D36824B.png",
+      "sha256": "06dd0ca455cf65dbdf3537984fa0527ebb3e21e2275f2ad08696b23d79265db8",
+      "inspectionTool": "view_image",
+      "observation": "注销确认弹窗真实显示，标题、永久删除说明、取消/注销并删除均完整可读；背景变暗属于弹窗遮罩。"
+    },
+    {
+      "caseID": "account--delete-confirmation",
+      "name": "account--delete-confirmation--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/900B97A3-C703-49CA-846B-5BDBA7D0452C.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "inspectionTool": "view_image",
+      "observation": "确认弹窗已不在画面，显示普通账户末尾；不能继续当作 delete-confirmation 状态，只用顶图评判该状态。"
+    },
+    {
+      "caseID": "account--export",
+      "name": "account--export--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B3E78D65-200B-419B-B09D-6076FE9D19E1.png",
+      "sha256": "55077398370968bc82a045c2760b135b90b9c5b5ed3d23204cf8108ee2578d32",
+      "inspectionTool": "view_image",
+      "observation": "本地账户顶图；当前未显示原生分享面板。"
+    },
+    {
+      "caseID": "account--export",
+      "name": "account--export--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1E02F056-451D-40A7-AF5F-D85F4D1C8B19.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "inspectionTool": "view_image",
+      "observation": "导出 Markdown/JSON 两入口、数据与注销说明及页脚完整可见；仅证明入口呈现，不证明导出已执行。"
+    },
+    {
+      "caseID": "account--local",
+      "name": "account--local--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/CC12C228-16DC-4B8E-BD75-5CFC765D1E77.png",
+      "sha256": "55077398370968bc82a045c2760b135b90b9c5b5ed3d23204cf8108ee2578d32",
+      "inspectionTool": "view_image",
+      "observation": "本地体验账号、未绑定、无需密码说明清晰，默认字号未见横向截断。"
+    },
+    {
+      "caseID": "account--local",
+      "name": "account--local--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF4D2CF0-BAB0-4DB0-8135-EDAACCD9FB3C.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "inspectionTool": "view_image",
+      "observation": "回忆与数据、两种导出入口、注销说明、MILO 页脚及底部按钮完整可见。"
+    },
+    {
+      "caseID": "account--local--large-text",
+      "name": "account--local--large-text--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/7CA8698C-3981-450D-8616-BBE8AA761AC0.png",
+      "sha256": "aa00c4d5dc7e8ec6454efb630e7ed3bb40ccc138b6b4f96f413bec3d62974052",
+      "inspectionTool": "view_image",
+      "observation": "大字号明显生效；固定页头和底部退出/注销占用较大空间，账号与安全的登录方式行下半部落在视口外。"
+    },
+    {
+      "caseID": "account--local--large-text",
+      "name": "account--local--large-text--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/021A75F4-9CF2-4AD7-AE94-B303F06AD620.png",
+      "sha256": "e5b87ef36a6e464ad55ca87ea37c28b5d5b662bc85836951662ee389191ce914",
+      "inspectionTool": "view_image",
+      "observation": "绑定邮箱值只有省略号，未绑定状态不可辨认；已跳过顶图没有完整显示的登录方式行。"
+    },
+    {
+      "caseID": "account--local--large-text",
+      "name": "account--local--large-text--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/70FF40CA-3DBC-4A5A-A9A8-79002CDFAA7D.png",
+      "sha256": "1a896c527aa0557645a123b343e3bd18358dbac96a18f061d01af4337411b056",
+      "inspectionTool": "view_image",
+      "observation": "AI 设置入口换成两行，回忆与数据标题和导出说明前半段可读；该帧从会员说明尾部开始，与上一帧存在文字覆盖缺口。"
+    },
+    {
+      "caseID": "account--local--large-text",
+      "name": "account--local--large-text--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/649E9059-525D-4A27-89F5-960FEA89FD49.png",
+      "sha256": "4f27b5e4cdfbbe77498732ea322e62d8f8419ca2e2c99cdc5babac2441be2ac5",
+      "inspectionTool": "view_image",
+      "observation": "导出 Markdown 与 JSON 入口完整换行可读；说明在上下视口边缘截开，需要连续滚动证据。"
+    },
+    {
+      "caseID": "account--local--large-text",
+      "name": "account--local--large-text--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DF9CB028-0C44-4A61-B435-898680AA9836.png",
+      "sha256": "aa405db1ecbc35836cfe5bdc1a28cd41e59c6203ec13cd57551c9539bfcf1aac",
+      "inspectionTool": "view_image",
+      "observation": "本地保存/注销数据说明可读，但边缘句子不完整。"
+    },
+    {
+      "caseID": "account--local--large-text",
+      "name": "account--local--large-text--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C13AE6ED-2457-45D8-B214-477A3D00B105.png",
+      "sha256": "d31f088f99e276cf3b8bf28a1e4c9192d5bf0db37cd65fa8e03da4ab1edabc2f",
+      "inspectionTool": "view_image",
+      "observation": "注销说明最后句、卡片圆角末尾、MILO 页脚以及退出/注销均可见，视觉末尾锚点存在。"
+    },
+    {
+      "caseID": "account--password-form",
+      "name": "account--password-form--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0255FFAE-B273-40CE-A13C-9ED8EDDC299F.png",
+      "sha256": "b6aa5373b36b700acad42bf2f12afc093418a154c879458e50d9242f1e0bb632",
+      "inspectionTool": "view_image",
+      "observation": "邮箱账户、修改密码展开、验证码框/发送验证码可见；首个新密码框只露出顶部边缘。"
+    },
+    {
+      "caseID": "account--password-form",
+      "name": "account--password-form--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/055D232A-3D33-455A-81DD-430738471F55.png",
+      "sha256": "cf57c556db60fe651f14cd9538ee8fdfdcb34a830f6320ba347dc3ef3d775f50",
+      "inspectionTool": "view_image",
+      "observation": "再输入新密码、密码长度说明、保存新密码可见；首个新密码框已移到页头上方，仅余边缘，未被完整拍到。"
+    },
+    {
+      "caseID": "account--password-form",
+      "name": "account--password-form--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C5D7D997-BDD0-4A03-A3BA-F488F16FE657.png",
+      "sha256": "45565984a087ccacf94796997f9739999660b60d5e734db38e8b17d75165d746",
+      "inspectionTool": "view_image",
+      "observation": "导出与数据说明、MILO 页脚以及退出/注销清晰，视觉末尾锚点存在。"
+    },
+    {
+      "caseID": "account--remote",
+      "name": "account--remote--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/4A33EAB1-BB49-405A-85E9-D7A703C6738C.png",
+      "sha256": "04847302a3fb308a00a2fee7a72b9e8c165516391d9341650eaab2e032d2f8ff",
+      "inspectionTool": "view_image",
+      "observation": "邮箱登录、绑定邮箱和修改密码入口真实显示，未见换行错误；不能证明真实 AGC 登录。"
+    },
+    {
+      "caseID": "account--remote",
+      "name": "account--remote--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/383E6476-8A72-42DA-BBB7-7F1783D75018.png",
+      "sha256": "b02e8fb059a35dd33ba00afda24a373117ed94409191eef1cffd16b31dffc47f",
+      "inspectionTool": "view_image",
+      "observation": "导出/本地存储/注销说明与页脚完整可读，底部按钮没有覆盖最后文案。"
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "name": "ai-settings--connection-error--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/7B446E00-737C-4364-B11F-559BBAC42536.png",
+      "sha256": "0112b73189c8fbbfbc3f37c70f408c5a6d8b8dfe52451934e1f44dde12ab8bf6",
+      "inspectionTool": "view_image",
+      "observation": "红色连接失败文案真实显示并完整可读；同意说明下半部在滚动区域外。"
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "name": "ai-settings--connection-error--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8C733C25-72AB-4AB7-8A3F-BA617DBE944C.png",
+      "sha256": "2b53a9b036ac3483a950ad01713d0d99d63bd5a383fa64c9b10a19b07d951c4b",
+      "inspectionTool": "view_image",
+      "observation": "同意、Key 存储说明、测试连接、删除已保存 Key、失败文案及保存均可见。"
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "name": "ai-settings--consent--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F161BBD1-D2AA-4567-AC0E-AA4A16D964F8.png",
+      "sha256": "2c25d77dcbc1fefd4574c68aea131d49d2a53e0822ab538d311b7b606533809e",
+      "inspectionTool": "view_image",
+      "observation": "自己的模型选中，复选框有对勾，同意说明可读。"
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "name": "ai-settings--consent--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A9CFD69A-5C02-4DC2-8C96-A339BC14F20A.png",
+      "sha256": "4b70f360e6006b94de2275ee977cbfa67f5aa61af76c48115a8967b8848442da",
+      "inspectionTool": "view_image",
+      "observation": "同意文案全句、Key 说明、测试连接、删除 Key 以及保存均可见；静态图不能证明网络调用或 Key 保存。"
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "name": "ai-settings--hosted--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8E2EC707-C553-47FE-A6FF-124B068D96FB.png",
+      "sha256": "00cf3e12ba8fd71fff93e90e6a929a3a42b18398eba0d2d6d9fa88e5f3faa375",
+      "inspectionTool": "view_image",
+      "observation": "MILO 默认模型选中，未接通提示、同意说明、会员拟定价格与禁用订阅按钮可见。"
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "name": "ai-settings--hosted--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1991B76A-1828-4265-BB5D-83F26DABDC61.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "inspectionTool": "view_image",
+      "observation": "会员卡片尾部和订阅暂未开放完整显示，保存不覆盖末尾；该 hosted 图也处于缺少网关配置状态。"
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "name": "ai-settings--missing-config--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/56005E28-902F-4787-8C55-562B45151B20.png",
+      "sha256": "00cf3e12ba8fd71fff93e90e6a929a3a42b18398eba0d2d6d9fa88e5f3faa375",
+      "inspectionTool": "view_image",
+      "observation": "明确显示缺少后台公网 HTTPS 地址；与 hosted 顶图字节相同，但仍独立查看。"
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "name": "ai-settings--missing-config--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/91958C3C-953F-4C86-BEDE-C4A53EFDF489.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "inspectionTool": "view_image",
+      "observation": "未接通说明、会员页尾/禁用订阅/保存完整可见；与 hosted 滚动图字节相同，但仍独立查看。"
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "name": "ai-settings--personal--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/96C3A588-221B-4720-BE55-ABADBB18BF3E.png",
+      "sha256": "69e757877aaf8f5aab620307b99495c5bf6e243db2af530728a752d464263b46",
+      "inspectionTool": "view_image",
+      "observation": "自己的模型、DeepSeek、接口地址、模型名、API Key、同意入口清晰，默认字号无明显截断。"
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "name": "ai-settings--personal--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2DEB5C5B-5DB4-446C-9BBA-CDDA6F89E031.png",
+      "sha256": "02897dbe5c28b5d4655824faeba1c19d03cf75dbb473fd7c6e154a4260266eaf",
+      "inspectionTool": "view_image",
+      "observation": "同意说明、Key 隐私说明、测试连接、删除已保存 Key 和保存均可见，视觉末尾锚点存在。"
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "name": "ai-settings--personal--large-text--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/D1C8B61B-3381-416D-868F-5842024075DB.png",
+      "sha256": "4e1358611d75ad4632577ec038eea9e903a9ac04f622c3ea1a02c56ffe05ce53",
+      "inspectionTool": "view_image",
+      "observation": "大字号生效，两个模型选项分别占两行/三行，形状不等高；所有标题可读，未见字符重叠。"
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "name": "ai-settings--personal--large-text--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8E743E4A-83B4-4937-9A7D-CC1F111F85BB.png",
+      "sha256": "979e0258974169d3c3bb4acdd748260aad11db5c33cb9168aa1464b46973668b",
+      "inspectionTool": "view_image",
+      "observation": "服务商可读，地址说明多行换行；接口值为 https://api.d…、模型值为 deepseek-c…，本帧不能核验完整值。"
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "name": "ai-settings--personal--large-text--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B4CDF2D9-7604-43A8-A22E-920964B5673B.png",
+      "sha256": "e69c6f6fd72bef6721fad2a1eb9238eef089ee52908c219c188c5cb636c57d1b",
+      "inspectionTool": "view_image",
+      "observation": "API Key 与服务商说明分行可读，没有横向溢出。"
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "name": "ai-settings--personal--large-text--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8BD4E846-1629-4639-B5BF-175705C13DF7.png",
+      "sha256": "4efc5af1a97cc79262e2b20921de553e583e20bad8c635afefba317ac492df52",
+      "inspectionTool": "view_image",
+      "observation": "同意复选框、完整同意说明和 Key 说明前半部可读；上下帧需依据实际滚动几何验证重叠。"
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "name": "ai-settings--personal--large-text--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F74B54C7-85BE-43CA-84FC-E3271310F66F.png",
+      "sha256": "4c8d95a4176e89486052b6ed04a64c6e0c2d2108782ef946435d15e35718be91",
+      "inspectionTool": "view_image",
+      "observation": "Key 说明末尾、测试连接、删除已保存的 Key 和保存设置都完整可见。"
+    },
+    {
+      "caseID": "login--code",
+      "name": "login--code--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/7F09210E-FE15-4EBC-B357-580495582549.png",
+      "sha256": "86974c67cbb4fbc4554f58cec1ef434a46902824188235120f32a1afa4ccbe36",
+      "inspectionTool": "view_image",
+      "observation": "验证码标题、目标邮箱、验证码框、禁用登录和重发入口完整可读；不能证明真的发送过验证码。"
+    },
+    {
+      "caseID": "login--email",
+      "name": "login--email--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B5DA1331-DF3B-4B7F-9889-0CCE27FE135D.png",
+      "sha256": "77a062038d5a572357b0738a57ff6def1bf6f7a50a7db897fe0d903d802de9dc",
+      "inspectionTool": "view_image",
+      "observation": "验证码登录选项、邮箱框、禁用获取验证码、注册说明完整可读。"
+    },
+    {
+      "caseID": "login--error",
+      "name": "login--error--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/D2396198-DB3C-485D-8182-F3F8EED9E609.png",
+      "sha256": "46289365a2600343afb9cba8712f9b8fd318d774aec5449974095af19ef38d67",
+      "inspectionTool": "view_image",
+      "observation": "邮箱已填且获取验证码可点，但画面没有错误文案、错误横幅或弹窗，未呈现指定 error 状态。"
+    },
+    {
+      "caseID": "login--password",
+      "name": "login--password--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/AFD9F698-2C84-4985-98D1-24CBFDEE473D.png",
+      "sha256": "4f99d02c755a5068d923a7fa9e0a1e1b77dd9d4c42c3a55e3f10e1923507ae1a",
+      "inspectionTool": "view_image",
+      "observation": "密码登录选项、已填邮箱、密码框、禁用登录和忘记密码均可见。"
+    },
+    {
+      "caseID": "login--reset",
+      "name": "login--reset--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/5AC8553C-1938-413E-BE91-290A25C916EF.png",
+      "sha256": "81e9c3ffd38d60c00e91a772a74b39f6ed6ae87dfe4956667b02c615c851fd22",
+      "inspectionTool": "view_image",
+      "observation": "重置密码标题、邮箱、验证码/新密码框、重置并登录和重发入口完整可读。"
+    }
+  ],
+  "skippedDuplicates": [
+    {
+      "caseID": "account--delete-confirmation",
+      "name": "account--delete-confirmation--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DBCE0411-15A5-4120-8542-642C02CFF0D2.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--delete-confirmation--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/900B97A3-C703-49CA-846B-5BDBA7D0452C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--delete-confirmation",
+      "name": "account--delete-confirmation--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/D12F4BE1-3F63-49BF-B297-3C3D37DFD853.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--delete-confirmation--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/900B97A3-C703-49CA-846B-5BDBA7D0452C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--delete-confirmation",
+      "name": "account--delete-confirmation--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF05B1E2-9184-4F02-A894-E64D49D62787.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--delete-confirmation--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/900B97A3-C703-49CA-846B-5BDBA7D0452C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--delete-confirmation",
+      "name": "account--delete-confirmation--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2EC664AF-D7CD-4E5D-8979-BE963BA95145.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--delete-confirmation--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/900B97A3-C703-49CA-846B-5BDBA7D0452C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--export",
+      "name": "account--export--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/247EB4A3-ABA3-4132-8A50-8D61514755CB.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--export--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1E02F056-451D-40A7-AF5F-D85F4D1C8B19.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--export",
+      "name": "account--export--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/AE96CA13-0E01-49C1-8C93-C2B1D78D43FB.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--export--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1E02F056-451D-40A7-AF5F-D85F4D1C8B19.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--export",
+      "name": "account--export--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/365D1B18-F378-42E9-BC90-230EA4FFDC41.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--export--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1E02F056-451D-40A7-AF5F-D85F4D1C8B19.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--export",
+      "name": "account--export--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/D385A7C9-6523-4FE0-8405-F0BFE1AF3C22.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--export--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1E02F056-451D-40A7-AF5F-D85F4D1C8B19.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--local",
+      "name": "account--local--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BA406901-2A8D-4E52-BA87-09ED9398E90F.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--local--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF4D2CF0-BAB0-4DB0-8135-EDAACCD9FB3C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--local",
+      "name": "account--local--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A213617D-8532-443D-ADEF-981D5F4C1C46.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--local--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF4D2CF0-BAB0-4DB0-8135-EDAACCD9FB3C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--local",
+      "name": "account--local--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/5B691BD4-8BF2-4A77-98E5-67C1A44CB63A.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--local--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF4D2CF0-BAB0-4DB0-8135-EDAACCD9FB3C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--local",
+      "name": "account--local--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/7C66DE7A-82A7-44F1-A54B-4835B80EA053.png",
+      "sha256": "0ad4247319b3b6709c8b20cc50213fd923a24a635188b74ae1fd85a1376c3e9e",
+      "duplicateOf": "account--local--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF4D2CF0-BAB0-4DB0-8135-EDAACCD9FB3C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--password-form",
+      "name": "account--password-form--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/055C6ED4-A3C6-417C-BDD3-435B41C4C732.png",
+      "sha256": "45565984a087ccacf94796997f9739999660b60d5e734db38e8b17d75165d746",
+      "duplicateOf": "account--password-form--scroll-2",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C5D7D997-BDD0-4A03-A3BA-F488F16FE657.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--password-form",
+      "name": "account--password-form--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/FE8E223B-419F-4C20-B9BF-275074F10B6B.png",
+      "sha256": "45565984a087ccacf94796997f9739999660b60d5e734db38e8b17d75165d746",
+      "duplicateOf": "account--password-form--scroll-2",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C5D7D997-BDD0-4A03-A3BA-F488F16FE657.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--password-form",
+      "name": "account--password-form--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/9B68CF1B-FC87-4E36-BBBC-999DFD9E5B11.png",
+      "sha256": "45565984a087ccacf94796997f9739999660b60d5e734db38e8b17d75165d746",
+      "duplicateOf": "account--password-form--scroll-2",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C5D7D997-BDD0-4A03-A3BA-F488F16FE657.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--remote",
+      "name": "account--remote--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/49EDD747-232C-4A9D-9E88-9584840C9EFB.png",
+      "sha256": "b02e8fb059a35dd33ba00afda24a373117ed94409191eef1cffd16b31dffc47f",
+      "duplicateOf": "account--remote--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/383E6476-8A72-42DA-BBB7-7F1783D75018.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--remote",
+      "name": "account--remote--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/EB5D9058-622C-4463-B468-A445344C1DF1.png",
+      "sha256": "b02e8fb059a35dd33ba00afda24a373117ed94409191eef1cffd16b31dffc47f",
+      "duplicateOf": "account--remote--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/383E6476-8A72-42DA-BBB7-7F1783D75018.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--remote",
+      "name": "account--remote--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8DEF536B-5697-4757-BE05-64E614CF50B3.png",
+      "sha256": "b02e8fb059a35dd33ba00afda24a373117ed94409191eef1cffd16b31dffc47f",
+      "duplicateOf": "account--remote--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/383E6476-8A72-42DA-BBB7-7F1783D75018.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "account--remote",
+      "name": "account--remote--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/E5FFDB23-FCB2-4FB4-8DF2-9120D33899E9.png",
+      "sha256": "b02e8fb059a35dd33ba00afda24a373117ed94409191eef1cffd16b31dffc47f",
+      "duplicateOf": "account--remote--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/383E6476-8A72-42DA-BBB7-7F1783D75018.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "name": "ai-settings--connection-error--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C297A97D-1CA6-497D-8F3C-5615A2597C5C.png",
+      "sha256": "2b53a9b036ac3483a950ad01713d0d99d63bd5a383fa64c9b10a19b07d951c4b",
+      "duplicateOf": "ai-settings--connection-error--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8C733C25-72AB-4AB7-8A3F-BA617DBE944C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "name": "ai-settings--connection-error--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/184DCDD5-F10E-40BA-B248-C93B5DB7E0AE.png",
+      "sha256": "2b53a9b036ac3483a950ad01713d0d99d63bd5a383fa64c9b10a19b07d951c4b",
+      "duplicateOf": "ai-settings--connection-error--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8C733C25-72AB-4AB7-8A3F-BA617DBE944C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "name": "ai-settings--connection-error--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/484BB345-B7C2-4EB3-928F-FD630462D612.png",
+      "sha256": "2b53a9b036ac3483a950ad01713d0d99d63bd5a383fa64c9b10a19b07d951c4b",
+      "duplicateOf": "ai-settings--connection-error--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8C733C25-72AB-4AB7-8A3F-BA617DBE944C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--connection-error",
+      "name": "ai-settings--connection-error--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/39FC2A6C-FFB1-4B22-8D71-0281722769C4.png",
+      "sha256": "2b53a9b036ac3483a950ad01713d0d99d63bd5a383fa64c9b10a19b07d951c4b",
+      "duplicateOf": "ai-settings--connection-error--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/8C733C25-72AB-4AB7-8A3F-BA617DBE944C.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "name": "ai-settings--consent--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/25E601D2-E549-4B84-9E7B-E2DD4BB1792D.png",
+      "sha256": "4b70f360e6006b94de2275ee977cbfa67f5aa61af76c48115a8967b8848442da",
+      "duplicateOf": "ai-settings--consent--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A9CFD69A-5C02-4DC2-8C96-A339BC14F20A.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "name": "ai-settings--consent--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6C7D761E-FF57-48D2-9526-A92DCBEB3E1F.png",
+      "sha256": "4b70f360e6006b94de2275ee977cbfa67f5aa61af76c48115a8967b8848442da",
+      "duplicateOf": "ai-settings--consent--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A9CFD69A-5C02-4DC2-8C96-A339BC14F20A.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "name": "ai-settings--consent--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F7F26590-C6B6-49A8-982F-63B04A21F676.png",
+      "sha256": "4b70f360e6006b94de2275ee977cbfa67f5aa61af76c48115a8967b8848442da",
+      "duplicateOf": "ai-settings--consent--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A9CFD69A-5C02-4DC2-8C96-A339BC14F20A.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--consent",
+      "name": "ai-settings--consent--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F9E9EB3D-32E0-43E8-9C56-5C2BB27B5C2B.png",
+      "sha256": "4b70f360e6006b94de2275ee977cbfa67f5aa61af76c48115a8967b8848442da",
+      "duplicateOf": "ai-settings--consent--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A9CFD69A-5C02-4DC2-8C96-A339BC14F20A.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "name": "ai-settings--hosted--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F25CE1ED-4B9D-4D3D-8573-37D8E817B071.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--hosted--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1991B76A-1828-4265-BB5D-83F26DABDC61.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "name": "ai-settings--hosted--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0F4CA743-C968-4D91-879B-4F8CC7E6D5DF.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--hosted--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1991B76A-1828-4265-BB5D-83F26DABDC61.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "name": "ai-settings--hosted--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/5607508B-DDC7-40D7-927A-A25C3EBCF9EF.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--hosted--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1991B76A-1828-4265-BB5D-83F26DABDC61.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--hosted",
+      "name": "ai-settings--hosted--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1EBF4732-8D86-4882-A5C0-F2B83BF933A2.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--hosted--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1991B76A-1828-4265-BB5D-83F26DABDC61.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "name": "ai-settings--missing-config--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/43B0F0B8-9115-4465-A308-3256A57F0772.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--missing-config--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/91958C3C-953F-4C86-BEDE-C4A53EFDF489.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "name": "ai-settings--missing-config--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0B82A4F1-474C-4B8C-95EE-4B1FC7579D2F.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--missing-config--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/91958C3C-953F-4C86-BEDE-C4A53EFDF489.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "name": "ai-settings--missing-config--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2B2F58ED-5A9A-4B8D-AF28-862520873820.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--missing-config--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/91958C3C-953F-4C86-BEDE-C4A53EFDF489.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--missing-config",
+      "name": "ai-settings--missing-config--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/7D590B1B-8DEA-45C4-9F10-4539D00923C3.png",
+      "sha256": "ad8c2171cd028d6c1faea2f1e282d8feed98b3d286214f182e77bacc61804e24",
+      "duplicateOf": "ai-settings--missing-config--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/91958C3C-953F-4C86-BEDE-C4A53EFDF489.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "name": "ai-settings--personal--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/FDB80228-A692-4E65-B14E-D31FD199B0A8.png",
+      "sha256": "02897dbe5c28b5d4655824faeba1c19d03cf75dbb473fd7c6e154a4260266eaf",
+      "duplicateOf": "ai-settings--personal--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2DEB5C5B-5DB4-446C-9BBA-CDDA6F89E031.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "name": "ai-settings--personal--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/9FE2EC06-4FBB-4C39-856F-6392FA00BAFC.png",
+      "sha256": "02897dbe5c28b5d4655824faeba1c19d03cf75dbb473fd7c6e154a4260266eaf",
+      "duplicateOf": "ai-settings--personal--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2DEB5C5B-5DB4-446C-9BBA-CDDA6F89E031.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "name": "ai-settings--personal--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6462E46C-9FC0-48A6-A385-7586740A0615.png",
+      "sha256": "02897dbe5c28b5d4655824faeba1c19d03cf75dbb473fd7c6e154a4260266eaf",
+      "duplicateOf": "ai-settings--personal--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2DEB5C5B-5DB4-446C-9BBA-CDDA6F89E031.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--personal",
+      "name": "ai-settings--personal--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1C818959-BCF7-47B9-B1FA-2CFF962DF5A8.png",
+      "sha256": "02897dbe5c28b5d4655824faeba1c19d03cf75dbb473fd7c6e154a4260266eaf",
+      "duplicateOf": "ai-settings--personal--scroll-1",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2DEB5C5B-5DB4-446C-9BBA-CDDA6F89E031.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    },
+    {
+      "caseID": "ai-settings--personal--large-text",
+      "name": "ai-settings--personal--large-text--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A1D5461C-5932-4057-AC80-E57C88A67CAE.png",
+      "sha256": "4c8d95a4176e89486052b6ed04a64c6e0c2d2108782ef946435d15e35718be91",
+      "duplicateOf": "ai-settings--personal--large-text--scroll-4",
+      "viewedRepresentativePath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F74B54C7-85BE-43CA-84FC-E3271310F66F.png",
+      "reason": "Same case, exact SHA-256 match to an actually viewed original; not independently viewed."
+    }
+  ],
+  "coverageLimits": [
+    "No real HarmonyOS screenshots were supplied or reviewed. This is not a paired parity acceptance, and it cannot establish aesthetic improvement over HarmonyOS.",
+    "All images are from the supplied iOS screenshot index. This review does not call simulator captures physical-iPhone tests.",
+    "Login/account/network fixtures do not prove AGC registration/login, real password reset, key storage, connectivity, subscription activation, destructive-action execution or export success.",
+    "No keyboard-visible captures, VoiceOver interaction, alternate device sizes or separate theme variants were reviewed within this scope.",
+    "Large font is visibly rendered, but exact system category and capture/build/source provenance were not independently validated in this visual-only review.",
+    "Visual terminal anchors were inspected. Runtime totalContentHeight/viewportHeight/maxScrollOffset and numerical overlap were not supplied here; repeated last frames alone do not prove full-content coverage.",
+    "Account export images show the export controls but no native share sheet or exported artifact. Export functionality requires separate journey/artifact evidence.",
+    "Per-case no-blocking-visual-finding is limited to supplied visible content; it is not a final pass and does not override pending case ledger entries."
+  ]
+}

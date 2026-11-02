@@ -1,0 +1,85 @@
+{
+  app: {
+    signingConfigs: [
+      {
+        name: 'default',
+        type: 'HarmonyOS',
+        material: {
+          certpath: '/Users/hut/.ohos/config/default_harmony_tpGXj4zAP0OJN9PO0cNs96xtkes7qnzuUqox2zHo0E=.cer',
+          keyAlias: 'debugKey',
+          keyPassword: '0000001b2ce10e383d9f3c012db3f1dd9f0d1317ae6e86f096eae5780b914cd8235241a20fd47eeebeb769',
+          profile: '/Users/hut/.ohos/config/default_harmony_tpGXj4zAP0OJN9PO0cNs96xtkes7qnzuUqox2zHo0E=.p7b',
+          signAlg: 'SHA256withECDSA',
+          storeFile: '/Users/hut/.ohos/config/default_harmony_tpGXj4zAP0OJN9PO0cNs96xtkes7qnzuUqox2zHo0E=.p12',
+          storePassword: '0000001b2ce10e383d9f3c012db3f1dd9f0d1317ae6e86f096eae5780b914cd8235241a20fd47eeebeb769',
+        },
+      },
+      {
+        name: 'release',
+        type: 'HarmonyOS',
+        material: {
+          certpath: '/Users/hut/.ohos/config/release_harmony_milo.cer',
+          keyAlias: 'debugKey',
+          keyPassword: '0000001b2ce10e383d9f3c012db3f1dd9f0d1317ae6e86f096eae5780b914cd8235241a20fd47eeebeb769',
+          profile: '/Users/hut/.ohos/config/release_harmony_milo.p7b',
+          signAlg: 'SHA256withECDSA',
+          storeFile: '/Users/hut/.ohos/config/default_harmony_tpGXj4zAP0OJN9PO0cNs96xtkes7qnzuUqox2zHo0E=.p12',
+          storePassword: '0000001b2ce10e383d9f3c012db3f1dd9f0d1317ae6e86f096eae5780b914cd8235241a20fd47eeebeb769',
+        },
+      },
+    ],
+    products: [
+      {
+        name: 'default',
+        signingConfig: 'default',
+        compileSdkVersion: '6.1.1(24)',
+        targetSdkVersion: '6.1.1(24)',
+        compatibleSdkVersion: '6.1.1(24)',
+        runtimeOS: 'HarmonyOS',
+        buildOption: {
+          strictMode: {
+            caseSensitiveCheck: true,
+            useNormalizedOHMUrl: true,
+          },
+        },
+      },
+      {
+        name: 'release',
+        signingConfig: 'release',
+        compileSdkVersion: '6.1.1(24)',
+        targetSdkVersion: '6.1.1(24)',
+        compatibleSdkVersion: '6.1.1(24)',
+        runtimeOS: 'HarmonyOS',
+        buildOption: {
+          strictMode: {
+            caseSensitiveCheck: true,
+            useNormalizedOHMUrl: true,
+          },
+        },
+      },
+    ],
+    buildModeSet: [
+      {
+        name: 'debug',
+      },
+      {
+        name: 'release',
+      },
+    ],
+  },
+  modules: [
+    {
+      name: 'entry',
+      srcPath: './entry',
+        targets: [
+          {
+            name: 'default',
+            applyToProducts: [
+              'default',
+              'release',
+            ],
+          },
+        ],
+    },
+  ],
+}

@@ -1,0 +1,844 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01E96800A651D705FC555C2C /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6292C7B1EAF5220A936506E9 /* JournalModel.swift */; };
+		0A7B26960D565F08573FF98E /* AGCAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0302E1C2F803081D132C20A2 /* AGCAuthProvider.swift */; };
+		0BF202F187DE9BA084D02594 /* MiloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF94CE44DC17EA4A9C83FC9 /* MiloApp.swift */; };
+		0F5001679836AB64FC9398A3 /* TestBundleProvenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485136814D1ED376976E6E57 /* TestBundleProvenance.swift */; };
+		1064A855D40E879B7B2A37D0 /* AccountFunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C096BD299483658227477B1 /* AccountFunctionalTests.swift */; };
+		14A0F8346F315B6CCD6515B4 /* ParityScrollMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB7B6AB55CDC51F9C6B0BB /* ParityScrollMetrics.swift */; };
+		15A6EBC6312A5B0D9281B8FB /* AISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D4640E726EFCCD79596C54 /* AISettingsView.swift */; };
+		190D069FE45F5026DFBC7C74 /* mood_sheet_01.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7931D568D3A57506B6777C /* mood_sheet_01.png */; };
+		194F5B521C7CD19911196BDB /* ParityCaptureGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A6F5E7E437F52994E2F34 /* ParityCaptureGeometry.swift */; };
+		21BAC4D302DC7D81B059FDD5 /* HMFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE4C9B5C4ED7089663CF3C9 /* HMFoundation.xcframework */; };
+		21DC1FAF5555705AC802A8AA /* mood_sheet_04.png in Resources */ = {isa = PBXBuildFile; fileRef = E622B38DD893C91CFF2D502D /* mood_sheet_04.png */; };
+		227909589693F9BF921F38A2 /* GalaxyMotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC0834EA9626ABFB0181B9 /* GalaxyMotionTests.swift */; };
+		28916FADBB885D911D38C8D5 /* CardArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95522B68E072C458C9FD1C8C /* CardArtworkView.swift */; };
+		2FDE01A7FE351FDC34CE8E69 /* SpeechInputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6743D88C1D418AC2044F8C /* SpeechInputUITests.swift */; };
+		2FFD2792EEFB57B7D100135B /* AGConnectCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4FE339D856BDBD9EEE1A6A /* AGConnectCore.xcframework */; };
+		340D0A2F0A6C47715566F53D /* mood_sheet_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 6188CB5F5362EA18346BEA90 /* mood_sheet_02.png */; };
+		3CC0AE502091733F3FEEC5E5 /* MiloCore in Frameworks */ = {isa = PBXBuildFile; productRef = 28C02AC18D2A4E6B55F1E514 /* MiloCore */; };
+		3E3B0681333BCED7CE3C682F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316B819C5B3CF4480F91D7A2 /* JournalView.swift */; };
+		4096FFB016B611F6E1DF0A3B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 451EE8691B7C6F8D16860831 /* PrivacyInfo.xcprivacy */; };
+		5291438C54349F81458109B1 /* NativeSpeechInputBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5AD851B5C3EF4B95FCA663 /* NativeSpeechInputBackend.swift */; };
+		52EB9FF2293381CABB11CF23 /* MemoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B2272AFD49DB49E14337EC /* MemoryCardView.swift */; };
+		6438A4CF9983FA9C5F310351 /* SpeechInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512BED803F484EAF9D0FF11 /* SpeechInputTests.swift */; };
+		6A03A41818B8D36F394BC719 /* AIConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07092A7DAD5EAC69845E288E /* AIConnection.swift */; };
+		711EB390FA5E34164D4993F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2370CD6673DEC8F45813EA1 /* LoginView.swift */; };
+		7567271EADBE0945A242258C /* AGConnectCredential.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAD6C897593680D20ACA11E /* AGConnectCredential.xcframework */; };
+		95D47DA37DC3E81F80AFEE13 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A44D17BD0C29F449941D9D /* AccountModel.swift */; };
+		9EA48DB966B4E706ACFC0D67 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2A7D543DA61438138925A8 /* Security.framework */; };
+		A0B26F40B3E05CCCFA270BA1 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971C915147403DF3835B023F /* AccountView.swift */; };
+		A1381A7FD6DAEBE5E08A7402 /* mood_sheet_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E65E18F112770FB00CFA44 /* mood_sheet_03.png */; };
+		AA96473C699EC60F75AD7983 /* SpeechInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FDA63B44B81B458DFB961 /* SpeechInputModel.swift */; };
+		AD1502EDE099A988E812A6B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E43D27D57127C6132765EE /* HomeView.swift */; };
+		B461BE8819B6CE14D17AEA2B /* NativeKeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E12833054CE13BF715CDC /* NativeKeychainTests.swift */; };
+		B61AD02FDCCED68524E04857 /* AccountBehaviorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA0BC6A2D323A24E4E02F49 /* AccountBehaviorTests.swift */; };
+		B9914337634A7730E6E695F7 /* MiloSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1ABECFBECCD40F1E704713 /* MiloSecureField.swift */; };
+		BCEC2783C74F5A9F209803FF /* mood_sheet_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DF7E8AD29B11E6A9C025079 /* mood_sheet_05.png */; };
+		BE36C37EB1DF3B2B28E496E3 /* AGConnectAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CFECABE91B4ED9849F7208 /* AGConnectAuth.xcframework */; };
+		BF23A8FBCF806834DFEE925A /* RecallViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9127460BEEEEE9E22C4D22 /* RecallViews.swift */; };
+		C005A0FD0A45DA02CB25B165 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDAA2B6472FDA7DE79AFEC /* TimelineView.swift */; };
+		C915C4B5C5713EB9331DE716 /* LaunchStabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879D525447736F92B99410D7 /* LaunchStabilityTests.swift */; };
+		CA1BB1026D417B4891D28F16 /* MiloGalaxy.metal.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD0CD881D88255A38A6942E4 /* MiloGalaxy.metal.txt */; };
+		CD606B07A039088C811AFF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77769368CB9C8C2AD75D329C /* Assets.xcassets */; };
+		D0176791BFCD75E9B96E176D /* MiloTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77063930A92E72BFC56298E2 /* MiloTheme.swift */; };
+		D20E2AE093C02CA9C36C9800 /* MiloGalaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460006D78C15C2D8067E9F23 /* MiloGalaxy.swift */; };
+		DC868099C8EE46428267FFA8 /* ParityCaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980BD42920B105877E8AA24 /* ParityCaptureTests.swift */; };
+		DCBDCCD363F7D8795998AA41 /* MiloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC4A7B64148FA83865CA00 /* MiloUITests.swift */; };
+		DE01EA9AE00C6753D1F58E07 /* AGCResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA0927465CDEF4FC24DA5D14 /* AGCResources.bundle */; };
+		E6F41A508B2C17F1DC814EBA /* ParityStateAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E104E7A0D33E31E0DE91 /* ParityStateAssertions.swift */; };
+		FAA60940DBB27DF4BF82F1D0 /* MemoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41BA0061468AC788E9C640C /* MemoryDetailView.swift */; };
+		FD2AEC48D1E9378E7716FB6F /* MiloNoteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DCC16F148FE33DAA475ABA /* MiloNoteEditor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F5C0B5C98202D7BECB0F5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3377B5FA48C1E1A8049276DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8561F94BC87E22B38E1C6CCC;
+			remoteInfo = Milo;
+		};
+		93DCE65062FB6FE1176521EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3377B5FA48C1E1A8049276DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8561F94BC87E22B38E1C6CCC;
+			remoteInfo = Milo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0302E1C2F803081D132C20A2 /* AGCAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGCAuthProvider.swift; sourceTree = "<group>"; };
+		07092A7DAD5EAC69845E288E /* AIConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIConnection.swift; sourceTree = "<group>"; };
+		0980BD42920B105877E8AA24 /* ParityCaptureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParityCaptureTests.swift; sourceTree = "<group>"; };
+		14B2272AFD49DB49E14337EC /* MemoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCardView.swift; sourceTree = "<group>"; };
+		1C6743D88C1D418AC2044F8C /* SpeechInputUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechInputUITests.swift; sourceTree = "<group>"; };
+		1FBB7B6AB55CDC51F9C6B0BB /* ParityScrollMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParityScrollMetrics.swift; sourceTree = "<group>"; };
+		20FC4A7B64148FA83865CA00 /* MiloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiloUITests.swift; sourceTree = "<group>"; };
+		2889EDD519451AB3AC17FAA5 /* Milo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Milo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C096BD299483658227477B1 /* AccountFunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFunctionalTests.swift; sourceTree = "<group>"; };
+		2FBDAA2B6472FDA7DE79AFEC /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		316B819C5B3CF4480F91D7A2 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		3C8A6F5E7E437F52994E2F34 /* ParityCaptureGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParityCaptureGeometry.swift; sourceTree = "<group>"; };
+		3E9127460BEEEEE9E22C4D22 /* RecallViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallViews.swift; sourceTree = "<group>"; };
+		451EE8691B7C6F8D16860831 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		460006D78C15C2D8067E9F23 /* MiloGalaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiloGalaxy.swift; sourceTree = "<group>"; };
+		485136814D1ED376976E6E57 /* TestBundleProvenance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundleProvenance.swift; sourceTree = "<group>"; };
+		4B1ABECFBECCD40F1E704713 /* MiloSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiloSecureField.swift; sourceTree = "<group>"; };
+		534C33DA5C4CE057CE30E98E /* MiloAccountTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MiloAccountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE4C9B5C4ED7089663CF3C9 /* HMFoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HMFoundation.xcframework; path = Vendor/AGConnect/1.9.4.300/HMFoundation.xcframework; sourceTree = "<group>"; };
+		6188CB5F5362EA18346BEA90 /* mood_sheet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_sheet_02.png; sourceTree = "<group>"; };
+		6292C7B1EAF5220A936506E9 /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
+		62DCC16F148FE33DAA475ABA /* MiloNoteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiloNoteEditor.swift; sourceTree = "<group>"; };
+		6F2A7D543DA61438138925A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		709FDA63B44B81B458DFB961 /* SpeechInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechInputModel.swift; sourceTree = "<group>"; };
+		75E43D27D57127C6132765EE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		77063930A92E72BFC56298E2 /* MiloTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiloTheme.swift; sourceTree = "<group>"; };
+		77769368CB9C8C2AD75D329C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BF94CE44DC17EA4A9C83FC9 /* MiloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiloApp.swift; sourceTree = "<group>"; };
+		81CFECABE91B4ED9849F7208 /* AGConnectAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AGConnectAuth.xcframework; path = Vendor/AGConnect/1.9.4.300/AGConnectAuth.xcframework; sourceTree = "<group>"; };
+		82E65E18F112770FB00CFA44 /* mood_sheet_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_sheet_03.png; sourceTree = "<group>"; };
+		8512BED803F484EAF9D0FF11 /* SpeechInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechInputTests.swift; sourceTree = "<group>"; };
+		879D525447736F92B99410D7 /* LaunchStabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStabilityTests.swift; sourceTree = "<group>"; };
+		8DF7E8AD29B11E6A9C025079 /* mood_sheet_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_sheet_05.png; sourceTree = "<group>"; };
+		93A44D17BD0C29F449941D9D /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		95522B68E072C458C9FD1C8C /* CardArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardArtworkView.swift; sourceTree = "<group>"; };
+		971C915147403DF3835B023F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		AA0927465CDEF4FC24DA5D14 /* AGCResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = AGCResources.bundle; sourceTree = "<group>"; };
+		AD0CD881D88255A38A6942E4 /* MiloGalaxy.metal.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MiloGalaxy.metal.txt; sourceTree = "<group>"; };
+		AEE93223F5A00BD7F17AD8F4 /* MiloCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MiloCore; path = MiloCore; sourceTree = SOURCE_ROOT; };
+		B41BA0061468AC788E9C640C /* MemoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailView.swift; sourceTree = "<group>"; };
+		BCEC0834EA9626ABFB0181B9 /* GalaxyMotionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyMotionTests.swift; sourceTree = "<group>"; };
+		C2370CD6673DEC8F45813EA1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D7D4640E726EFCCD79596C54 /* AISettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISettingsView.swift; sourceTree = "<group>"; };
+		DA4FE339D856BDBD9EEE1A6A /* AGConnectCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AGConnectCore.xcframework; path = Vendor/AGConnect/1.9.4.300/AGConnectCore.xcframework; sourceTree = "<group>"; };
+		DC7931D568D3A57506B6777C /* mood_sheet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_sheet_01.png; sourceTree = "<group>"; };
+		DCA0BC6A2D323A24E4E02F49 /* AccountBehaviorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBehaviorTests.swift; sourceTree = "<group>"; };
+		DE5AD851B5C3EF4B95FCA663 /* NativeSpeechInputBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSpeechInputBackend.swift; sourceTree = "<group>"; };
+		E08E12833054CE13BF715CDC /* NativeKeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeKeychainTests.swift; sourceTree = "<group>"; };
+		E622B38DD893C91CFF2D502D /* mood_sheet_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_sheet_04.png; sourceTree = "<group>"; };
+		EBAD6C897593680D20ACA11E /* AGConnectCredential.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AGConnectCredential.xcframework; path = Vendor/AGConnect/1.9.4.300/AGConnectCredential.xcframework; sourceTree = "<group>"; };
+		EE18E104E7A0D33E31E0DE91 /* ParityStateAssertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParityStateAssertions.swift; sourceTree = "<group>"; };
+		F2FA649EF431F434F06AFBD4 /* MiloUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MiloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		106D0CA66C7E81BC4266D103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC0AE502091733F3FEEC5E5 /* MiloCore in Frameworks */,
+				BE36C37EB1DF3B2B28E496E3 /* AGConnectAuth.xcframework in Frameworks */,
+				7567271EADBE0945A242258C /* AGConnectCredential.xcframework in Frameworks */,
+				2FFD2792EEFB57B7D100135B /* AGConnectCore.xcframework in Frameworks */,
+				21BAC4D302DC7D81B059FDD5 /* HMFoundation.xcframework in Frameworks */,
+				9EA48DB966B4E706ACFC0D67 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EDD5DF6F4495FFBF0EA83C8 /* 1.9.4.300 */ = {
+			isa = PBXGroup;
+			children = (
+				AA0927465CDEF4FC24DA5D14 /* AGCResources.bundle */,
+			);
+			name = 1.9.4.300;
+			path = Vendor/AGConnect/1.9.4.300;
+			sourceTree = "<group>";
+		};
+		13F182044B7F50B8B3458449 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				93A44D17BD0C29F449941D9D /* AccountModel.swift */,
+				971C915147403DF3835B023F /* AccountView.swift */,
+				0302E1C2F803081D132C20A2 /* AGCAuthProvider.swift */,
+				07092A7DAD5EAC69845E288E /* AIConnection.swift */,
+				D7D4640E726EFCCD79596C54 /* AISettingsView.swift */,
+				C2370CD6673DEC8F45813EA1 /* LoginView.swift */,
+				4B1ABECFBECCD40F1E704713 /* MiloSecureField.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		1C8DF115D6A7EB1A1B29F01B /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C096BD299483658227477B1 /* AccountFunctionalTests.swift */,
+				BCEC0834EA9626ABFB0181B9 /* GalaxyMotionTests.swift */,
+				879D525447736F92B99410D7 /* LaunchStabilityTests.swift */,
+				20FC4A7B64148FA83865CA00 /* MiloUITests.swift */,
+				3C8A6F5E7E437F52994E2F34 /* ParityCaptureGeometry.swift */,
+				0980BD42920B105877E8AA24 /* ParityCaptureTests.swift */,
+				EE18E104E7A0D33E31E0DE91 /* ParityStateAssertions.swift */,
+				1C6743D88C1D418AC2044F8C /* SpeechInputUITests.swift */,
+				485136814D1ED376976E6E57 /* TestBundleProvenance.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		206DC18E2357B47A6D742F54 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				460006D78C15C2D8067E9F23 /* MiloGalaxy.swift */,
+				62DCC16F148FE33DAA475ABA /* MiloNoteEditor.swift */,
+				77063930A92E72BFC56298E2 /* MiloTheme.swift */,
+				1FBB7B6AB55CDC51F9C6B0BB /* ParityScrollMetrics.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		4362E990E5BB4F1260456B53 /* Journey */ = {
+			isa = PBXGroup;
+			children = (
+				75E43D27D57127C6132765EE /* HomeView.swift */,
+				DE5AD851B5C3EF4B95FCA663 /* NativeSpeechInputBackend.swift */,
+				3E9127460BEEEEE9E22C4D22 /* RecallViews.swift */,
+				709FDA63B44B81B458DFB961 /* SpeechInputModel.swift */,
+			);
+			path = Journey;
+			sourceTree = "<group>";
+		};
+		6526C7249AAAFEFECBA5A333 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2889EDD519451AB3AC17FAA5 /* Milo.app */,
+				534C33DA5C4CE057CE30E98E /* MiloAccountTests.xctest */,
+				F2FA649EF431F434F06AFBD4 /* MiloUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9B3521FED6E58D41EAC77AB = {
+			isa = PBXGroup;
+			children = (
+				0EDD5DF6F4495FFBF0EA83C8 /* 1.9.4.300 */,
+				FBBF50BC6DC362F708A667D9 /* App */,
+				F0ECD4098185910FB11C8A44 /* Packages */,
+				AC30BAB2FDB063B2F5F1A5CC /* Resources */,
+				D6DCBEB2BCAD1AEE0AB05823 /* tests */,
+				1C8DF115D6A7EB1A1B29F01B /* UITests */,
+				F6A7FBB34CF05F9160CD0F07 /* Frameworks */,
+				6526C7249AAAFEFECBA5A333 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC30BAB2FDB063B2F5F1A5CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77769368CB9C8C2AD75D329C /* Assets.xcassets */,
+				AD0CD881D88255A38A6942E4 /* MiloGalaxy.metal.txt */,
+				DC7931D568D3A57506B6777C /* mood_sheet_01.png */,
+				6188CB5F5362EA18346BEA90 /* mood_sheet_02.png */,
+				82E65E18F112770FB00CFA44 /* mood_sheet_03.png */,
+				E622B38DD893C91CFF2D502D /* mood_sheet_04.png */,
+				8DF7E8AD29B11E6A9C025079 /* mood_sheet_05.png */,
+				451EE8691B7C6F8D16860831 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3AB7B96D9D33A2579F723F2 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				95522B68E072C458C9FD1C8C /* CardArtworkView.swift */,
+				14B2272AFD49DB49E14337EC /* MemoryCardView.swift */,
+				B41BA0061468AC788E9C640C /* MemoryDetailView.swift */,
+				2FBDAA2B6472FDA7DE79AFEC /* TimelineView.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		D6DCBEB2BCAD1AEE0AB05823 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA0BC6A2D323A24E4E02F49 /* AccountBehaviorTests.swift */,
+				E08E12833054CE13BF715CDC /* NativeKeychainTests.swift */,
+				8512BED803F484EAF9D0FF11 /* SpeechInputTests.swift */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		F0ECD4098185910FB11C8A44 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				AEE93223F5A00BD7F17AD8F4 /* MiloCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		F6A7FBB34CF05F9160CD0F07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81CFECABE91B4ED9849F7208 /* AGConnectAuth.xcframework */,
+				DA4FE339D856BDBD9EEE1A6A /* AGConnectCore.xcframework */,
+				EBAD6C897593680D20ACA11E /* AGConnectCredential.xcframework */,
+				5EE4C9B5C4ED7089663CF3C9 /* HMFoundation.xcframework */,
+				6F2A7D543DA61438138925A8 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBBF50BC6DC362F708A667D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6292C7B1EAF5220A936506E9 /* JournalModel.swift */,
+				316B819C5B3CF4480F91D7A2 /* JournalView.swift */,
+				7BF94CE44DC17EA4A9C83FC9 /* MiloApp.swift */,
+				13F182044B7F50B8B3458449 /* Account */,
+				C3AB7B96D9D33A2579F723F2 /* Collection */,
+				206DC18E2357B47A6D742F54 /* Design */,
+				4362E990E5BB4F1260456B53 /* Journey */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8561F94BC87E22B38E1C6CCC /* Milo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD8D5033639ADDB67101FA63 /* Build configuration list for PBXNativeTarget "Milo" */;
+			buildPhases = (
+				F93A834DD7F917580C201DF4 /* Sources */,
+				449C904C435DEA040972E6D1 /* Resources */,
+				106D0CA66C7E81BC4266D103 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Milo;
+			packageProductDependencies = (
+				28C02AC18D2A4E6B55F1E514 /* MiloCore */,
+			);
+			productName = Milo;
+			productReference = 2889EDD519451AB3AC17FAA5 /* Milo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BCE2F20E2296DCE4B4300C7 /* MiloAccountTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED22EEB146532733A09A16C8 /* Build configuration list for PBXNativeTarget "MiloAccountTests" */;
+			buildPhases = (
+				59151206D1BDC9BE94881E9C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				360F8FD911A9DB750DC2040A /* PBXTargetDependency */,
+			);
+			name = MiloAccountTests;
+			packageProductDependencies = (
+			);
+			productName = MiloAccountTests;
+			productReference = 534C33DA5C4CE057CE30E98E /* MiloAccountTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7B6F86B693B13F146106F9F /* MiloUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4D1D77C8029F0D68FF86BF4 /* Build configuration list for PBXNativeTarget "MiloUITests" */;
+			buildPhases = (
+				946AED36EF4F218E0200F6B1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CC409F1D5C832A19872C8E2 /* PBXTargetDependency */,
+			);
+			name = MiloUITests;
+			packageProductDependencies = (
+			);
+			productName = MiloUITests;
+			productReference = F2FA649EF431F434F06AFBD4 /* MiloUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3377B5FA48C1E1A8049276DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8561F94BC87E22B38E1C6CCC = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					8BCE2F20E2296DCE4B4300C7 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					B7B6F86B693B13F146106F9F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8561F94BC87E22B38E1C6CCC;
+					};
+				};
+			};
+			buildConfigurationList = 86AC46D9BED0151821C0F729 /* Build configuration list for PBXProject "Milo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A9B3521FED6E58D41EAC77AB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AC6D4FA2A8AB8AECABD2DFD5 /* XCLocalSwiftPackageReference "MiloCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6526C7249AAAFEFECBA5A333 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8561F94BC87E22B38E1C6CCC /* Milo */,
+				8BCE2F20E2296DCE4B4300C7 /* MiloAccountTests */,
+				B7B6F86B693B13F146106F9F /* MiloUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		449C904C435DEA040972E6D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE01EA9AE00C6753D1F58E07 /* AGCResources.bundle in Resources */,
+				CD606B07A039088C811AFF5B /* Assets.xcassets in Resources */,
+				CA1BB1026D417B4891D28F16 /* MiloGalaxy.metal.txt in Resources */,
+				4096FFB016B611F6E1DF0A3B /* PrivacyInfo.xcprivacy in Resources */,
+				190D069FE45F5026DFBC7C74 /* mood_sheet_01.png in Resources */,
+				340D0A2F0A6C47715566F53D /* mood_sheet_02.png in Resources */,
+				A1381A7FD6DAEBE5E08A7402 /* mood_sheet_03.png in Resources */,
+				21DC1FAF5555705AC802A8AA /* mood_sheet_04.png in Resources */,
+				BCEC2783C74F5A9F209803FF /* mood_sheet_05.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59151206D1BDC9BE94881E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B61AD02FDCCED68524E04857 /* AccountBehaviorTests.swift in Sources */,
+				B461BE8819B6CE14D17AEA2B /* NativeKeychainTests.swift in Sources */,
+				6438A4CF9983FA9C5F310351 /* SpeechInputTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		946AED36EF4F218E0200F6B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1064A855D40E879B7B2A37D0 /* AccountFunctionalTests.swift in Sources */,
+				227909589693F9BF921F38A2 /* GalaxyMotionTests.swift in Sources */,
+				C915C4B5C5713EB9331DE716 /* LaunchStabilityTests.swift in Sources */,
+				DCBDCCD363F7D8795998AA41 /* MiloUITests.swift in Sources */,
+				194F5B521C7CD19911196BDB /* ParityCaptureGeometry.swift in Sources */,
+				DC868099C8EE46428267FFA8 /* ParityCaptureTests.swift in Sources */,
+				E6F41A508B2C17F1DC814EBA /* ParityStateAssertions.swift in Sources */,
+				2FDE01A7FE351FDC34CE8E69 /* SpeechInputUITests.swift in Sources */,
+				0F5001679836AB64FC9398A3 /* TestBundleProvenance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93A834DD7F917580C201DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7B26960D565F08573FF98E /* AGCAuthProvider.swift in Sources */,
+				6A03A41818B8D36F394BC719 /* AIConnection.swift in Sources */,
+				15A6EBC6312A5B0D9281B8FB /* AISettingsView.swift in Sources */,
+				95D47DA37DC3E81F80AFEE13 /* AccountModel.swift in Sources */,
+				A0B26F40B3E05CCCFA270BA1 /* AccountView.swift in Sources */,
+				28916FADBB885D911D38C8D5 /* CardArtworkView.swift in Sources */,
+				AD1502EDE099A988E812A6B5 /* HomeView.swift in Sources */,
+				01E96800A651D705FC555C2C /* JournalModel.swift in Sources */,
+				3E3B0681333BCED7CE3C682F /* JournalView.swift in Sources */,
+				711EB390FA5E34164D4993F3 /* LoginView.swift in Sources */,
+				52EB9FF2293381CABB11CF23 /* MemoryCardView.swift in Sources */,
+				FAA60940DBB27DF4BF82F1D0 /* MemoryDetailView.swift in Sources */,
+				0BF202F187DE9BA084D02594 /* MiloApp.swift in Sources */,
+				D20E2AE093C02CA9C36C9800 /* MiloGalaxy.swift in Sources */,
+				FD2AEC48D1E9378E7716FB6F /* MiloNoteEditor.swift in Sources */,
+				B9914337634A7730E6E695F7 /* MiloSecureField.swift in Sources */,
+				D0176791BFCD75E9B96E176D /* MiloTheme.swift in Sources */,
+				5291438C54349F81458109B1 /* NativeSpeechInputBackend.swift in Sources */,
+				14A0F8346F315B6CCD6515B4 /* ParityScrollMetrics.swift in Sources */,
+				BF23A8FBCF806834DFEE925A /* RecallViews.swift in Sources */,
+				AA96473C699EC60F75AD7983 /* SpeechInputModel.swift in Sources */,
+				C005A0FD0A45DA02CB25B165 /* TimelineView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		360F8FD911A9DB750DC2040A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8561F94BC87E22B38E1C6CCC /* Milo */;
+			targetProxy = 7F5C0B5C98202D7BECB0F5CB /* PBXContainerItemProxy */;
+		};
+		9CC409F1D5C832A19872C8E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8561F94BC87E22B38E1C6CCC /* Milo */;
+			targetProxy = 93DCE65062FB6FE1176521EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0319167C4C15E0DED5432177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0F4A90267B09D77F6674A23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectAuth",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectCredential",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectCore",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/HMFoundation",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.milo.echoes.ios.accounttests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Milo.app/Milo";
+			};
+			name = Release;
+		};
+		42EA03C08DFBB53176194128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]" = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		48DB076757C2D2D24FA9DB08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.milo.echoes.ios.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Milo;
+			};
+			name = Release;
+		};
+		995C5A4D054D5E4182C34868 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Vendor/AGConnect/1.9.4.300\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = MILO;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风，把你说的话写进当前回忆。";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "将你选择的回忆卡片保存到相册，方便留存和分享。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "将你主动录下的话转换成文字；系统可能使用 Apple 语音服务。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.milo.echoes.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDE2F1597E9F3FD4546DA0E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.milo.echoes.ios.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Milo;
+			};
+			name = Debug;
+		};
+		EB7792CBEE671D64BF8C47C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Vendor/AGConnect/1.9.4.300\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = MILO;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用麦克风，把你说的话写进当前回忆。";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "将你选择的回忆卡片保存到相册，方便留存和分享。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "将你主动录下的话转换成文字；系统可能使用 Apple 语音服务。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.milo.echoes.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD8167AFA1D392967B81DB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectAuth",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectCredential",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectCore",
+					"$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/HMFoundation",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.milo.echoes.ios.accounttests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Milo.app/Milo";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86AC46D9BED0151821C0F729 /* Build configuration list for PBXProject "Milo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0319167C4C15E0DED5432177 /* Debug */,
+				42EA03C08DFBB53176194128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C4D1D77C8029F0D68FF86BF4 /* Build configuration list for PBXNativeTarget "MiloUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE2F1597E9F3FD4546DA0E2 /* Debug */,
+				48DB076757C2D2D24FA9DB08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DD8D5033639ADDB67101FA63 /* Build configuration list for PBXNativeTarget "Milo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C5A4D054D5E4182C34868 /* Debug */,
+				EB7792CBEE671D64BF8C47C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ED22EEB146532733A09A16C8 /* Build configuration list for PBXNativeTarget "MiloAccountTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD8167AFA1D392967B81DB49 /* Debug */,
+				0F4A90267B09D77F6674A23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AC6D4FA2A8AB8AECABD2DFD5 /* XCLocalSwiftPackageReference "MiloCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MiloCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28C02AC18D2A4E6B55F1E514 /* MiloCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MiloCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3377B5FA48C1E1A8049276DC /* Project object */;
+}

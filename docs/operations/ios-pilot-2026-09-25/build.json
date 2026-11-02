@@ -1,0 +1,16 @@
+{
+  "bundle": "/Users/runner/work/milo/milo/apps/ios/evidence/build-2026-09-25T16-14-12-549Z.xcresult",
+  "environment": {
+    "version": "Xcode 16.4\nBuild version 16F6",
+    "compiler": "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)\nTarget: arm64-apple-macosx15.0",
+    "sdk": "18.5",
+    "device": {
+      "name": "iPhone 16e",
+      "udid": "51F5467F-16A9-4296-9C05-A74F91234967",
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-18-5"
+    },
+    "developerDir": "/Applications/Xcode.app/Contents/Developer"
+  },
+  "sourceHash": "020231a34793dcdb91c06fb4e0d3444c7ce1835f8730f6f0727bc191df66e796",
+  "finishedAt": "2026-09-25T16:14:57.288Z"
+}

@@ -1,0 +1,1082 @@
+Monitoring boot status for iPhone 16e (51F5467F-16A9-4296-9C05-A74F91234967).
+Booting device...
+[2026-09-25 16:15:00 +0000] Status=0, isTerminal=NO, Elapsed=00:00.
+	Booting
+
+[2026-09-25 16:15:06 +0000] Status=1, isTerminal=NO, Elapsed=00:06.
+	Waiting on BackBoard
+
+[2026-09-25 16:15:14 +0000] Status=2, isTerminal=NO, Elapsed=00:13.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:00 seconds
+
+[2026-09-25 16:15:15 +0000] Status=2, isTerminal=NO, Elapsed=00:14.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:00 seconds
+
+[2026-09-25 16:15:16 +0000] Status=2, isTerminal=NO, Elapsed=00:16.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:01 seconds
+
+[2026-09-25 16:15:17 +0000] Status=2, isTerminal=NO, Elapsed=00:16.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:02 seconds
+
+[2026-09-25 16:15:18 +0000] Status=2, isTerminal=NO, Elapsed=00:18.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:03 seconds
+
+[2026-09-25 16:15:18 +0000] Status=2, isTerminal=NO, Elapsed=00:18.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:04 seconds
+
+[2026-09-25 16:15:19 +0000] Status=2, isTerminal=NO, Elapsed=00:19.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:05 seconds
+
+[2026-09-25 16:15:20 +0000] Status=2, isTerminal=NO, Elapsed=00:19.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:06 seconds
+
+[2026-09-25 16:15:21 +0000] Status=2, isTerminal=NO, Elapsed=00:20.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:07 seconds
+
+[2026-09-25 16:15:22 +0000] Status=2, isTerminal=NO, Elapsed=00:21.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:08 seconds
+
+[2026-09-25 16:15:23 +0000] Status=2, isTerminal=NO, Elapsed=00:23.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:09 seconds
+
+[2026-09-25 16:15:24 +0000] Status=2, isTerminal=NO, Elapsed=00:24.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:10 seconds
+
+[2026-09-25 16:15:25 +0000] Status=2, isTerminal=NO, Elapsed=00:25.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:11 seconds
+
+[2026-09-25 16:15:26 +0000] Status=2, isTerminal=NO, Elapsed=00:25.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:12 seconds
+
+[2026-09-25 16:15:27 +0000] Status=2, isTerminal=NO, Elapsed=00:26.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:13 seconds
+
+[2026-09-25 16:15:28 +0000] Status=2, isTerminal=NO, Elapsed=00:28.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:14 seconds
+
+[2026-09-25 16:15:29 +0000] Status=2, isTerminal=NO, Elapsed=00:28.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:15 seconds
+
+[2026-09-25 16:15:30 +0000] Status=2, isTerminal=NO, Elapsed=00:29.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:16 seconds
+
+[2026-09-25 16:15:31 +0000] Status=2, isTerminal=NO, Elapsed=00:30.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:17 seconds
+
+[2026-09-25 16:15:32 +0000] Status=2, isTerminal=NO, Elapsed=00:31.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:18 seconds
+
+[2026-09-25 16:15:33 +0000] Status=2, isTerminal=NO, Elapsed=00:32.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:19 seconds
+
+[2026-09-25 16:15:34 +0000] Status=2, isTerminal=NO, Elapsed=00:33.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:20 seconds
+
+[2026-09-25 16:15:35 +0000] Status=2, isTerminal=NO, Elapsed=00:34.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:21 seconds
+
+[2026-09-25 16:15:36 +0000] Status=2, isTerminal=NO, Elapsed=00:35.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:22 seconds
+
+[2026-09-25 16:15:37 +0000] Status=2, isTerminal=NO, Elapsed=00:36.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:23 seconds
+
+[2026-09-25 16:15:38 +0000] Status=2, isTerminal=NO, Elapsed=00:37.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:24 seconds
+
+[2026-09-25 16:15:39 +0000] Status=2, isTerminal=NO, Elapsed=00:38.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:25 seconds
+
+[2026-09-25 16:15:40 +0000] Status=2, isTerminal=NO, Elapsed=00:39.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:26 seconds
+
+[2026-09-25 16:15:41 +0000] Status=2, isTerminal=NO, Elapsed=00:40.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:27 seconds
+
+[2026-09-25 16:15:42 +0000] Status=2, isTerminal=NO, Elapsed=00:41.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:28 seconds
+
+[2026-09-25 16:15:43 +0000] Status=2, isTerminal=NO, Elapsed=00:42.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:29 seconds
+
+[2026-09-25 16:15:44 +0000] Status=2, isTerminal=NO, Elapsed=00:43.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:30 seconds
+
+[2026-09-25 16:15:45 +0000] Status=2, isTerminal=NO, Elapsed=00:44.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:31 seconds
+
+[2026-09-25 16:15:46 +0000] Status=2, isTerminal=NO, Elapsed=00:45.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:32 seconds
+
+[2026-09-25 16:15:47 +0000] Status=2, isTerminal=NO, Elapsed=00:46.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:33 seconds
+
+[2026-09-25 16:15:48 +0000] Status=2, isTerminal=NO, Elapsed=00:47.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:34 seconds
+
+[2026-09-25 16:15:49 +0000] Status=2, isTerminal=NO, Elapsed=00:48.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:35 seconds
+
+[2026-09-25 16:15:50 +0000] Status=2, isTerminal=NO, Elapsed=00:49.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:36 seconds
+
+[2026-09-25 16:15:51 +0000] Status=2, isTerminal=NO, Elapsed=00:50.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:37 seconds
+
+[2026-09-25 16:15:52 +0000] Status=2, isTerminal=NO, Elapsed=00:51.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:38 seconds
+
+[2026-09-25 16:15:53 +0000] Status=2, isTerminal=NO, Elapsed=00:52.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:39 seconds
+
+[2026-09-25 16:15:54 +0000] Status=2, isTerminal=NO, Elapsed=00:53.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:40 seconds
+
+[2026-09-25 16:15:55 +0000] Status=2, isTerminal=NO, Elapsed=00:54.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:41 seconds
+
+[2026-09-25 16:15:56 +0000] Status=2, isTerminal=NO, Elapsed=00:55.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:42 seconds
+
+[2026-09-25 16:16:00 +0000] Status=2, isTerminal=NO, Elapsed=00:59.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.securityd.KeychainMigrator (KeychainMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:43 seconds
+
+[2026-09-25 16:16:02 +0000] Status=2, isTerminal=NO, Elapsed=01:02.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.migrator (MCProfile.migrator, user-agnostic)
+		Migration Elapsed:00:46 seconds
+
+[2026-09-25 16:16:04 +0000] Status=2, isTerminal=NO, Elapsed=01:04.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.MobileSafari.migrator (MobileSafari.migrator)
+		Migration Elapsed:00:48 seconds
+
+[2026-09-25 16:16:08 +0000] Status=2, isTerminal=NO, Elapsed=01:08.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.PreferencesMigrator (PreferencesMigrator.migrator)
+		Migration Elapsed:00:50 seconds
+
+[2026-09-25 16:16:10 +0000] Status=4, isTerminal=NO, Elapsed=01:10.
+	Waiting on System App
+
+[2026-09-25 16:16:13 +0000] Status=4294967295, isTerminal=YES, Elapsed=01:13.
+	Finished
+
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project Milo.xcodeproj -scheme Milo -configuration Debug -destination "platform=iOS Simulator,id=51F5467F-16A9-4296-9C05-A74F91234967" -derivedDataPath DerivedData -resultBundlePath /Users/runner/work/milo/milo/apps/ios/evidence/ui-test-2026-09-25T16-14-57-409Z.xcresult CODE_SIGNING_ALLOWED=NO -parallel-testing-enabled NO test
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  swift-syntax: https://github.com/swiftlang/swift-syntax.git @ 602.0.0
+  swift-testing: https://github.com/swiftlang/swift-testing.git @ 6.2.4
+  MiloCore: /Users/runner/work/milo/milo/apps/ios/MiloCore
+
+Writing result bundle at path:
+	/Users/runner/work/milo/milo/apps/ios/evidence/ui-test-2026-09-25T16-14-57-409Z.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (4 targets)
+    Target 'MiloUITests' in project 'Milo'
+        ➜ Explicit dependency on target 'Milo' in project 'Milo'
+    Target 'Milo' in project 'Milo'
+        ➜ Explicit dependency on target 'MiloCore' in project 'MiloCore'
+    Target 'MiloCore' in project 'MiloCore'
+        ➜ Explicit dependency on target 'MiloCore' in project 'MiloCore'
+    Target 'MiloCore' in project 'MiloCore' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 82e5ad4dabf2d130c73df2516c2c9ba3
+Build description path: /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/XCBuildData/82e5ad4dabf2d130c73df2516c2c9ba3.xcbuilddata
+ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -o /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/empty-MiloUITests.plist (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/empty-MiloUITests.plist
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/ProductTypeInfoPlistAdditions.plist (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/ProductTypeInfoPlistAdditions.plist
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_const_extract_protocols.json (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftFileList (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftConstValuesFileList (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.LinkFileList (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-OutputFileMap.json (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.hmap (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyStaticMetadataFileList (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyMetadataFileList (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-project-headers.hmap (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-own-target-headers.hmap (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-generated-files.hmap (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-target-headers.hmap (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-non-framework-target-headers.hmap (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-non-framework-target-headers.hmap
+
+MkDir /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /bin/mkdir -p /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest
+
+ProcessInfoPlistFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Info.plist /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/empty-Milo.plist (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-infoPlistUtility /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/empty-Milo.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Info.plist
+
+SwiftDriver MiloUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MiloUITests -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-generated-files.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-own-target-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-project-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios -experimental-emit-module-separately -disable-cmo
+
+ProcessInfoPlistFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Info.plist /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/empty-MiloUITests.plist (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-infoPlistUtility /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/empty-MiloUITests.plist -producttype com.apple.product-type.bundle.ui-testing -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/ProductTypeInfoPlistAdditions.plist -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Info.plist
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ MiloUITests (in target 'MiloUITests' from project 'Milo')
+
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/UITests/MiloUITests.swift (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    
+
+SwiftCompile normal arm64 Compiling\ MiloUITests.swift /Users/runner/work/milo/milo/apps/ios/UITests/MiloUITests.swift (in target 'MiloUITests' from project 'Milo')
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/UITests/MiloUITests.swift (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for MiloUITests (in target 'MiloUITests' from project 'Milo')
+
+SwiftDriver\ Compilation\ Requirements MiloUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MiloUITests -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-generated-files.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-own-target-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-project-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources/MiloUITests-Swift.h /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-Swift.h (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-Swift.h -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources/MiloUITests-Swift.h
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftmodule (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftmodule /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftdoc (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftdoc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.abi.json (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.abi.json /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftsourceinfo (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftsourceinfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling MiloUITests.swift (in target 'MiloUITests' from project 'Milo')
+
+SwiftDriver\ Compilation MiloUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-Swift-Compilation -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MiloUITests -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-generated-files.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-own-target-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests-project-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests normal (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -bundle -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -filelist /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.LinkFileList -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_dependency_info.dat -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.swiftmodule -framework XCTest -lXCTestSwiftSupport -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests
+
+ExtractAppIntentsMetadata (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name MiloUITests --sdk-root /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk --xcode-version 16F6 --platform-family iOS --deployment-target 17.0 --bundle-identifier com.milo.echoes.ios.uitests --output /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest --target-triple arm64-apple-ios17.0-simulator --binary-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests --dependency-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests_dependency_info.dat --stringsdata-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftFileList --metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/Objects-normal/arm64/MiloUITests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-25 16:17:53.875 appintentsmetadataprocessor[13346:41896] Starting appintentsmetadataprocessor export
+2026-09-25 16:17:53.880 appintentsmetadataprocessor[13346:41896] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/MiloUITests --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Frameworks --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/PlugIns --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/SystemExtensions --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Extensions --platform iphonesimulator --toolchain /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+AppIntentsSSUTraining (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Info.plist --temp-dir-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/ssu --bundle-id com.milo.echoes.ios.uitests --product-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest --extracted-metadata-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Metadata.appintents --metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/MiloUITests.build/MiloUITests.DependencyMetadataFileList --archive-ssu-assets
+2026-09-25 16:17:53.941 appintentsnltrainingprocessor[13381:41967] Parsing options for appintentsnltrainingprocessor
+2026-09-25 16:17:53.942 appintentsnltrainingprocessor[13381:41967] No AppShortcuts found - Skipping.
+
+MkDir /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /bin/mkdir -p /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app
+
+CopyPlistFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Info.plist /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/Info.plist (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copyPlist --validate --convert xml1 --macro-expansion WRAPPEDPRODUCTNAME MiloUITests-Runner --macro-expansion WRAPPEDPRODUCTBUNDLEIDENTIFIER com.milo.echoes.ios.uitests.xctrunner --macro-expansion TESTPRODUCTNAME MiloUITests --macro-expansion TESTPRODUCTBUNDLEIDENTIFIER com.milo.echoes.ios.uitests --copy-value UIDeviceFamily /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest/Info.plist --outdir /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app -- /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/Info.plist
+
+CopyAndPreserveArchs /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/MiloUITests-Runner (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/XCTRunner -output /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/MiloUITests-Runner -extract arm64
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PkgInfo /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/XCUnit.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/XCUIAutomation.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/XCTestSupport.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/XCTestCore.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/XCTest.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/XCTAutomationSupport.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks/Testing.framework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/Frameworks
+
+RegisterExecutionPolicyException /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-RegisterExecutionPolicyException /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest
+
+Touch /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest (in target 'MiloUITests' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /usr/bin/touch -c /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloUITests-Runner.app/PlugIns/MiloUITests.xctest
+
+2026-09-25 16:24:59.891490+0000 MiloUITests-Runner[32726:89696] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'All tests' started at 2026-09-25 16:25:20.511.
+Test Suite 'MiloUITests.xctest' started at 2026-09-25 16:25:20.512.
+Test Suite 'MiloUITests' started at 2026-09-25 16:25:20.512.
+Test Case '-[MiloUITests.MiloUITests testBlankNoteAndEmptyHistory]' started.
+    t =     0.00s Start Test at 2026-09-25 16:25:20.512
+    t =     1.19s Set Up
+    t =     1.22s Open com.milo.echoes.ios
+    t =     1.22s     Launch com.milo.echoes.ios
+    t =    13.57s         Setting up automation session
+    t =    13.97s         Wait for com.milo.echoes.ios to idle
+    t =    17.82s Waiting 10.0s for "open-history" Button to exist
+    t =    18.85s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =    18.85s         Checking existence of `"open-history" Button`
+    t =    19.13s Tap "open-history" Button
+    t =    19.13s     Wait for com.milo.echoes.ios to idle
+    t =    19.13s     Find the "open-history" Button
+    t =    19.18s     Check for interrupting elements affecting "open-history" Button
+    t =    19.28s     Synthesize event
+    t =    19.74s     Wait for com.milo.echoes.ios to idle
+    t =    19.89s Waiting 5.0s for "这里还很安静" StaticText to exist
+    t =    20.94s     Checking `Expect predicate `existsNoRetry == 1` for object "这里还很安静" StaticText`
+    t =    20.94s         Checking existence of `"这里还很安静" StaticText`
+    t =    20.97s Tap Button (Element at index 0)
+    t =    20.97s     Wait for com.milo.echoes.ios to idle
+    t =    20.98s     Find the Button (Element at index 0)
+    t =    20.99s     Check for interrupting elements affecting "Back" Button
+    t =    21.03s     Synthesize event
+    t =    21.36s     Wait for com.milo.echoes.ios to idle
+    t =    21.74s Tap "save-entry" Button
+    t =    21.74s     Wait for com.milo.echoes.ios to idle
+    t =    21.74s     Find the "save-entry" Button
+    t =    21.78s     Check for interrupting elements affecting "save-entry" Button
+    t =    21.81s     Synthesize event
+    t =    22.10s     Wait for com.milo.echoes.ios to idle
+    t =    22.13s Waiting 5.0s for "（一次安静的记录）" StaticText to exist
+    t =    23.18s     Checking `Expect predicate `existsNoRetry == 1` for object "（一次安静的记录）" StaticText`
+    t =    23.18s         Checking existence of `"（一次安静的记录）" StaticText`
+    t =    23.26s Tear Down
+Test Case '-[MiloUITests.MiloUITests testBlankNoteAndEmptyHistory]' passed (23.540 seconds).
+Test Case '-[MiloUITests.MiloUITests testCorruptDataRemainsBlockedAfterRelaunch]' started.
+    t =     0.00s Start Test at 2026-09-25 16:25:44.053
+    t =     0.05s Set Up
+    t =     0.05s Open com.milo.echoes.ios
+    t =     0.05s     Launch com.milo.echoes.ios
+    t =     0.05s         Terminate com.milo.echoes.ios:33191
+    t =     1.52s         Setting up automation session
+    t =     3.31s         Wait for com.milo.echoes.ios to idle
+    t =     5.22s Waiting 10.0s for "open-history" Button to exist
+    t =     6.26s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =     6.26s         Checking existence of `"open-history" Button`
+    t =     6.40s Find the "save-entry" Button
+    t =     6.46s Checking existence of `"retry-load" Button`
+    t =     6.48s Terminate com.milo.echoes.ios:33627
+    t =     7.49s Open com.milo.echoes.ios
+    t =     7.49s     Launch com.milo.echoes.ios
+    t =     7.98s         Setting up automation session
+    t =     9.47s         Wait for com.milo.echoes.ios to idle
+    t =    11.07s Waiting 5.0s for "retry-load" Button to exist
+    t =    12.11s     Checking `Expect predicate `existsNoRetry == 1` for object "retry-load" Button`
+    t =    12.11s         Checking existence of `"retry-load" Button`
+    t =    12.25s Find the "save-entry" Button
+    t =    12.33s Tap "retry-load" Button
+    t =    12.33s     Wait for com.milo.echoes.ios to idle
+    t =    12.34s     Find the "retry-load" Button
+    t =    12.37s     Check for interrupting elements affecting "retry-load" Button
+    t =    12.40s     Synthesize event
+    t =    12.42s         Scroll element to visible
+    t =    12.42s         Find the "retry-load" Button
+    t =    12.54s         Computed hit point {57.833333333333336, 713.5} after scrolling to visible
+    t =    12.83s     Wait for com.milo.echoes.ios to idle
+    t =    12.84s Find the "save-entry" Button
+    t =    12.88s Tear Down
+Test Case '-[MiloUITests.MiloUITests testCorruptDataRemainsBlockedAfterRelaunch]' passed (13.138 seconds).
+Test Case '-[MiloUITests.MiloUITests testLongNoteAndLargeTextScreenshots]' started.
+    t =     0.00s Start Test at 2026-09-25 16:25:57.192
+    t =     0.05s Set Up
+    t =     0.05s Open com.milo.echoes.ios
+    t =     0.05s     Launch com.milo.echoes.ios
+    t =     0.05s         Terminate com.milo.echoes.ios:34021
+    t =     1.58s         Setting up automation session
+    t =     3.16s         Wait for com.milo.echoes.ios to idle
+    t =     4.79s Waiting 10.0s for "open-history" Button to exist
+    t =     5.81s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =     5.81s         Checking existence of `"open-history" Button`
+    t =     5.99s Waiting 5.0s for "uitest-appearance-root" Other to exist
+    t =     7.06s     Checking `Expect predicate `existsNoRetry == 1` for object "uitest-appearance-root" Other`
+    t =     7.06s         Checking existence of `"uitest-appearance-root" Other`
+    t =     8.25s Checking `Expect predicate `value == "Light"` for object "uitest-appearance-root" Other`
+    t =     8.26s     Find the "uitest-appearance-root" Other
+    t =     8.29s Waiting 5.0s for "note-input" TextView to exist
+    t =     9.30s     Checking `Expect predicate `existsNoRetry == 1` for object "note-input" TextView`
+    t =     9.30s         Checking existence of `"note-input" TextView`
+    t =     9.35s Waiting 5.0s for "capture-scroll" ScrollView to exist
+    t =    10.44s     Checking `Expect predicate `existsNoRetry == 1` for object "capture-scroll" ScrollView`
+    t =    10.44s         Checking existence of `"capture-scroll" ScrollView`
+    t =    10.77s Find the "capture-scroll" ScrollView
+    t =    11.04s Find the NavigationBar (First Match)
+    t =    11.48s Find the "capture-scroll" ScrollView
+    t =    11.86s Find the "save-entry" Button
+    t =    12.45s Find the "capture-scroll" ScrollView
+    t =    13.10s Find the "capture-scroll" ScrollView
+    t =    13.59s Find the "note-input" TextView
+    t =    14.08s Find the "capture-scroll" ScrollView
+    t =    14.47s Find the Target Application 'com.milo.echoes.ios'
+    t =    14.79s Find the Target Application 'com.milo.echoes.ios'
+    t =    15.00s Find the Target Application 'com.milo.echoes.ios'
+    t =    15.24s Find the Target Application 'com.milo.echoes.ios'
+    t =    15.41s Press Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 670.7) for 0.1 seconds, then drag to Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 119.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    15.41s     Wait for com.milo.echoes.ios to idle
+    t =    15.41s     Find the Target Application 'com.milo.echoes.ios'
+    t =    15.69s     Check for interrupting elements affecting "MILO" Application
+    t =    15.74s     Synthesize event
+    t =    15.75s         Find the Target Application 'com.milo.echoes.ios'
+    t =    15.78s         Find the Target Application 'com.milo.echoes.ios'
+    t =    15.90s         Find the Target Application 'com.milo.echoes.ios'
+    t =    16.11s         Find the Target Application 'com.milo.echoes.ios'
+    t =    16.56s         Find the Target Application 'com.milo.echoes.ios'
+    t =    18.33s     Wait for com.milo.echoes.ios to idle
+    t =    19.05s Find the "capture-scroll" ScrollView
+    t =    19.58s Find the NavigationBar (First Match)
+    t =    23.58s Find the "capture-scroll" ScrollView
+    t =    26.22s Find the "save-entry" Button
+    t =    28.37s Find the "capture-scroll" ScrollView
+    t =    28.72s Find the "capture-scroll" ScrollView
+    t =    28.80s Find the "note-input" TextView
+    t =    29.04s Find the "capture-scroll" ScrollView
+    t =    29.21s Find the Target Application 'com.milo.echoes.ios'
+    t =    29.38s Find the Target Application 'com.milo.echoes.ios'
+    t =    29.43s Find the Target Application 'com.milo.echoes.ios'
+    t =    29.46s Find the Target Application 'com.milo.echoes.ios'
+    t =    29.52s Press Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 670.7) for 0.1 seconds, then drag to Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 119.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    29.52s     Wait for com.milo.echoes.ios to idle
+    t =    29.52s     Find the Target Application 'com.milo.echoes.ios'
+    t =    29.56s     Check for interrupting elements affecting "MILO" Application
+    t =    35.01s     Synthesize event
+    t =    35.76s         Find the Target Application 'com.milo.echoes.ios'
+    t =    35.89s         Find the Target Application 'com.milo.echoes.ios'
+    t =    35.97s         Find the Target Application 'com.milo.echoes.ios'
+    t =    36.02s         Find the Target Application 'com.milo.echoes.ios'
+    t =    36.07s         Find the Target Application 'com.milo.echoes.ios'
+    t =    37.51s     Wait for com.milo.echoes.ios to idle
+    t =    37.54s Find the "capture-scroll" ScrollView
+    t =    37.63s Find the NavigationBar (First Match)
+    t =    37.74s Find the "capture-scroll" ScrollView
+    t =    37.89s Find the "save-entry" Button
+    t =    38.00s Find the "capture-scroll" ScrollView
+    t =    38.05s Find the "capture-scroll" ScrollView
+    t =    38.08s Find the "note-input" TextView
+    t =    38.11s Find the Target Application 'com.milo.echoes.ios'
+    t =    38.16s Find the Target Application 'com.milo.echoes.ios'
+    t =    38.19s Tap Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (195.0, 605.7)
+    t =    38.19s     Wait for com.milo.echoes.ios to idle
+    t =    38.19s     Find the Target Application 'com.milo.echoes.ios'
+    t =    38.21s     Check for interrupting elements affecting "MILO" Application
+    t =    38.24s     Synthesize event
+    t =    38.24s         Find the Target Application 'com.milo.echoes.ios'
+    t =    38.26s         Find the Target Application 'com.milo.echoes.ios'
+    t =    38.29s         Find the Target Application 'com.milo.echoes.ios'
+    t =    38.61s     Wait for com.milo.echoes.ios to idle
+    t =    39.75s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    40.80s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    40.80s         Checking existence of `Keyboard (First Match)`
+    t =    43.04s Checking existence of `"note-input" TextView`
+    t =    43.18s Type '今天慢慢走了一段路，风很温柔。今天慢...' into "note-input" TextView
+    t =    43.18s     Wait for com.milo.echoes.ios to idle
+    t =    43.19s     Find the "note-input" TextView
+    t =    43.28s     Check for interrupting elements affecting "note-input" TextView
+    t =    43.35s     Synthesize event
+    t =    46.57s     Wait for com.milo.echoes.ios to idle
+    t =    46.57s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    47.63s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    47.63s         Checking existence of `Keyboard (First Match)`
+    t =    47.71s Find the "save-entry" Button
+    t =    47.78s Find the Target Application 'com.milo.echoes.ios'
+    t =    48.04s Added attachment named 'capture-large-text-keyboard-Light'
+    t =    48.04s Tap "save-entry" Button
+    t =    48.04s     Wait for com.milo.echoes.ios to idle
+    t =    48.04s     Find the "save-entry" Button
+    t =    48.09s     Check for interrupting elements affecting "save-entry" Button
+    t =    48.14s     Synthesize event
+    t =    48.46s     Wait for com.milo.echoes.ios to idle
+    t =    48.90s Waiting 5.0s for Button (First Match) to exist
+    t =    50.00s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    50.00s         Checking existence of `Button (First Match)`
+    t =    50.76s Tap Button (First Match)
+    t =    50.76s     Wait for com.milo.echoes.ios to idle
+    t =    50.77s     Find the Button (First Match)
+    t =    50.99s     Check for interrupting elements affecting "entry-7E39BC0E-D74A-466B-B13D-6CDCD1144056" Button
+    t =    51.04s     Synthesize event
+    t =    51.35s     Wait for com.milo.echoes.ios to idle
+    t =    51.77s Find the "entry-note" StaticText
+    t =    51.84s Waiting 5.0s for "uitest-appearance-root" Other to exist
+    t =    52.89s     Checking `Expect predicate `existsNoRetry == 1` for object "uitest-appearance-root" Other`
+    t =    52.89s         Checking existence of `"uitest-appearance-root" Other`
+    t =    53.96s Checking `Expect predicate `value == "Light"` for object "uitest-appearance-root" Other`
+    t =    53.96s     Find the "uitest-appearance-root" Other
+    t =    53.99s Find the Target Application 'com.milo.echoes.ios'
+    t =    54.20s Added attachment named 'detail-large-text-Light'
+    t =    54.20s Terminate com.milo.echoes.ios:34595
+    t =    55.26s Open com.milo.echoes.ios
+    t =    55.26s     Launch com.milo.echoes.ios
+    t =    56.51s         Setting up automation session
+    t =    60.03s         Wait for com.milo.echoes.ios to idle
+    t =    63.07s Waiting 10.0s for "open-history" Button to exist
+    t =    64.13s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =    64.13s         Checking existence of `"open-history" Button`
+    t =    64.68s Waiting 5.0s for "uitest-appearance-root" Other to exist
+    t =    65.71s     Checking `Expect predicate `existsNoRetry == 1` for object "uitest-appearance-root" Other`
+    t =    65.71s         Checking existence of `"uitest-appearance-root" Other`
+    t =    66.85s Checking `Expect predicate `value == "Dark"` for object "uitest-appearance-root" Other`
+    t =    66.86s     Find the "uitest-appearance-root" Other
+    t =    66.89s Waiting 5.0s for "note-input" TextView to exist
+    t =    67.90s     Checking `Expect predicate `existsNoRetry == 1` for object "note-input" TextView`
+    t =    67.91s         Checking existence of `"note-input" TextView`
+    t =    67.95s Waiting 5.0s for "capture-scroll" ScrollView to exist
+    t =    68.97s     Checking `Expect predicate `existsNoRetry == 1` for object "capture-scroll" ScrollView`
+    t =    68.97s         Checking existence of `"capture-scroll" ScrollView`
+    t =    69.01s Find the "capture-scroll" ScrollView
+    t =    69.06s Find the NavigationBar (First Match)
+    t =    69.17s Find the "capture-scroll" ScrollView
+    t =    69.20s Find the "save-entry" Button
+    t =    69.28s Find the "capture-scroll" ScrollView
+    t =    69.36s Find the "capture-scroll" ScrollView
+    t =    69.52s Find the "note-input" TextView
+    t =    69.60s Find the "capture-scroll" ScrollView
+    t =    69.69s Find the Target Application 'com.milo.echoes.ios'
+    t =    69.73s Find the Target Application 'com.milo.echoes.ios'
+    t =    69.75s Find the Target Application 'com.milo.echoes.ios'
+    t =    69.77s Find the Target Application 'com.milo.echoes.ios'
+    t =    69.86s Press Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 670.7) for 0.1 seconds, then drag to Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 119.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    69.86s     Wait for com.milo.echoes.ios to idle
+    t =    69.86s     Find the Target Application 'com.milo.echoes.ios'
+    t =    69.92s     Check for interrupting elements affecting "MILO" Application
+    t =    70.04s     Synthesize event
+    t =    70.04s         Find the Target Application 'com.milo.echoes.ios'
+    t =    70.10s         Find the Target Application 'com.milo.echoes.ios'
+    t =    70.12s         Find the Target Application 'com.milo.echoes.ios'
+    t =    70.14s         Find the Target Application 'com.milo.echoes.ios'
+    t =    70.25s         Find the Target Application 'com.milo.echoes.ios'
+    t =    71.71s     Wait for com.milo.echoes.ios to idle
+    t =    71.76s Find the "capture-scroll" ScrollView
+    t =    71.83s Find the NavigationBar (First Match)
+    t =    71.94s Find the "capture-scroll" ScrollView
+    t =    72.04s Find the "save-entry" Button
+    t =    72.11s Find the "capture-scroll" ScrollView
+    t =    72.19s Find the "capture-scroll" ScrollView
+    t =    72.32s Find the "note-input" TextView
+    t =    72.37s Find the "capture-scroll" ScrollView
+    t =    72.55s Find the Target Application 'com.milo.echoes.ios'
+    t =    72.58s Find the Target Application 'com.milo.echoes.ios'
+    t =    72.63s Find the Target Application 'com.milo.echoes.ios'
+    t =    72.66s Find the Target Application 'com.milo.echoes.ios'
+    t =    72.72s Press Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 670.7) for 0.1 seconds, then drag to Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 119.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =    72.72s     Wait for com.milo.echoes.ios to idle
+    t =    72.78s     Find the Target Application 'com.milo.echoes.ios'
+    t =    72.90s     Check for interrupting elements affecting "MILO" Application
+    t =    72.95s     Synthesize event
+    t =    72.95s         Find the Target Application 'com.milo.echoes.ios'
+    t =    72.97s         Find the Target Application 'com.milo.echoes.ios'
+    t =    73.01s         Find the Target Application 'com.milo.echoes.ios'
+    t =    73.08s         Find the Target Application 'com.milo.echoes.ios'
+    t =    73.13s         Find the Target Application 'com.milo.echoes.ios'
+    t =    74.56s     Wait for com.milo.echoes.ios to idle
+    t =    74.58s Find the "capture-scroll" ScrollView
+    t =    74.65s Find the NavigationBar (First Match)
+    t =    74.71s Find the "capture-scroll" ScrollView
+    t =    74.74s Find the "save-entry" Button
+    t =    74.80s Find the "capture-scroll" ScrollView
+    t =    74.84s Find the "capture-scroll" ScrollView
+    t =    74.88s Find the "note-input" TextView
+    t =    74.92s Find the Target Application 'com.milo.echoes.ios'
+    t =    74.96s Find the Target Application 'com.milo.echoes.ios'
+    t =    74.98s Tap Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (195.0, 605.7)
+    t =    74.98s     Wait for com.milo.echoes.ios to idle
+    t =    74.99s     Find the Target Application 'com.milo.echoes.ios'
+    t =    75.03s     Check for interrupting elements affecting "MILO" Application
+    t =    75.06s     Synthesize event
+    t =    75.06s         Find the Target Application 'com.milo.echoes.ios'
+    t =    75.09s         Find the Target Application 'com.milo.echoes.ios'
+    t =    75.15s         Find the Target Application 'com.milo.echoes.ios'
+    t =    75.45s     Wait for com.milo.echoes.ios to idle
+    t =    76.45s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    77.54s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    77.54s         Checking existence of `Keyboard (First Match)`
+    t =    78.09s Checking existence of `"note-input" TextView`
+    t =    78.22s Type '今天慢慢走了一段路，风很温柔。今天慢...' into "note-input" TextView
+    t =    78.22s     Wait for com.milo.echoes.ios to idle
+    t =    78.22s     Find the "note-input" TextView
+    t =    78.36s     Check for interrupting elements affecting "note-input" TextView
+    t =    78.50s     Synthesize event
+    t =    81.72s     Wait for com.milo.echoes.ios to idle
+    t =    81.73s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    82.77s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    82.77s         Checking existence of `Keyboard (First Match)`
+    t =    82.82s Find the "save-entry" Button
+    t =    82.90s Find the Target Application 'com.milo.echoes.ios'
+    t =    83.14s Added attachment named 'capture-large-text-keyboard-Dark'
+    t =    83.14s Tap "save-entry" Button
+    t =    83.14s     Wait for com.milo.echoes.ios to idle
+    t =    83.14s     Find the "save-entry" Button
+    t =    83.20s     Check for interrupting elements affecting "save-entry" Button
+    t =    83.26s     Synthesize event
+    t =    83.56s     Wait for com.milo.echoes.ios to idle
+    t =    83.99s Waiting 5.0s for Button (First Match) to exist
+    t =    85.00s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    85.00s         Checking existence of `Button (First Match)`
+    t =    85.07s Tap Button (First Match)
+    t =    85.07s     Wait for com.milo.echoes.ios to idle
+    t =    85.08s     Find the Button (First Match)
+    t =    85.13s     Check for interrupting elements affecting "entry-B1CE75D5-EE9A-4E06-846C-D62B2CEB6CDD" Button
+    t =    85.16s     Synthesize event
+    t =    85.48s     Wait for com.milo.echoes.ios to idle
+    t =    85.92s Find the "entry-note" StaticText
+    t =    85.97s Waiting 5.0s for "uitest-appearance-root" Other to exist
+    t =    87.01s     Checking `Expect predicate `existsNoRetry == 1` for object "uitest-appearance-root" Other`
+    t =    87.01s         Checking existence of `"uitest-appearance-root" Other`
+    t =    88.04s Checking `Expect predicate `value == "Dark"` for object "uitest-appearance-root" Other`
+    t =    88.04s     Find the "uitest-appearance-root" Other
+    t =    88.05s Find the Target Application 'com.milo.echoes.ios'
+    t =    88.22s Added attachment named 'detail-large-text-Dark'
+    t =    88.22s Terminate com.milo.echoes.ios:35395
+    t =    89.28s Tear Down
+Test Case '-[MiloUITests.MiloUITests testLongNoteAndLargeTextScreenshots]' passed (89.341 seconds).
+Test Case '-[MiloUITests.MiloUITests testNormalSizeHomeScreenshots]' started.
+    t =     0.00s Start Test at 2026-09-25 16:27:26.535
+    t =     0.07s Set Up
+    t =     0.07s Open com.milo.echoes.ios
+    t =     0.07s     Launch com.milo.echoes.ios
+    t =     0.95s         Setting up automation session
+    t =     2.80s         Wait for com.milo.echoes.ios to idle
+    t =     4.45s Waiting 10.0s for "open-history" Button to exist
+    t =     5.46s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =     5.46s         Checking existence of `"open-history" Button`
+    t =     5.61s Waiting 5.0s for "uitest-appearance-root" Other to exist
+    t =     6.64s     Checking `Expect predicate `existsNoRetry == 1` for object "uitest-appearance-root" Other`
+    t =     6.65s         Checking existence of `"uitest-appearance-root" Other`
+    t =     7.69s Checking `Expect predicate `value == "Light"` for object "uitest-appearance-root" Other`
+    t =     7.70s     Find the "uitest-appearance-root" Other
+    t =     7.72s Find the Target Application 'com.milo.echoes.ios'
+    t =     7.89s Added attachment named 'home-standard-text-Light'
+    t =     7.89s Terminate com.milo.echoes.ios:36699
+    t =     8.90s Open com.milo.echoes.ios
+    t =     8.90s     Launch com.milo.echoes.ios
+    t =     9.52s         Setting up automation session
+    t =    10.82s         Wait for com.milo.echoes.ios to idle
+    t =    12.33s Waiting 10.0s for "open-history" Button to exist
+    t =    13.33s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =    13.33s         Checking existence of `"open-history" Button`
+    t =    13.48s Waiting 5.0s for "uitest-appearance-root" Other to exist
+    t =    14.49s     Checking `Expect predicate `existsNoRetry == 1` for object "uitest-appearance-root" Other`
+    t =    14.50s         Checking existence of `"uitest-appearance-root" Other`
+    t =    15.56s Checking `Expect predicate `value == "Dark"` for object "uitest-appearance-root" Other`
+    t =    15.56s     Find the "uitest-appearance-root" Other
+    t =    15.59s Find the Target Application 'com.milo.echoes.ios'
+    t =    15.75s Added attachment named 'home-standard-text-Dark'
+    t =    15.75s Terminate com.milo.echoes.ios:37468
+    t =    30.83s Tear Down
+Test Case '-[MiloUITests.MiloUITests testNormalSizeHomeScreenshots]' passed (30.841 seconds).
+Test Case '-[MiloUITests.MiloUITests testWriteFailureKeepsDraftAndCanRecover]' started.
+    t =     0.00s Start Test at 2026-09-25 16:27:57.377
+    t =     0.04s Set Up
+    t =     0.04s Open com.milo.echoes.ios
+    t =     0.04s     Launch com.milo.echoes.ios
+    t =     0.60s         Setting up automation session
+    t =     2.11s         Wait for com.milo.echoes.ios to idle
+    t =     4.10s Waiting 10.0s for "open-history" Button to exist
+    t =     5.12s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =     5.12s         Checking existence of `"open-history" Button`
+    t =     5.24s Waiting 5.0s for "note-input" TextView to exist
+    t =     6.27s     Checking `Expect predicate `existsNoRetry == 1` for object "note-input" TextView`
+    t =     6.27s         Checking existence of `"note-input" TextView`
+    t =     6.31s Waiting 5.0s for "capture-scroll" ScrollView to exist
+    t =     7.32s     Checking `Expect predicate `existsNoRetry == 1` for object "capture-scroll" ScrollView`
+    t =     7.32s         Checking existence of `"capture-scroll" ScrollView`
+    t =     7.34s Find the "capture-scroll" ScrollView
+    t =     7.38s Find the NavigationBar (First Match)
+    t =     7.40s Find the "capture-scroll" ScrollView
+    t =     7.44s Find the "save-entry" Button
+    t =     7.48s Find the "capture-scroll" ScrollView
+    t =     7.52s Find the "capture-scroll" ScrollView
+    t =     7.55s Find the "note-input" TextView
+    t =     7.60s Find the "capture-scroll" ScrollView
+    t =     7.64s Find the Target Application 'com.milo.echoes.ios'
+    t =     7.66s Find the Target Application 'com.milo.echoes.ios'
+    t =     7.68s Find the Target Application 'com.milo.echoes.ios'
+    t =     7.69s Find the Target Application 'com.milo.echoes.ios'
+    t =     7.71s Press Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 713.7) for 0.1 seconds, then drag to Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 119.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =     7.71s     Wait for com.milo.echoes.ios to idle
+    t =     7.71s     Find the Target Application 'com.milo.echoes.ios'
+    t =     7.73s     Check for interrupting elements affecting "MILO" Application
+    t =     7.75s     Synthesize event
+    t =     7.75s         Find the Target Application 'com.milo.echoes.ios'
+    t =     7.76s         Find the Target Application 'com.milo.echoes.ios'
+    t =     7.78s         Find the Target Application 'com.milo.echoes.ios'
+    t =     7.79s         Find the Target Application 'com.milo.echoes.ios'
+    t =     7.81s         Find the Target Application 'com.milo.echoes.ios'
+    t =     9.33s     Wait for com.milo.echoes.ios to idle
+    t =     9.78s Find the "capture-scroll" ScrollView
+    t =     9.81s Find the NavigationBar (First Match)
+    t =     9.83s Find the "capture-scroll" ScrollView
+    t =     9.88s Find the "save-entry" Button
+    t =     9.90s Find the "capture-scroll" ScrollView
+    t =     9.92s Find the "capture-scroll" ScrollView
+    t =     9.95s Find the "note-input" TextView
+    t =     9.99s Find the Target Application 'com.milo.echoes.ios'
+    t =    10.01s Find the Target Application 'com.milo.echoes.ios'
+    t =    10.02s Tap Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (195.0, 576.3)
+    t =    10.02s     Wait for com.milo.echoes.ios to idle
+    t =    10.03s     Find the Target Application 'com.milo.echoes.ios'
+    t =    10.06s     Check for interrupting elements affecting "MILO" Application
+    t =    10.09s     Synthesize event
+    t =    10.09s         Find the Target Application 'com.milo.echoes.ios'
+    t =    10.10s         Find the Target Application 'com.milo.echoes.ios'
+    t =    10.12s         Find the Target Application 'com.milo.echoes.ios'
+    t =    10.42s     Wait for com.milo.echoes.ios to idle
+    t =    10.91s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    11.92s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    11.92s         Checking existence of `Keyboard (First Match)`
+    t =    12.01s Checking existence of `"note-input" TextView`
+    t =    12.10s Type '失败也别丢掉这句话' into "note-input" TextView
+    t =    12.10s     Wait for com.milo.echoes.ios to idle
+    t =    12.10s     Find the "note-input" TextView
+    t =    12.19s     Check for interrupting elements affecting "note-input" TextView
+    t =    12.25s     Synthesize event
+    t =    12.61s     Wait for com.milo.echoes.ios to idle
+    t =    12.61s Tap "save-entry" Button
+    t =    12.61s     Wait for com.milo.echoes.ios to idle
+    t =    12.62s     Find the "save-entry" Button
+    t =    12.67s     Check for interrupting elements affecting "save-entry" Button
+    t =    12.72s     Synthesize event
+    t =    13.03s     Wait for com.milo.echoes.ios to idle
+    t =    13.03s Checking existence of `"storage-error" Other`
+    t =    13.12s Checking existence of `"storage-error" StaticText`
+    t =    13.20s Find the "note-input" TextView
+    t =    13.25s Terminate com.milo.echoes.ios:38269
+    t =    14.30s Open com.milo.echoes.ios
+    t =    14.30s     Launch com.milo.echoes.ios
+    t =    14.76s         Setting up automation session
+    t =    16.07s         Wait for com.milo.echoes.ios to idle
+    t =    17.59s Tap "open-history" Button
+    t =    17.59s     Wait for com.milo.echoes.ios to idle
+    t =    17.60s     Find the "open-history" Button
+    t =    17.69s     Check for interrupting elements affecting "open-history" Button
+    t =    17.72s     Synthesize event
+    t =    18.04s     Wait for com.milo.echoes.ios to idle
+    t =    18.47s Waiting 5.0s for "这里还很安静" StaticText to exist
+    t =    19.50s     Checking `Expect predicate `existsNoRetry == 1` for object "这里还很安静" StaticText`
+    t =    19.50s         Checking existence of `"这里还很安静" StaticText`
+    t =    19.54s Tear Down
+Test Case '-[MiloUITests.MiloUITests testWriteFailureKeepsDraftAndCanRecover]' passed (19.751 seconds).
+Test Case '-[MiloUITests.MiloUITests testWrittenNotePersistsAcrossRelaunch]' started.
+    t =     0.00s Start Test at 2026-09-25 16:28:17.129
+    t =     0.05s Set Up
+    t =     0.05s Open com.milo.echoes.ios
+    t =     0.05s     Launch com.milo.echoes.ios
+    t =     0.05s         Terminate com.milo.echoes.ios:38954
+    t =     1.53s         Setting up automation session
+    t =     2.83s         Wait for com.milo.echoes.ios to idle
+    t =     4.43s Waiting 10.0s for "open-history" Button to exist
+    t =     5.47s     Checking `Expect predicate `existsNoRetry == 1` for object "open-history" Button`
+    t =     5.47s         Checking existence of `"open-history" Button`
+    t =     5.65s Tap "mood-bright" Button
+    t =     5.65s     Wait for com.milo.echoes.ios to idle
+    t =     5.67s     Find the "mood-bright" Button
+    t =     5.71s     Check for interrupting elements affecting "mood-bright" Button
+    t =     5.75s     Synthesize event
+    t =     6.05s     Wait for com.milo.echoes.ios to idle
+    t =     6.06s Waiting 5.0s for "note-input" TextView to exist
+    t =     7.11s     Checking `Expect predicate `existsNoRetry == 1` for object "note-input" TextView`
+    t =     7.11s         Checking existence of `"note-input" TextView`
+    t =     7.14s Waiting 5.0s for "capture-scroll" ScrollView to exist
+    t =     8.18s     Checking `Expect predicate `existsNoRetry == 1` for object "capture-scroll" ScrollView`
+    t =     8.18s         Checking existence of `"capture-scroll" ScrollView`
+    t =     8.21s Find the "capture-scroll" ScrollView
+    t =     8.25s Find the NavigationBar (First Match)
+    t =     8.28s Find the "capture-scroll" ScrollView
+    t =     8.32s Find the "save-entry" Button
+    t =     8.37s Find the "capture-scroll" ScrollView
+    t =     8.41s Find the "capture-scroll" ScrollView
+    t =     8.44s Find the "note-input" TextView
+    t =     8.50s Find the "capture-scroll" ScrollView
+    t =     8.52s Find the Target Application 'com.milo.echoes.ios'
+    t =     8.54s Find the Target Application 'com.milo.echoes.ios'
+    t =     8.56s Find the Target Application 'com.milo.echoes.ios'
+    t =     8.61s Find the Target Application 'com.milo.echoes.ios'
+    t =     8.64s Press Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 713.7) for 0.1 seconds, then drag to Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (6.0, 119.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =     8.64s     Wait for com.milo.echoes.ios to idle
+    t =     8.64s     Find the Target Application 'com.milo.echoes.ios'
+    t =     8.67s     Check for interrupting elements affecting "MILO" Application
+    t =     8.70s     Synthesize event
+    t =     8.71s         Find the Target Application 'com.milo.echoes.ios'
+    t =     8.74s         Find the Target Application 'com.milo.echoes.ios'
+    t =     8.77s         Find the Target Application 'com.milo.echoes.ios'
+    t =     8.79s         Find the Target Application 'com.milo.echoes.ios'
+    t =     8.82s         Find the Target Application 'com.milo.echoes.ios'
+    t =    10.34s     Wait for com.milo.echoes.ios to idle
+    t =    10.80s Find the "capture-scroll" ScrollView
+    t =    10.84s Find the NavigationBar (First Match)
+    t =    10.89s Find the "capture-scroll" ScrollView
+    t =    10.93s Find the "save-entry" Button
+    t =    10.98s Find the "capture-scroll" ScrollView
+    t =    11.05s Find the "capture-scroll" ScrollView
+    t =    11.09s Find the "note-input" TextView
+    t =    11.11s Find the Target Application 'com.milo.echoes.ios'
+    t =    11.14s Find the Target Application 'com.milo.echoes.ios'
+    t =    11.15s Tap Target Application 'com.milo.echoes.ios'[0.00, 0.00] -> (195.0, 576.3)
+    t =    11.15s     Wait for com.milo.echoes.ios to idle
+    t =    11.17s     Find the Target Application 'com.milo.echoes.ios'
+    t =    11.18s     Check for interrupting elements affecting "MILO" Application
+    t =    11.22s     Synthesize event
+    t =    11.23s         Find the Target Application 'com.milo.echoes.ios'
+    t =    11.25s         Find the Target Application 'com.milo.echoes.ios'
+    t =    11.28s         Find the Target Application 'com.milo.echoes.ios'
+    t =    11.59s     Wait for com.milo.echoes.ios to idle
+    t =    11.94s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    12.95s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    12.95s         Checking existence of `Keyboard (First Match)`
+    t =    13.32s Checking existence of `"note-input" TextView`
+    t =    13.47s Type '  今天散步很开心  ' into "note-input" TextView
+    t =    13.47s     Wait for com.milo.echoes.ios to idle
+    t =    13.52s     Find the "note-input" TextView
+    t =    13.64s     Check for interrupting elements affecting "note-input" TextView
+    t =    13.72s     Synthesize event
+    t =    14.12s     Wait for com.milo.echoes.ios to idle
+    t =    14.13s Tap "save-entry" Button
+    t =    14.13s     Wait for com.milo.echoes.ios to idle
+    t =    14.14s     Find the "save-entry" Button
+    t =    14.21s     Check for interrupting elements affecting "save-entry" Button
+    t =    14.29s     Synthesize event
+    t =    14.60s     Wait for com.milo.echoes.ios to idle
+    t =    14.75s Waiting 5.0s for "今天散步很开心" StaticText to exist
+    t =    15.82s     Checking `Expect predicate `existsNoRetry == 1` for object "今天散步很开心" StaticText`
+    t =    15.82s         Checking existence of `"今天散步很开心" StaticText`
+    t =    15.88s Terminate com.milo.echoes.ios:39514
+    t =    16.89s Open com.milo.echoes.ios
+    t =    16.89s     Launch com.milo.echoes.ios
+    t =    18.23s         Setting up automation session
+    t =    18.60s         Wait for com.milo.echoes.ios to idle
+    t =    20.14s Tap "open-history" Button
+    t =    20.14s     Wait for com.milo.echoes.ios to idle
+    t =    20.15s     Find the "open-history" Button
+    t =    20.30s     Check for interrupting elements affecting "open-history" Button
+    t =    20.34s     Synthesize event
+    t =    20.66s     Wait for com.milo.echoes.ios to idle
+    t =    20.70s Waiting 5.0s for "今天散步很开心" StaticText to exist
+    t =    21.77s     Checking `Expect predicate `existsNoRetry == 1` for object "今天散步很开心" StaticText`
+    t =    21.77s         Checking existence of `"今天散步很开心" StaticText`
+    t =    21.82s Tap "今天散步很开心" StaticText
+    t =    21.82s     Wait for com.milo.echoes.ios to idle
+    t =    21.83s     Find the "今天散步很开心" StaticText
+    t =    21.88s     Check for interrupting elements affecting "今天散步很开心" StaticText
+    t =    21.93s     Synthesize event
+    t =    22.25s     Wait for com.milo.echoes.ios to idle
+    t =    22.68s Find the "entry-note" StaticText
+    t =    22.72s Checking existence of `"明亮" StaticText`
+    t =    22.76s Tear Down
+Test Case '-[MiloUITests.MiloUITests testWrittenNotePersistsAcrossRelaunch]' passed (24.064 seconds).
+Test Suite 'MiloUITests' passed at 2026-09-25 16:28:41.193.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 200.677 (200.681) seconds
+Test Suite 'MiloUITests.xctest' passed at 2026-09-25 16:28:41.194.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 200.677 (200.682) seconds
+Test Suite 'All tests' passed at 2026-09-25 16:28:41.194.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 200.677 (200.683) seconds
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/milo/milo/apps/ios/evidence/ui-test-2026-09-25T16-14-57-409Z.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, arch:arm64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+2026-09-25 16:28:42.588 xcodebuild[11006:36147] [MT] IDETestOperationsObserverDebug: 648.372 elapsed -- Testing started completed.
+2026-09-25 16:28:42.588 xcodebuild[11006:36147] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-25 16:28:42.588 xcodebuild[11006:36147] [MT] IDETestOperationsObserverDebug: 648.372 sec, +648.372 sec -- end

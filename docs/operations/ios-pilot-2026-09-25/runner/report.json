@@ -1,0 +1,65 @@
+{
+  "runId": "2026-09-25T16-11-42-317Z-d16682bc",
+  "status": "passed",
+  "readyToArchive": true,
+  "elapsedMs": 1029659,
+  "blockers": [],
+  "checks": [
+    {
+      "id": "specification",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/specification-1.log"
+    },
+    {
+      "id": "framework-tests",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/framework-tests-1.log"
+    },
+    {
+      "id": "portable-core",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/portable-core-1.log"
+    },
+    {
+      "id": "xcode-environment",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 2,
+      "log": "logs/xcode-environment-2.log"
+    },
+    {
+      "id": "ios-build",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/ios-build-1.log"
+    },
+    {
+      "id": "ios-ui",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/ios-ui-1.log"
+    },
+    {
+      "id": "visual-review",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 2,
+      "log": "logs/visual-review-2.log"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "githubRunId": "36159042524",
+  "githubRunUrl": "https://github.com/horton2048/milo/actions/runs/36159042524",
+  "testedCommit": "e650fef889ae2569a563886d25e489afa6ff2a1b",
+  "sourceHash": "020231a34793dcdb91c06fb4e0d3444c7ce1835f8730f6f0727bc191df66e796",
+  "specdriveSourceCommit": "b043533bb5ceea393f989408879c1f556914db93",
+  "specdriveRunId": "2026-09-25T16-11-42-317Z-d16682bc",
+  "conclusion": "passed",
+  "completedAt": "2026-09-25T16:32:25Z",
+  "scope": "First offline native iPhone slice: mood, optional note, local history/detail, restart persistence and file-error handling.",
+  "counts": {
+    "requiredChecks": 7,
+    "frameworkTests": 19,
+    "portableCoreTests": 17,
+    "receiptTransportTests": 7,
+    "nativeUITests": 6,
+    "independentlyViewedScreenshots": 6
+  },
+  "environment": {
+    "version": "Xcode 16.4\nBuild version 16F6",
+    "compiler": "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)\nTarget: arm64-apple-macosx15.0",
+    "sdk": "18.5",
+    "device": {
+      "name": "iPhone 16e",
+      "udid": "51F5467F-16A9-4296-9C05-A74F91234967",
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-18-5"
+    },
+    "developerDir": "/Applications/Xcode.app/Contents/Developer"
+  },
+  "checks": [
+    {
+      "id": "specification",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/specification-1.log"
+    },
+    {
+      "id": "framework-tests",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/framework-tests-1.log"
+    },
+    {
+      "id": "portable-core",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/portable-core-1.log"
+    },
+    {
+      "id": "xcode-environment",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 2,
+      "log": "logs/xcode-environment-2.log"
+    },
+    {
+      "id": "ios-build",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/ios-build-1.log"
+    },
+    {
+      "id": "ios-ui",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 1,
+      "log": "logs/ios-ui-1.log"
+    },
+    {
+      "id": "visual-review",
+      "required": true,
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": 2,
+      "log": "logs/visual-review-2.log"
+    }
+  ],
+  "sameStateResume": {
+    "iosBuildAttempts": 1,
+    "iosUIAttempts": 1,
+    "environmentAttempts": 2,
+    "visualReviewAttempts": 2
+  },
+  "screenshots": [
+    {
+      "label": "detail-large-text-Dark.png",
+      "path": "screenshots/84828E0F-6DF9-47C9-99C0-C37BB7638760.png",
+      "sha256": "582d7d829f56164a370fccf25d11557b02cdbf2b6ba642646b35c55ef6443f2b"
+    },
+    {
+      "label": "capture-large-text-keyboard-Dark.png",
+      "path": "screenshots/4DC2A7CA-0B19-45AA-86C7-890BD796EA55.png",
+      "sha256": "66551c5b0bb8b4141f40d312719fe9462b4103ba4ae4702a0e49d09d2130c71d"
+    },
+    {
+      "label": "detail-large-text-Light.png",
+      "path": "screenshots/131FABAE-A1CA-41EB-B262-8F65462BF0A0.png",
+      "sha256": "3eb9993630e9e8b5b4397c14e52b66e90dc1fa47cefb8a608630c1a340a8ef80"
+    },
+    {
+      "label": "capture-large-text-keyboard-Light.png",
+      "path": "screenshots/DD605181-52D0-4CB0-994B-3577FB6D734D.png",
+      "sha256": "67d6bdc0ebc2f28c9aae0bb26a4daee39fd4220637bc1a6616df5f507049d28e"
+    },
+    {
+      "label": "home-standard-text-Dark.png",
+      "path": "screenshots/78B98153-DB1B-48AA-A963-1D9A68439DE2.png",
+      "sha256": "9cfb63cf0164ff15dbfb6176d3ef2274876aeed7905b691f6a121e936375948a"
+    },
+    {
+      "label": "home-standard-text-Light.png",
+      "path": "screenshots/AAD51AD6-CC99-402E-8780-A479FD9AF11C.png",
+      "sha256": "795ae53ac10ae9360ebc25003e2e6443e665e00aacdb6218ef8e9d4b24f044fc"
+    }
+  ],
+  "priorRuns": [
+    {
+      "id": "36153565983",
+      "result": "Largest text editor interaction reached Save; layout and test interaction repaired."
+    },
+    {
+      "id": "36155819644",
+      "result": "XCTest accessibility initialization failed before any UI test; simulator preparation added."
+    },
+    {
+      "id": "36157364558",
+      "result": "Six UI tests passed but independent visual review rejected images labelled Dark that were light; no pass receipt issued."
+    }
+  ],
+  "limitations": [
+    "Simulator only: iPhone 16e and iOS 18.5, Xcode 16.4.",
+    "Physical devices, full product parity, AI integration, signing, TestFlight and App Store release are outside this pilot.",
+    "Local Mac still lacks full Xcode; archived cloud state is historical evidence, not a portable resumable local run.",
+    "Later documentation and evidence commits do not change the tested application source; the full gate result remains attached to the tested commit.",
+    "No measured time or token-cost advantage over another workflow."
+  ]
+}

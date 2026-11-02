@@ -55,7 +55,18 @@ src/
   lib/                  # ACP 客户端、旋转拨盘手势、引导 prompt、语音、卡片渲染
   pages/                # 首页拨盘 → 分流 → 对话 → 日记 → 卡片 → 时间线
   store.ts              # localStorage 状态
+services/ai-gateway/    # Express + MiniMax HTTP 网关（被 HarmonyOS 与 Web 共享）
+apps/harmony/           # Stage-model ArkTS + ArkUI 原生应用
+apps/web/               # React + Vite 现有 web 构建
+docs/compliance/        # data-flow / permissions / release-checklist
+docs/superpowers/plans/ # 多端策略与原生移植计划
 ```
+
+## 多端策略
+
+- **业务规则与后端契约共享**：服务端 Express 网关对 Web 与 HarmonyOS 暴露同一套 `/v1/recall/*` 路由与 `MiniMaxTransport` 接口；客户端只负责 UI 渲染。
+- **Web（React + Vite）** 与 **HarmonyOS（ArkTS + ArkUI）** 已经实现；iOS / Android 暂未排期。
+- **AI 失败降级**：Web 与 HarmonyOS 都通过 `ConversationController` / 离线 flow 切换到本地脚本化引导与 `fallbackDiary`，保证无 AI 也能完整走完流程。
 
 ## License
 

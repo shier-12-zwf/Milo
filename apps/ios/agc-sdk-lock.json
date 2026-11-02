@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "version": "1.9.4.300",
+  "officialDocumentation": "https://developer.huawei.com/consumer/en/doc/AppGallery-connect-Guides/agc-auth-ios-integration-sdk-0000001326347605",
+  "packages": [
+    {
+      "name": "HMFoundation",
+      "version": "1.9.4.300",
+      "url": "https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_package_901_9/d5/v3/eX4PX--sTJuBHVGHJNKRiw/hmfoundation-1.9.4.300.zip?HW-CC-KV=V1&HW-CC-Date=20260605T072100Z&HW-CC-Expire=315360000&HW-CC-Sign=C170D9FC6FDD0C484E25A4611EFEE63192431E36B8B1F8195E43C5D4247ACD74",
+      "sha256": "404228ec0776d77cef377196e784c8fb79124e39ef04d99a8da543044bed6680",
+      "framework": "HMFoundation.xcframework",
+      "resources": []
+    },
+    {
+      "name": "AGConnectCore",
+      "version": "1.9.4.300",
+      "url": "https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_package_901_9/42/v3/fbQcVDBWSbqqwzg7oG7fow/agconnectcore-1.9.4.300.zip?HW-CC-KV=V1&HW-CC-Date=20260605T072200Z&HW-CC-Expire=315360000&HW-CC-Sign=5532F643F2FC374854B1746743D701DD8EC23D3A71B74D9A223F86547B4A681F",
+      "sha256": "d0f905c106b1ee37b73bbadf50ff3cd0297febf3c097d3a1a40059ec37a833a2",
+      "framework": "AGConnectCore.xcframework",
+      "resources": []
+    },
+    {
+      "name": "AGConnectCredential",
+      "version": "1.9.4.300",
+      "url": "https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_package_901_9/72/v3/teS22HRESMuEg7iBw8eoFA/agconnectcredential-1.9.4.300.zip?HW-CC-KV=V1&HW-CC-Date=20260605T072800Z&HW-CC-Expire=315360000&HW-CC-Sign=ACBAB17604E27FA4A4643561B5CFCD4DE338504440CA738A06DE4A15B708D036",
+      "sha256": "54c9b788328fb99863894955eda5993b88d91796f415b28c22a82b8f43d67623",
+      "framework": "AGConnectCredential.xcframework",
+      "resources": [
+        "AGCResources.bundle"
+      ]
+    },
+    {
+      "name": "AGConnectAuth",
+      "version": "1.9.4.300",
+      "url": "https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_package_901_9/4a/v3/-I6wgnuISGqZu7r_jJTFmA/agconnectauth-1.9.4.300.zip?HW-CC-KV=V1&HW-CC-Date=20260605T072400Z&HW-CC-Expire=315360000&HW-CC-Sign=3EDFA8AC124A5C67286EF6956BD2F78AC5C33C026B1272D8C9D63E01F203648E",
+      "sha256": "81fd13cbd31c8d79134727e0fbb639c4c8af3750664633079a47197e4889b15f",
+      "framework": "AGConnectAuth.xcframework",
+      "resources": []
+    }
+  ]
+}

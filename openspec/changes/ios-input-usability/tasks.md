@@ -1,0 +1,5 @@
+- [x] 1. Review usability plan and preserve previous run evidence.
+- [x] 2. Correct speech routing and service diagnostics.
+- [x] 3. Show simulator software keyboard after focusing an input.
+- [ ] 4. Run current signed native build, permission regression and strict keyboard/recording checks.
+- [ ] 5. Observe real Chinese transcription and independently review evidence; retain blockers honestly.

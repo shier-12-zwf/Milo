@@ -1,0 +1,91 @@
+/* A large quiet sky, and a small place to come home to. */
+.cosmic-sky { position: fixed; inset: 0; width: 100%; height: 100dvh; pointer-events: none; z-index: 0; }
+.landing-universe { background: radial-gradient(ellipse at 79% 16%, #141127 0%, transparent 55%), linear-gradient(165deg, #060812, #080714 65%, #100b1c); }
+.landing-universe::before { display: none; }
+.landing-universe .landing-hero { gap: 20px; grid-template-columns: 1fr 1.05fr; padding-top: 12px; padding-bottom: 50px; }
+.landing-universe .landing-hero-copy { position: relative; z-index: 2; }
+.landing-universe .landing-lead { max-width: 410px; }
+.landing-universe .landing-trust { background: linear-gradient(90deg, transparent, #0a091555, transparent); }
+.planet-hero-wrap { position: relative; min-width: 0; }
+.planet-sanctuary { position: relative; text-align: center; color: #ece5fb; }
+.planet-surface { position: relative; height: clamp(420px, 39vw, 535px); isolation: isolate; }
+.planet-canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; opacity: 0; transition: opacity .8s; outline: none; }
+.planet-canvas.is-ready { opacity: 1; }
+.planet-canvas:active { cursor: grabbing; }
+.planet-canvas:focus-visible { outline: 1px solid #d6c6e9aa; outline-offset: -8px; border-radius: 24px; }
+.planet-coordinate { position: absolute; top: 26px; left: 0; right: 0; pointer-events: none; font-size: 8px; letter-spacing: .36em; color: #bcb7d366; }
+.planet-home-light { position: absolute; pointer-events: none; bottom: 26px; left: 50%; white-space: nowrap; transform: translateX(-50%); display: flex; align-items: center; gap: 9px; color: #dbbfa5b3; font-size: 10px; letter-spacing: .13em; }
+.planet-home-light i { width: 4px; height: 4px; border-radius: 50%; background: #f7d4a5; box-shadow: 0 0 12px 4px #e8b98444; }
+.planet-fallback-art { position: absolute !important; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 75%; pointer-events: none; }
+.planet-story { margin: -4px 0 20px; }
+.planet-eyebrow { display: block; font-size: 9px; letter-spacing: .22em; color: #c6bfd8a6; }
+.planet-story p { margin-top: 12px; font-family: var(--serif); color: #e2d6eccc; font-size: 16px; letter-spacing: .06em; }
+.planet-controls { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.planet-controls button, .observatory-close, .observatory-bottom button { appearance: none; font-family: inherit; color: #e6d9f1; font-size: 11px; letter-spacing: .04em; border: 1px solid #d9c7ec30; border-radius: 24px; padding: 11px 17px; background: #17122499; cursor: pointer; transition: background .2s, border-color .2s; }
+.planet-controls button:hover, .observatory-close:hover { background: #322640bb; border-color: #d6beeb77; }
+.planet-controls button:disabled { opacity: .4; cursor: default; }
+.planet-controls button span { margin-left: 8px; }
+.planet-controls button[aria-pressed='true'] { border-color: #d9bd9077; background: #55403255; }
+.planet-controls .planet-icon-control { width: 38px; height: 38px; padding: 0; font-size: 18px; }
+.planet-controls .planet-expand { border-color: transparent; background: transparent; padding-inline: 10px; color: #c7bdd9; }
+.planet-gesture-hint { font-size: 9px; letter-spacing: .1em; color: #b5aec177; margin: 14px 0 0; }
+.planet-controls button:focus-visible, .observatory-close:focus-visible, .observatory-moods button:focus-visible, .observatory-bottom a:focus-visible, .observatory-bottom button:focus-visible { outline: 2px solid #e2c4f1; outline-offset: 4px; }
+.landing-mood-selection button { color: #c7b8dc; background: none; border: none; border-bottom: 1px solid #c7b8dc44; padding: 12px 0 5px; font-family: inherit; font-size: 11px; letter-spacing: .06em; cursor: pointer; }
+.landing-universe .landing-mood-card { background: linear-gradient(145deg,#b394e510,#080a18bb); box-shadow: inset 0 1px 0 #ddd0ff0a; }
+.landing-universe .landing-mood-card:hover { transform: perspective(700px) translateY(-6px) rotateX(4deg); }
+.landing-universe .landing-feature-card { background-color: #0c0b1dc9; }
+.planet-observatory { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; overflow: auto; border: none; color: #eee5f8; background: radial-gradient(ellipse at 60% 35%, #171529, #050811 80%); }
+.planet-observatory::backdrop { background: #060813; }
+.planet-observatory[open] { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(360px, 1fr) auto; }
+.observatory-header { min-width: 0; z-index: 1; position: relative; display: flex; justify-content: space-between; align-items: start; padding: 35px 44px 0; gap: 20px; }
+.observatory-header h2 { text-wrap: balance; margin-top: 13px; font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); letter-spacing: .1em; font-weight: 400; }
+.observatory-close { padding: 10px 15px; flex-shrink: 0; }
+.observatory-close span { padding-left: 13px; font-size: 16px; }
+.planet-observatory .planet-sanctuary { z-index: 1; display: flex; flex-direction: column; min-height: 0; }
+.planet-observatory .planet-surface { height: auto; min-height: 270px; flex: 1; }
+.planet-observatory .planet-canvas { position: absolute; inset: 0; touch-action: none; }
+.planet-observatory .planet-coordinate { top: 8px; }
+.planet-observatory .planet-home-light { bottom: 14px; }
+.planet-observatory .planet-story { margin: 0 0 18px; }
+.planet-observatory .planet-story p { font-size: 19px; }
+.planet-observatory .planet-gesture-hint { margin-bottom: 14px; }
+.observatory-footer { min-width: 0; z-index: 1; position: relative; width: min(1120px, calc(100% - 80px)); margin: 14px auto 0; }
+.observatory-moods { display: flex; justify-content: center; gap: 7px; padding: 15px 4px; border-top: 1px solid #d9cefa20; }
+.observatory-moods button { appearance: none; flex: 1; min-width: 48px; padding: 7px 2px; border: 1px solid transparent; border-radius: 12px; background: transparent; color: #b3aec0; font-family: inherit; cursor: pointer; }
+.observatory-moods button i { display: block; width: 22px; height: 22px; margin: 0 auto 10px; border-radius: 50%; background: radial-gradient(circle at 30% 22%, #e7daef, var(--planet-tint) 28%, #161124 83%); box-shadow: 0 0 15px #c7a3e210, inset -3px -2px 5px #05061677; }
+.observatory-moods button span { display: block; font-size: 9px; white-space: nowrap; }
+.observatory-moods button[aria-pressed='true'] { background: #b8a0d519; border-color: #ccb7e844; color: #f0e1ff; }
+.observatory-moods button[aria-pressed='true'] i { box-shadow: 0 0 17px #cfb3ec66; }
+.observatory-bottom { display: flex; align-items: center; justify-content: space-between; padding: 0 0 24px; gap: 20px; }
+.observatory-bottom button { padding: 8px 0; color: #b7adca; background: none; border: none; font-size: 10px; }
+.observatory-bottom a { color: #e5c8a6; font-size: 12px; letter-spacing: .07em; text-decoration: none; padding: 10px 0; }
+.observatory-bottom a span { margin-left: 12px; }
+@media (min-width: 1600px) { .landing-universe .landing-hero { min-height: 780px; } }
+@media (max-width: 780px) {
+  .landing-universe .landing-hero { padding-top: 43px; padding-bottom: 42px; gap: 10px; }
+  .landing-universe .landing-hero-copy { text-align: center; }
+  .landing-universe .landing-hero-copy .landing-kicker, .landing-universe .landing-actions { justify-content: center; }
+  .landing-universe .landing-lead { margin-inline: auto; max-width: 330px; font-size: 13px; }
+  .landing-universe .landing-hero h1 { margin-inline: auto; }
+  .planet-hero-wrap { margin-inline: -20px; }
+  .planet-surface { height: 410px; }
+  .planet-coordinate { top: 16px; }
+  .planet-story p { font-size: 14px; }
+  .planet-story { margin-bottom: 17px; }
+  .planet-home-light { bottom: 22px; }
+  .observatory-header { padding: 23px 20px 0; }
+  .observatory-header h2 { font-size: 19px; max-width: 240px; line-height: 1.6; }
+  .observatory-header .planet-eyebrow { font-size: 8px; }
+  .planet-observatory[open] { grid-template-rows: auto minmax(390px,1fr) auto; }
+  .planet-observatory .planet-story p { font-size: 15px; }
+  .planet-observatory .planet-coordinate { display: none; }
+  .observatory-footer { width: calc(100% - 32px); }
+  .observatory-moods { justify-content: flex-start; overflow-x: auto; scrollbar-width: thin; scrollbar-color: #c6a8de44 transparent; }
+  .observatory-moods button { flex: 0 0 54px; }
+  .observatory-bottom { padding-bottom: max(16px, env(safe-area-inset-bottom)); gap: 8px; }
+  .observatory-bottom a { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .planet-canvas, .planet-controls button, .landing-universe .landing-mood-card { transition: none; }
+  .landing-universe .landing-mood-card:hover { transform: none; }
+}

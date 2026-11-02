@@ -1,0 +1,7 @@
+{
+  "name": "milo-ios-verification-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pinned planning tool; the iOS app uses Swift and Xcode, not npm.",
+  "devDependencies": { "@fission-ai/openspec": "1.13.2" }
+}

@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "phase": "visual-repair",
+  "reviewer": "ios_parity_core",
+  "repositoryRoot": "/Users/hut/Projects/milo-ios-validation",
+  "scope": "视觉修复阶段三轮真实原生操作测试，以及第三轮后首次完整截图检查的实际失败。此前完整产品阶段另行保留。",
+  "environment": "iPhone 17e 模拟器，真实 iOS 应用与 XCTest；不是实体 iPhone 验证。",
+  "status": "journeys-passed-capture-incomplete",
+  "runs": [
+    {
+      "round": 1,
+      "runID": "journeys-2026-09-26T07-39-44-607Z",
+      "passed": 5,
+      "failed": 6,
+      "total": 11,
+      "failedTests": [
+        "testCardTemplateGeometryAndLoginErrorState",
+        "testLargeTextEditorTailRemainsVisibleAndPersists",
+        "testLargeTextKeyboardKeepsSaveReachable",
+        "testPastOfflineJourneyDiaryEditAndTemplatePersistence",
+        "testPresentJourneyAndRestartPersistence",
+        "testWriteFailureRetainsInputThenRecovers"
+      ],
+      "log": "apps/ios/evidence/parity/journeys-2026-09-26T07-39-44-607Z.log",
+      "xcresult": "apps/ios/evidence/parity/journeys-2026-09-26T07-39-44-607Z.xcresult",
+      "attachments": "apps/ios/evidence/parity/visual-repair-1-images/manifest.json"
+    },
+    {
+      "round": 2,
+      "runID": "journeys-2026-09-26T07-49-40-668Z",
+      "passed": 9,
+      "failed": 2,
+      "total": 11,
+      "failedTests": [
+        "testLargeTextEditorTailRemainsVisibleAndPersists",
+        "testPastOfflineJourneyDiaryEditAndTemplatePersistence"
+      ],
+      "confirmedImprovement": "模板几何与登录错误状态组合测试完整通过；两种卡片原生分享、键盘下保存、此刻记录重启恢复及写入失败恢复测试通过。",
+      "log": "apps/ios/evidence/parity/journeys-2026-09-26T07-49-40-668Z.log",
+      "xcresult": "apps/ios/evidence/parity/journeys-2026-09-26T07-49-40-668Z.xcresult",
+      "attachments": "apps/ios/evidence/parity/visual-repair-2-images/manifest.json"
+    },
+    {
+      "round": 3,
+      "runID": "journeys-2026-09-26T08-02-03-620Z",
+      "passed": 11,
+      "failed": 0,
+      "total": 11,
+      "failedTests": [],
+      "log": "apps/ios/evidence/parity/journeys-2026-09-26T08-02-03-620Z.log",
+      "xcresult": "apps/ios/evidence/parity/journeys-2026-09-26T08-02-03-620Z.xcresult",
+      "attachments": "apps/ios/evidence/parity/visual-repair-3-images/manifest.json",
+      "scope": "真实点击、实际输入末尾、运行时光标几何、模板立即选中与重启持久化通过；不是53组双端截图验收。"
+    }
+  ],
+  "confirmedFindings": [
+    {
+      "id": "template-button-accessibility-shadowing",
+      "round": 1,
+      "priority": "P2",
+      "finding": "card-template-* 标识落在 Other 容器；内部 Button 标识被合并成重复的 card-template-preview-*。按真实 Button 查询无法找到目标。",
+      "evidence": "apps/ios/evidence/parity/visual-repair-1-images/2ABC9A64-9048-44DC-9CAD-D01530F67A4B.txt",
+      "followup": "移除模板 Button 的 children:contain 并隐藏序号 badge 的 AX；第二轮真实模板按钮及预览几何断言通过。"
+    },
+    {
+      "id": "note-editor-accessibility-identifier-shadowing",
+      "round": 1,
+      "priority": "P2",
+      "finding": "诊断容器和实际 TextView 同时使用 note-editor-viewport，实际输入控件的 note-input 标识被覆盖，多个输入流程在查找控件时失败。",
+      "evidence": "apps/ios/evidence/parity/visual-repair-1-images/B2E7A657-D3D4-41D7-ABD3-7495D1DC294A.txt",
+      "followup": "第二轮 AX 已分别显示 parity-scroll-note-editor 与 note-input；输入控件可查找，但长文末尾测试仍在命中检查失败，不能视为全部修复。"
+    },
+    {
+      "id": "large-text-editor-not-hittable",
+      "round": 2,
+      "priority": "P2",
+      "finding": "长文末尾测试在 MiloUITests.swift:190 报 TextView not hittable；AX 中诊断 Other 与 note-input TextView 同框为 (46,262.3,298,338.3)。该证据证明命中失败与重叠，不能仅凭 AX 推定全部触摸遮挡原因。",
+      "evidence": "apps/ios/evidence/parity/visual-repair-2-images/0D0AC033-121E-497A-93CF-955774A6FDC5.txt",
+      "followup": "输入编辑与诊断命中修复待第三轮真实末尾输入、光标及重启持久化复验。"
+    },
+    {
+      "id": "template-tap-in-bottom-safe-area",
+      "round": 2,
+      "priority": "P2",
+      "finding": "测试仅凭 isHittable 停止滚动，在 390×844 窗口的 (283,816.667) 底部安全区域点击。模板尚在固定底栏下，点击未触发模板切换；这不是已切换后重启丢失选中状态。",
+      "evidence": [
+        "apps/ios/evidence/parity/journeys-2026-09-26T07-49-40-668Z.log:865",
+        "apps/ios/evidence/parity/visual-repair-2-images/33C8F8A3-9164-494C-A805-5CA3D6418BB7",
+        "apps/ios/evidence/parity/visual-repair-2-images/2FBF5F3F-6191-48B0-85E9-3AAF09C6326D.png"
+      ],
+      "eventSHA256": "d178ebc83696c180023d7da82eebd57ab958959eefabe9f8ed22166ed2065546",
+      "imageSHA256": "1dced5e22d3f26e388768998f3b96cf4df232e542ea29b7756e5024448c95437",
+      "observedImage": "点击后的原图仍为紫色 planet-letter 卡片，页码 1 / 2。",
+      "syntheticStoreObservation": {
+        "path": "/Users/hut/Library/Developer/CoreSimulator/Devices/EAE7BE56-823B-4B27-93CE-2883A202DC1D/data/Containers/Data/Application/0142F982-541E-4B7E-B6A9-864CA12EFAF9/Library/Application Support/MILO-UITests/89AF7ACD-3744-4B5A-9812-72D9B97A00B3/journal.json",
+        "entryID": "DE3E86DA-F88F-46DB-B9ED-139714E8E99B",
+        "stickerTemplate": "planet-letter",
+        "modifiedAt": "2026-09-26T07:52:59.120965Z",
+        "limitation": "仅只读检查该 synthetic UUID 测试目录；模拟器存储可能被后续运行清理。点击发生在 07:53:01，之后该记录没有写入。"
+      },
+      "followup": "点击前验证完整模板按钮处于底栏上方，否则先滚动；点击后立即验证选中，继续保留原来的重启持久化断言。修复待第三轮复验。"
+    }
+  ],
+  "verificationLimits": [
+    "第三轮11项操作测试全部通过，但新的53状态截图检查在首例失败，不能外推成完整视觉通过。",
+    "每项最多3次执行；本阶段native build已3次，保留当前源码与结果，不追加构建、清零计数或重建同义运行。",
+    "两张键盘静态帧中的闪烁光标像素需独立审图；运行时光标几何断言通过不等于图片中必然出现光标。"
+  ],
+  "pairedReview": {
+    "ledger": "docs/visual-parity/cases.json",
+    "requiredCases": 53,
+    "pendingCases": 53,
+    "status": "pending",
+    "reasons": [
+      "53项两端capture和review仍为空，没有有效配对证据。",
+      "缺少同状态鸿蒙实际截图，无法判断跨端复刻或美学提升。",
+      "最新操作通过，但全状态新版滚动截图采集失败；早期候选图不能改标成当前构建的图。"
+    ]
+  },
+  "captureAttempt": {
+    "status": "failed",
+    "runID": "capture-2026-09-26T08-06-55-690Z",
+    "firstCase": "login--email",
+    "namedCaseScreenshots": 0,
+    "failure": "XCTAssertFalse failed: A scrollable page requires measured coverage: login--email",
+    "observed": "登录状态断言通过；查询 parity-scroll-* 返回无元素，随后发现 ScrollView，按严格覆盖规则失败。",
+    "inference": "LoginView 外层 page-login 标识可能覆盖 DEBUG 几何标识，需原生 AX 证据确认。",
+    "log": "apps/ios/evidence/parity/capture-2026-09-26T08-06-55-690Z.log",
+    "xcresult": "apps/ios/evidence/parity/capture-2026-09-26T08-06-55-690Z.xcresult",
+    "attachments": "apps/ios/evidence/parity/visual-repair-capture-1-images/manifest.json",
+    "note": "失败附件为原始屏幕录像，未产出命名case截图。此前183图仍是修复前版本。"
+  },
+  "remainingVisualFinding": {
+    "priority": "P2",
+    "status": "unresolved",
+    "image": "apps/ios/evidence/parity/visual-repair-3-images/C2487706-F2B6-4CDD-9A8A-D3DB4D78BC2D.png",
+    "finding": "实际模板切换图中，右侧选项上移碰到页码，左側副标题受底栏遮挡。",
+    "limitation": "尚不能仅凭此帧区分常驻布局问题与切换后过早采集；必须复现并检查稳定后的真实界面。"
+  },
+  "nextRepairEvidenceNeeded": [
+    "在登录页原生AX树中确认几何探针为何丢失；按同一规则检查账户行及所有页面容器，不能仅修改查询使检查跳过。",
+    "真实过去旅程双向切换模板后，分别记录立即帧和几何稳定帧：两按钮、两预览、标题、底栏及滚动偏移。切换前可见不能替代切换后可见。",
+    "源码显示主图由1434切到1530设计高度，342点宽度下增高约30.4点；这可解释整排向底栏移动，但不能解释右列单独上移。须复现而非只加固定等待。",
+    "53状态当前置于单个失败即止测试中。后续应隔离状态执行，使单例失败仍可保留其他状态证据，同时保持全部状态必需。",
+    "扩展嵌套滚动区域的正式证据格式，并通过负向测试后再登记完整滚动覆盖。"
+  ]
+}

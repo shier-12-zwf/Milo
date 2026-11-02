@@ -1,0 +1,93 @@
+name: Milo
+options:
+  minimumXcodeGenVersion: 2.46.0
+  deploymentTarget:
+    iOS: '17.0'
+packages:
+  MiloCore:
+    path: MiloCore
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    DEVELOPMENT_TEAM: ''
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: '1'
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    "CODE_SIGNING_ALLOWED[sdk=iphonesimulator*]": YES
+    "CODE_SIGN_IDENTITY[sdk=iphonesimulator*]": "-"
+    OTHER_LDFLAGS: ["$(inherited)", "-ObjC"]
+targets:
+  Milo:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Resources
+      - path: Vendor/AGConnect/1.9.4.300/AGCResources.bundle
+        type: file
+        buildPhase: resources
+    dependencies:
+      - package: MiloCore
+      - framework: Vendor/AGConnect/1.9.4.300/AGConnectAuth.xcframework
+        embed: false
+      - framework: Vendor/AGConnect/1.9.4.300/AGConnectCredential.xcframework
+        embed: false
+      - framework: Vendor/AGConnect/1.9.4.300/AGConnectCore.xcframework
+        embed: false
+      - framework: Vendor/AGConnect/1.9.4.300/HMFoundation.xcframework
+        embed: false
+      - sdk: Security.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.milo.echoes.ios
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_FILE: ""
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: MILO
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: 将你选择的回忆卡片保存到相册，方便留存和分享。
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: 使用麦克风，把你说的话写进当前回忆。
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: 将你主动录下的话转换成文字；系统可能使用 Apple 语音服务。
+        MARKETING_VERSION: '0.2.0'
+        CURRENT_PROJECT_VERSION: '1'
+  MiloAccountTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [tests/AccountBehaviorTests.swift, tests/NativeKeychainTests.swift, tests/SpeechInputTests.swift]
+    dependencies:
+      - target: Milo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.milo.echoes.ios.accounttests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Milo.app/Milo"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        OTHER_LDFLAGS: []
+        FRAMEWORK_SEARCH_PATHS:
+          - "$(inherited)"
+          - "$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectAuth"
+          - "$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectCredential"
+          - "$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/AGConnectCore"
+          - "$(BUILT_PRODUCTS_DIR)/XCFrameworkIntermediates/HMFoundation"
+  MiloUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: Milo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.milo.echoes.ios.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Milo
+schemes:
+  Milo:
+    build:
+      targets:
+        Milo: all
+        MiloUITests: [test]
+    test:
+      gatherCoverageData: true
+      targets: [MiloUITests, MiloAccountTests]

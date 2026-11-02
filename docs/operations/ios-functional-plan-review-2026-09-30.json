@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "reviewedAt": "2026-09-29T16:10:14.726649+00:00",
+  "phase": "2026-09-30 source-based login/account/settings continuation",
+  "round": 1,
+  "maximumPlanReviewRounds": 2,
+  "verdict": "PASS",
+  "meaning": "Plan is sufficient to start bounded implementation. This is not implementation acceptance, actual remote authentication verification, device verification, or visual acceptance.",
+  "files": [
+    {
+      "path": "docs/operations/ios-functional-parity-plan-2026-09-30.md",
+      "sha256": "52cbb07fa9c5cefe3a91d4a69097273b8a78d343b63ec6b6e3f62ca6fd30c6ce"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/proposal.md",
+      "sha256": "b23c4d2ecfba733c9ea48faa6097e36a6788aa675ebfc77ef1e95f90ece045ae"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/design.md",
+      "sha256": "b23c2fc27ddaa020e20d840ec56b082f21b4ffeb3ffe752539247ad221801494"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/tasks.md",
+      "sha256": "c8fa446f6f8208349005bc81a41a3e4a4a42719a48ba664f0168759d9632c628"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/specs/ios-product-parity/spec.md",
+      "sha256": "d2c626a82e7d1c1008783fd9b69e55f2d86758ae866d1582470352f525503387"
+    }
+  ],
+  "blockingFindings": [],
+  "coverage": [
+    "Normal first-launch login and account/settings navigation are separated from DEBUG capture fixtures and remote service success.",
+    "Actual supported AGC provider, iOS bundle configuration, simulator build, injectable behavior tests and actual remote verification are distinct deliverables; absent external configuration does not justify a production fake provider.",
+    "Reset-success/sign-in-failure, consumed code, purpose/email cooldown, local sign-out despite remote cleanup failure, local cleanup failure and failed deletion preservation are explicit.",
+    "AI defaults affect new memories; explicit settings save cancels old configuration requests and prevents stale writes; restored drafts retain their recorded choice.",
+    "Existing avatar/export/provider/key/consent/account isolation and offline behavior are retained; password reveal and stale errors have concrete parity requirements.",
+    "The new functional phase is bounded separately without resetting historical attempts, weakening old failures, claiming all 53 visual states, merging or archiving the incomplete change."
+  ],
+  "implementationClarifications": [
+    {
+      "id": "P-N1",
+      "blocking": false,
+      "text": "First launch means a clean normal installation/session store. Do not interpret this as forcing login on every launch or invalidating a valid persisted local/remote session."
+    },
+    {
+      "id": "P-N2",
+      "blocking": false,
+      "text": "Harmony has a configurable hosted AI adapter whereas iOS currently hardcodes hosted unavailability. The current Harmony gateway URL is also empty. Inventory this honestly; do not claim hosted parity or working hosted service from this authentication/settings milestone."
+    },
+    {
+      "id": "P-N3",
+      "blocking": false,
+      "text": "Official SDK availability and compile/link probe were reported by the implementation coordinator. This review did not execute or independently reproduce that probe; final review must inspect actual production linkage and current build evidence."
+    }
+  ],
+  "executionLimits": {
+    "attemptsPerCheck": 3,
+    "sameInputNoProgress": 2,
+    "commandMinutes": 90,
+    "historicalLimitsPreserved": true
+  },
+  "requiredLaterEvidence": [
+    "current implementation independent review",
+    "AccountModel injected provider success/failure/partial-reset/logout/deletion/persistence assertions",
+    "AI coordinator defaults/save/cancellation/restored-draft assertions",
+    "current iOS build and runner provenance",
+    "normal-entry simulator flow and original login/account/settings screenshots",
+    "actual configured remote account verification or explicit unresolved external gap"
+  ],
+  "notPerformed": [
+    "source edits",
+    "tests",
+    "builds",
+    "simulator or browser operations",
+    "Harmony runtime launch",
+    "remote authentication"
+  ],
+  "sourceAudit": [
+    {
+      "priority": "P1",
+      "difference": "Production default auth provider is unconfigured, so existing forms do not provide real remote login/register/reset/account deletion.",
+      "ios": "apps/ios/App/Account/AccountModel.swift:28-40,84-100",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/AuthController.ets:176-253",
+      "ownerNote": "Coordinator already owns this finding."
+    },
+    {
+      "priority": "P1",
+      "difference": "Stored AI enabled default and explicit settings-save changes are not propagated into new/current draft behavior.",
+      "ios": "apps/ios/App/JournalModel.swift:87-104; apps/ios/App/Account/AISettingsView.swift:38-40",
+      "harmony": "apps/harmony/entry/src/main/ets/pages/Index.ets:154-158,285-292",
+      "ownerNote": "Coordinator already owns this finding."
+    },
+    {
+      "priority": "P2",
+      "difference": "Reset and subsequent login are one success/failure result; no accurate partial-success return to password login.",
+      "ios": "apps/ios/App/Account/LoginView.swift:139; apps/ios/App/Account/AccountModel.swift:157-170",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/LoginScreen.ets:136-156; features/auth/AuthController.ets:256-283",
+      "ownerNote": "Coordinator already owns this finding."
+    },
+    {
+      "priority": "P2",
+      "difference": "Remote sign-out failure can prevent local exit; the plan deliberately improves resilience. Harmony has similar ordering, so this is not exclusively an iOS omission.",
+      "ios": "apps/ios/App/Account/AccountModel.swift:173",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/AuthController.ets:294-306",
+      "ownerNote": "Coordinator already owns this finding."
+    },
+    {
+      "priority": "P2",
+      "difference": "Login/reset password cannot be revealed while entering.",
+      "ios": "apps/ios/App/Account/LoginView.swift:118-121",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/LoginScreen.ets:328"
+    },
+    {
+      "priority": "P2",
+      "difference": "Editing code/password leaves a stale error; only email edits clear it.",
+      "ios": "apps/ios/App/Account/LoginView.swift:28-36,77-83,118-121",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/LoginScreen.ets:269-274,301-313"
+    },
+    {
+      "priority": "P2-capability-gap",
+      "difference": "Hosted/default AI is always unavailable in iOS; Harmony selects an actual hosted adapter when configured. Both currently lack an enabled hosted production endpoint, so this does not prove a live service regression.",
+      "ios": "apps/ios/App/Account/AISettingsView.swift:115; apps/ios/App/Account/AccountModel.swift:272-276",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/AiSettingsScreen.ets:141; apps/harmony/entry/src/main/ets/pages/Index.ets:103-115"
+    },
+    {
+      "priority": "inventory-only",
+      "difference": "Login, account entry, avatar/reset, JSON/Markdown export, password management, delete/logout, five model presets, personal connection test, key deletion/consent and non-purchasable membership explanation already have iOS UI; do not recreate them as missing pages.",
+      "ios": "apps/ios/App/JournalView.swift:12,57-58; apps/ios/App/Journey/HomeView.swift:37; apps/ios/App/Account/AccountView.swift:40-214; apps/ios/App/Account/AISettingsView.swift:71-126"
+    },
+    {
+      "priority": "fixture-or-session-only",
+      "difference": "Authenticated screenshots skip login because the capture fixture installs identity, or because local identity persisted. Both clients intentionally hide remote password management for owner-local identity. Page absence in those screenshots is not proof that normal login/account routes are missing.",
+      "ios": "apps/ios/App/MiloApp.swift:69-84; apps/ios/App/Account/AccountView.swift:114-119; apps/ios/App/JournalView.swift:12",
+      "harmony": "apps/harmony/entry/src/main/ets/features/auth/AccountScreen.ets:171-190"
+    }
+  ]
+}

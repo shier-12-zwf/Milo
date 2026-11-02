@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "limits": {
+    "maxAttemptsPerCheck": 3,
+    "maxNoProgress": 2,
+    "maxWallTimeMs": 2400000
+  },
+  "checks": [
+    {
+      "id": "specification",
+      "argv": [
+        "node",
+        "apps/ios/node_modules/@fission-ai/openspec/bin/openspec.js",
+        "validate",
+        "ios-speech-input-stability",
+        "--strict",
+        "--no-interactive"
+      ],
+      "inputs": [
+        "openspec/changes/ios-speech-input-stability"
+      ],
+      "env": {
+        "OPENSPEC_TELEMETRY": "0"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "id": "native-preflight",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "preflight"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "kind": "preflight"
+    },
+    {
+      "id": "native-build",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "build"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-preflight"
+      ]
+    },
+    {
+      "id": "native-install",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "install"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build"
+      ]
+    },
+    {
+      "id": "native-unit",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "unit"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-launch",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "launch"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    },
+    {
+      "id": "native-speech",
+      "argv": [
+        "node",
+        "apps/ios/scripts/stability-native.mjs",
+        "speech"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000,
+      "dependsOn": [
+        "native-build",
+        "native-install"
+      ]
+    }
+  ]
+}

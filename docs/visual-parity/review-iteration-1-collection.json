@@ -1,0 +1,677 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/ios_parity_core",
+  "reviewedAt": "2026-09-26T07:25:28Z",
+  "iteration": 1,
+  "scope": "Read-only iOS visual review of every timeline, detail and card case in captures-1-images/image-index.json; no App or acceptance-ledger edits.",
+  "sourceIndex": {
+    "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/image-index.json",
+    "sha256": "fa0378038aedc83f51e2ef5d9d8d73e9ef959924781dfea37ac06afb6ac72506"
+  },
+  "decision": "ios-fixes-and-additional-capture-required",
+  "crossPlatformDecision": "NOT_ASSESSED_NO_HARMONY_SCREENSHOTS",
+  "method": "Every distinct image within each assigned case was opened with tools.view_image(detail: original). Only byte-identical images within the same case were omitted from repeated viewing; each omitted file is listed below. Pixel dimensions were read from the original PNG IHDR and SHA-256 was computed from unmodified file bytes. No generated images, montage proxies or screenshot edits were used.",
+  "coverage": {
+    "caseCount": 11,
+    "indexedImageCount": 41,
+    "directlyViewedImageCount": 22,
+    "sameCaseByteDuplicateCount": 19,
+    "allAssignedCaseTopsViewed": true,
+    "allDistinctAssignedScrollImagesViewed": true,
+    "fullLongPageCoverageEstablished": false
+  },
+  "viewedImages": [
+    {
+      "caseID": "card--orbit-theatre",
+      "name": "card--orbit-theatre--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6DA084AB-F690-4B53-8FB6-41A348D5A34E.png",
+      "sha256": "46556d035b761205e81bedd31f5fae68b9cd2b6319c443c7de5a5b5c90c41d5f",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "card--planet-letter",
+      "name": "card--planet-letter--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/839E36AB-2763-4ECA-B60E-1D8FCA218A39.png",
+      "sha256": "dc7b6bb85d3be0045ba92c5ea2b7e0e63853709733e5c8ae2f447708ee4cee62",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "timeline--empty",
+      "name": "timeline--empty--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/EB5966A1-173C-482A-938E-F8ED7ED13F5A.png",
+      "sha256": "99d2791fb4bd43844d9f0843af25cc77ae9e07de63e66ff00d04b4b86494c091",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "timeline--populated",
+      "name": "timeline--populated--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2558BB93-54E0-41BB-B4D3-D7F56478D9AD.png",
+      "sha256": "1037e405b4872e8acf5c2f3c322677cda3bbba22e2f6c89ef784a7ab02b6174f",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "name": "timeline--populated--large-text--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png",
+      "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--now",
+      "name": "detail--now--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png",
+      "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--missing",
+      "name": "detail--missing--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6A3A49D9-8511-4785-A2E6-6ABA40DFF6CD.png",
+      "sha256": "a0a6195c5cde23e4e285b6dcadfd9b7624b22054d0970fea91278648a9e8292a",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--delete-confirmation",
+      "name": "detail--delete-confirmation--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6BDD81EC-A6BF-4425-8E63-8B8AF1F6BE18.png",
+      "sha256": "8e9c5d086af8ab35497d5d9e9a439346248f0dafccb2e86adb8a62ba3af7748d",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--past",
+      "name": "detail--past--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/11751B4A-FE95-4A19-9BBC-228AF85B04AA.png",
+      "sha256": "4b797bdeb48dd28f055533329097b3af5e7565d8a65d9d0a9bd4356e1b8028bd",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--past",
+      "name": "detail--past--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/012509C2-722D-4049-919E-313A85F3DCEF.png",
+      "sha256": "0b61e5cfd1e4924595c52dc8bc6b3291e19a0576557a44fde9ae97d33a5fedbf",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--past",
+      "name": "detail--past--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/29EE9966-91A1-4592-BD91-2CAD5012EA74.png",
+      "sha256": "c74ae0911e4a1b6b2f522d28ce99a5518c174f7adfccd98ec6529edb48f67bb3",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--past",
+      "name": "detail--past--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C6ED23FE-1FE9-47C5-9660-A4342BA3C404.png",
+      "sha256": "e8abd53bb4228c85f6022930456cf788a1380a8139ffe8aa60dd88e410e0ced3",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "name": "detail--transcript-expanded--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2ED2A88B-3D8E-4905-BF74-7A22A188071F.png",
+      "sha256": "4b797bdeb48dd28f055533329097b3af5e7565d8a65d9d0a9bd4356e1b8028bd",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "name": "detail--transcript-expanded--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/FDAA17C5-F6EB-43C8-9F69-F5EFFEEB7701.png",
+      "sha256": "ffe0c98d361e3fa95fe3e68d9e7c09b287fdb1454ee467887a44113f822f1aa3",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "name": "detail--transcript-expanded--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/72BACCAE-15E4-41FC-98EE-C5DE17C13AFF.png",
+      "sha256": "4728edf615c6c7e86781549fed3b2c3909a23cce01eb6ce7d4913596bf56fd02",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "name": "detail--transcript-expanded--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/015F9EB4-E8B4-473B-9B15-0FEFDC475923.png",
+      "sha256": "4e38570fd5c0a0669a7b4f138212e189a709dc2cce34cb7b57fcc0ca222c65bc",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "name": "detail--transcript-expanded--large-text--top",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/3E801BF8-306D-451D-8F3E-688762811E87.png",
+      "sha256": "fe736546fae26ad9a1e33a539a37b25c22117071dc7038cd4804613981bf7547",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "name": "detail--transcript-expanded--large-text--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/58BF904F-EFB0-4955-97A6-1CAF5868C389.png",
+      "sha256": "98280f25526f0678bec67c2cefb70869e7c71d37171b649980642345da036af4",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "name": "detail--transcript-expanded--large-text--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/CF3AF2B3-D8CD-490B-945D-5FD958302BDE.png",
+      "sha256": "12cd65fc1a4df3cc639f529f5d2bda59591fe91e6eeb915e92b7fbc029b3d296",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "name": "detail--transcript-expanded--large-text--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/70E13552-F547-4145-88AD-BD1E4BB1CDCC.png",
+      "sha256": "eac399c93b57d2bea4cbd3e944dc88c7e487f03d357c9a7952a3503cafd0a844",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "name": "detail--transcript-expanded--large-text--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A374CB2C-8BEC-40C1-B7C2-CF37C205FB01.png",
+      "sha256": "354287ed2a2f238bc6c7f2a7b0e4b464ae9754c7b66af160857e8bf1b83226bf",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "name": "detail--transcript-expanded--large-text--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0DA5F7B1-E7BA-4C01-A064-BE73FED1E37D.png",
+      "sha256": "0998347b80e005b1b7a0526d8739112f02a9811764306c3d667d48ee6488d8f3",
+      "pixelSize": [
+        1170,
+        2532
+      ],
+      "viewMethod": "tools.view_image(original)"
+    }
+  ],
+  "byteIdenticalImagesNotViewedAgain": [
+    {
+      "caseID": "detail--delete-confirmation",
+      "name": "detail--delete-confirmation--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/510FEE43-699A-4541-910B-8164E905A9CD.png",
+      "sha256": "8e9c5d086af8ab35497d5d9e9a439346248f0dafccb2e86adb8a62ba3af7748d",
+      "identicalToViewedName": "detail--delete-confirmation--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6BDD81EC-A6BF-4425-8E63-8B8AF1F6BE18.png"
+    },
+    {
+      "caseID": "detail--delete-confirmation",
+      "name": "detail--delete-confirmation--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/5102CC78-F9A7-4DC4-B159-35ACAC8AFAA6.png",
+      "sha256": "8e9c5d086af8ab35497d5d9e9a439346248f0dafccb2e86adb8a62ba3af7748d",
+      "identicalToViewedName": "detail--delete-confirmation--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6BDD81EC-A6BF-4425-8E63-8B8AF1F6BE18.png"
+    },
+    {
+      "caseID": "detail--delete-confirmation",
+      "name": "detail--delete-confirmation--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/54823A6B-E4B5-4E04-BD2D-6B4C4A4DEA84.png",
+      "sha256": "8e9c5d086af8ab35497d5d9e9a439346248f0dafccb2e86adb8a62ba3af7748d",
+      "identicalToViewedName": "detail--delete-confirmation--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6BDD81EC-A6BF-4425-8E63-8B8AF1F6BE18.png"
+    },
+    {
+      "caseID": "detail--delete-confirmation",
+      "name": "detail--delete-confirmation--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/F03FA821-E4CA-44F9-8FE7-674206BCDA78.png",
+      "sha256": "8e9c5d086af8ab35497d5d9e9a439346248f0dafccb2e86adb8a62ba3af7748d",
+      "identicalToViewedName": "detail--delete-confirmation--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6BDD81EC-A6BF-4425-8E63-8B8AF1F6BE18.png"
+    },
+    {
+      "caseID": "detail--delete-confirmation",
+      "name": "detail--delete-confirmation--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/79515BB0-EFD8-4E4D-991A-B60233C7EAC3.png",
+      "sha256": "8e9c5d086af8ab35497d5d9e9a439346248f0dafccb2e86adb8a62ba3af7748d",
+      "identicalToViewedName": "detail--delete-confirmation--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6BDD81EC-A6BF-4425-8E63-8B8AF1F6BE18.png"
+    },
+    {
+      "caseID": "detail--now",
+      "name": "detail--now--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/69B7226E-60FD-4E3C-9FFA-39018C4736DA.png",
+      "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342",
+      "identicalToViewedName": "detail--now--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png"
+    },
+    {
+      "caseID": "detail--now",
+      "name": "detail--now--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/54B2B364-A18F-4857-9033-052DFED767A2.png",
+      "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342",
+      "identicalToViewedName": "detail--now--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png"
+    },
+    {
+      "caseID": "detail--now",
+      "name": "detail--now--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/45714DF3-222E-4903-BA60-E2E63AB8B71D.png",
+      "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342",
+      "identicalToViewedName": "detail--now--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png"
+    },
+    {
+      "caseID": "detail--now",
+      "name": "detail--now--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/BF2ACC27-58E3-455B-BE4F-EB9FDF7DEA29.png",
+      "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342",
+      "identicalToViewedName": "detail--now--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png"
+    },
+    {
+      "caseID": "detail--now",
+      "name": "detail--now--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B01F1E7B-F0F7-4359-903B-F1E9C18F30B2.png",
+      "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342",
+      "identicalToViewedName": "detail--now--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png"
+    },
+    {
+      "caseID": "detail--past",
+      "name": "detail--past--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2D38B8A5-26BE-4F3E-A805-B004EF724396.png",
+      "sha256": "e8abd53bb4228c85f6022930456cf788a1380a8139ffe8aa60dd88e410e0ced3",
+      "identicalToViewedName": "detail--past--scroll-3",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C6ED23FE-1FE9-47C5-9660-A4342BA3C404.png"
+    },
+    {
+      "caseID": "detail--past",
+      "name": "detail--past--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6F4F32D3-6239-4C9B-8927-01039CEEA1D1.png",
+      "sha256": "e8abd53bb4228c85f6022930456cf788a1380a8139ffe8aa60dd88e410e0ced3",
+      "identicalToViewedName": "detail--past--scroll-3",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/C6ED23FE-1FE9-47C5-9660-A4342BA3C404.png"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "name": "detail--transcript-expanded--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/B17BAC5C-582D-4DDB-8F9F-0AA83DC00581.png",
+      "sha256": "4e38570fd5c0a0669a7b4f138212e189a709dc2cce34cb7b57fcc0ca222c65bc",
+      "identicalToViewedName": "detail--transcript-expanded--scroll-3",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/015F9EB4-E8B4-473B-9B15-0FEFDC475923.png"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "name": "detail--transcript-expanded--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/850955AD-1186-4654-AC7D-7757EA95EDFA.png",
+      "sha256": "4e38570fd5c0a0669a7b4f138212e189a709dc2cce34cb7b57fcc0ca222c65bc",
+      "identicalToViewedName": "detail--transcript-expanded--scroll-3",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/015F9EB4-E8B4-473B-9B15-0FEFDC475923.png"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "name": "timeline--populated--large-text--scroll-1",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2D422ECF-E738-4AE6-BE4D-30DF2893318A.png",
+      "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58",
+      "identicalToViewedName": "timeline--populated--large-text--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "name": "timeline--populated--large-text--scroll-2",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0BCDC71E-0BDD-4EB7-A26A-3FC6D5AEBBCC.png",
+      "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58",
+      "identicalToViewedName": "timeline--populated--large-text--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "name": "timeline--populated--large-text--scroll-3",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/4B7684FF-B70E-4203-ABB9-E64F922603A9.png",
+      "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58",
+      "identicalToViewedName": "timeline--populated--large-text--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "name": "timeline--populated--large-text--scroll-4",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A5ADAB10-3E1B-41CA-823E-82F0EB42BBCC.png",
+      "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58",
+      "identicalToViewedName": "timeline--populated--large-text--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "name": "timeline--populated--large-text--scroll-5",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/1941C9FE-5668-4BCA-AA4E-603A0EB413F7.png",
+      "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58",
+      "identicalToViewedName": "timeline--populated--large-text--top",
+      "identicalToViewedPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png"
+    }
+  ],
+  "findings": [
+    {
+      "id": "COL-01",
+      "priority": "P2",
+      "kind": "ios-layout",
+      "caseIDs": [
+        "timeline--populated--large-text",
+        "detail--transcript-expanded--large-text"
+      ],
+      "title": "最大字体下日期时间被省略，关键信息不可见",
+      "observation": "收藏列表日期仅显示“9月26…”，09:41 被隐藏；详情固定导航栏日期仅显示“2026年…”，月和日被隐藏。详情的全部 6 张大字图都保持这个省略状态。",
+      "evidence": [
+        {
+          "name": "timeline--populated--large-text--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/398C06A8-3A0A-4995-B668-BFD42811901E.png",
+          "sha256": "3025b33a676180c77a18b397e4c7cec5b2c43492337ad9e4dc526de85ec5dc58"
+        },
+        {
+          "name": "detail--transcript-expanded--large-text--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/3E801BF8-306D-451D-8F3E-688762811E87.png",
+          "sha256": "fe736546fae26ad9a1e33a539a37b25c22117071dc7038cd4804613981bf7547"
+        },
+        {
+          "name": "detail--transcript-expanded--large-text--scroll-5",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0DA5F7B1-E7BA-4C01-A064-BE73FED1E37D.png",
+          "sha256": "0998347b80e005b1b7a0526d8739112f02a9811764306c3d667d48ee6488d8f3"
+        }
+      ],
+      "suggestedFix": "在辅助字号下将日期与“此刻”标签分行；详情日期移到可换行的独立区域，保留返回和删除控件，避免依赖单行省略。",
+      "verification": "重新采集最大字号两页，日期和时间应完整可读，控件不互相覆盖。"
+    },
+    {
+      "id": "COL-02",
+      "priority": "P2",
+      "kind": "ios-content-presentation",
+      "caseIDs": [
+        "detail--now",
+        "detail--past",
+        "detail--transcript-expanded",
+        "detail--transcript-expanded--large-text",
+        "detail--delete-confirmation"
+      ],
+      "title": "详情情绪摘要重复显示“平静”",
+      "observation": "副标题实际为“平静 · 平静 · 松弛”，情绪名与已选词重复。大字图把这段冗余文字换成两行，加大了首页占用。",
+      "evidence": [
+        {
+          "name": "detail--now--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png",
+          "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342"
+        },
+        {
+          "name": "detail--past--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/11751B4A-FE95-4A19-9BBC-228AF85B04AA.png",
+          "sha256": "4b797bdeb48dd28f055533329097b3af5e7565d8a65d9d0a9bd4356e1b8028bd"
+        },
+        {
+          "name": "detail--transcript-expanded--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/2ED2A88B-3D8E-4905-BF74-7A22A188071F.png",
+          "sha256": "4b797bdeb48dd28f055533329097b3af5e7565d8a65d9d0a9bd4356e1b8028bd"
+        },
+        {
+          "name": "detail--transcript-expanded--large-text--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/3E801BF8-306D-451D-8F3E-688762811E87.png",
+          "sha256": "fe736546fae26ad9a1e33a539a37b25c22117071dc7038cd4804613981bf7547"
+        }
+      ],
+      "suggestedFix": "只在展示摘要时按首次出现顺序去重情绪名和描述词，保留原始记录数据。",
+      "verification": "相同 fixture 显示“平静 · 松弛”；其他不同描述词保持原顺序。"
+    },
+    {
+      "id": "COL-03",
+      "priority": "P2",
+      "kind": "ios-layout-and-coverage",
+      "caseIDs": [
+        "card--planet-letter"
+      ],
+      "title": "星球卡片截图底部截在模板标题，固定操作栏未出现在屏幕内",
+      "observation": "1170×2532 原图底缘仅露出 LAYOUTS、“选择卡片模板”和“1 / 2”的部分文字，两个模板按钮及“保存图片／回到首页”操作栏均未显示。轨道卡片顶图的操作栏则完整显示，两个模板的首屏行为不一致。截图本身不能证明后续能否滚到这些控件。",
+      "evidence": [
+        {
+          "name": "card--planet-letter--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/839E36AB-2763-4ECA-B60E-1D8FCA218A39.png",
+          "sha256": "dc7b6bb85d3be0045ba92c5ea2b7e0e63853709733e5c8ae2f447708ee4cee62"
+        },
+        {
+          "name": "card--orbit-theatre--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6DA084AB-F690-4B53-8FB6-41A348D5A34E.png",
+          "sha256": "46556d035b761205e81bedd31f5fae68b9cd2b6319c443c7de5a5b5c90c41d5f"
+        }
+      ],
+      "suggestedFix": "修复已知模板按钮布局尺寸后，明确约束预览与滚动视口，使固定操作栏在两种模板下都留在可视区域；补拍模板区域与底部。",
+      "verification": "同一设备两种模板的操作栏完整可见；下滚后两模板按钮等宽、同顶线，不能侵入标题或页码。"
+    },
+    {
+      "id": "COL-04",
+      "priority": "P2",
+      "kind": "capture-coverage",
+      "caseIDs": [
+        "detail--transcript-expanded--large-text"
+      ],
+      "title": "最大字号长详情没有覆盖到展开对话或页面末尾",
+      "observation": "top 和 scroll-1…scroll-5 共 6 张均已实际查看。scroll-5 仍显示长日记中段，底部是未完的下一段“今天慢慢走了一段路，风很温柔。路…”，没有看到日记容器下边缘、“收起当时的对话”或任一对话气泡。不能将这组图记为完整长页验收。",
+      "evidence": [
+        {
+          "name": "detail--transcript-expanded--large-text--scroll-4",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/A374CB2C-8BEC-40C1-B7C2-CF37C205FB01.png",
+          "sha256": "354287ed2a2f238bc6c7f2a7b0e4b464ae9754c7b66af160857e8bf1b83226bf"
+        },
+        {
+          "name": "detail--transcript-expanded--large-text--scroll-5",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/0DA5F7B1-E7BA-4C01-A064-BE73FED1E37D.png",
+          "sha256": "0998347b80e005b1b7a0526d8739112f02a9811764306c3d667d48ee6488d8f3"
+        }
+      ],
+      "suggestedFix": "继续采集有重叠的滚动位置直到实际末尾，同时记录总高、最大偏移和末尾锚点；不要固定以 5 次滚动代表完成。",
+      "verification": "必须看到完整最后一条对话及底部留白，覆盖图之间没有未检查的区间。"
+    },
+    {
+      "id": "COL-05",
+      "priority": "P2",
+      "kind": "capture-coverage",
+      "caseIDs": [
+        "card--planet-letter",
+        "card--orbit-theatre"
+      ],
+      "title": "两种卡片都缺少模板选择区和完整滚动证据",
+      "observation": "索引中两个 card case 各只有一张 top。星球卡片标题在底缘被截断；轨道卡片仅见大预览与固定操作栏。没有图能用于检查实际的两个模板缩略按钮、选中描边、页码与标题间距，尤其无法独立关闭已知模板错位问题。",
+      "evidence": [
+        {
+          "name": "card--planet-letter--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/839E36AB-2763-4ECA-B60E-1D8FCA218A39.png",
+          "sha256": "dc7b6bb85d3be0045ba92c5ea2b7e0e63853709733e5c8ae2f447708ee4cee62"
+        },
+        {
+          "name": "card--orbit-theatre--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6DA084AB-F690-4B53-8FB6-41A348D5A34E.png",
+          "sha256": "46556d035b761205e81bedd31f5fae68b9cd2b6319c443c7de5a5b5c90c41d5f"
+        }
+      ],
+      "suggestedFix": "增加两种模板的下部截图和切换后状态，并实际检查缩略按钮边界；分享生成 PNG 应另外查看。",
+      "verification": "补图后逐图复核模板完整区域，而非用顶图或测试通过代替。"
+    },
+    {
+      "id": "COL-06",
+      "priority": "P3",
+      "kind": "ios-asset-polish",
+      "caseIDs": [
+        "detail--now",
+        "detail--past",
+        "detail--transcript-expanded",
+        "detail--transcript-expanded--large-text"
+      ],
+      "title": "深色背景上的星球外缘仍有细碎亮边",
+      "observation": "默认详情星球左上沿及左侧可见很细的断续浅色弧和孤立短线，约位于原图 x=435…550、y=680…845；大字详情的同一星球也有这些边缘。明确的左右摆动曲线属于图案，本项只记录其外侧较细碎的像素边，未凭截图断定具体素材处理原因。",
+      "evidence": [
+        {
+          "name": "detail--now--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/DABE929C-4FFB-422B-BAD9-760FD18EA143.png",
+          "sha256": "0e6cd9f0493d902cb528263d5dc13137e1119eff406ba765c629c1ad6f181342"
+        },
+        {
+          "name": "detail--past--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/11751B4A-FE95-4A19-9BBC-228AF85B04AA.png",
+          "sha256": "4b797bdeb48dd28f055533329097b3af5e7565d8a65d9d0a9bd4356e1b8028bd"
+        },
+        {
+          "name": "detail--transcript-expanded--large-text--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/3E801BF8-306D-451D-8F3E-688762811E87.png",
+          "sha256": "fe736546fae26ad9a1e33a539a37b25c22117071dc7038cd4804613981bf7547"
+        }
+      ],
+      "suggestedFix": "检查透明素材的边界遮罩并在深色实底下复看，保留明确的摆动线条，清掉非设计的裁切残边。",
+      "verification": "原尺寸深色底截图中，星球及装饰线外侧没有孤立残边。"
+    },
+    {
+      "id": "COL-07",
+      "priority": "P3",
+      "kind": "ios-typography-polish",
+      "caseIDs": [
+        "card--planet-letter",
+        "card--orbit-theatre"
+      ],
+      "title": "短卡片正文末行只剩“柔。”",
+      "observation": "两张卡片的短句“今天慢慢走了一段路，风很温柔。”都排成很长的第一行和仅“柔。”的第二行。内容没有丢失，但票据和海报的文字重心不够平衡。",
+      "evidence": [
+        {
+          "name": "card--planet-letter--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/839E36AB-2763-4ECA-B60E-1D8FCA218A39.png",
+          "sha256": "dc7b6bb85d3be0045ba92c5ea2b7e0e63853709733e5c8ae2f447708ee4cee62"
+        },
+        {
+          "name": "card--orbit-theatre--top",
+          "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/captures-1-images/6DA084AB-F690-4B53-8FB6-41A348D5A34E.png",
+          "sha256": "46556d035b761205e81bedd31f5fae68b9cd2b6319c443c7de5a5b5c90c41d5f"
+        }
+      ],
+      "suggestedFix": "针对卡片正文容器做自然断行或有限字号适配，避免短句出现孤立一两个字的末行；保留原话。",
+      "verification": "原句在两种模板中排版均衡，长文仍不遮挡装饰和页脚。"
+    }
+  ],
+  "caseObservations": [
+    {
+      "caseID": "timeline--empty",
+      "observation": "空态标题、说明和返回按钮完整；没有观察到文字遮挡。"
+    },
+    {
+      "caseID": "timeline--populated",
+      "observation": "默认字号单条列表卡的时间、标签、情绪和预览完整，间距清楚；仅有单条记录，未覆盖多条排序和长列表。"
+    },
+    {
+      "caseID": "timeline--populated--large-text",
+      "observation": "正文换行完整；时间被省略，见 COL-01。top 与 5 张滚动图完全相同，不能把重复图当成新的覆盖。"
+    },
+    {
+      "caseID": "detail--now",
+      "observation": "默认字号短正文和生成卡片按钮完整；副标题重复与细碎素材边缘见 COL-02/COL-06。top 与 5 张滚动图字节相同。"
+    },
+    {
+      "caseID": "detail--past",
+      "observation": "默认字号顶部、两段中间位置及末尾均查看；scroll-3 可见日记容器底边和“看看当时的对话”，固定生成按钮完整。scroll-4/5 重复末尾图。"
+    },
+    {
+      "caseID": "detail--transcript-expanded",
+      "observation": "默认字号 scroll-3 可见“收起当时的对话”及三条完整气泡，末条问题完整，固定操作栏未遮挡气泡。scroll-4/5 重复末尾图。"
+    },
+    {
+      "caseID": "detail--transcript-expanded--large-text",
+      "observation": "已查看全部 6 个不同位置；导航日期省略，固定双行生成按钮完整但占较多高度。没有采到展开对话，故不能评价该区域的大字布局。"
+    },
+    {
+      "caseID": "detail--delete-confirmation",
+      "observation": "确认框标题、不可撤销说明、取消按钮和红色删除按钮全部完整可读，没有彼此遮挡。后续 5 图与 top 完全相同。只验证该默认字号静态外观。"
+    },
+    {
+      "caseID": "detail--missing",
+      "observation": "缺失提示与返回按钮完整；右上删除文案呈弱化状态。没有观察到布局遮挡。"
+    },
+    {
+      "caseID": "card--planet-letter",
+      "observation": "票据卡上的星球、标题、标签、编码、正文与页脚均可辨认；短末行见 COL-07，底部操作栏/模板区域见 COL-03/COL-05。"
+    },
+    {
+      "caseID": "card--orbit-theatre",
+      "observation": "轨道海报的星球、标签、正文框、盖章与日期完整；短末行见 COL-07。固定保存与首页按钮完整；模板选择区域未覆盖。"
+    }
+  ],
+  "coverageLimits": [
+    "没有提供相同状态的鸿蒙实际截图，本文件不证明跨端复刻、一致性或美学优于鸿蒙，也不设置任何 parity PASS。",
+    "这些是给定运行导出的 iOS 截图；本轮没有亲自操作实体 iPhone，没有据此声称完成真机验证。",
+    "最大字号长详情仍缺日记后段、展开对话和末尾，见 COL-04；两种卡片都缺底部模板选择区域，见 COL-05。",
+    "默认字号长详情使用重复段落，视觉上可以看到中间和末尾，但没有读取实测 scrollGeometry，因此不声称数学上证明所有段落无遗漏。",
+    "没有查看最终导出的卡片 PNG、系统分享面板、照片授权与保存成功/失败状态；只查看这里索引包含的 card 顶图。",
+    "large-text 标签及图中文字明显变大不等于本审查独立验证了实际系统 Dynamic Type category；该项仍需运行元数据。",
+    "默认删除确认框已检查；没有最大字号删除确认框截图。",
+    "截图不能证明触控可达性、VoiceOver、动画质量或离屏后恢复行为；功能测试结果不在本视觉判定内。"
+  ]
+}

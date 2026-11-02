@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-27",
+  "scope": "Fix the Huawei 2026-10-20 review rejection of HarmonyOS 1.0.1; no resubmission authorized in this turn.",
+  "review": {
+    "version": "1.0.1",
+    "reportGeneratedAt": "2026-10-20 17:38:34 Asia/Shanghai",
+    "statusRead": "待修改 / 审核未通过",
+    "logs": ".artifacts/harmony-review-2026-10-27/review-logs.zip",
+    "confirmedCrashes": [
+      "HomeScreen.dragAngle: Cannot read property localY of undefined",
+      "MoodOrbitCarousel.pointerLocalPoint: Cannot read property localX of undefined"
+    ]
+  },
+  "changes": [
+    "Replace unsupported module.deviceTypes default with phone; audit the actual packaged HAP deviceTypes before accepting a release archive.",
+    "Both rotating selectors use the shared gestureLocalPoint helper: prefer API20+ fingerInfos, scan legacy fingerList for non-null finite coordinates, ignore empty/sparse events. Word dial also ignores center dead-zone events and settles cancellation.",
+    "Explicitly select CoreSpeechKit StartParams.extraParams.recognitionMode=0, so the offline engine captures microphone audio instead of waiting for unprovided external PCM (default mode=1).",
+    "Bound speech initialization/recognition with a 35-second watchdog; release engines and timers on completion, errors, cancellation and disposal; discard late initialization/callbacks.",
+    "Stream recognized text into the input without auto-sending; a second mic tap requests a final result rather than cancelling speech. Show permission, unavailable-service and empty-input feedback. Disable typing only while recognition is active.",
+    "Keep input and mic/send buttons centered and give word-ring labels equal 84x40vp interaction frames. Preserve the intentional circular label layout; Huawei's optional alignment suggestion is not independently certified as resolved.",
+    "Increment the local release candidate to 1.0.2 (1000002), retaining com.milo.echoes and the existing release signing identity. AI remains disabled."
+  ],
+  "verification": {
+    "hypium": { "command": "./hvigorw test", "passed": 190, "failed": 0, "resultFile": "apps/harmony/entry/.test/default/intermediates/test/coverage_data/test_result.txt" },
+    "node": { "command": "/Applications/DevEco-Studio.app/Contents/tools/node/bin/node --test tests/*.test.mjs", "passed": 33, "failed": 0 },
+    "regressions": [
+      "Undefined/null/empty/sparse pointer arrays, pointer id 7 and non-finite coordinates",
+      "Actual HarmonySpeechPlatform adapter exercised with substituted device SDK: offline mode, real-recording parameter, final result cleanup, explicit finish, cancellation and late callbacks, late engine release, missing callback watchdog and engine creation failure",
+      "Permission cancellation, retry after engine error, disposal suppression, streamed partial/final results and feedback in Hypium",
+      "Release archive audit rejects missing/default/out-of-range device declarations"
+    ],
+    "releaseHapBuild": "passed",
+    "releaseAppBuild": "passed",
+    "hapSdkSignatureVerification": "passed, profile type release",
+    "packageAudit": {
+      "passed": true,
+      "deviceTypes": ["phone"],
+      "debug": false,
+      "knownOldGatewayTokenChecked": true,
+      "knownTokenMatches": 0,
+      "privateKeyFiles": 0,
+      "forbiddenFiles": 0
+    },
+    "manualEmulator": {
+      "instance": "MILO Release QA",
+      "api": 24,
+      "screen": "1080x1920, density 360",
+      "installation": "In-place update of the signed release HAP; no uninstall or data clearing",
+      "checks": [
+        "Home displays existing one synthetic memory after update",
+        "Three swipes on the mood selector and three on the word selector; app stays alive and continues through past/yesterday into recall chat",
+        "Microphone denial produces visible permission guidance and restores enabled input",
+        "After enabling microphone via the QA instance system Settings, recognition enters listening and completes an empty recording with visible no-speech feedback",
+        "A second microphone tap finishes recording and returns to editable input, without crash",
+        "After no-speech feedback, direct HDC uitest inputText successfully inserts milo-qa into the TextArea; it is not sent or saved as a diary",
+        "No matching Cannot read property / JsCrash / JS_ERROR / RuntimeError lines in the app PID log during this run"
+      ],
+      "notVerified": [
+        "Real spoken Chinese transcription on physical hardware",
+        "Huawei cloud review acceptance"
+      ],
+      "automationNote": "devecocli ui text failed at the device clipboard; recovered using HDC uitest uiInput inputText and verified the visible TextArea content.",
+      "originalUserPura90Instance": "Not started, updated or cleared"
+    }
+  },
+  "emulatorRetestRequestedByUser": {
+    "date": "2026-10-27",
+    "releaseVersion": "1.0.2",
+    "instance": "MILO Release QA",
+    "actualUiChecks": [
+      { "case": "Mood dial: 15 consecutive drags and a two-finger movement", "result": "passed; PID 3727 stayed alive" },
+      { "case": "Word dial: 15 consecutive drags and a two-finger movement", "result": "passed; PID 3727 stayed alive" },
+      { "case": "Select 担心, 压抑, 孤独, then attempt a fourth tag", "result": "passed; exactly three tags retained" },
+      { "case": "Type a synthetic now note, save, open its detail", "result": "passed; exact typed text and all three selected tags visible" },
+      { "case": "Start another recording after saving", "result": "passed; prior picked-word summary absent and no prior tags selected" },
+      { "case": "Force-stop and relaunch, without clearing app data", "result": "passed; two saved entries still visible; new PID 20940" },
+      { "case": "Past/yesterday: type and send synthetic Chinese text, receive local guidance, generate diary and save", "result": "passed; exact supplied sentence visible in the timeline" }
+    ],
+    "crashLogQuery": {
+      "pids": [3727, 20940],
+      "pattern": "Cannot read property|JsCrash|JS_ERROR|RuntimeError",
+      "matches": [0, 0],
+      "limitation": "This is a bounded emulator run, not a guarantee that all possible crashes are absent."
+    },
+    "speechTranscriptionAcceptance": {
+      "status": "not_verified",
+      "reason": "No nonempty audio was delivered to the production microphone flow during this run. Asked the user to approve playing a synthetic Chinese test sentence and using the Mac microphone; no reply yet. Permission/empty-recording tests from the earlier run do not establish transcription success."
+    },
+    "screenshots": [
+      ".artifacts/harmony-review-2026-10-27/home-after-15-drags.png",
+      ".artifacts/harmony-review-2026-10-27/words-after-15-drags.png",
+      ".artifacts/harmony-review-2026-10-27/three-tags-selected.png",
+      ".artifacts/harmony-review-2026-10-27/now-diary-detail.png",
+      ".artifacts/harmony-review-2026-10-27/new-record-tags-cleared.png",
+      ".artifacts/harmony-review-2026-10-27/past-local-reply.png",
+      ".artifacts/harmony-review-2026-10-27/emulator-retest-timeline.png"
+    ],
+    "testData": "Two new synthetic entries saved only in MILO Release QA. Existing synthetic entry preserved, total three. Original Pura 90 instance remains untouched.",
+    "productionCodeChangedInRetest": false,
+    "submission": "No upload or resubmission"
+  },
+  "artifacts": {
+    "app": "apps/harmony/build/outputs/release/harmony-release-signed.app",
+    "appSha256": "af015e04f3a2b57aa5c37cf71b2962d2623baf2e1a8fea838f2c50086603f012",
+    "hap": "apps/harmony/entry/build/release/outputs/default/entry-default-signed.hap",
+    "hapSha256": "7e6cdc98da9154d28f3eadcffeddcc943c0d360ef62e1aac03169e88fd24c02b"
+  },
+  "reference": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/hms-ai-speechrecognizer",
+  "submission": "Not uploaded or resubmitted. Portal draft remains the rejected 1.0.1."
+}

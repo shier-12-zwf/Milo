@@ -1,0 +1,15 @@
+.build/
+.swiftpm/
+.DS_Store
+DerivedData/
+build/
+*.xcresult
+xcuserdata/
+.specdrive/
+node_modules/
+evidence/
+
+.test-work/
+
+Vendor/
+Resources/agconnect-services.plist

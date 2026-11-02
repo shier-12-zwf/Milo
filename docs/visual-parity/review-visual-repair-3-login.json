@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/harmony_parity_inventory",
+  "reviewedAt": "2026-09-26T08:09:40Z",
+  "scope": "Independent actual-image review of the third visual-repair login-error screenshot, plus read-only investigation of the separate 53-state collector failure. Reviewer did not implement LoginView.",
+  "verdict": "PASS_FOR_LOGIN_ERROR_VISIBILITY_ONLY",
+  "harmonyFidelityVerdict": "NOT_ASSESSED",
+  "images": [
+    {
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/1E9AF76B-0EDB-4264-882E-9239A3B36207.png",
+      "sha256": "e76f93eab65a457e122b6af0e836825f1956999911f3875e886679d6ed9d3df3",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 407832,
+      "caseID": "login--error",
+      "attachmentName": "repaired-login-error_0_21FFA81A-07D7-4622-A3BA-4BE10B17D67F.png",
+      "attachmentTimestamp": 1790409795.415,
+      "originTest": "MiloUITests/testCardTemplateGeometryAndLoginErrorState()",
+      "reviewMethod": "PNG opened and visually inspected with view_image; SHA-256 independently computed from file bytes.",
+      "observations": [
+        "粉色错误信息确实存在且完整可读：邮箱登录尚未接通，请完成此 iOS 版本的账号服务配置。现有本机回忆不会丢失。",
+        "错误正文在邮箱输入框与获取验证码按钮之间分成两行，没有与输入框、按钮或系统状态栏重叠，也未被截断。",
+        "milo@example.com、验证码登录/密码登录切换、获取验证码按钮及未注册邮箱提示完整可见。",
+        "此图没有键盘；只能确认该默认字号错误状态的静态布局，不能据此判定其他登录步骤、输入过程或辅助字号布局。"
+      ],
+      "findingResolution": {
+        "finding": "login error fixture text disappeared",
+        "status": "visually-resolved-for-this-capture"
+      }
+    }
+  ],
+  "imageBinding": {
+    "manifestPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/manifest.json",
+    "receiptPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/journeys.json",
+    "sourceHashFromReceipt": "4fba1c17364323eca0a597cfeb11fcf7dfcb7e05e75d2be40f24d2a1ab91d512",
+    "buildHashFromReceipt": "b499debe920078767bc3823c5c3fc4b1f98c1bcec132b2738ae7d233f836f2aa",
+    "xcresultPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/journeys-2026-09-26T08-02-03-620Z.xcresult",
+    "deviceName": "iPhone 17e",
+    "deviceId": "EAE7BE56-823B-4B27-93CE-2883A202DC1D",
+    "corroboration": "The journey log records this named test passed and the journey suite completed 11 tests with 0 failures. This is log corroboration, not a new test run by this reviewer."
+  },
+  "findings": [],
+  "collectorInvestigation": {
+    "verdict": "FAILED_BEFORE_FIRST_STATE_IMAGE",
+    "logPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/capture-2026-09-26T08-06-55-690Z.log",
+    "xcresultPath": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/capture-2026-09-26T08-06-55-690Z.xcresult",
+    "testIdentifier": "ParityCaptureTests/testRequiredPageStates()",
+    "confirmed": [
+      {
+        "id": "CAPTURE-LOGIN-PROBE-MISSING",
+        "priority": "P1",
+        "notes": "日志 50–52 行确认：首个状态 login--email 查找 identifier BEGINSWITH parity-scroll- 后没有找到可用 probe，随后 ScrollView.firstMatch 存在，触发 ParityCaptureTests.swift:104 的覆盖断言失败。失败前的登录邮箱态断言已执行且没有先行失败。这个错误证明当前采集器不能建立该页滚动覆盖，不证明登录产品页面本身不能滚动。"
+      },
+      {
+        "id": "CAPTURE-ONLY-FIRST-CASE",
+        "priority": "P1",
+        "notes": "测试在首个 login--email 状态停止，当前失败 run 不能提供 53 状态的新截图集；11 条操作测试通过不能代替此覆盖失败。"
+      },
+      {
+        "id": "CAPTURE-NO-AX-ATTACHMENT",
+        "priority": "P2",
+        "notes": "只读执行 xcresulttool get test-results activities 与 test-details；活动树唯一附件是屏幕录制 MP4，没有已保存的 accessibility tree 或 PNG 失败附件。test-details 记录 1 次运行、Failed、8.560557961463928 秒，失败说明与日志一致。"
+      },
+      {
+        "id": "STALE-CAPTURE-RECEIPT",
+        "priority": "P2",
+        "notes": "apps/ios/evidence/parity/capture.json 仍指向 07:12:44 的旧成功采集（source 57c61333933ed7eb9e2359a7e69af361453e974fe7c8ef72fccddbbf22b50b56），不能将它用于证明 08:06:55 本轮失败采集通过，也不能将它用作本次登录错误图的来源绑定；该图绑定第三轮 journeys receipt。"
+      }
+    ],
+    "pendingConfirmation": [
+      {
+        "id": "LOGIN-PARENT-IDENTIFIER-OVERRIDE",
+        "confidence": "source-supported-hypothesis-not-runtime-proven",
+        "notes": "LoginView 的 .parityScrollMetrics(\"account-login\") 之后，最外层又设置 .accessibilityIdentifier(\"page-login\")；ParityScrollProbe 通过内部 overlay 子元素提供 parity-scroll-account-login。该修饰顺序与之前 TextEditor 已证实的父级 identifier 传播覆盖问题相似，可能令 probe 被改名为 page-login。当前失败 run 无 AX 树，所以无法断言这就是根因，也不能确认 probe 实际变成了哪个标记。",
+        "sourceReferences": [
+          {
+            "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/App/Account/LoginView.swift",
+            "line": 69
+          },
+          {
+            "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/App/Account/LoginView.swift",
+            "line": 73
+          },
+          {
+            "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/App/Design/ParityScrollMetrics.swift",
+            "line": 127
+          }
+        ],
+        "nextEvidenceNeeded": "在后续获准的新验证阶段记录失败前完整 AX tree，核对是否存在同 geometry JSON 的 page-login 节点及 probe 的实际 identifier；在源码冻结期间不要据推断改代码或追加原生执行。"
+      }
+    ],
+    "xcresultAttachmentInventory": [
+      {
+        "lifetime": "deleteOnSuccess",
+        "name": "Screen Recording 2026-09-26 at 04.07.18 下午.mp4",
+        "payloadId": "0~MEPn-K3EujEEL66eDMcRbBtzNVFZJfsvd1JIMHgz9VNZFUBmtQDD4p2oaRINv1S5UXJMe8FxEtuFEKzINup59A==",
+        "timestamp": 1790410038.456,
+        "uuid": "867A58C8-BC13-450E-BAD8-B950A3F642B3"
+      }
+    ],
+    "diagnosticsReadOnly": true
+  },
+  "coverageLimits": [
+    "No current matching HarmonyOS runtime screenshot was available. No pixel fidelity, perfect recreation, or comparative aesthetic improvement verdict is given.",
+    "The reviewed PNG comes from the successful journey test, not from the failed 53-state collector.",
+    "The shown error is an isolated DEBUG fixture for an unconfigured login service. This is not successful live Apple/AGC/email authentication evidence.",
+    "No new native run, simulator interaction, build, source edit, or budget reset was performed. Only this independent review JSON was created.",
+    "The screenshot proves visible layout only. The named journey test calls assertParityState and captures the image; that helper checks the nonempty exact error label but does not require isHittable after scrolling. No separate login-error hit-testing result is claimed here.",
+    "Collector root cause remains unconfirmed without its runtime AX tree. The raw MP4 attachment was inventoried but not decoded or reviewed."
+  ]
+}

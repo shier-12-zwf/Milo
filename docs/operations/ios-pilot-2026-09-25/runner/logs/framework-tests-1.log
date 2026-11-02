@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: initial missing checks block; successful evidence resumes; changed source invalidates gate and reruns
+ok 1 - initial missing checks block; successful evidence resumes; changed source invalidates gate and reruns
+  ---
+  duration_ms: 561.46325
+  type: 'test'
+  ...
+# Subtest: missing prerequisite blocks dependants but independent core tests still run; resume retries preflight
+ok 2 - missing prerequisite blocks dependants but independent core tests still run; resume retries preflight
+  ---
+  duration_ms: 394.949084
+  type: 'test'
+  ...
+# Subtest: failed checks run once per invocation and stop at a no-progress cap
+ok 3 - failed checks run once per invocation and stop at a no-progress cap
+  ---
+  duration_ms: 315.877833
+  type: 'test'
+  ...
+# Subtest: a source fix resets no-progress detection without resetting the total attempt cap
+ok 4 - a source fix resets no-progress detection without resetting the total attempt cap
+  ---
+  duration_ms: 420.248292
+  type: 'test'
+  ...
+# Subtest: attempt cap applies to repeated source revisions
+ok 5 - attempt cap applies to repeated source revisions
+  ---
+  duration_ms: 316.663292
+  type: 'test'
+  ...
+# Subtest: timeout is blocked and a cumulative wall-time cap prevents a further command
+ok 6 - timeout is blocked and a cumulative wall-time cap prevents a further command
+  ---
+  duration_ms: 215.342
+  type: 'test'
+  ...
+# Subtest: changes during a successful command cannot become passing evidence
+ok 7 - changes during a successful command cannot become passing evidence
+  ---
+  duration_ms: 183.466667
+  type: 'test'
+  ...
+# Subtest: changed commands require a fresh run; a missing or modified log invalidates evidence
+ok 8 - changed commands require a fresh run; a missing or modified log invalidates evidence
+  ---
+  duration_ms: 436.889708
+  type: 'test'
+  ...
+# Subtest: a stale PID lock is recovered and a live owner is rejected
+ok 9 - a stale PID lock is recovered and a live owner is rejected
+  ---
+  duration_ms: 1284.768334
+  type: 'test'
+  ...
+# Subtest: directory fingerprints include additions/deletions but ignore generated build files
+ok 10 - directory fingerprints include additions/deletions but ignore generated build files
+  ---
+  duration_ms: 332.3335
+  type: 'test'
+  ...
+# Subtest: review evidence must be produced by its configured command and bound to inputs
+ok 11 - review evidence must be produced by its configured command and bound to inputs
+  ---
+  duration_ms: 411.691625
+  type: 'test'
+  ...
+# Subtest: argument arrays are executed literally without shell expansion
+ok 12 - argument arrays are executed literally without shell expansion
+  ---
+  duration_ms: 164.647416
+  type: 'test'
+  ...
+# Subtest: a command not installed is a blocked preflight, not a product failure
+ok 13 - a command not installed is a blocked preflight, not a product failure
+  ---
+  duration_ms: 122.142417
+  type: 'test'
+  ...
+# Subtest: SIGTERM cancels the running command, records blocked evidence and prevents subsequent work
+ok 14 - SIGTERM cancels the running command, records blocked evidence and prevents subsequent work
+  ---
+  duration_ms: 162.601125
+  type: 'test'
+  ...
+# Subtest: a stale parent lock is not reclaimed while its command is alive
+ok 15 - a stale parent lock is not reclaimed while its command is alive
+  ---
+  duration_ms: 103.876125
+  type: 'test'
+  ...
+# Subtest: expired evidence is blocked and is refreshed by an explicit run
+ok 16 - expired evidence is blocked and is refreshed by an explicit run
+  ---
+  duration_ms: 499.612125
+  type: 'test'
+  ...
+# Subtest: input paths reject symlink ancestors at init and after initialization
+ok 17 - input paths reject symlink ancestors at init and after initialization
+  ---
+  duration_ms: 171.68325
+  type: 'test'
+  ...
+# Subtest: working directories reject symlink ancestors before executing commands
+ok 18 - working directories reject symlink ancestors before executing commands
+  ---
+  duration_ms: 163.028583
+  type: 'test'
+  ...
+# Subtest: canonical project aliases exclude custom evidence directories from whole-project input hashes
+ok 19 - canonical project aliases exclude custom evidence directories from whole-project input hashes
+  ---
+  duration_ms: 499.368333
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6851.130625

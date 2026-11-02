@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "runId": "2026-09-25T16-11-42-317Z-d16682bc",
+  "projectRoot": "/Users/runner/work/milo/milo",
+  "evidenceRoot": "/Users/runner/work/milo/milo/apps/ios/.specdrive/ci",
+  "configPath": "/Users/runner/work/milo/milo/apps/ios/specdrive.config.json",
+  "config": {
+    "version": 1,
+    "checks": [
+      {
+        "id": "specification",
+        "argv": [
+          "node",
+          "apps/ios/node_modules/@fission-ai/openspec/bin/openspec.js",
+          "validate",
+          "ios-offline-journal",
+          "--strict",
+          "--no-interactive"
+        ],
+        "cwd": ".",
+        "kind": "verification",
+        "inputs": [
+          "openspec/changes/ios-offline-journal",
+          "openspec/config.yaml",
+          "apps/ios/package-lock.json"
+        ],
+        "dependsOn": [],
+        "timeoutMs": 30000,
+        "env": {
+          "OPENSPEC_TELEMETRY": "0"
+        },
+        "required": true
+      },
+      {
+        "id": "framework-tests",
+        "argv": [
+          "node",
+          "--test",
+          ".agents/skills/specdrive/tests/runner.test.mjs"
+        ],
+        "cwd": ".",
+        "kind": "verification",
+        "inputs": [
+          ".agents/skills/specdrive/scripts",
+          ".agents/skills/specdrive/tests"
+        ],
+        "dependsOn": [],
+        "timeoutMs": 120000,
+        "env": {},
+        "required": true
+      },
+      {
+        "id": "portable-core",
+        "argv": [
+          "swift",
+          "test",
+          "--package-path",
+          "apps/ios/MiloCore"
+        ],
+        "cwd": ".",
+        "kind": "verification",
+        "inputs": [
+          "apps/ios/MiloCore/Package.swift",
+          "apps/ios/MiloCore/Sources",
+          "apps/ios/MiloCore/Tests",
+          "apps/ios/MiloCore/Package.resolved"
+        ],
+        "dependsOn": [],
+        "timeoutMs": 600000,
+        "env": {},
+        "required": true
+      },
+      {
+        "id": "xcode-environment",
+        "argv": [
+          "node",
+          "apps/ios/scripts/verify.mjs",
+          "xcode-preflight"
+        ],
+        "cwd": ".",
+        "kind": "preflight",
+        "inputs": [
+          "apps/ios/scripts/verify.mjs"
+        ],
+        "dependsOn": [],
+        "timeoutMs": 60000,
+        "env": {},
+        "required": true,
+        "maxAgeMs": 86400000
+      },
+      {
+        "id": "ios-build",
+        "argv": [
+          "node",
+          "apps/ios/scripts/verify.mjs",
+          "build"
+        ],
+        "cwd": ".",
+        "kind": "verification",
+        "inputs": [
+          "apps/ios/App",
+          "apps/ios/MiloCore/Package.swift",
+          "apps/ios/MiloCore/Package.resolved",
+          "apps/ios/MiloCore/Sources",
+          "apps/ios/MiloCore/Tests",
+          "apps/ios/Resources",
+          "apps/ios/project.yml",
+          "apps/ios/Milo.xcodeproj",
+          "apps/ios/scripts",
+          "apps/ios/evidence/environment.json"
+        ],
+        "dependsOn": [
+          "xcode-environment"
+        ],
+        "timeoutMs": 600000,
+        "env": {},
+        "required": true
+      },
+      {
+        "id": "ios-ui",
+        "argv": [
+          "node",
+          "apps/ios/scripts/verify.mjs",
+          "ui-test"
+        ],
+        "cwd": ".",
+        "kind": "verification",
+        "inputs": [
+          "apps/ios/App",
+          "apps/ios/MiloCore/Package.swift",
+          "apps/ios/MiloCore/Package.resolved",
+          "apps/ios/MiloCore/Sources",
+          "apps/ios/MiloCore/Tests",
+          "apps/ios/UITests",
+          "apps/ios/Resources",
+          "apps/ios/project.yml",
+          "apps/ios/Milo.xcodeproj",
+          "apps/ios/scripts",
+          "apps/ios/evidence/environment.json"
+        ],
+        "dependsOn": [
+          "ios-build"
+        ],
+        "timeoutMs": 900000,
+        "env": {},
+        "required": true
+      },
+      {
+        "id": "visual-review",
+        "argv": [
+          "node",
+          "apps/ios/scripts/verify.mjs",
+          "visual-review"
+        ],
+        "cwd": ".",
+        "kind": "verification",
+        "inputs": [
+          "apps/ios/App",
+          "apps/ios/MiloCore/Package.swift",
+          "apps/ios/MiloCore/Package.resolved",
+          "apps/ios/MiloCore/Sources",
+          "apps/ios/MiloCore/Tests",
+          "apps/ios/Resources",
+          "apps/ios/UITests",
+          "apps/ios/scripts",
+          "apps/ios/project.yml",
+          "apps/ios/evidence"
+        ],
+        "dependsOn": [
+          "ios-ui"
+        ],
+        "timeoutMs": 30000,
+        "env": {},
+        "required": true
+      }
+    ],
+    "limits": {
+      "maxAttemptsPerCheck": 5,
+      "maxNoProgress": 2,
+      "maxWallTimeMs": 1800000
+    }
+  },
+  "createdAt": "2026-09-25T16:11:42.328Z",
+  "elapsedMs": 1029691,
+  "status": "passed",
+  "readyToArchive": true,
+  "checks": {
+    "specification": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "f44832685761cce34d8e9b38a8864624a0bc3fde6aecc323de92491fadcc6d46",
+          "startedAt": "2026-09-25T16:11:42.406Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/specification-1.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "ea9ac17e89d237377dbccbaf5f3746bf05c61b45b55ea812692727833a766fda",
+          "finishedAt": "2026-09-25T16:11:43.157Z"
+        }
+      ]
+    },
+    "framework-tests": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "62dfda39381b8b7d9577a260caf485ada8601ffb4bbe5a15d55ad0f1ed06be9d",
+          "startedAt": "2026-09-25T16:11:43.161Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/framework-tests-1.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "f66e39c593585de721f67552898ca8249ba4857d6122fde9c5b9b8843890fb57",
+          "finishedAt": "2026-09-25T16:11:50.076Z"
+        }
+      ]
+    },
+    "portable-core": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "4c950da09c4d74d735f9a23c13109aa95c7bf076f49822c9131a82cb2216de23",
+          "startedAt": "2026-09-25T16:11:50.082Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/portable-core-1.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "8bcf1cd4799bf84307e406f0c89b5e143d4e651a72d9e930548c2671ba7f0e5d",
+          "finishedAt": "2026-09-25T16:14:02.497Z"
+        }
+      ]
+    },
+    "xcode-environment": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "462ea741e423cab7d341a93e8a275795779754b8d1f41c14992dd39c26b64e03",
+          "startedAt": "2026-09-25T16:14:02.526Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/xcode-environment-1.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "2a620ef28cd3269ea0f1301e68e0f96f0d383cd49a304d854b64932dd6035544",
+          "finishedAt": "2026-09-25T16:14:12.465Z"
+        },
+        {
+          "number": 2,
+          "fingerprint": "462ea741e423cab7d341a93e8a275795779754b8d1f41c14992dd39c26b64e03",
+          "startedAt": "2026-09-25T16:32:01.755Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/xcode-environment-2.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "607b35cb570cd27b98d40f545dffbc13a1847aca09fff7201988db79303b262f",
+          "finishedAt": "2026-09-25T16:32:07.175Z"
+        }
+      ]
+    },
+    "ios-build": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "cc8283c43386d6bea50cc8dbb1de550db34d2b7e5695a3523f3d1845e11600b9",
+          "startedAt": "2026-09-25T16:14:12.485Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/ios-build-1.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "3cdbb82075c969b779dc677f4fe0b99b8ec00462c4b586717277c8c4a4409fcc",
+          "finishedAt": "2026-09-25T16:14:57.311Z"
+        }
+      ]
+    },
+    "ios-ui": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "1304969634fb9bc0d707f451b723c5f23e4bf4623899c823ab69f5fa95beea21",
+          "startedAt": "2026-09-25T16:14:57.340Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/ios-ui-1.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "25626529fc42a12a462228d485624e526d0244309075c691bff336263c2eac91",
+          "finishedAt": "2026-09-25T16:28:45.745Z"
+        }
+      ]
+    },
+    "visual-review": {
+      "status": "passed",
+      "reason": "Command passed",
+      "attempts": [
+        {
+          "number": 1,
+          "fingerprint": "c7c4fd8ec1e2eb657f78ce2d775680d580cc11c5a228f6b1a7d829ac4d245452",
+          "startedAt": "2026-09-25T16:28:45.959Z",
+          "status": "blocked",
+          "reason": "Prerequisite unavailable (exit 78)",
+          "log": "logs/visual-review-1.log",
+          "exitCode": 78,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "2ac67d7ec6c45115e7de4dd9f9092b74c45b8ec8a56ddaa0b26e86986f427b9e",
+          "finishedAt": "2026-09-25T16:28:46.404Z"
+        },
+        {
+          "number": 2,
+          "fingerprint": "4f2bb46f5e134a30df47e700dd0dac21c1a2c9fc169a58375fdf020d8d7ad30c",
+          "startedAt": "2026-09-25T16:32:07.267Z",
+          "status": "passed",
+          "reason": "Command passed",
+          "log": "logs/visual-review-2.log",
+          "exitCode": 0,
+          "signal": null,
+          "timedOut": false,
+          "logHash": "758216f80abd491bb4358fdc8dbce8f170c6aa093e2e7ffb0317f485cd407a78",
+          "finishedAt": "2026-09-25T16:32:07.349Z"
+        }
+      ]
+    }
+  },
+  "updatedAt": "2026-09-25T16:32:07.381Z"
+}

@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "limits": {
+    "maxAttemptsPerCheck": 3,
+    "maxNoProgress": 2,
+    "maxWallTimeMs": 5400000
+  },
+  "checks": [
+    {
+      "id": "specification",
+      "argv": [
+        "node",
+        "apps/ios/node_modules/@fission-ai/openspec/bin/openspec.js",
+        "validate",
+        "ios-harmony-product-parity",
+        "--strict",
+        "--no-interactive"
+      ],
+      "inputs": [
+        "openspec/changes/ios-harmony-product-parity"
+      ],
+      "env": {
+        "OPENSPEC_TELEMETRY": "0"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "id": "sdk-integrity",
+      "argv": [
+        "python3",
+        "apps/ios/scripts/install-agc-sdk.py",
+        "--verify"
+      ],
+      "inputs": [
+        "apps/ios/agc-sdk-lock.json",
+        "apps/ios/scripts/install-agc-sdk.py"
+      ],
+      "timeoutMs": 60000
+    },
+    {
+      "id": "core-tests",
+      "argv": [
+        "swift",
+        "test",
+        "--package-path",
+        "apps/ios/MiloCore"
+      ],
+      "inputs": [
+        "apps/ios/MiloCore"
+      ],
+      "timeoutMs": 300000
+    },
+    {
+      "id": "settings-coordinator",
+      "argv": [
+        "bash",
+        "apps/ios/scripts/test-journal-ai.sh"
+      ],
+      "inputs": [
+        "apps/ios/App/JournalModel.swift",
+        "apps/ios/App/Account/AIConnection.swift",
+        "apps/ios/MiloCore",
+        "apps/ios/tests/journal-ai-check.swift",
+        "apps/ios/scripts/test-journal-ai.sh"
+      ],
+      "timeoutMs": 120000
+    },
+    {
+      "id": "xcode-environment",
+      "kind": "preflight",
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "preflight"
+      ],
+      "inputs": [
+        "apps/ios/scripts/parity-native.mjs"
+      ],
+      "timeoutMs": 60000
+    },
+    {
+      "id": "functional-build",
+      "dependsOn": [
+        "sdk-integrity",
+        "xcode-environment"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/functional-native.mjs",
+        "build"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/Tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000
+    },
+    {
+      "id": "account-model-tests",
+      "dependsOn": [
+        "functional-build"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/functional-native.mjs",
+        "account-tests"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/Tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 600000
+    },
+    {
+      "id": "account-ui-tests",
+      "dependsOn": [
+        "functional-build"
+      ],
+      "argv": [
+        "node",
+        "apps/ios/scripts/functional-native.mjs",
+        "account-ui"
+      ],
+      "inputs": [
+        "apps/ios/App",
+        "apps/ios/Tests",
+        "apps/ios/UITests",
+        "apps/ios/Resources",
+        "apps/ios/MiloCore",
+        "apps/ios/project.yml",
+        "apps/ios/Milo.xcodeproj",
+        "apps/ios/scripts",
+        "apps/ios/tests",
+        "apps/ios/agc-sdk-lock.json"
+      ],
+      "timeoutMs": 900000
+    },
+    {
+      "id": "real-agc-auth",
+      "argv": [
+        "node",
+        "apps/ios/scripts/parity-native.mjs",
+        "external-auth"
+      ],
+      "inputs": [
+        "apps/ios/App/Account",
+        "apps/ios/scripts/parity-native.mjs"
+      ],
+      "timeoutMs": 10000
+    }
+  ]
+}

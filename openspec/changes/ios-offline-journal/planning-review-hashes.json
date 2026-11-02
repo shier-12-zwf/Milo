@@ -1,0 +1,12 @@
+{
+  "reviewer": "milo_recon",
+  "verdict": "pass",
+  "note": "tasks.md hash is the pre-review unchecked version; completion checkboxes are updated later.",
+  "sha256": {
+    "proposal.md": "96a780b794ab946319d191632ab205dfa0510ab6cdaeb41ac381106ef837a7f0",
+    "design.md": "bdce70426bb51c6da9d1f1867faa9fdebcdb9f1373898468a0fe0f20bf97086f",
+    "tasks.md": "c125e08888df8d224d2574ed72665b22bb376175c4cd3309c9a3193a66c3e69c",
+    "specs/ios-offline-journal/spec.md": "9fc8504dcc9d3c243befdc9cba1efb1d0e7a67566f1964b649dd0b96584c03a6",
+    "specs/ios-evidence-gates/spec.md": "7f29afc52a42cd3578245627f60ef19a535fe89f044eb1658fb41e4df1934577"
+  }
+}

@@ -1,0 +1,26 @@
+[Unit]
+Description=MILO AI gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=milo-gateway
+Group=milo-gateway
+WorkingDirectory=/opt/milo-gateway/current
+EnvironmentFile=/etc/milo-gateway/gateway.env
+ExecStart=/usr/bin/node /opt/milo-gateway/current/dist/main.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictSUIDSGID=true
+UMask=0077
+StandardOutput=append:/var/log/milo-gateway/service.log
+StandardError=append:/var/log/milo-gateway/service.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+# Railway configuration for the MILO AI gateway.
+# Usage:
+#   railway up                          # first-time deploy
+#   railway variables set MINIMAX_API_KEY=...   # inject the secret
+#
+# Railway auto-detects the Dockerfile and exposes PORT automatically.
+
+[build]
+builder = "DOCKERFILE"
+dockerfile = "Dockerfile"
+
+[deploy]
+startCommand = "node dist/server.js"
+healthcheckPath = "/health"
+healthcheckTimeout = 10
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

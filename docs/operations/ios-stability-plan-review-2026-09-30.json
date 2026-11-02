@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "phase": "Simulator stability and delivery; user-authorized continuation",
+  "round": 2,
+  "maximumPlanReviewRounds": 2,
+  "reviewedAt": "2026-10-01T03:54:53.600238+00:00",
+  "verdict": "PASS",
+  "meaning": "Final allowed plan round approves the complete staged plan; it is not execution or product acceptance of future remote, visual, device, TestFlight or release phases. Current simulator third-run capture/final cold launch evidence still pending.",
+  "history": [
+    {
+      "path": ".artifacts/ios/stability-20260930/reviews/stability-plan-review-round1.json",
+      "sha256": "3faa87785fcd1f030ef906c808dda6668ee0a322506c18ffaa4fde89ace81024",
+      "round": 1,
+      "verdict": "PASS"
+    }
+  ],
+  "planningFiles": [
+    {
+      "path": "docs/operations/ios-stability-plan-2026-09-30.md",
+      "sha256": "4d932f6e6aaabd6eb804684e39c143acf641701a1568b2841ccf6e9eb5fe9acc"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/proposal.md",
+      "sha256": "541ae68b8089f34c45f12764575410c82b52a94b41aecef5409c6ac8f5ddfd76"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/design.md",
+      "sha256": "8d3c743ad9f30d49dcb040a648c6739e20ce38c303359ab6feef5695b41e6803"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/tasks.md",
+      "sha256": "f47a7e7f1edc9f1d69f416b6d104c81d6baa5ca6b74df84147cc9acef5efabd9"
+    },
+    {
+      "path": "openspec/changes/ios-harmony-product-parity/specs/ios-product-parity/spec.md",
+      "sha256": "77056a1696e9e04abebc3a16ebc34e8f1afb95adfd9fbabae3729b18c854dce9"
+    }
+  ],
+  "blockingFindings": [],
+  "coverageAssessment": [
+    {
+      "area": "Current bounded execution",
+      "assessment": "Original three simulator implementation/repair rounds remain explicitly bounded to six executions per check, two identical no-progress failures and90 active command minutes. Adding future delivery stages does not add attempts or reset past failure state."
+    },
+    {
+      "area": "Real authentication",
+      "assessment": "Stage4 names bundle-matched AGC setup and real registration/code/password/reset/logout/deletion cleanup retry. Distinguishes mock-provider/local owner evidence from real services, and identifies user-owned identity/code/irreversible actions. External configuration absence does not erase local work or count as remote acceptance."
+    },
+    {
+      "area": "Full product acceptance",
+      "assessment": "Stage5 preserves all53 native states mapped from Harmony source to actual Web references and independent per-page originals, motion/click/navigation and maximum text/keyboard comparisons. Existing sampled native visuals and53 automated capture tests cannot substitute for full paired visual/aesthetic review."
+    },
+    {
+      "area": "Physical devices",
+      "assessment": "Stage6 requires actual iPhone device/system/build-specific normal launch/background/persistence/permissions/share/offline/weak-network evidence across screen sizes and supported versions. Simulator-only success is explicitly insufficient."
+    },
+    {
+      "area": "Release",
+      "assessment": "Stage7 includes real signing, traceable build, TestFlight, privacy/permission and offline checks, version/rollback records. Submission/agreement steps owned by user. PR remains draft until agreed product, visual, physical-device and release acceptance, preventing the simulator phase from being relabeled final delivery."
+    },
+    {
+      "area": "Spec coherence",
+      "assessment": "Proposal/design/spec/tasks retain installation, Keychain, data preservation, source-bound binaries and historical failed evidence. Their three-round reference describes current simulator work and is consistent with the plan explicitly classifying4–7 as later stages."
+    }
+  ],
+  "newRun": {
+    "state": ".specdrive/stability-20260930",
+    "maxExecutionsPerCheck": 6,
+    "repairRounds": 3,
+    "maxNoProgress": 2,
+    "activeCommandMinutes": 90,
+    "historicalStatesPreserved": true
+  },
+  "implementationReviewChecklist": [
+    "Give each of the ten cold launches an identifiable start/end, asserted usable login/home control, and a declared fixed observation interval. Process existence or simctl launch return alone is not the planned success condition.",
+    "The final normal SpringBoard tap must target the same installed bytes last verified; screenshots of an icon asset or XCTest launch alone cannot replace that observation.",
+    "Preserve the production data container during replacement; restrict synthetic reset/deletion and Keychain test credentials to a UUID/account-specific scope.",
+    "Include new AppIcon, signing/project settings, drivers and XCTest sources in run inputs, and validate loaded test binary provenance and installed app bytes. Do not reuse the prior signed experiment artifact or only compare source hashes.",
+    "Use actual Keychain and unchanged negative assertions. Record account-service mocks as mocks; do not replace the failed Keychain branch with a stub or plaintext.",
+    "Keep maximum-text final-line reachability and genuine motion/reduced-motion temporal assertions meaningful; do not weaken tolerances, fake settings, reuse stale test bundles or mark cropped screenshot sweeps complete.",
+    "Final independent evidence review must state exact sampled/full screenshot scope and preserve any remaining historical 53-state or remote/device gaps."
+  ],
+  "notPerformed": [
+    "Build or test",
+    "App/simulator/browser operation",
+    "Implementation edit",
+    "Full external-stage acceptance"
+  ],
+  "planReviewRoundsRemaining": 0
+}

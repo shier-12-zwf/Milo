@@ -1,0 +1,393 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project Milo.xcodeproj -scheme Milo -configuration Debug -destination "platform=iOS Simulator,id=51F5467F-16A9-4296-9C05-A74F91234967" -derivedDataPath DerivedData -resultBundlePath /Users/runner/work/milo/milo/apps/ios/evidence/build-2026-09-25T16-14-12-549Z.xcresult CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Resolve Package Graph
+
+Fetching from https://github.com/swiftlang/swift-testing.git (cached)
+
+Fetching from https://github.com/swiftlang/swift-syntax.git (cached)
+
+Creating working copy of package ‘swift-syntax’
+
+Checking out 602.0.0 of package ‘swift-syntax’
+
+Creating working copy of package ‘swift-testing’
+
+Checking out 6.2.4 of package ‘swift-testing’
+
+
+Resolved source packages:
+  swift-testing: https://github.com/swiftlang/swift-testing.git @ 6.2.4
+  MiloCore: /Users/runner/work/milo/milo/apps/ios/MiloCore
+  swift-syntax: https://github.com/swiftlang/swift-syntax.git @ 602.0.0
+
+Writing result bundle at path:
+	/Users/runner/work/milo/milo/apps/ios/evidence/build-2026-09-25T16-14-12-549Z.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'Milo' in project 'Milo'
+        ➜ Explicit dependency on target 'MiloCore' in project 'MiloCore'
+    Target 'MiloCore' in project 'MiloCore'
+        ➜ Explicit dependency on target 'MiloCore' in project 'MiloCore'
+    Target 'MiloCore' in project 'MiloCore' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: c79035f87745c38655badbe39a4be5fd
+Build description path: /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/XCBuildData/c79035f87745c38655badbe39a4be5fd.xcbuilddata
+ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -o /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+
+CreateBuildDirectory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-create-build-directory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products
+
+CreateBuildDirectory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-create-build-directory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml
+
+CreateBuildDirectory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-create-build-directory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-create-build-directory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-create-build-directory /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_const_extract_protocols.json (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftFileList (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftConstValuesFileList (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.LinkFileList (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-OutputFileMap.json (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.modulemap (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.modulemap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.DependencyStaticMetadataFileList (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.DependencyMetadataFileList (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.DependencyMetadataFileList
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/MiloCore.modulemap /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.modulemap (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.modulemap /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/empty-Milo.plist (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/empty-Milo.plist
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_const_extract_protocols.json (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftFileList (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftConstValuesFileList (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.LinkFileList (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-OutputFileMap.json (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.hmap (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyStaticMetadataFileList (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyMetadataFileList (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-project-headers.hmap (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-own-target-headers.hmap (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-generated-files.hmap (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-target-headers.hmap (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-non-framework-target-headers.hmap (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-DebugDylibPath-normal-arm64.txt (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-DebugDylibInstallName-normal-arm64.txt (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    write-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-DebugDylibInstallName-normal-arm64.txt
+
+MkDir /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /bin/mkdir -p /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app
+
+SwiftDriver MiloCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MiloCore -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DXcode -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name milocore -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_const_extract_protocols.json -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ MiloCore (in target 'MiloCore' from project 'MiloCore')
+
+EmitSwiftModule normal arm64 (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ Mood.swift /Users/runner/work/milo/milo/apps/ios/MiloCore/Sources/MiloCore/Mood.swift (in target 'MiloCore' from project 'MiloCore')
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/MiloCore/Sources/MiloCore/Mood.swift (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ JournalEntry.swift /Users/runner/work/milo/milo/apps/ios/MiloCore/Sources/MiloCore/JournalEntry.swift (in target 'MiloCore' from project 'MiloCore')
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/MiloCore/Sources/MiloCore/JournalEntry.swift (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ JournalRepository.swift /Users/runner/work/milo/milo/apps/ios/MiloCore/Sources/MiloCore/JournalRepository.swift (in target 'MiloCore' from project 'MiloCore')
+
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/MiloCore/Sources/MiloCore/JournalRepository.swift (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for MiloCore (in target 'MiloCore' from project 'MiloCore')
+
+SwiftDriver\ Compilation\ Requirements MiloCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MiloCore -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DXcode -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name milocore -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_const_extract_protocols.json -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling Mood.swift (in target 'MiloCore' from project 'MiloCore')
+
+SwiftMergeGeneratedHeaders /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/MiloCore-Swift.h /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-Swift.h (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-Swift.h -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/MiloCore-Swift.h
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftdoc (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftdoc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.abi.json (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.abi.json /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftsourceinfo (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftsourceinfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling JournalRepository.swift (in target 'MiloCore' from project 'MiloCore')
+
+SwiftDriver Milo normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Milo -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-generated-files.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-own-target-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-project-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ Milo (in target 'Milo' from project 'Milo')
+
+EmitSwiftModule normal arm64 (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    
+
+SwiftCompile normal arm64 Compiling\ MiloApp.swift /Users/runner/work/milo/milo/apps/ios/App/MiloApp.swift (in target 'Milo' from project 'Milo')
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/App/MiloApp.swift (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    
+
+SwiftCompile normal arm64 Compiling\ JournalView.swift /Users/runner/work/milo/milo/apps/ios/App/JournalView.swift (in target 'Milo' from project 'Milo')
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/App/JournalView.swift (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling JournalEntry.swift (in target 'MiloCore' from project 'MiloCore')
+
+SwiftDriver\ Compilation MiloCore normal arm64 com.apple.xcode.tools.swift.compiler (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj
+    builtin-Swift-Compilation -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name MiloCore -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DXcode -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -I /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name milocore -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_const_extract_protocols.json -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios/Milo.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for Milo (in target 'Milo' from project 'Milo')
+
+SwiftDriver\ Compilation\ Requirements Milo normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Milo -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-generated-files.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-own-target-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-project-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.o normal (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -r -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/Developer/Library/Frameworks -filelist /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.o
+
+SwiftMergeGeneratedHeaders /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources/Milo-Swift.h /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-Swift.h (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-Swift.h -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources/Milo-Swift.h
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftmodule (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftmodule /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftdoc (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftdoc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.abi.json (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.abi.json /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftsourceinfo (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftsourceinfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftCompile normal arm64 Compiling\ JournalModel.swift /Users/runner/work/milo/milo/apps/ios/App/JournalModel.swift (in target 'Milo' from project 'Milo')
+
+SwiftCompile normal arm64 /Users/runner/work/milo/milo/apps/ios/App/JournalModel.swift (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling JournalModel.swift (in target 'Milo' from project 'Milo')
+
+ExtractAppIntentsMetadata (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name MiloCore --sdk-root /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk --xcode-version 16F6 --platform-family iOS --deployment-target 17.0 --bundle-identifier milocore.MiloCore --output /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.appintents --target-triple arm64-apple-ios17.0-simulator --binary-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.o --dependency-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore_dependency_info.dat --stringsdata-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftFileList --metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/MiloCore.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.SwiftConstValuesFileList --force --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-25 16:14:52.648 appintentsmetadataprocessor[9318:30199] Starting appintentsmetadataprocessor export
+2026-09-25 16:14:52.764 appintentsmetadataprocessor[9318:30199] Extracted no relevant App Intents symbols, skipping writing output
+
+RegisterExecutionPolicyException /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.o (in target 'MiloCore' from project 'MiloCore')
+    cd /Users/runner/work/milo/milo/apps/ios/MiloCore
+    builtin-RegisterExecutionPolicyException /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/MiloCore.o
+
+Ld /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/__preview.dylib normal (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -dynamiclib -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -install_name @rpath/Milo.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_dependency_info.dat -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/__preview.dylib
+
+ProcessInfoPlistFile /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Info.plist /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/empty-Milo.plist (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-infoPlistUtility /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/empty-Milo.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Info.plist
+
+CpResource /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/PrivacyInfo.xcprivacy /Users/runner/work/milo/milo/apps/ios/Resources/PrivacyInfo.xcprivacy (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/milo/milo/apps/ios/Resources/PrivacyInfo.xcprivacy /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app
+
+SwiftDriverJobDiscovery normal arm64 Compiling MiloApp.swift (in target 'Milo' from project 'Milo')
+
+SwiftDriverJobDiscovery normal arm64 Compiling JournalView.swift (in target 'Milo' from project 'Milo')
+
+SwiftDriver\ Compilation Milo normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-Swift-Compilation -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Milo -Onone -enforce-exclusivity\=checked @/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Index.noindex/DataStore -swift-version 6 -I /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/milo/milo/apps/ios/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-generated-files.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-own-target-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo-4104e037c19351be4388cfef8f29e739-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-project-headers.hmap -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo-Swift.h -working-directory /Users/runner/work/milo/milo/apps/ios -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo.debug.dylib normal (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -dynamiclib -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -filelist /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.LinkFileList -install_name @rpath/Milo.debug.dylib -Xlinker -rpath -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_dependency_info.dat -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.swiftmodule -Wl,-no_warn_duplicate_libraries -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo.debug.dylib -Xlinker -add_ast_path -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/MiloCore.build/Debug-iphonesimulator/MiloCore.build/Objects-normal/arm64/MiloCore.swiftmodule
+
+ConstructStubExecutorLinkFileList /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-ExecutorLinkFileList-normal-arm64.txt (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    construct-stub-executor-link-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo.debug.dylib /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, arch:arm64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+{ platform:iOS Simulator, arch:x86_64, id:51F5467F-16A9-4296-9C05-A74F91234967, OS:18.5, name:iPhone 16e }
+ --output /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'Milo' from project 'Milo')
+
+Ld /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo normal (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -L/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo-ExecutorLinkFileList-normal-arm64.txt /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo.debug.dylib -o /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo
+
+ExtractAppIntentsMetadata (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name Milo --sdk-root /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk --xcode-version 16F6 --platform-family iOS --deployment-target 17.0 --bundle-identifier com.milo.echoes.ios --output /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app --target-triple arm64-apple-ios17.0-simulator --binary-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo --dependency-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo_dependency_info.dat --stringsdata-file /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftFileList --metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Objects-normal/arm64/Milo.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-25 16:14:56.911 appintentsmetadataprocessor[9554:30789] Starting appintentsmetadataprocessor export
+2026-09-25 16:14:56.912 appintentsmetadataprocessor[9554:30789] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Milo.debug.dylib --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Frameworks --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/PlugIns --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/SystemExtensions --scan-folder /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Extensions --platform iphonesimulator --toolchain /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+AppIntentsSSUTraining (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Info.plist --temp-dir-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/ssu --bundle-id com.milo.echoes.ios --product-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app --extracted-metadata-path /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app/Metadata.appintents --metadata-file-list /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Intermediates.noindex/Milo.build/Debug-iphonesimulator/Milo.build/Milo.DependencyMetadataFileList --archive-ssu-assets
+2026-09-25 16:14:56.977 appintentsnltrainingprocessor[9555:30792] Parsing options for appintentsnltrainingprocessor
+2026-09-25 16:14:56.991 appintentsnltrainingprocessor[9555:30792] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-RegisterExecutionPolicyException /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app
+
+Validate /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    builtin-validationUtility /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app -infoplist-subpath Info.plist
+
+Touch /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app (in target 'Milo' from project 'Milo')
+    cd /Users/runner/work/milo/milo/apps/ios
+    /usr/bin/touch -c /Users/runner/work/milo/milo/apps/ios/DerivedData/Build/Products/Debug-iphonesimulator/Milo.app
+
+
+Result bundle written to path:
+	/Users/runner/work/milo/milo/apps/ios/evidence/build-2026-09-25T16-14-12-549Z.xcresult
+
+** BUILD SUCCEEDED **
+

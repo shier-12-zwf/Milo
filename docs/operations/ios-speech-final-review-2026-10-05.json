@@ -1,0 +1,429 @@
+{
+  "reviewedAtUTC": "2026-10-05T04:32:46.451604+00:00",
+  "reviewer": "independent speech_review agent",
+  "verdict": "PASS_SCOPED_SPEECH_CALLBACK_AND_KEYBOARD_FALLBACK_SIMULATOR_STABILITY",
+  "scope": "Swift callback isolation, pending cancellation, stored writing protection, real native speech entry failure handling and simulator regression. Does not certify successful transcription or platform-wide audio safety.",
+  "sourceHash": "1ce98c7eada55f57b0139ac73c7c9651d96b785bdccaba560c87ae8d56acdb63",
+  "builtAndInstalledAppHash": "6731501e33fe54bc5159f03e67265eb4ac2fc2c34fe719099e269a96626b86f0",
+  "independentProvenance": {
+    "method": "Recomputed source via production fingerprint(root,inputs), complete app via hashBuild, complete current simctl app container via fingerprint(ignoreGenerated:false), and unit/UI binaries via direct SHA256. Re-read actual loaded bundle log lines.",
+    "sourceBuildInstalledAndTestsMatch": true,
+    "unitBinarySHA256": "122decedba64020aa38d5d3dc637ac16d070d33ec7da3a02737745032175896c",
+    "uiBinarySHA256": "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a",
+    "ordinaryProcess": "92724, no test/parity arguments; actual process remained alive 4m15s at independent inspection"
+  },
+  "tests": {
+    "unit": {
+      "receipt": "apps/ios/evidence/stability/unit.json",
+      "resultBundle": "apps/ios/evidence/stability/unit-2026-10-05T04-22-17-526Z.xcresult",
+      "result": "Passed",
+      "passedTests": 31,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "expectedTestHash": "122decedba64020aa38d5d3dc637ac16d070d33ec7da3a02737745032175896c",
+      "actualLoadedTestHashes": [
+        "122decedba64020aa38d5d3dc637ac16d070d33ec7da3a02737745032175896c",
+        "122decedba64020aa38d5d3dc637ac16d070d33ec7da3a02737745032175896c",
+        "122decedba64020aa38d5d3dc637ac16d070d33ec7da3a02737745032175896c"
+      ],
+      "logAndProvenanceVerified": true
+    },
+    "launch": {
+      "receipt": "apps/ios/evidence/stability/launch.json",
+      "resultBundle": "apps/ios/evidence/stability/launch-2026-10-05T04-22-26-727Z.xcresult",
+      "result": "Passed",
+      "passedTests": 2,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "expectedTestHash": "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a",
+      "actualLoadedTestHashes": [
+        "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a",
+        "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a"
+      ],
+      "logAndProvenanceVerified": true
+    },
+    "speech": {
+      "receipt": "apps/ios/evidence/stability/speech.json",
+      "resultBundle": "apps/ios/evidence/stability/speech-2026-10-05T04-24-19-935Z.xcresult",
+      "result": "Passed",
+      "passedTests": 2,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "expectedTestHash": "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a",
+      "actualLoadedTestHashes": [
+        "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a",
+        "8947f007dafe29fba07a71be792fd3a8bf681261b3797df08c2af466abc33f0a"
+      ],
+      "logAndProvenanceVerified": true
+    }
+  },
+  "originalFailedRun": {
+    "retained": true,
+    "resultBundle": "apps/ios/evidence/stability/speech-2026-10-05T04-12-01-804Z.xcresult",
+    "result": "Failed",
+    "passedTests": 1,
+    "failedTests": 1,
+    "cause": "Distinct SIGABRT at AudioUnit RPC timeout; original authorization SIGTRAP reports also retained."
+  },
+  "runner": {
+    "runId": "2026-10-05T04-09-35-448Z-e7471cb7",
+    "status": "passed",
+    "requiredChecksPassed": 7,
+    "activeCommandElapsedMs": 423437,
+    "maxActiveCommandMs": 2400000,
+    "maxAttemptsPerCheck": 3,
+    "attempts": {
+      "specification": 2,
+      "native-preflight": 2,
+      "native-build": 2,
+      "native-install": 2,
+      "native-unit": 2,
+      "native-launch": 2,
+      "native-speech": 2
+    },
+    "nativeSpeechAttempts": [
+      "failed",
+      "passed"
+    ],
+    "allAttemptLogHashesVerified": true,
+    "zeroAttemptConfigTypoRetained": true,
+    "futureSpecFreshnessRefresh": "Not included in this frozen review snapshot; requires unchanged native source and retained state history."
+  },
+  "dataPreservation": {
+    "method": "Compared live three production file SHA256 values to ordinary-demo receipt and both original covered install receipts.",
+    "productionFilesPreserved": {
+      "Library/Application Support/MILO/account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+      "Library/Application Support/MILO/draft.json": "475dba6ee3366232e5c14166f5ad8ad8d6c5468bde7d06a79f54004460fd5a3f",
+      "Library/Application Support/MILO/journal.json": "e8819ceaeba76516588b35d33d23e65074aeb98d8b187a4c3faab738041fa1df"
+    },
+    "protectedDirtyBaselineCount": 112,
+    "otherProtectedFilesUnchanged": 111,
+    "authorizedBaselineChange": [
+      "apps/ios/App/Journey/RecallViews.swift"
+    ],
+    "dirtyRecallViewsIndependentlyReconstructed": true,
+    "methodForDirtyRecallViews": "Applied original saved before.patch hunk text to read-only git HEAD content entirely in memory; SHA256 ecfd86ec7fb8048ce07ec7f3c8f287d41579c806e34d345604ca540ca5010c1e matches original dirty baseline; diff to current contains only speech scene lifecycle, pending editor lock and speech identifiers/control state."
+  },
+  "reviewedImages": [
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/D528D3BE-5163-4564-B947-7CFDDAA10CD5.png",
+      "sha256": "08a5b2b32a3bcf5795dea623e7cab2d50387f03e8a05257e94b992498f26cf93",
+      "personallyViewedOriginal": true,
+      "observation": "Actual Chinese microphone permission alert with explicit Allow/Do not allow and preserved input behind it."
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/1C4C3B2B-BE96-48C4-8A74-9E85B14F1512.png",
+      "sha256": "6d784d081d7ff98aa0607118741bc789969f48163329a7a4643ab54f2d507912",
+      "personallyViewedOriginal": true,
+      "observation": "Permission denied reason visible; prior fixture text plus newly typed refusal text retained in editable composer and Send enabled."
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/9CE2C799-E142-4867-B6FA-971098158817.png",
+      "sha256": "72d4379bf5e70d6992c72039d3b798884e27ecb91a1842cd6dfffbf0e7d12de5",
+      "personallyViewedOriginal": true,
+      "observation": "Actual native recognition-unavailable fallback; idle voice control, original input and Send remain present. No successful recording/transcription."
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/974AA9D1-B102-4A76-8D1D-005338EAF7DF.png",
+      "sha256": "9a60eab7bfd3d7e8946fe3ec35607a78fc451760b2e9f3c3999c43c1318d8a1a",
+      "personallyViewedOriginal": true,
+      "observation": "Rendered star background/safe bars only; does not independently show composer after background return. Adjacent actual AX dump and later typed/sent actions provide functional evidence instead."
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/normal-demo-final.png",
+      "sha256": "ca00148eb8adb3ec8b6ff15f1e120e2f09cdf13ac6d1c07158e1d3d7cb0a4214",
+      "personallyViewedOriginal": true,
+      "observation": "Ordinary Demo presents readable keyboard fallback and idle voice control on actual conversation. No test fixture screenshot substituted."
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/ordinary-background-desktop.png",
+      "sha256": "ef5efa036c85de39aade98583fb37f62e8a238ac047099b3220afe9c2a664cda",
+      "personallyViewedOriginal": true,
+      "observation": "Actual Simulator SpringBoard with correct MILO app icon, observed ordinary app background step."
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/ordinary-background-return.png",
+      "sha256": "f378bcc616113d9d5a4fab59d7a4107cf8e0359a247eb97bb60b6cdd21e8c9ab",
+      "personallyViewedOriginal": true,
+      "observation": "Original ordinary app return frame now visibly contains full MILO chat header, initial message, keyboard fallback, idle voice control and editable composer. Supports ordinary background return visual verification without claiming recording interruption."
+    }
+  ],
+  "reviewedFiles": [
+    {
+      "path": ".artifacts/ios/speech-20261005/Milo-2026-10-04-220853.ips",
+      "sha256": "a70717787876be27995af1184071ec9081a0e2cc95b34d2953199866be7adc27"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/Milo-2026-10-05-120340.ips",
+      "sha256": "7623309b65aefc8cdd457d4257fc358d4bcbb737817ac758be8044341bc4920a"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/audio-start-crash.ips",
+      "sha256": "960c52871ef754ed32e999d5e3ae8ebe0ebce986b106a774e7360596e2083657"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/before-files.json",
+      "sha256": "3a403d6ca1501a223f8ba3b59159a9a73ccc08562a52dcc756bc8025b704d909"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/before.patch",
+      "sha256": "d500b59feb936b6859e263baee380458736b11c923daa9da0337d1c40e2e846f"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/config-correction.txt",
+      "sha256": "20c219b6d8337fc75c29b9768e4088df227c4a0c517ec933322dabdae1a6583a"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/392C512D-02AF-421E-B75C-9C4921062241.txt",
+      "sha256": "85c475a84f57dd52f8eb9de77432c5774a11cdc8deee2955aa50f32953431b79"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/3B261D02-4A10-4EBF-889C-4B7B338AF216.txt",
+      "sha256": "dfc2188f7eab9662ddea8346fb11f17eb408d62fa6707c42bf2d2358f53cf4c1"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/480AFA20-5202-4ABC-B0EF-A5E35B1BACE3.txt",
+      "sha256": "638b236b83cffd336e2e678ad9b3443cac9df1d8ba72cb8880af6cad018835de"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/957B26F3-EFA0-4BBE-89E3-CE8F48724E5C.txt",
+      "sha256": "ed12e343679348b8f00f57e4f7cf932f076a77aa9e6e36077e78170dfb7db08b"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/A33E7211-88A8-4DA7-A793-1B550BA96682.txt",
+      "sha256": "e1ae89df734044c01aea225c73b48f700e9f1ee044e7a04a615d63d8879aeea6"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/A75914FD-1E8E-4D12-AB4B-C1E8642C97B3.txt",
+      "sha256": "f2b0163740417bc4e13f07d099adda60ea3dbc4bf291536c0a63725bca434616"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/B009B013-C56C-4CA3-9FB9-6DAAE17F29E3.txt",
+      "sha256": "96b47f3d73043a629580ce5907b8b74bd4a95001f8d0c44d8cd4982c0482a976"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/B9F90350-0E8C-496F-9355-9B546EFFAF21.txt",
+      "sha256": "8ba85720cc8142e4d69ae716f31ec3129525570ac0a8eefcc39e07ea35932065"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/BE9B1F0B-1914-4989-A4FB-FA8C9223926F.txt",
+      "sha256": "72671681f2ff2171c2341a0aac219f1071e476ec29176b4e5adf4a54c80fe37c"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/C2233D3F-2FBF-42D6-A7C9-B614D852263E.txt",
+      "sha256": "ebcb584ae8a982a5c6fe453adb0e0d5689e462403f0e98d4f579394c862df843"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/D9B939BE-86F6-4ABE-B446-6ECC063B8098.txt",
+      "sha256": "bee3f6a25b62b0c7a5dba6313884bcd004aa50c028bc6904f2ced3e0c0e1956e"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/DB0F388A-78BA-411E-A3FE-CC50F872E15F.txt",
+      "sha256": "d4eaa1edea0efa4f74bdc30256a8281436412805d839fd07524f6b0c205efeeb"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/final-ui/manifest.json",
+      "sha256": "a3779ce8b5a8075a9345bbcc9eabf093f33593124796ae775d3d54ff6acf9baa"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/first-ui/manifest.json",
+      "sha256": "34255b9c8c732260ff32474fffb7d881a1e0e3674373a368f445be69ece54076"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/missing-speech-model.log",
+      "sha256": "4785bf46c90391d037585100f4ec434c8be3ab03ccb5ac358b9ce9a21c857053"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/normal-demo.json",
+      "sha256": "4d5cc1bc45dd01710faa1f52ad2fc359d0e274b768a93cb0e31bdd536b71a8bc"
+    },
+    {
+      "path": ".specdrive/speech-20261005/state.json",
+      "sha256": "9b2ac2ca7c7a2417519c158fa815b43756e301eff6e120f817b1ec4995436f87"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-build-1.log",
+      "sha256": "ca9747c50d6cd0c6d7099b59bf7ae6d3ba486b06d5dfe1e19332156d2cb688c3"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-build-2.log",
+      "sha256": "ca9747c50d6cd0c6d7099b59bf7ae6d3ba486b06d5dfe1e19332156d2cb688c3"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-install-1.log",
+      "sha256": "6427785f173473c7d23f6c468eb275cdcbb889805ac426e440a9c8a4af1a896b"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-install-2.log",
+      "sha256": "6427785f173473c7d23f6c468eb275cdcbb889805ac426e440a9c8a4af1a896b"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-launch-1.log",
+      "sha256": "317314f9e518a32674904a0514e0e26b1d1b6809a6fe7e93542f9d790a371026"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-launch-2.log",
+      "sha256": "1c1af7e2ead15da7c6508f5f9d0ff5e12c43bcdd92f29fd610ec9cba4a5bbaf3"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-preflight-1.log",
+      "sha256": "29271caefad2e9df58700194a5ea1253079a3dd134b8890752a00c2a5e520dc8"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-preflight-2.log",
+      "sha256": "29271caefad2e9df58700194a5ea1253079a3dd134b8890752a00c2a5e520dc8"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-speech-1.log",
+      "sha256": "e0d16494f056267b1431bc551a5a23a2b0cbea4bf552c347005281175327efec"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-speech-2.log",
+      "sha256": "3f7e3a0bc099d74abf0403e1c3d51daf5e838c051793278c8d88d2cfcab94b71"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-unit-1.log",
+      "sha256": "241896529eaacf311caa69578ec097b4c44e84893b965821a274dff7a7b3144c"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/native-unit-2.log",
+      "sha256": "58a8728313046e8e658e6f8ec874e90c6faba9a9830779376ff86e5ae7349d3e"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/specification-1.log",
+      "sha256": "f54aed89151c2f45392671366979aca24d1d893295bda7d863d2bcba3e0f11dd"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/logs/specification-2.log",
+      "sha256": "f54aed89151c2f45392671366979aca24d1d893295bda7d863d2bcba3e0f11dd"
+    },
+    {
+      "path": ".specdrive/speech-20261005-verified-config/state.json",
+      "sha256": "bad2364ffabf2d644942af8c6b042682f944737448c814b5ff5d498647418ed7"
+    },
+    {
+      "path": "apps/ios/App/Journey/NativeSpeechInputBackend.swift",
+      "sha256": "45c058a3c3373b9e450d43a683ef15445f7046411c50fb397ac8bdddad716fa3"
+    },
+    {
+      "path": "apps/ios/App/Journey/RecallViews.swift",
+      "sha256": "2183d289f39ad1140caf0913cb92969c4f62dc7e9af99ace4aa09683bda548a8"
+    },
+    {
+      "path": "apps/ios/App/Journey/SpeechInputModel.swift",
+      "sha256": "bfaa5e1d171d8b69bc0e85c9b04dbae8462dc1c70c6e5d8903ed50d16f618e56"
+    },
+    {
+      "path": "apps/ios/UITests/SpeechInputUITests.swift",
+      "sha256": "da1d9b451725459eb44d611d0317d8a6437fbc736fcb42fd20c7a80c26310f4e"
+    },
+    {
+      "path": "apps/ios/evidence/stability/install-2026-10-05T04-09-51-781Z.json",
+      "sha256": "cbd0151e4cc4fe8e5b8aab7d32119e5948ee87774e3a0653fd8d25b4482a8bfc"
+    },
+    {
+      "path": "apps/ios/evidence/stability/install-2026-10-05T04-22-11-879Z.json",
+      "sha256": "a04a8e4e008f040b7def7360b976c13af5b5d9db73b2ef0d37e72982a746e652"
+    },
+    {
+      "path": "apps/ios/evidence/stability/launch-2026-10-05T04-22-26-727Z.log",
+      "sha256": "88af8500303e57ee62b3265ba73f7dce785b9fef70e36567ae7b64836e296ee7"
+    },
+    {
+      "path": "apps/ios/evidence/stability/launch-2026-10-05T04-22-26-727Z.xcresult/Info.plist",
+      "sha256": "aaea143dbe8a443c56fbe03ebcbdb3b2ee690b86d62d8150997b64a6c9d00dde"
+    },
+    {
+      "path": "apps/ios/evidence/stability/launch.json",
+      "sha256": "8a9d90f20bd702248f53cea165b967094ba8c0c8953429be69f1b45bf49b2f80"
+    },
+    {
+      "path": "apps/ios/evidence/stability/speech-2026-10-05T04-12-01-804Z.log",
+      "sha256": "3b98839695f100cb04e5f0027dac40ff516187f458a720f711f27afbfbe7c8ec"
+    },
+    {
+      "path": "apps/ios/evidence/stability/speech-2026-10-05T04-24-19-935Z.log",
+      "sha256": "c2b1d681d8bde6262cf14ce37e614c45167ae0a83da70f3c3f1e1869c8f2e585"
+    },
+    {
+      "path": "apps/ios/evidence/stability/speech-2026-10-05T04-24-19-935Z.xcresult/Info.plist",
+      "sha256": "591b808ccf007109d66f0967f2c50eebb43679190eea9d387e9528c7341e5752"
+    },
+    {
+      "path": "apps/ios/evidence/stability/speech.json",
+      "sha256": "45f74e84f654ea4938f83730fb2c12c30325b9449d5958867657686ada2bd42b"
+    },
+    {
+      "path": "apps/ios/evidence/stability/unit-2026-10-05T04-22-17-526Z.log",
+      "sha256": "d1b37d15e970c8016256b7b961e029c8b73b7cc23e8d9ac4e9442b6b6e7f3180"
+    },
+    {
+      "path": "apps/ios/evidence/stability/unit-2026-10-05T04-22-17-526Z.xcresult/Info.plist",
+      "sha256": "d23e04ee0ed9c1e8cbeb2bf06a2031243c2a1bb5563a6f4be9ed412d66e28158"
+    },
+    {
+      "path": "apps/ios/evidence/stability/unit.json",
+      "sha256": "58b2b964452df6eeb915f7946fa965597d7003119b80ea6d13c557c1f9f918e2"
+    },
+    {
+      "path": "apps/ios/project.yml",
+      "sha256": "d33bb058baa9f68045f6e7b45ce05b083137429d311efc1659df93764ca57064"
+    },
+    {
+      "path": "apps/ios/scripts/stability-native.mjs",
+      "sha256": "1c826d1e4dec125166bbedf93fd165fedcaad814097fa3584239350bacbbb6f7"
+    },
+    {
+      "path": "apps/ios/specdrive.speech.json",
+      "sha256": "e04cfe238ee53dbe8cbc06f41afbc1a6283ef7cf9f65227142bbf503a486bceb"
+    },
+    {
+      "path": "apps/ios/tests/SpeechInputTests.swift",
+      "sha256": "d622faaccc6c4130570a2abd72413ee9d453fc629fad78563a778c65b1554a6e"
+    },
+    {
+      "path": "docs/operations/ios-speech-code-review-2026-10-05.json",
+      "sha256": "12d616e80b3a4eaf84fa3c556fca20ee3eef533e24c307eb46a622e150b8a9d1"
+    },
+    {
+      "path": "docs/operations/ios-speech-incident-2026-10-05.md",
+      "sha256": "6247a03af23032d354b85b43dfd26f1ca237990bcfdb915745bc02dda1d51568"
+    },
+    {
+      "path": "docs/operations/ios-speech-plan-review-2026-10-05.json",
+      "sha256": "9da6f300dffa405b3851c0633569583b36ccc54dc205b211e60283191fa593da"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/protected-recall-views.json",
+      "sha256": "50aeba154895a44bc41cb047e762853847c41dce1d99f4d20b3a4c7bee3f30ef"
+    }
+  ],
+  "conclusions": [
+    "Both original Swift isolation crash reports agree with actual production nonisolated Sendable bridges and MainActor delivery repair.",
+    "Generation checks and cancellable pending state are tested, including old defer, duplicate starts, cancellation, stale callbacks and partial-text retention.",
+    "Real UI microphone refusal and allowed entry paths use native backend; three repeated allowed entries return keyboard fallback without new observed app termination in verified environment.",
+    "Background return is functionally established by actual idle accessibility state and subsequent real typing/sending; selected raw background PNG is visually incomplete and is not used as visual proof.",
+    "Ordinary non-test Demo screenshot shows actionable keyboard fallback; direct live app/container/data checks match verified build and initial data.",
+    "Incident report accurately distinguishes simulator fallback, controlled interruption tests, real mic denial versus controlled speech denial, second audio timeout and missing recognition assets.",
+    "Supplemental actual SpringBoard/MILO-icon return originals personally viewed; ordinary full chat controls are visibly restored and receipt records same ordinary PID92724. Prior incomplete automatic PNG remains retained as inadequate visual proof, not replaced."
+  ],
+  "limitations": [
+    "Simulator localspeechrecognition cannot open mini.json and cannot create recognizer; no successful Chinese transcription or persistent recording frame was demonstrated.",
+    "Actual active microphone interruption/background handling relies on controlled native unit tests; real UI backgrounds an entry that has already fallen back.",
+    "Builtin Mac microphone/speaker Simulator routing and reboot are part of verified environment. No tested Bluetooth matrix or guarantees for fatal native AudioUnit RPC timeouts.",
+    "No physical iPhone was tested; no full visual parity, remote-account or release acceptance is implied.",
+    "Raw automatic background-return PNG shows only background; functional UI state/actions carry this scoped check."
+  ],
+  "reportNotes": [
+    {
+      "severity": "informational",
+      "detail": "Reviewed incident now explicitly distinguishes second execution report 423410ms from subsequent acceptance-state snapshot 423437ms. Later task/spec freshness bookkeeping is outside this historical snapshot and must preserve unchanged native evidence."
+    }
+  ],
+  "actionableImplementationGaps": [],
+  "supplementalEvidenceReview": {
+    "previousReceiptSha256": "31390df99b589c09380018459ff46a2cb47e871f4d72c7b19862d76ee6e0a9c7",
+    "reason": "Root supplied original ordinary desktop/background-return PNGs, clarified exact historical runner snapshot timing, and supplied dirty RecallViews reconstruction proof.",
+    "nativeImplementationUnchanged": true
+  }
+}

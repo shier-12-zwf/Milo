@@ -1,0 +1,799 @@
+{
+  "version": 1,
+  "referenceManifest": "harmony-source.json",
+  "fixtureVersion": "milo-parity-v1",
+  "fixedTime": "2026-09-26T09:41:00+08:00",
+  "locale": "zh_CN",
+  "timezone": "Asia/Shanghai",
+  "syntheticNote": "今天慢慢走了一段路，风很温柔。",
+  "cases": [
+    {
+      "id": "login--email",
+      "route": "login",
+      "state": "email",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "login--password",
+      "route": "login",
+      "state": "password",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "login--code",
+      "route": "login",
+      "state": "code",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "login--reset",
+      "route": "login",
+      "state": "reset",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "login--error",
+      "route": "login",
+      "state": "error",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "home--mood-calm",
+      "route": "home",
+      "state": "mood-calm",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "home--mood-joyful",
+      "route": "home",
+      "state": "mood-joyful",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "home--mood-low",
+      "route": "home",
+      "state": "mood-low",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "home--words-empty",
+      "route": "home",
+      "state": "words-empty",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "home--words-three",
+      "route": "home",
+      "state": "words-three",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "classify--default",
+      "route": "classify",
+      "state": "default",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "now-note--empty",
+      "route": "now-note",
+      "state": "empty",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "now-note--written",
+      "route": "now-note",
+      "state": "written",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "now-note--keyboard-long",
+      "route": "now-note",
+      "state": "keyboard-long",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "past-time--empty",
+      "route": "past-time",
+      "state": "empty",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "past-time--preset",
+      "route": "past-time",
+      "state": "preset",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "past-time--custom",
+      "route": "past-time",
+      "state": "custom",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "chat--opening",
+      "route": "chat",
+      "state": "opening",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "chat--conversation",
+      "route": "chat",
+      "state": "conversation",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "chat--offline",
+      "route": "chat",
+      "state": "offline",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "chat--keyboard",
+      "route": "chat",
+      "state": "keyboard",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "chat--busy",
+      "route": "chat",
+      "state": "busy",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "diary--enabled",
+      "route": "diary",
+      "state": "enabled",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "diary--disabled",
+      "route": "diary",
+      "state": "disabled",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "diary--editing",
+      "route": "diary",
+      "state": "editing",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "diary--long",
+      "route": "diary",
+      "state": "long",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "timeline--empty",
+      "route": "timeline",
+      "state": "empty",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "timeline--populated",
+      "route": "timeline",
+      "state": "populated",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "detail--now",
+      "route": "detail",
+      "state": "now",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "detail--past",
+      "route": "detail",
+      "state": "past",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "detail--transcript-expanded",
+      "route": "detail",
+      "state": "transcript-expanded",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "detail--missing",
+      "route": "detail",
+      "state": "missing",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "detail--delete-confirmation",
+      "route": "detail",
+      "state": "delete-confirmation",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "card--planet-letter",
+      "route": "card",
+      "state": "planet-letter",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "card--orbit-theatre",
+      "route": "card",
+      "state": "orbit-theatre",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "account--local",
+      "route": "account",
+      "state": "local",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "account--remote",
+      "route": "account",
+      "state": "remote",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "account--password-form",
+      "route": "account",
+      "state": "password-form",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "account--export",
+      "route": "account",
+      "state": "export",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "account--delete-confirmation",
+      "route": "account",
+      "state": "delete-confirmation",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "ai-settings--hosted",
+      "route": "ai-settings",
+      "state": "hosted",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "ai-settings--personal",
+      "route": "ai-settings",
+      "state": "personal",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ]
+    },
+    {
+      "id": "ai-settings--missing-config",
+      "route": "ai-settings",
+      "state": "missing-config",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "ai-settings--consent",
+      "route": "ai-settings",
+      "state": "consent",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "ai-settings--connection-error",
+      "route": "ai-settings",
+      "state": "connection-error",
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null,
+      "textSize": "default",
+      "checkpoints": [
+        "visible-state"
+      ]
+    },
+    {
+      "id": "home--words-three--large-text",
+      "route": "home",
+      "state": "words-three",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "now-note--keyboard-long--large-text",
+      "route": "now-note",
+      "state": "keyboard-long",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "chat--conversation--large-text",
+      "route": "chat",
+      "state": "conversation",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "diary--long--large-text",
+      "route": "diary",
+      "state": "long",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "timeline--populated--large-text",
+      "route": "timeline",
+      "state": "populated",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "detail--transcript-expanded--large-text",
+      "route": "detail",
+      "state": "transcript-expanded",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "account--local--large-text",
+      "route": "account",
+      "state": "local",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    },
+    {
+      "id": "ai-settings--personal--large-text",
+      "route": "ai-settings",
+      "state": "personal",
+      "textSize": "largest-accessibility",
+      "checkpoints": [
+        "top",
+        "all-overflow-content",
+        "bottom"
+      ],
+      "required": true,
+      "status": "pending",
+      "harmony": null,
+      "ios": null,
+      "review": null
+    }
+  ],
+  "captureContract": {
+    "fontSize": "Each capture records the actual OS text-size setting; default unless overridden.",
+    "scrollCoverage": "Every named checkpoint requires an original screenshot on both platforms. Capture successive overlapping viewport slices for overflow; top/bottom alone cannot omit the middle. Record scroll offset and last visible content anchor.",
+    "accessibility": "iOS accessibility5; Harmony largest supported system text size with exact scale recorded. Compare equivalent content, not raw pixel size.",
+    "deviations": "Native confirmation sheets or safety improvements absent on Harmony must reference the source action screenshot and receive an explicit accepted-deviation review; never manufacture a reference UI."
+  }
+}

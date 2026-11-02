@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent-ios-original-image-review",
+  "reviewer": {
+    "agent": "/root/ios_parity_gap",
+    "role": "独立 Collection 视觉审查；本轮未实施 Collection 模块",
+    "method": "实际调用 view_image 查看六个原始 PNG 文件，SHA-256 按原始文件字节计算；未生成或改写截图。"
+  },
+  "reviewedAt": "2026-09-26",
+  "sourceManifest": "apps/ios/evidence/parity/visual-repair-3-images/manifest.json",
+  "journeyRunID": "journeys-2026-09-26T08-02-03-620Z",
+  "scope": {
+    "platform": "iOS Simulator",
+    "requestedImages": 6,
+    "viewedImages": 6,
+    "uniqueByteSequences": 6,
+    "caseLedgerUpdated": false,
+    "comparisonAvailable": false
+  },
+  "verdict": "needs-follow-up",
+  "verdictMeaning": "仅针对六张 iOS 旅程附件：发现一项 P2 附件可见重叠/稳定采集不足，以及一项 P3 排版润色项。两张专门模板布局图中未见原选项错位，但过去回忆旅程图仍不足以通过视觉验收。",
+  "images": [
+    {
+      "name": "export-orbit-theatre-native-share",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/4BB081EB-C225-48CD-BF87-D8300F3D3ADC.png",
+      "sha256": "1d866589188d0bbbec53bc0b116d67d4e3d202bf7f4f10ef27a165853b5680af",
+      "testIdentifier": "MiloUITests/testBothCardTemplatesRenderForNativeShare()",
+      "timestamp": 1790409774.729,
+      "caseID": null,
+      "caseIDReason": "这是命名旅程附件，不冒充 cases.json 中已经采集并通过审图的同态证据。",
+      "actuallyViewed": true,
+      "observations": [
+        "原生分享面板已展开，缩略图为深紫轨道模板，项目显示 PNG 图像；复制、存储图像等系统操作清晰可见。",
+        "背景被系统分享面板覆盖和变暗属于当前模态状态；未见系统操作重叠。"
+      ],
+      "findingIDs": [],
+      "imageVerdict": "no-blocking-issue-observed-in-this-image"
+    },
+    {
+      "name": "export-planet-letter-native-share",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/5ED99495-2923-408B-823F-35B1A2D16E21.png",
+      "sha256": "b266157ed87af413e4b5140e8f50a3bd98981035f87d98cc07f22d77b2c0b0c1",
+      "testIdentifier": "MiloUITests/testBothCardTemplatesRenderForNativeShare()",
+      "timestamp": 1790409763.303,
+      "caseID": null,
+      "caseIDReason": "这是命名旅程附件，不冒充 cases.json 中已经采集并通过审图的同态证据。",
+      "actuallyViewed": true,
+      "observations": [
+        "原生分享面板已展开，缩略图为浅紫纸卡模板，项目显示 PNG 图像；系统操作文字可读。",
+        "可确认两个模板分别到达分享面板；不能据此确认已保存到照片或已发送。"
+      ],
+      "findingIDs": [],
+      "imageVerdict": "no-blocking-issue-observed-in-this-image"
+    },
+    {
+      "name": "repaired-template-layout-orbit-theatre",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/DFC8109B-1584-4BC1-ADE1-351A5B1443F0.png",
+      "sha256": "bf79d97986d2e58d05f272d2334cfbcb0fad69988ad323027186bfe74ae39165",
+      "testIdentifier": "MiloUITests/testCardTemplateGeometryAndLoginErrorState()",
+      "timestamp": 1790409791.119,
+      "caseID": null,
+      "caseIDReason": "这是命名旅程附件，不冒充 cases.json 中已经采集并通过审图的同态证据。",
+      "actuallyViewed": true,
+      "observations": [
+        "“选择卡片模板”和“2 / 2”位于两个模板选项上方；选项顶边齐平，选中描边清楚，标题与说明完整可读。",
+        "底部保存图片、回到首页控件没有遮住这张图的模板说明；正文“温 / 柔。”断行见 F2。",
+        "大卡片顶部处于滚动视口外，不据这张滚动截图把顶部裁切判定为缺陷。"
+      ],
+      "findingIDs": [
+        "collection-repair-3-F2"
+      ],
+      "imageVerdict": "readable-with-polish-follow-up"
+    },
+    {
+      "name": "repaired-template-layout-planet-letter",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/E3E78DCB-1F5A-4D13-BE19-62C09F3A3017.png",
+      "sha256": "6732e5b34c14784850829882515833f0aacd5cd813fcb2246fd7df68754a91b1",
+      "testIdentifier": "MiloUITests/testCardTemplateGeometryAndLoginErrorState()",
+      "timestamp": 1790409782.99,
+      "caseID": null,
+      "caseIDReason": "这是命名旅程附件，不冒充 cases.json 中已经采集并通过审图的同态证据。",
+      "actuallyViewed": true,
+      "observations": [
+        "“选择卡片模板”和“1 / 2”位于选项上方；两个选项顶边齐平，左侧纸卡选中样式明确。",
+        "纸卡底部的记忆编号、日期、收下这颗星以及模板说明可读；正文“温 / 柔。”断行见 F2。",
+        "卡片顶部在当前滚动视口外，单图不能证明完整长页覆盖。"
+      ],
+      "findingIDs": [
+        "collection-repair-3-F2"
+      ],
+      "imageVerdict": "readable-with-polish-follow-up"
+    },
+    {
+      "name": "journey-past-card-orbit",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/C2487706-F2B6-4CDD-9A8A-D3DB4D78BC2D.png",
+      "sha256": "97430ce2951076a45e6b2a21b5ae707bd37ce1e60ac0818a92f95b7021868702",
+      "testIdentifier": "MiloUITests/testPastOfflineJourneyDiaryEditAndTemplatePersistence()",
+      "timestamp": 1790409890.086,
+      "caseID": null,
+      "caseIDReason": "这是命名旅程附件，不冒充 cases.json 中已经采集并通过审图的同态证据。",
+      "actuallyViewed": true,
+      "observations": [
+        "轨道模板显示“去年夏天”、回忆正文、记录日期和归档标志；正文可读。",
+        "右侧选中模板选项高于左侧，并碰到“2 / 2”；左侧模板说明被固定底栏遮住，见 F1。",
+        "单张截图无法证明这些错位在动画和滚动完全稳定后仍然存在；本图也不能单独证明编辑内容、模板选择已持久化。"
+      ],
+      "findingIDs": [
+        "collection-repair-3-F1"
+      ],
+      "imageVerdict": "needs-follow-up"
+    },
+    {
+      "name": "journey-present-detail",
+      "path": "/Users/hut/Projects/milo-ios-validation/apps/ios/evidence/parity/visual-repair-3-images/58550C0E-FFE7-413C-B0BA-B366191D6A02.png",
+      "sha256": "e9e0214f0969e989ceb16a70d7ae4c46df4a9c1b09f21b39cd6b7cd3f90dc786",
+      "testIdentifier": "MiloUITests/testPresentJourneyAndRestartPersistence()",
+      "timestamp": 1790409932.404,
+      "caseID": null,
+      "caseIDReason": "这是命名旅程附件，不冒充 cases.json 中已经采集并通过审图的同态证据。",
+      "actuallyViewed": true,
+      "observations": [
+        "详情页显示“此刻”“明亮”、星球图形、完整短句“今天散步很开心”和“生成回忆卡片”按钮。",
+        "当前可见中文没有省略或明显控件遮挡，底部主要按钮在安全区内可读。",
+        "这是短内容详情态；不证明长内容、最大字号或其他详情状态。"
+      ],
+      "findingIDs": [],
+      "imageVerdict": "no-blocking-issue-observed-in-this-image"
+    }
+  ],
+  "findings": [
+    {
+      "id": "collection-repair-3-F1",
+      "priority": "P2",
+      "status": "open",
+      "imageNames": [
+        "journey-past-card-orbit"
+      ],
+      "title": "过去回忆旅程附件中的模板选项与页码、底栏相碰",
+      "observation": "该原图中右侧已选“轨道剧场”选项顶部高于左侧选项，边框穿过“2 / 2”所在行；左侧“雾紫卡纸”说明下部被固定操作栏遮住。两张专门 template-layout 附件未出现同样的选项错位。",
+      "impact": "这张旅程附件不能作为模板区域排版已稳定修复、文字完整可读的视觉通过证据。",
+      "certainty": "可确认附件可见重叠；仅凭该图无法区分持续布局缺陷与选择模板后的过渡画面。",
+      "followUp": "保留此失败附件。后续获准的验证范围应在模板切换和滚动稳定后，采集完整选项区并复核页码、两个选项及固定操作栏；当前三次原生构建预算已经用完，本审查不授权再次运行或变更限制。"
+    },
+    {
+      "id": "collection-repair-3-F2",
+      "priority": "P3",
+      "status": "open",
+      "imageNames": [
+        "repaired-template-layout-planet-letter",
+        "repaired-template-layout-orbit-theatre"
+      ],
+      "title": "短句在“温柔”词中断行，末行仅“柔。”",
+      "observation": "两个模板均把“今天慢慢走了一段路，风很温柔。”排成第一行到“温”、第二行仅“柔。”，文字完整但视觉节奏不够均衡。",
+      "impact": "属于局部排版润色项，不阻塞信息读取；尚不足以声称美学提升已经完成。",
+      "certainty": "原图可见的排版事实；不对中文按字换行本身判定为功能错误。",
+      "followUp": "在保留系统字号、完整内容和长文能力的前提下，后续评估卡片正文宽度或分行策略。"
+    }
+  ],
+  "coverageLimits": [
+    "没有任何同状态 HarmonyOS 原始截图；不能判定双端复刻一致或相对鸿蒙的美学提升。",
+    "仅查看指定的六张 iPhone 模拟器旅程原图；没有实体 iPhone 验证。",
+    "没有完整 53 状态的新截图矩阵，也没有大字号、所有滚动区域和所有末尾锚点覆盖；所有配对案例仍 pending。",
+    "新采集 capture-2026-09-26T08-06-55-690Z 在 login--email 缺少几何探针时失败，尚未产生命名案例截图；此审查不把旧 183 张图或本轮旅程附件替代该矩阵。",
+    "分享面板截图只证明面板和对应缩略图可见；没有查看实际导出 PNG 文件的完整像素，也未执行存入照片、发送等外部动作。",
+    "截图是静态瞬间，无法独立证明切换后的稳定状态、真实动作命中、持久化或完整滚动覆盖；行为结论仍应引用原生测试日志。",
+    "11/11 旅程测试通过与本次图片质量结论分别记录；任何通过措辞都不表示产品验收完成。",
+    "未修改源码或测试，未运行原生构建/模拟器，未改写案例账本或真实证据，未绕过已用完的三次构建限制。"
+  ]
+}

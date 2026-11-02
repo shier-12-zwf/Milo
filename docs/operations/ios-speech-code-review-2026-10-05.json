@@ -1,0 +1,148 @@
+{
+  "reviewedAtUTC": "2026-10-05T04:23:27.570154+00:00",
+  "reviewer": "independent speech_review agent",
+  "scope": "Current speech callback/lifecycle implementation and tests; existing unrelated dirty ChatView changes excluded from ownership assessment",
+  "verdict": "PASS",
+  "artifacts": [
+    {
+      "path": "apps/ios/App/Journey/SpeechInputModel.swift",
+      "sha256": "bfaa5e1d171d8b69bc0e85c9b04dbae8462dc1c70c6e5d8903ed50d16f618e56"
+    },
+    {
+      "path": "apps/ios/App/Journey/NativeSpeechInputBackend.swift",
+      "sha256": "45c058a3c3373b9e450d43a683ef15445f7046411c50fb397ac8bdddad716fa3"
+    },
+    {
+      "path": "apps/ios/App/Journey/RecallViews.swift",
+      "sha256": "2183d289f39ad1140caf0913cb92969c4f62dc7e9af99ace4aa09683bda548a8"
+    },
+    {
+      "path": "apps/ios/tests/SpeechInputTests.swift",
+      "sha256": "d622faaccc6c4130570a2abd72413ee9d453fc629fad78563a778c65b1554a6e"
+    },
+    {
+      "path": "apps/ios/UITests/SpeechInputUITests.swift",
+      "sha256": "da1d9b451725459eb44d611d0317d8a6437fbc736fcb42fd20c7a80c26310f4e"
+    },
+    {
+      "path": "apps/ios/project.yml",
+      "sha256": "d33bb058baa9f68045f6e7b45ce05b083137429d311efc1659df93764ca57064"
+    },
+    {
+      "path": "apps/ios/specdrive.speech.json",
+      "sha256": "e04cfe238ee53dbe8cbc06f41afbc1a6283ef7cf9f65227142bbf503a486bceb"
+    },
+    {
+      "path": "apps/ios/scripts/stability-native.mjs",
+      "sha256": "1c826d1e4dec125166bbedf93fd165fedcaad814097fa3584239350bacbbb6f7"
+    },
+    {
+      "path": ".artifacts/ios/speech-20261005/config-correction.txt",
+      "sha256": "20c219b6d8337fc75c29b9768e4088df227c4a0c517ec933322dabdae1a6583a"
+    }
+  ],
+  "findings": [],
+  "passedAssessment": [
+    "Authorization, recognition, audio tap and interruption factories are explicitly nonisolated and Sendable and do not inherit MainActor. Model receives only value-type recognition events and returns to MainActor.",
+    "Current UUID generation protects late permissions and recognition; generation-aware defer protects newer start state after cancellation; Task cancellation before capture is handled.",
+    "Native teardown removes owned tap before ending request and cancels recognition; only session owned by backend is deactivated; zero-resource cleanup is repeatable.",
+    "Scene background and navigation stop recording; inactive permission-alert phase intentionally does not.",
+    "Unit tests cover actual native bridge factories running on background queues, duplicate/pending starts, stale events, denied permissions, setup failure, partial transcript retention and three interruption forms.",
+    "UI tests use real microphone permission dialog, native backend, three repeat entries, background return, editable retained fixture and actual sending. Simulator recognition may return fallback and does not certify physical-device transcription.",
+    "Fresh corrected runner config records zero executed attempts on original typo state and retains exact limits; no exhausted check reset observed."
+  ],
+  "limitations": [
+    "Recognition factory unit test uses nil result plus real NSError; actual successful native transcription is not synthesized and physical-device quality is excluded.",
+    "Backend interruption notification delivery is unit exercised through production callback factory; actual notification attachment/audio-route event not forced on simulator.",
+    "Original test run remains underway; this receipt is a code review, not evidence acceptance."
+  ],
+  "reviewRound": 2,
+  "reviewHistory": [
+    {
+      "snapshotSha256": "15b7f16bb7207e93996c91e3f1fdd767002e9e1ae3e41b8a910c7e013c1adcfb",
+      "review": {
+        "reviewedAtUTC": "2026-10-05T04:10:47.971905+00:00",
+        "reviewer": "independent speech_review agent",
+        "scope": "Current speech callback/lifecycle implementation and tests; existing unrelated dirty ChatView changes excluded from ownership assessment",
+        "verdict": "NEEDS_REVISION",
+        "artifacts": [
+          {
+            "path": "apps/ios/App/Journey/SpeechInputModel.swift",
+            "sha256": "bfaa5e1d171d8b69bc0e85c9b04dbae8462dc1c70c6e5d8903ed50d16f618e56"
+          },
+          {
+            "path": "apps/ios/App/Journey/NativeSpeechInputBackend.swift",
+            "sha256": "51a28662be7495e688baf6e19c4b08c8d308ae99fbfd47e9338aa220fc60ed41"
+          },
+          {
+            "path": "apps/ios/App/Journey/RecallViews.swift",
+            "sha256": "b11e37def652f124650ef79eaa8a4ebbf5187b08317e4fa38b948178b11fdc47"
+          },
+          {
+            "path": "apps/ios/tests/SpeechInputTests.swift",
+            "sha256": "0b64b7c717c0fab2f72a9023e719c6828191b0dd45927e9e61ee03fe2ebd6552"
+          },
+          {
+            "path": "apps/ios/UITests/SpeechInputUITests.swift",
+            "sha256": "66db4c0a9d300fe0de631b66e496a050438f2b0d55eccdbea4bf50a25d4a0ceb"
+          },
+          {
+            "path": "apps/ios/project.yml",
+            "sha256": "d33bb058baa9f68045f6e7b45ce05b083137429d311efc1659df93764ca57064"
+          },
+          {
+            "path": "apps/ios/specdrive.speech.json",
+            "sha256": "e04cfe238ee53dbe8cbc06f41afbc1a6283ef7cf9f65227142bbf503a486bceb"
+          },
+          {
+            "path": "apps/ios/scripts/stability-native.mjs",
+            "sha256": "1c826d1e4dec125166bbedf93fd165fedcaad814097fa3584239350bacbbb6f7"
+          },
+          {
+            "path": ".artifacts/ios/speech-20261005/config-correction.txt",
+            "sha256": "20c219b6d8337fc75c29b9768e4088df227c4a0c517ec933322dabdae1a6583a"
+          }
+        ],
+        "findings": [
+          {
+            "priority": "P2",
+            "path": "apps/ios/App/Journey/RecallViews.swift",
+            "trigger": "Voice tap captures speechPrefix, then keyboard input remains editable while asynchronous permission checks are pending because field disables only for isRecording.",
+            "impact": "First accepted transcript replaces draft text using older prefix, discarding edits entered during isStarting.",
+            "requestedChange": "Disable input while speech.isActive (pending cancel remains available), or explicitly preserve latest input at actual recording start. Add a practical assertion/test matching the chosen behavior."
+          }
+        ],
+        "passedAssessment": [
+          "Authorization, recognition, audio tap and interruption factories are explicitly nonisolated and Sendable and do not inherit MainActor. Model receives only value-type recognition events and returns to MainActor.",
+          "Current UUID generation protects late permissions and recognition; generation-aware defer protects newer start state after cancellation; Task cancellation before capture is handled.",
+          "Native teardown removes owned tap before ending request and cancels recognition; only session owned by backend is deactivated; zero-resource cleanup is repeatable.",
+          "Scene background and navigation stop recording; inactive permission-alert phase intentionally does not.",
+          "Unit tests cover actual native bridge factories running on background queues, duplicate/pending starts, stale events, denied permissions, setup failure, partial transcript retention and three interruption forms.",
+          "UI tests use real microphone permission dialog, native backend, three repeat entries, background return, editable retained fixture and actual sending. Simulator recognition may return fallback and does not certify physical-device transcription.",
+          "Fresh corrected runner config records zero executed attempts on original typo state and retains exact limits; no exhausted check reset observed."
+        ],
+        "limitations": [
+          "Recognition factory unit test uses nil result plus real NSError; actual successful native transcription is not synthesized and physical-device quality is excluded.",
+          "Backend interruption notification delivery is unit exercised through production callback factory; actual notification attachment/audio-route event not forced on simulator.",
+          "Original test run remains underway; this receipt is a code review, not evidence acceptance."
+        ]
+      }
+    }
+  ],
+  "secondRoundAssessment": {
+    "pendingInputPreservation": "Chat input now disables for speech.isActive including pending authorization. Cancellation remains available; native UI verifies pending starting state and disabled editor at actual microphone alert. This resolves first review P2.",
+    "backgroundNotificationTransfer": "Interruption test constructs legacy non-Sendable Notification on background queue from Sendable integer case; captured cross-queue payload is no longer Notification.",
+    "nativeAudioHardening": "Backend uses playAndRecord/measurement/defaultToSpeaker, validates activated input availability/sample rate/channel count before engine.inputNode, caches acquired input node and removes tap through cached reference during stop. Existing failure cleanup is reached for throwing setup failures.",
+    "newCrashScope": "Original granted-permission UI failure is distinct SIGABRT at _ReportRPCTimeout/AURemoteIO.Initialize/inputNode. App hardening plus explicit builtin Simulator audio routing and reboot is within current plan. No universal AudioUnit fatal-timeout recovery is claimed.",
+    "runIntegrity": "First failed real UI run retained. Same corrected runner state and same original attempt/active-command limits reused after repair, according to requested execution context; final state/provenance acceptance deferred to evidence review.",
+    "evidenceAcceptance": "This PASS is planning/implementation acceptance only. Current second runner execution must finish before final tests and original attachments are independently accepted."
+  },
+  "resolvedFindings": [
+    {
+      "priority": "P2",
+      "originalFinding": "Keyboard edits while permission request pending could be replaced by snapshotted prefix.",
+      "resolution": "Editor disabled during speech.isActive, native UI pending-start assertion added; cancel control remains usable.",
+      "status": "RESOLVED_IN_SOURCE"
+    }
+  ]
+}

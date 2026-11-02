@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "VITE_PUBLIC_AI_ENABLED=false npm --workspace @milo/web run build",
+  "outputDirectory": "apps/web/dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

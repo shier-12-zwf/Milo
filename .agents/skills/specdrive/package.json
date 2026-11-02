@@ -1,0 +1,10 @@
+{
+  "name": "specdrive",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenSpec orchestration with resumable, source-bound verification evidence",
+  "engines": { "node": ">=20.19" },
+  "scripts": { "test": "node --test tests/*.test.mjs" },
+  "bin": { "specdrive": "scripts/specdrive.mjs" }
+}

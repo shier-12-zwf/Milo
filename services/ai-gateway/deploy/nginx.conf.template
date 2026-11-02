@@ -1,0 +1,23 @@
+# Replace the domain and certificate paths after domain ownership and filing are ready.
+# Add to the existing Nginx installation; never overwrite BaoTa's main configuration.
+server {
+    listen 443 ssl;
+    server_name API_DOMAIN;
+    ssl_certificate /etc/milo-gateway/tls/fullchain.pem;
+    ssl_certificate_key /etc/milo-gateway/tls/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    client_max_body_size 64k;
+    access_log off;
+
+    location / {
+        proxy_pass http://127.0.0.1:8787;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        # Overwrite caller-supplied forwarding headers before the loopback gateway.
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 30s;
+    }
+}

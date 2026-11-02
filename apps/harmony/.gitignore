@@ -1,0 +1,17 @@
+/node_modules
+/oh_modules
+/local.properties
+/.idea
+**/build
+/.hvigor
+/.deveco-sdk
+/.signing
+/.deveco-sdk-installed
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+**/.test
+/.appanalyzer
+/entry/src/main/resources/rawfile/gateway-credentials.local.json
+/.release-private/

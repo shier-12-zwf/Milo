@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent /root/web_native_review",
+  "reviews": [
+    {
+      "reviewedAt": "2026-09-29T16:26:35.260886+00:00",
+      "evidenceSet": "first functional runtime, 2026-09-29T16:22Z",
+      "verdict": "LOCAL_UI_FLOW_VERIFIED_FOR_RECORDED_BUILD_FULL_PHASE_INCOMPLETE",
+      "sourceHash": "b6d2abc12cc0f22f19b998c2439aabd54dee4641801b350cf2439a97a7d65ecf",
+      "appHash": "5f82dedcceb20a52479440946d3d1e773ab840270d5b71116daee46ce1fb76a0",
+      "uiReceipt": {
+        "path": "apps/ios/evidence/functional/account-ui-2026-09-29T16-22-44-639Z.json",
+        "sha256": "3f5af96b35a031c368ae9a215f7a3cbc702c4a6c04e671445ba548551da1fcfd"
+      },
+      "unitReceipt": {
+        "path": "apps/ios/evidence/functional/account-tests-2026-09-29T16-22-22-469Z.json",
+        "sha256": "def3a7e9f396822935b32aee5125269a2915e1df2195f6c2a0dbba7ed76668f6"
+      },
+      "attachmentManifest": {
+        "path": ".artifacts/ios/functional-20260930/ui-attachments/manifest.json",
+        "sha256": "b9931c0e71cf856f539782068eef1db8f1466b1376985d52104eb77956c73807"
+      },
+      "uiVerification": {
+        "testsPassed": 3,
+        "testsFailed": 0,
+        "testBundleHash": "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80",
+        "loadedHashes": [
+          "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80",
+          "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80",
+          "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80"
+        ],
+        "provenanceMatches": true,
+        "logHashVerified": true,
+        "logPath": "apps/ios/evidence/functional/account-ui-2026-09-29T16-22-44-639Z.log",
+        "resultBundle": "apps/ios/evidence/functional/account-ui-2026-09-29T16-22-44-639Z.xcresult"
+      },
+      "unitVerification": {
+        "testsPassed": 15,
+        "testsFailed": 1,
+        "failedAssertions": 2,
+        "exitCode": 65,
+        "failedTest": "testRemoteDeletionCompletionSurvivesLocalFailureAndRelaunch",
+        "provenanceMatches": true,
+        "logHashVerified": true,
+        "logPath": "apps/ios/evidence/functional/account-tests-2026-09-29T16-22-22-469Z.log",
+        "status": "failed, retained; subsequent environment repair has not retroactively passed this run"
+      },
+      "imagesReviewed": [
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/F0F30E13-2C0B-4C2C-81F2-C3D0254D7B3A.png",
+          "sha256": "3ef9328df57ba2025a617dc7ac7fb4e95db727be79f8c9eace8641500f56f994",
+          "testIdentifier": "AccountFunctionalTests/testEditingPasswordClearsPreviousFeedbackWithoutRemoteRequest()",
+          "suggestedName": "functional-login-feedback-cleared-code-error_0_10C0B3A2-3FD9-4AEF-AD7C-CB8BEBEFA083.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "explicit-error-fixture",
+          "observation": "Code error feedback is absent after entering digit 1; real numeric keyboard, code caret, disabled incomplete login and resend control are visible without overlap. Sent-to label belongs to a fixture and is not evidence a code was actually sent.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/C1379E76-DF45-4A7E-9259-ADA85F2F8BF9.png",
+          "sha256": "1e027d8fac50c6b47827bb1f879cad74bd18d54c53eaa63a3e462d48d2a5130d",
+          "testIdentifier": "AccountFunctionalTests/testEditingPasswordClearsPreviousFeedbackWithoutRemoteRequest()",
+          "suggestedName": "functional-login-feedback-cleared-password-error_0_3825DC28-A089-49E0-B1F4-F29A2A7A994A.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "explicit-error-fixture",
+          "observation": "Password error feedback is absent after a typed character; email/password mode and visibility icon are visible. Screenshot omits secure input/system-keyboard rendering and lower controls even though adjacent AX records focused SecureTextField, submit/forgot controls and keyboard. Do not infer keyboard layout acceptance or a product defect from this capture discrepancy.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/CFB316B6-0572-4D7F-B9AE-F026466025B4.png",
+          "sha256": "677e5d10512d85482ada3895848009ef75a388a189683e136fb0df0dd0b8d66b",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-owner-home_0_D8CBC906-A3C0-43BA-894F-475E18E26AF3.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "normal-owner-login",
+          "observation": "Home follows actual owner login: My/Timeline entries, complete planet and mood labels, instruction and primary action are visible. Still image does not validate motion.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/8D2857F9-D879-4D61-8470-0DDB28EDA5BD.png",
+          "sha256": "eeaca80c263c150e79e59393f95f409787a71a7c8c08adf5f299d410c5ee0649",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-reset-entry_0_CC78E80B-6BC2-4B3E-B45E-7AD926260CCB.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "normal-entry",
+          "observation": "Forgot-password entry shows a visible back control, title, empty email field and disabled code request, with safe margins. Reset submission/service outcome is not shown.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/E1335C3E-209B-4F20-8C05-3CDD9789E43D.png",
+          "sha256": "9d8dfe97d8ec350b2429d6fdaa08dede0a15f9e7d2a4261cc5d2bcef5c799212",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-first-launch_0_0E0463DC-1911-4C2E-B479-F1CD523DB93D.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "normal-entry",
+          "observation": "Fresh login: code/password modes, email field, disabled empty submit and automatic-registration explanation are visible without overlap. This is not a successful email registration.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/64629E4A-BD1D-4002-A2B5-8E263E7A3A25.png",
+          "sha256": "9d8dfe97d8ec350b2429d6fdaa08dede0a15f9e7d2a4261cc5d2bcef5c799212",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-logged-out_0_7777DCAA-BCAF-4898-B9C1-5B559AC5F657.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "normal-logout",
+          "observation": "After confirmed logout the login form returns with empty email. Persistence/re-entry conclusions additionally rely on actual UI assertions, not this static frame alone.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/717C266D-4B69-46CB-8843-1205F6C58AB3.png",
+          "sha256": "e2101eeaaff15e4ef5d49554d2f2e3c1a3cd088916796a02b35cec0932d51605",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-settings-saved-disabled_0_1AC0E18A-1E6D-4CB5-B019-3CD22314FA67.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "normal-entry",
+          "observation": "AI toggle visibly off; saved status and save action are visible. Hosted unavailability and planned/non-charging membership language are readable. Lower membership content is below the scroll viewport, not certified as fully captured.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/228D575D-01A3-45B0-BC25-C9CDB7A54381.png",
+          "sha256": "27bdeae87fcba2d7297ce869b150303235271d758330f94b212de715b0f2aae9",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-account-normal-entry_0_6788B0E0-D3B3-4B98-81A2-A64DC534A146.png",
+          "pixels": [
+            1170,
+            2532
+          ],
+          "viewedWith": "view_image",
+          "origin": "normal-entry",
+          "observation": "Account shows owner identity, avatar, local-account/no-password explanation, AI settings entry and separate logout/delete actions. The scroll content continues below the viewport; this single frame does not validate export rows or the full scroll extent.",
+          "localLayoutVerdict": "no confirmed new blocking defect in visible content",
+          "completePageCoverage": false
+        }
+      ],
+      "allExportedAttachments": [
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/0433C748-574A-4573-8322-C43941852B79.txt",
+          "sha256": "544bc63f73f5a535476aaed1b63252d19b826977644805385ea61cab492abd0b",
+          "testIdentifier": "AccountFunctionalTests/testEditingPasswordClearsPreviousFeedbackWithoutRemoteRequest()",
+          "suggestedName": "functional-login-feedback-cleared-code-error-accessibility_0_42545E86-2BF7-47AA-86EB-68A93C772E01.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/F0F30E13-2C0B-4C2C-81F2-C3D0254D7B3A.png",
+          "sha256": "3ef9328df57ba2025a617dc7ac7fb4e95db727be79f8c9eace8641500f56f994",
+          "testIdentifier": "AccountFunctionalTests/testEditingPasswordClearsPreviousFeedbackWithoutRemoteRequest()",
+          "suggestedName": "functional-login-feedback-cleared-code-error_0_10C0B3A2-3FD9-4AEF-AD7C-CB8BEBEFA083.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/A894BA26-8F4F-4FB2-B657-318AD0DBEC74.txt",
+          "sha256": "1bfea8a4c6e508486b45a5367025d423cb281eeaafd58d737d9deb2998141b70",
+          "testIdentifier": "AccountFunctionalTests/testEditingPasswordClearsPreviousFeedbackWithoutRemoteRequest()",
+          "suggestedName": "functional-login-feedback-cleared-password-error-accessibility_0_835716D9-BE4C-43BE-B7AE-44B3544E420A.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/C1379E76-DF45-4A7E-9259-ADA85F2F8BF9.png",
+          "sha256": "1e027d8fac50c6b47827bb1f879cad74bd18d54c53eaa63a3e462d48d2a5130d",
+          "testIdentifier": "AccountFunctionalTests/testEditingPasswordClearsPreviousFeedbackWithoutRemoteRequest()",
+          "suggestedName": "functional-login-feedback-cleared-password-error_0_3825DC28-A089-49E0-B1F4-F29A2A7A994A.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/053A561E-1A1B-4D75-A455-C3E4DA297CB4.txt",
+          "sha256": "3264d19f7f6b61b48ac48ec29127f79f97c7dc4c7706d7e4f0804f2914ff08ff",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-owner-home-accessibility_0_C9E1BF5A-957D-4408-8A54-58E7286AA141.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/CFB316B6-0572-4D7F-B9AE-F026466025B4.png",
+          "sha256": "677e5d10512d85482ada3895848009ef75a388a189683e136fb0df0dd0b8d66b",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-owner-home_0_D8CBC906-A3C0-43BA-894F-475E18E26AF3.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/E63716F6-09A9-473C-8241-03FE9C3A6421.txt",
+          "sha256": "d77adbbaa5d9e36cccf4ad25277816cf93bcddf6c872aafbcaaf1c269068d8f5",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-reset-entry-accessibility_0_1EC3B78A-BF3D-41FF-A0CE-FA50FBEAC817.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/8D2857F9-D879-4D61-8470-0DDB28EDA5BD.png",
+          "sha256": "eeaca80c263c150e79e59393f95f409787a71a7c8c08adf5f299d410c5ee0649",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-reset-entry_0_CC78E80B-6BC2-4B3E-B45E-7AD926260CCB.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/81305258-D131-4520-BA12-354ECD11FFC9.txt",
+          "sha256": "06db8f8942747b69c25f9e95000f35394f063c14b9aa1976042301aa67190f68",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-first-launch-accessibility_0_A55E3B97-47C0-4D09-89D8-06E82CDEA63B.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/E1335C3E-209B-4F20-8C05-3CDD9789E43D.png",
+          "sha256": "9d8dfe97d8ec350b2429d6fdaa08dede0a15f9e7d2a4261cc5d2bcef5c799212",
+          "testIdentifier": "AccountFunctionalTests/testFirstLaunchLoginModesAndPasswordVisibility()",
+          "suggestedName": "functional-login-first-launch_0_0E0463DC-1911-4C2E-B479-F1CD523DB93D.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/00FCF9C8-955D-48E4-A927-EB9D91B79C35.txt",
+          "sha256": "73c29ca10e67facf1b849cb1ede9a4e12e47579a72564a018a788139182e8704",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-logged-out-accessibility_0_15783E68-4F59-44D5-BADF-8D2D21010EE8.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/64629E4A-BD1D-4002-A2B5-8E263E7A3A25.png",
+          "sha256": "9d8dfe97d8ec350b2429d6fdaa08dede0a15f9e7d2a4261cc5d2bcef5c799212",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-logged-out_0_7777DCAA-BCAF-4898-B9C1-5B559AC5F657.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/51F7FCEB-A5DF-4AFF-9684-CF12227FB4CA.txt",
+          "sha256": "62e37dd56154174a1881fbbf34b873f420b570fedaca5dee94886f5300cd1e78",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-settings-saved-disabled-accessibility_0_E6D672E7-5EB0-4B60-93ED-08C57133B5D9.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/717C266D-4B69-46CB-8843-1205F6C58AB3.png",
+          "sha256": "e2101eeaaff15e4ef5d49554d2f2e3c1a3cd088916796a02b35cec0932d51605",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-settings-saved-disabled_0_1AC0E18A-1E6D-4CB5-B019-3CD22314FA67.png"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/55936571-3ADE-4D6A-8CAB-18275EF5790C.txt",
+          "sha256": "775ae37c090a38448dfe7b9fb350c132e8eb6016dd5905351c49caaff6384c20",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-account-normal-entry-accessibility_0_1508DE4B-5A89-40CF-963C-E570365EA17A.txt"
+        },
+        {
+          "path": ".artifacts/ios/functional-20260930/ui-attachments/228D575D-01A3-45B0-BC25-C9CDB7A54381.png",
+          "sha256": "27bdeae87fcba2d7297ce869b150303235271d758330f94b212de715b0f2aae9",
+          "testIdentifier": "AccountFunctionalTests/testSettingsPersistThroughNormalNavigationRestartAndLogout()",
+          "suggestedName": "functional-account-normal-entry_0_6788B0E0-D3B3-4B98-81A2-A64DC534A146.png"
+        }
+      ],
+      "confirmedNewP1P2VisualFindings": [],
+      "limits": [
+        "All eight original PNGs were actually viewed individually; no synthetic image or replacement screenshot was used.",
+        "Three UI tests exercise normal local-owner navigation and two explicitly labeled error fixtures; they do not contact real email authentication or verify password reset/deletion remotely.",
+        "Images are default-size views on iPhone 17e simulator. They do not cover large accessibility sizes, complete scroll sweeps, touch/motion sequences or real device behavior.",
+        "Dense bright stars remain visible behind muted form and membership text; visible content is readable, but this is not a full aesthetic-polish acceptance.",
+        "Password field capture discrepancy is retained as limited evidence; keyboard layout is not marked passed from the secure-field screenshot.",
+        "Later source/driver changes require new current receipts; this evidence is bound only to the recorded source/app/test hashes.",
+        "Old visual phase failures and external AGC/config/device gaps remain unresolved; no merge/archive/product-completion approval."
+      ]
+    }
+  ],
+  "finalStatus": {
+    "recordedAt": "2026-09-29T16:27:33.436069+00:00",
+    "verdict": "BLOCKED_INCOMPLETE",
+    "currentSourceHashIndependentlyComputed": "b6d2abc12cc0f22f19b998c2439aabd54dee4641801b350cf2439a97a7d65ecf",
+    "currentProductHashIndependentlyComputed": "925baa89342df15a0fb2d576476302b328ca66fa17665c1b219a354c0ed663e6",
+    "hashMethod": "Read-only exported fingerprint/hashBuild helpers; no tests/build/app operations",
+    "historicalSameSourceEvidence": {
+      "ui": "3/3 passed with current loaded UI test SHA; 8 original PNGs individually reviewed",
+      "model": "15/16 passed; 1 deletion cleanup test failed with 2 assertions; securityd confirms missing Keychain entitlements (-34018)",
+      "originalProductHash": "5f82dedcceb20a52479440946d3d1e773ab840270d5b71116daee46ce1fb76a0"
+    },
+    "latestExperimentRuns": [
+      {
+        "receipt": "apps/ios/evidence/functional/account-tests-2026-09-29T16-25-17-049Z.json",
+        "receiptSHA256": "2532f32139d36b183c96239c93fa223943fea536ca672648d67f1ce6398d514a",
+        "sourceHash": "71dd4704397dab90476e834cf151c7fc8eeaaaa2bce3863b4451f995c699a100",
+        "appHash": "925baa89342df15a0fb2d576476302b328ca66fa17665c1b219a354c0ed663e6",
+        "exitCode": 65,
+        "provenanceOK": false,
+        "loadedTestHashes": [],
+        "logPath": "apps/ios/evidence/functional/account-tests-2026-09-29T16-25-17-049Z.log",
+        "logHashVerified": true,
+        "result": "failed: simulator could not launch com.milo.echoes.ios; not accepted"
+      },
+      {
+        "receipt": "apps/ios/evidence/functional/account-ui-2026-09-29T16-25-32-154Z.json",
+        "receiptSHA256": "62c25b8b6ae27994c67797d87b6b1ebcb0a314d63bcdb977800bce72fa0967cd",
+        "sourceHash": "71dd4704397dab90476e834cf151c7fc8eeaaaa2bce3863b4451f995c699a100",
+        "appHash": "925baa89342df15a0fb2d576476302b328ca66fa17665c1b219a354c0ed663e6",
+        "exitCode": 65,
+        "provenanceOK": true,
+        "loadedTestHashes": [
+          "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80",
+          "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80",
+          "81d244311d6ecb8a06e2d57b7f83f2d1b4019a16505958abf8b7a75ccb80bc80"
+        ],
+        "logPath": "apps/ios/evidence/functional/account-ui-2026-09-29T16-25-32-154Z.log",
+        "logHashVerified": true,
+        "result": "failed: simulator could not launch com.milo.echoes.ios; not accepted"
+      }
+    ],
+    "rollback": "Simulator ad-hoc signing experiment and diagnostic-only assertion changes were reverted. Current source fingerprint exactly matches the earlier unsigned build. The latest product on disk remains the signed experiment artifact and does not match that earlier product hash.",
+    "currentGate": "blocked/stale: do not use historical UI pass as acceptance of the current signed product or mark the failed model suite green",
+    "budget": "Coordinator reports three native build attempts exhausted; reviewer ran no additional build/test and did not reset state",
+    "notAccepted": [
+      "model suite complete pass",
+      "current product runnable/validated",
+      "remote AGC service authentication or deletion",
+      "physical device validation",
+      "old visual parity failures or motion acceptance",
+      "merge/archive/release approval"
+    ]
+  }
+}

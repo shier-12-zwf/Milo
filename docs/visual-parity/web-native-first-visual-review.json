@@ -1,0 +1,1095 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/web_native_review",
+  "reviewedAt": "2026-09-29T14:26:46.498909+00:00",
+  "reviewType": "independent-first-run-visual-and-motion-diagnostic",
+  "verdict": "needs_iteration",
+  "visualAcceptance": false,
+  "sourceAcceptance": false,
+  "scope": "First native temporal originals versus available actual Web home and natural sequence; sampled raw video frames. This is diagnostic review of a failed earlier run, not final source approval or all-53 acceptance. No source, browser, app, build or tests were operated. Video frame extractions and numerical diagnostic data are under .artifacts/ios/review-first-motion only.",
+  "visuallyInspected": [
+    {
+      "path": ".artifacts/ios/web-reference-20260929/home.png",
+      "sha256": "068451ce2aba05b1208e069f8b529a48a2de6d1a8a693081ae448e26215dca35"
+    },
+    {
+      "path": ".artifacts/ios/web-reference-20260929/motion-sequence-00.png",
+      "sha256": "736bebea0706c12853a1fb579e07d8dbc0bf179537192c6b5f8fa72c80847f10"
+    },
+    {
+      "path": ".artifacts/ios/web-reference-20260929/motion-sequence-11.png",
+      "sha256": "47a2f191ff49669daffb79dbdb0c5d97c1f3fd34c64ca75f66a96eb3e0f50a01"
+    },
+    {
+      "path": ".artifacts/ios/motion-first-attachments/7C076A92-87D2-48C4-92DE-4D4AF2193035.png",
+      "sha256": "ad84cf2a5e1584327ae37aa6e3c844fda061f8a07ef8e7737f30cf73b622b123"
+    },
+    {
+      "path": ".artifacts/ios/motion-first-attachments/CB5C76A2-5046-4A73-8F6C-987090F17E93.png",
+      "sha256": "451836a8775373941beb299b2fc1c086815d4870a21ac4b66b8a21e9374d30ea"
+    },
+    {
+      "path": ".artifacts/ios/motion-first-attachments/140DC69C-C895-46BF-A933-2FD38E837315.png",
+      "sha256": "b680329c937c1b131b2b4ce0c53acec2289f84aa0cfd9b13589c542e12c9c3ac"
+    },
+    {
+      "path": ".artifacts/ios/card-first-failure.png",
+      "sha256": "4fea0c5d7d7aa636cdee40819d493e7b6bfcce84a74b1014f0dc7c6f553e080a"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/native-video-13.5s.png",
+      "sha256": "5ee84fb8ac350122fd0e740928c21b9047156fef05cbefec5a4d668137dd6f0f"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/native-video-14.0s.png",
+      "sha256": "a6117ef9022ad4d2dd8f522e709a0f152a02c1853d6c5fe436b85ecbe65bad60"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/native-video-14.5s.png",
+      "sha256": "765426499b2b0c55bf2c0845ed9b8fb001b57622b127cdbd7c9a10d9ffc231b1"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/native-video-15.5s.png",
+      "sha256": "9162a1baafb0c4b06e91c671a16ae35b9dd1fa4f6caf8565c7bb9f08a760b3bb"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/native-video-16.5s.png",
+      "sha256": "48470e7b07f558a1509cfa9f3b5c12e6999b983be58869e917f1c09fe591981c"
+    }
+  ],
+  "supportingArtifacts": [
+    {
+      "path": ".artifacts/ios/motion-first-attachments/manifest.json",
+      "sha256": "9b9f82418907418ab31b21f8bcd1136bb1b5f8db9648122b85eb585c5c8109f4"
+    },
+    {
+      "path": ".artifacts/ios/web-reference-20260929/motion-sequence.json",
+      "sha256": "8360ae4706bb4dbbb4a3d13645f0debc4aff8a7da87cb42344aa97d029023515"
+    },
+    {
+      "path": "apps/ios/evidence/parity/motion-2026-09-29T14-18-38-484Z.mp4",
+      "sha256": "a301238ca85f8f0968db2a17a262db799545857bdb53baa54b77ce85767aba1b"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/extracted-frames.json",
+      "sha256": "66bcd424198a4a8f1a37d6a93b6e0a4b2fe86e6351e94e6ec2b4c0fd88f1f963"
+    },
+    {
+      "path": ".artifacts/ios/review-first-motion/background-metrics.json",
+      "sha256": "f48044be9ca4e40fb43ed07c7c6778e01f19e6b5e6b139c31dbc89a7c13b3df8"
+    }
+  ],
+  "findings": [
+    {
+      "id": "V1",
+      "priority": "P2",
+      "caseId": "home--mood-calm",
+      "title": "Orbit composition sits too low and leaves a large blank top region",
+      "evidence": [
+        ".artifacts/ios/web-reference-20260929/home.png",
+        ".artifacts/ios/motion-first-attachments/7C076A92-87D2-48C4-92DE-4D4AF2193035.png"
+      ],
+      "observation": "At the same 390x844 logical viewport, the Web planet center is about y320 while the first native center is about y500. Accounting for native status/safe area still leaves an excessive roughly130pt downward shift. The native gap between navigation and the orbit labels dominates the page. Planet art diameter itself is close (roughly195–200pt), so shrinking the art is not the appropriate first fix.",
+      "action": "Rebalance leading flexible space using the available safe content viewport and reserve explicit orbit bounds; recapture the default home and all mood labels. Integration owner reports a staged top-aligned layout repair, not yet verified here.",
+      "status": "open"
+    },
+    {
+      "id": "V2",
+      "priority": "P2",
+      "caseId": "home--mood-calm",
+      "title": "Selected mood label collides with the instruction line",
+      "evidence": [
+        ".artifacts/ios/motion-first-attachments/7C076A92-87D2-48C4-92DE-4D4AF2193035.png",
+        ".artifacts/ios/motion-first-attachments/CB5C76A2-5046-4A73-8F6C-987090F17E93.png"
+      ],
+      "observation": "The bottom 平静 selected label and 沿圆环旋转 instruction touch/overlap around logical y675–688. The label is positioned beyond the fixed orbit container bottom; visible default text has insufficient vertical separation. Other default peripheral mood labels in these images remain fully visible.",
+      "action": "Include peripheral label extent in measured orbit height and leave a clear gap before the hint. Verify actual selected-label bounding box and next text box after real mood changes, retaining Dynamic Type.",
+      "status": "open"
+    },
+    {
+      "id": "V3",
+      "priority": "P2",
+      "caseId": "card--orbit-theatre",
+      "title": "Selected template is vertically raised relative to neighboring template",
+      "evidence": [
+        ".artifacts/ios/card-first-failure.png"
+      ],
+      "observation": "The right selected template border/preview is about4pt above the left after the real transition. Both titles and subtitles are visible, so this is now a selection/pressed geometry issue rather than the old title clipping. The selector is very close to the fixed footer.",
+      "action": "Keep selection feedback inside invariant outer geometry; verify equal top/bottom/preview bounds and a visible footer gap after both switch directions. Integration owner reports opacity-only template button feedback staged; this review does not mark it fixed.",
+      "status": "open"
+    }
+  ],
+  "motionObservations": {
+    "natural": "Native natural probes progress from2.24917 to3.38250 to4.51584 seconds; original frames visibly change in background stars while product content remains stable. Web sequence originals also differ naturally.",
+    "touch": "Sampled native raw video frames at13.5/14.0/14.5 seconds show local star displacement and recovery near the held blank-area touch. At15.5 seconds the primary button visibly presses, and16.5 seconds shows the descriptor page. No whole-screen flash is visible in these samples. This does not certify all intermediate video frames or repeated navigation counts.",
+    "density": "Both present a layered clustered silver-on-black starfield. Initial native at large display scale appears stronger, but read-only area-normalized analysis of two background regions gives opposite relative brightness in top and bottom; a global density error is not established. Do not retune density from these unsynchronized animation phases alone.",
+    "planet": "Original smiling purple planet, facial features and hand marks remain recognizable and uncut. Its logical apparent diameter is similar on both platforms.",
+    "nativeControls": "Native primary gradient button is more prominent and the descriptor back control has a legible chevron and circular material. These are observed product differences, not yet a final independently accepted aesthetic improvement.",
+    "reduceMotion": "First run used a DEBUG forced-pause argument. Zero time/activity probes support that injected state only; no real system Reduce Motion acceptance is granted.",
+    "inactive": "First native motion run failed its inactive duration requirement. Existing supplied probes show approximately0.209 seconds from an earlier transition, not the requested background interval. No pause/resume acceptance.",
+    "webTemporalLimit": "The12 Web sequence frames span only0.765 seconds (14:17:48.360–14:17:49.125 UTC), and no Web held-touch sequence was provided here. They do not establish comparable long-term rotation direction/speed/depth cycle or touch recovery."
+  },
+  "rawProbeSamples": [
+    {
+      "name": "motion-control-after-clock_0_91E40D90-B026-429E-9A06-ADF19BC33B4C.txt",
+      "timestamp": 1790691536.013,
+      "values": {
+        "time": 8.160570958332936,
+        "active": 4.8509316869543705e-05,
+        "x": 0.49999993516814417,
+        "y": 0.1232227606539784,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-control-before-clock_0_88CE7AD4-1CA9-4CA6-A986-91A5E878DBD0.txt",
+      "timestamp": 1790691533.719,
+      "values": {
+        "time": 6.049169874999825,
+        "active": 0.021540962923024473,
+        "x": 0.08036720704816114,
+        "y": 0.19986013689316462,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-blank-after-clock_0_25E238E7-7F57-415C-B801-ACC0B45DA4BF.txt",
+      "timestamp": 1790691533.568,
+      "values": {
+        "time": 5.882503208333764,
+        "active": 0.07734609490990466,
+        "x": 0.08043281972257331,
+        "y": 0.19990706596888727,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-blank-before-clock_0_20075852-D8E8-4C45-A37D-542AC7AD515D.txt",
+      "timestamp": 1790691532.348,
+      "values": {
+        "time": 4.682503208333946,
+        "active": 0.0,
+        "x": 0.5,
+        "y": 0.5,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-natural-2-clock_0_B32F5601-328D-4718-99A8-9742AE7AD5D5.txt",
+      "timestamp": 1790691532.188,
+      "values": {
+        "time": 4.515836541666976,
+        "active": 0.0,
+        "x": 0.5,
+        "y": 0.5,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-natural-1-clock_0_630D2251-D4AB-4432-B9E4-17D42723D014.txt",
+      "timestamp": 1790691531.062,
+      "values": {
+        "time": 3.3825032083337643,
+        "active": 0.0,
+        "x": 0.5,
+        "y": 0.5,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-natural-0-clock_0_F2162222-9C70-469D-8BDA-9BE31FB81E79.txt",
+      "timestamp": 1790691529.91,
+      "values": {
+        "time": 2.249169875000552,
+        "active": 0.0,
+        "x": 0.5,
+        "y": 0.5,
+        "paused": 0,
+        "renderReady": 1,
+        "inactiveDuration": 0.20922529166728054
+      }
+    },
+    {
+      "name": "motion-reduced-after-clock_0_5A56FD5D-1B7A-4397-9CD7-064864EA9493.txt",
+      "timestamp": 1790691549.15,
+      "values": {
+        "time": 0.0,
+        "active": 0.0,
+        "x": 0.5,
+        "y": 0.5,
+        "paused": 1,
+        "renderReady": 1,
+        "inactiveDuration": 0.22128804166641203
+      }
+    },
+    {
+      "name": "motion-reduced-before-clock_0_A4F266E1-6F25-43F5-88AE-FD366F953313.txt",
+      "timestamp": 1790691545.24,
+      "values": {
+        "time": 0.0,
+        "active": 0.0,
+        "x": 0.5,
+        "y": 0.5,
+        "paused": 1,
+        "renderReady": 1,
+        "inactiveDuration": 0.22128804166641203
+      }
+    }
+  ],
+  "remainingEvidence": [
+    "Current-source recapture after home/card repairs",
+    "A longer timestamped Web sequence plus actual before/during/after blank/control/mood gestures",
+    "Real system Reduce Motion and lifecycle transition evidence",
+    "Live long-page scrolling and text entry without observer gesture interference",
+    "All53 native state captures, full overflow regions and independent per-case matched review"
+  ],
+  "recommendation": "Fix the confirmed home spacing/label and template geometry issues first; retain shader parameters until longer synchronized/comparable motion evidence identifies a concrete discrepancy.",
+  "supplementalFirstCaptureSample": {
+    "reviewedAt": "2026-09-29T14:43:23.321435+00:00",
+    "manifest": {
+      "path": ".artifacts/ios/capture-first-attachments/manifest.json",
+      "sha256": "e18c3856fb8260d497abf932c40c41ee92987f44c71c4bacb21065564fd3e73e"
+    },
+    "stateCount": 8,
+    "originalImagesVisuallyInspected": 17,
+    "samples": [
+      {
+        "caseId": "login--error",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/447D0C12-C6E3-448E-8AB8-70DFE09E9DB8.png",
+            "name": "login--error--top_0_95D4A144-7268-4814-ADE9-268D8BA6A8A8.png",
+            "sha256": "7ef851bca8a23fa30f062f582699a115c80a03e4ce6cac6826fd541ebf7c28fb"
+          }
+        ]
+      },
+      {
+        "caseId": "classify--default",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/67989234-6F6D-4EEF-94C5-B4F9786EF3D4.png",
+            "name": "classify--default--top_0_A3E5265C-5A90-49EB-8725-102266C5BFCA.png",
+            "sha256": "f60a707ba79b98cb0b1e8d555faf2c6ca0b3e32f2adbfb4a4b3c0def37fa62cb"
+          }
+        ]
+      },
+      {
+        "caseId": "past-time--custom",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/15170451-6E65-4188-8398-4FB9C55B9ED8.png",
+            "name": "past-time--custom--top_0_A32427A9-E6C1-45DF-A1AE-7DAA3CC4E471.png",
+            "sha256": "20ed1fe7fbbebf076651e9eec2e98c09f31afdeadf8e883006ccf7bebcc9070a"
+          }
+        ]
+      },
+      {
+        "caseId": "account--local--large-text",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/6FD90984-3804-44B4-90B3-00961846A612.png",
+            "name": "account--local--large-text--top_0_5845D44C-52C6-4E91-A9F9-9A3995B89731.png",
+            "sha256": "0d1140e03440cc9732dc3d8a9362516301aa3ebc7bfacb874c5505fae385495c"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/AE71A394-3561-4737-BF48-4F6C0720E876.png",
+            "name": "account--local--large-text--scroll-4_0_8A008DDE-50EA-41C2-91E3-09A14436BD9A.png",
+            "sha256": "58dda6d6dc44c1bc17628e491e9c38ed4a109882fb01cfd553797eb43abc8943"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/41351CC5-80B2-41CB-9E4A-9EFC4F39567E.png",
+            "name": "account--local--large-text--scroll-8_0_2CC9C33C-6703-4C5A-8089-475BE6A1AEAD.png",
+            "sha256": "133d15c9e9b054b1b269a7f7a3637ce761588e58ea1dd42da46693384e60e4f7"
+          }
+        ]
+      },
+      {
+        "caseId": "ai-settings--personal--large-text",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/344A8C5B-15C0-4D68-83C8-947B1BD10D54.png",
+            "name": "ai-settings--personal--large-text--top_0_FD3C4AFA-E56E-4619-B69F-E89AEAC95E75.png",
+            "sha256": "c373576468628472c82996c1beb1e8309995ea592f5107e02d03d25ee6954cd8"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/3CDE3460-78A6-461D-B94E-DCEED05ABC4C.png",
+            "name": "ai-settings--personal--large-text--scroll-6_0_3C26F2AF-C76C-4B01-B81A-580FDD6C14CD.png",
+            "sha256": "3a1690fca0617bf968ee69dd26ddb26177f90123ca60192ee0cb09290db6ddba"
+          }
+        ]
+      },
+      {
+        "caseId": "chat--conversation--large-text",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/A5B2821A-919C-47C5-8462-EEFD3F381AB4.png",
+            "name": "chat--conversation--large-text--top_0_D58DF71E-BD8A-4C13-B4BA-EA23B807DE5F.png",
+            "sha256": "a41f60bcd5dd4fd38f5e48014cb49b68c1066fdfbb4c6bf9031d732c7c8cf0c2"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/DAB6497E-D77D-4EE5-B3E2-B4AA4AF396C1.png",
+            "name": "chat--conversation--large-text--scroll-3_0_6F3E9554-BD60-4CC4-A358-382AC7AACBD8.png",
+            "sha256": "d47f295a62adb91add3544784b7c22576d3ed3b14f0ee75be8dde6515a53531a"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/94FD303C-8D14-4B57-AD9D-6BBB8EBE8BC0.png",
+            "name": "chat--conversation--large-text--scroll-6_0_51C7A3D2-9971-43C0-AE9B-942E693F7602.png",
+            "sha256": "e3eb313b3203a2374519bb8b472ec7020cc75f84fc851f4bda0276f3a8ca1b4f"
+          }
+        ]
+      },
+      {
+        "caseId": "diary--long--large-text",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/4FC437D6-617D-4240-8B8D-49A5F8363D30.png",
+            "name": "diary--long--large-text--top_0_3E20C060-2C1E-4F3B-B173-3A66FB384CBB.png",
+            "sha256": "437be70e338f300af2dae0c8a8ca9408f7f8246dfcd216f08ed885b29b06cb98"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/8E48AFF6-8A53-4ED2-8824-81F9353E3813.png",
+            "name": "diary--long--large-text--scroll-10_0_893FB51B-4167-4F99-97F3-CE8997B9EA82.png",
+            "sha256": "44ac5dd50c37b14c2034ed53f3257c8318de5c08a3f7de8f94534cbf6ce2da3c"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/23BA9292-5004-4B0B-8FE6-499C95AEF8D8.png",
+            "name": "diary--long--large-text--scroll-21_0_24B7B4DD-AD96-4A94-8220-8F1FC8B94C53.png",
+            "sha256": "b7439032123c9850427655eede0511b2997985297e442f2a66c8b15d06552d15"
+          }
+        ]
+      },
+      {
+        "caseId": "detail--transcript-expanded--large-text",
+        "images": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/C5072C2D-526C-4613-BDD2-1F79FD622667.png",
+            "name": "detail--transcript-expanded--large-text--top_0_C2389772-BE7D-4BB1-9275-B6FFF4C0B8D5.png",
+            "sha256": "36eca8d6539939d971e992843fe07cac585ad0f64fcd03c82bd72cdce2c63f05"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/40E1242B-A829-4E32-A537-E483FB842F6D.png",
+            "name": "detail--transcript-expanded--large-text--scroll-12_0_AC5CA862-4C27-4B5D-A3DB-5E6CFBD940D4.png",
+            "sha256": "16dfda805ff309814b778a594f02e699b98af1880c3946a84f6dacfee31d10b9"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/24678F1C-59C2-4A2A-B1F6-FDEFABA61359.png",
+            "name": "detail--transcript-expanded--large-text--scroll-25_0_AE1237E2-5AF3-4746-82EB-A7343F5DF0DA.png",
+            "sha256": "9d8ad97111b29e52afc8ffef510ecbbda318480f49a288d8b37e15f3c3a2ded7"
+          }
+        ]
+      }
+    ],
+    "newP2Findings": [],
+    "observations": [
+      "Login error text is complete; classify choices and custom-time input/actions are distinct and unobscured in the sampled default state.",
+      "Sampled large account content stays within horizontal margins; the final notice and tagline end above the persistent logout/delete controls.",
+      "Sampled chat large header and offline notice are tall, but message body and bottom actions remain separately visible. The final message bottom is visible at the captured end. This is not proof of keyboard-state usability.",
+      "Sampled large diary paragraph text wraps within its panel and the final punctuation and 编辑日记 control are visible above the fixed save bar.",
+      "Sampled large detail date/mood/transcript text remains within margins and the final assistant question is visible above the fixed card action.",
+      "First AI large images reproduce the already-known horizontal clipping; the integration owner reports its source fix is in the second run. It is not duplicated as a new finding or marked resolved without new evidence."
+    ],
+    "limits": [
+      "This was diagnostic sampling of FIRST-run originals only while the second run executed. It grants no current-source or paired Web acceptance.",
+      "For overflowing cases only the listed top/middle/end originals were inspected; unlisted intermediate captures were not visually reviewed and continuous coverage is not certified.",
+      "No native interaction, browser operation, source modification, build or test was performed.",
+      "Existing home/card findings remain in the earlier record. No speculative priority was assigned to subjective style preferences or expected text cropping at scroll viewport edges."
+    ],
+    "acceptanceGranted": false
+  },
+  "followUpVisualReviews": [
+    {
+      "reviewedAt": "2026-09-29T14:51:33.649188+00:00",
+      "run": "second-native-run",
+      "scope": "Default-size native home at calm, natural phases, real selection of bright, and descriptor navigation; comparison with previously inspected Web home and three samples from the longer natural Web sequence.",
+      "visuallyInspected": [
+        {
+          "path": ".artifacts/ios/motion-second-attachments/80B91365-953D-4ED9-BF45-D42C50CEE558.png",
+          "sha256": "85e86a0d5d9dba7f96bca431c8bf976d1e07098e8a4164561ae551fd63070116"
+        },
+        {
+          "path": ".artifacts/ios/motion-second-attachments/737C565B-107C-4C43-8067-AFC82D060DD7.png",
+          "sha256": "5bd03ff439df112956eedbee54d9f533ffdfa1cf1cd405f71b81360f9fd3ae9f"
+        },
+        {
+          "path": ".artifacts/ios/motion-second-attachments/175CFC4F-2DF2-451F-B3DE-0CA62E16F867.png",
+          "sha256": "693ac1ddd5019800966cd4c039af704a63da853691251ac1f10fb50eaf2c5c38"
+        },
+        {
+          "path": ".artifacts/ios/motion-second-attachments/B627617F-59F2-4365-901C-078BCC701C11.png",
+          "sha256": "0ddc16a2b0bfad7853521ffe1c1e5849ee906293c22d0c0bbb96684411988f27"
+        },
+        {
+          "path": ".artifacts/ios/web-reference-20260929/natural-long-00.png",
+          "sha256": "a09738e4648e87cb4954942b256de863c21fb9cc30640304b52f1966ca93e130"
+        },
+        {
+          "path": ".artifacts/ios/web-reference-20260929/natural-long-30.png",
+          "sha256": "33cf3195688654de56942035a66a8fa6da11b872e4de6c69d354a7bf34950f0e"
+        },
+        {
+          "path": ".artifacts/ios/web-reference-20260929/natural-long-59.png",
+          "sha256": "e3acd178485316635ebc30cbd0796709f300a8307e3e0d0291e07ad1fff7bc81"
+        }
+      ],
+      "supportingFiles": [
+        {
+          "path": "apps/ios/App/Journey/HomeView.swift",
+          "sha256": "eab7bc53d5e41eb93dc2a8110d98e71dc83919e77521af5e49a0de7b9535e569"
+        },
+        {
+          "path": ".artifacts/ios/motion-second-attachments/manifest.json",
+          "sha256": "d95646862d378edba09da8ab9d05caf64e43ba268afe1e4d3e5ee2a1f8b6e641"
+        },
+        {
+          "path": ".artifacts/ios/web-reference-20260929/natural-long.json",
+          "sha256": "6da1efe19e278a2b77bc39e5828b77c6c336f7de1b492447e40c81658a3569e3"
+        }
+      ],
+      "resolvedForSampledStates": [
+        {
+          "id": "V1",
+          "status": "resolved_in_sampled_default_states",
+          "notes": "Orbit center is now approximatelyy335–340 logical points versus Web about320; the prior roughlyy500 center and large unused gap are gone. The primary button remains entirely visible and the star/planet remains central. The remaining native safe-area/header differences are proportionate in these samples."
+        },
+        {
+          "id": "V2",
+          "status": "resolved_in_sampled_default_states",
+          "notes": "Both calm and bright selected labels have clear separation from the instruction text; no touching or overlapping text visible. The fixed400pt orbit container now includes the peripheral label extent."
+        }
+      ],
+      "newP2Findings": [],
+      "observations": [
+        "Original planet is complete; all default calm labels and the selected bright label are readable in inspected images. Peripheral bright-state longest label reaches close to the right screen edge; this sample does not establish all mood or large-text bounds.",
+        "The branded primary capsule is more prominent than the Web glass button, consistent with the requested native action polish. No full aesthetic acceptance is inferred from these few views.",
+        "Longer Web first/middle/last originals visibly change the star field over about5.6seconds. These unsynchronized samples do not establish exact native/Web speed or response equivalence.",
+        "System return-to-Settings text appears in the native status area after actual Settings navigation; it is genuine system chrome and has not been removed from originals."
+      ],
+      "limitations": [
+        "No full53-state review, no largest-text home review, no complete native/Web video comparison.",
+        "Card V3, lifecycle and real Reduce Motion remain incomplete; integration owner reports second-run failures under investigation.",
+        "Source is frozen during ongoing capture; no app/source/build/test operation was performed by this reviewer."
+      ],
+      "phaseAcceptance": false
+    },
+    {
+      "reviewedAt": "2026-09-29T15:05:20.851711+00:00",
+      "scope": "Run2 AI settings personal large text: top, scroll3, scroll7. Default now-note keyboard-long: top and scroll2.",
+      "files": [
+        {
+          "path": ".artifacts/ios/capture-second-attachments/D41DA320-4B0E-4B54-8EA3-52D9EB8BAAF6.png",
+          "sha256": "9b1f1d076160bab4d2b269e268e29131b971cebe57175ad68013fd142f7d28e6"
+        },
+        {
+          "path": ".artifacts/ios/capture-second-attachments/66983887-9433-452A-808A-889FDF6727D2.png",
+          "sha256": "c7b825cb48734307062076897327b0016df8407e853f29be7855b5e4ce244dbb"
+        },
+        {
+          "path": ".artifacts/ios/capture-second-attachments/9106E30E-1EB8-462E-95A0-313604FF712C.png",
+          "sha256": "17c9a7cc0b088375e96e6350727c88a24407a115317f7d17d2cfd23345fd7741"
+        },
+        {
+          "path": ".artifacts/ios/capture-second-attachments/D3CB38D8-3AD6-4921-B791-7013B104CA93.png",
+          "sha256": "253c3146d0c24367a1d0e0249e3b2f7b7133403b1c02ed5be5962274d2d274d8"
+        },
+        {
+          "path": ".artifacts/ios/capture-second-attachments/5262C2D7-F4E2-4E58-A3D3-1FA684B6B3AA.png",
+          "sha256": "5e94fa8acc4d55ac03bd8566848218421eb6cd113ccc2327fc992a0d695a3c62"
+        }
+      ],
+      "resolvedForSampledStates": [
+        "Previously reported AI settings horizontal clipping is absent in sampled large-text originals; labels wrap within margins and end actions are fully visible."
+      ],
+      "newP2Findings": [
+        {
+          "id": "V4",
+          "priority": "P2",
+          "title": "Keyboard Done toolbar visibly overlaps save footer",
+          "evidence": [
+            "D3CB38D8-3AD6-4921-B791-7013B104CA93.png",
+            "5262C2D7-F4E2-4E58-A3D3-1FA684B6B3AA.png"
+          ],
+          "observed": "The floating 完成编辑 pill intersects the lower-right portion of 收藏这一刻 in both default keyboard originals. Primary label remains readable; no claim that its central tap is blocked.",
+          "suggestedRepair": "Reserve vertical space between keyboard toolbar and bottom action so control bounds do not intersect; preserve actual keyboard and default/large text checks."
+        }
+      ],
+      "limits": [
+        "Initial top capture places editor below viewport; capture positioning is not enough to diagnose normal focus behavior, so no production auto-reveal defect asserted.",
+        "Large-text note coverage failure remains under separate repair. No all53 or whole-suite acceptance."
+      ],
+      "acceptanceGranted": false
+    },
+    {
+      "reviewedAt": "2026-09-29T15:24:01.850355+00:00",
+      "scope": "Third journey original card/large-text editor diagnosis; no source edits, app actions or test executions. Existing failed results remain failed.",
+      "files": [
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/manifest.json",
+          "sha256": "fd3f58a1697a0f872bffefb575844e203cfb68cfbddb8b29de4fa38537650b5e"
+        },
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/F0DEC6C5-A770-4337-A644-4B5A0D7C603D.png",
+          "sha256": "f3e4e079201721ae4e19e54beca9f30e146f4ed959a86f6c5c987e6c038b5248"
+        },
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/3582106C-28F3-431A-B527-5F9FC9DBD174.png",
+          "sha256": "41ce06c3058ee9603f477c04e861e943cf98b6af59099a3f31e13b9148b05718"
+        },
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/9016C7F1-C932-44B1-8E65-8B20C3E8F6BE.png",
+          "sha256": "a735fda1a2e3330e9b97879e982cc40c49b7999cad9c4930e4f501d523cb271c"
+        },
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/E0F0C111-6AFF-4B43-99E1-5333277A20EB.png",
+          "sha256": "079ddbb6d2ab52e244f4d6deee29ed5798c5bc8e58ce3a1099aabdb4d120bca6"
+        },
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/9CE46121-7FD7-41B6-BD08-0D6AC596FF0F.txt",
+          "sha256": "f9e6441842f03f17d0379d68c8cd19eb709da33064cbe52d6d2518b4b0e5eb6d"
+        },
+        {
+          "path": ".artifacts/ios/journeys-third-attachments/67B1A35B-6FE0-442F-9501-63249643A0D2.mp4",
+          "sha256": "e9062bad287ba2cc5570eedd2444c0db47d2c4530cfbd589e0f32058e437da06"
+        },
+        {
+          "path": ".artifacts/ios/review-first-motion/run3-editor-tail-7_5.png",
+          "sha256": "14408a29511c1606ba37d6f42e093ab6f6723c9d23137cb6e5cd02fda44ff05e"
+        },
+        {
+          "path": ".artifacts/ios/review-first-motion/run3-editor-tail-8_2.png",
+          "sha256": "29e091b9ae7eeecffb8bbb6c9708bbd5a02b0ea7d29f500c32e9b42afd8bbe0e"
+        },
+        {
+          "path": "apps/ios/UITests/MiloUITests.swift",
+          "sha256": "af380d0abe28349758d618b395a1de1a86730afda0e2d6246f4372810874f650"
+        },
+        {
+          "path": "apps/ios/App/Journey/RecallViews.swift",
+          "sha256": "f1a8c5f630b7aaa5af4cb8c72b8e6d7a0eb5d9d38e8d4ab77d0111ad9b6abd7f"
+        },
+        {
+          "path": "apps/ios/App/Design/ParityScrollMetrics.swift",
+          "sha256": "99acef7b5ccac89200e3d88828544cea5a797d37427063dc0b408dcfa1eea688"
+        }
+      ],
+      "cardAssessment": {
+        "status": "visible_alignment_improved_but_tests_failed",
+        "observed": "Three original card snapshots show aligned template columns and full title/subtitle text. Selected template does not visibly jump above neighboring column. There is no discernible content/footer overlap in these sampled originals.",
+        "measured": "Same-snapshot AX reports both template minY569.3333129882812. Save minY733.6500244140625 minus12 gives721.6500244140625, while reported button maxY721.666687 exceeds it by0.0166626pt, about0.049988 physical pixels at3x. This is a subpixel clearance-boundary failure rather than visual evidence of occlusion.",
+        "limits": "Do not reclassify failed tests as passed, relax the assertion, or claim all switches/states accepted."
+      },
+      "resolvedForSampledStates": [
+        {
+          "id": "V4",
+          "status": "resolved_in_sampled_large_text_keyboard_state",
+          "notes": "Run3 actual keyboard screenshot E0F0C111 shows Done above Save with clear separation and both complete; former floating-pill intersection is absent."
+        }
+      ],
+      "newP2Findings": [
+        {
+          "id": "V5",
+          "priority": "P2",
+          "title": "Actually typed large-text tail is not automatically revealed",
+          "observed": "Test entered text ending 这里是实际输入的最后一句。 and passed full field.value equality before failing caret containment. The final recorded video frame (PTS8.285s, extracted with seek8.2) visibly remains on the preceding paragraph ending 我想记住这段安静的时间。 The newly typed final sentence and caret are not visible.",
+          "diagnosis": "This corroborates a real text-entry visibility problem; it is not justified to dismiss the177.667pt caret-versus-viewport difference as rounding. The added footer reserves more height, but exact UIKit auto-scroll/layout mechanism is not proven by these artifacts.",
+          "source": "apps/ios/UITests/MiloUITests.swift:288",
+          "limits": "The persistence portion of this test did not execute after the first assertion failure. No additional execution is authorized by this review."
+        }
+      ],
+      "acceptanceGranted": false,
+      "motionScopeNote": "Parent reports motion3 loaded an older test runner while actual app binary was new. This review does not approve or reject C2/C3 based on that stale test execution."
+    },
+    {
+      "reviewedAt": "2026-09-29T15:40:45.217273+00:00",
+      "scope": "Final bounded run3 original-image sample: home calm1; AI personal large-text all8 scroll images; default and large-text note keyboard first/last2each. Total13 originals visually inspected; no source edits/test/app operations.",
+      "index": {
+        "path": ".artifacts/ios/capture-third-attachments/case-index.json",
+        "sha256": "7a83652d2eb7c53111d83ba93129a3ab2c47ad6f012ec0d7435f86459365303e"
+      },
+      "sourceReferences": [
+        {
+          "path": "apps/ios/App/Journey/HomeView.swift",
+          "sha256": "eab7bc53d5e41eb93dc2a8110d98e71dc83919e77521af5e49a0de7b9535e569"
+        },
+        {
+          "path": "apps/ios/App/Journey/RecallViews.swift",
+          "sha256": "f1a8c5f630b7aaa5af4cb8c72b8e6d7a0eb5d9d38e8d4ab77d0111ad9b6abd7f"
+        },
+        {
+          "path": "apps/ios/App/Design/ParityScrollMetrics.swift",
+          "sha256": "99acef7b5ccac89200e3d88828544cea5a797d37427063dc0b408dcfa1eea688"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureGeometry.swift",
+          "sha256": "55f77e77c0f67f2833bba4981d4435f34059c3f955185edf36d675f89faea0f5"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureTests.swift",
+          "sha256": "c6dbc7dc7661377a9a48b6a4cf423146a3597a5aca5f380712bdfcb659a12bc0"
+        },
+        {
+          "path": "apps/ios/App/Account/AISettingsView.swift",
+          "sha256": "f07a58307a805cf601907265a2d6dade33f2365d10464ebb94b8aecdd69f5530"
+        }
+      ],
+      "cases": [
+        {
+          "id": "home--mood-calm",
+          "visuallyInspected": [
+            {
+              "name": "home--mood-calm--top",
+              "path": ".artifacts/ios/capture-third-attachments/4493FB22-58E8-4E7E-AE4A-0AA64D085791.png",
+              "sha256": "236d0d25a7a4c7793c6a008a9555150ad0cb022b48c7dc64d5e8a7c9af7ab3ac",
+              "capturedAt": "2026-09-29T15:27:28.610000+00:00"
+            }
+          ]
+        },
+        {
+          "id": "ai-settings--personal--large-text",
+          "visuallyInspected": [
+            {
+              "name": "ai-settings--personal--large-text--top",
+              "path": ".artifacts/ios/capture-third-attachments/3FED7AE8-E927-4FA1-A8A6-7296CF181357.png",
+              "sha256": "9b1f1d076160bab4d2b269e268e29131b971cebe57175ad68013fd142f7d28e6",
+              "capturedAt": "2026-09-29T15:19:22.296000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-1",
+              "path": ".artifacts/ios/capture-third-attachments/AA83199A-EC0A-4391-B776-56D4458B1F4D.png",
+              "sha256": "b2c0e3f5ce9f2408595f727d1143d5d40146f409c3f8cea3697ed6d45bbc3696",
+              "capturedAt": "2026-09-29T15:19:25.505000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-2",
+              "path": ".artifacts/ios/capture-third-attachments/2B929A7D-38D5-49F4-B4CA-6E06624114BF.png",
+              "sha256": "93411ca969e64a8ed327ffa5e2eceb07b4002cb2d410b17d5bf65c04d1c995c3",
+              "capturedAt": "2026-09-29T15:19:29.673000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-3",
+              "path": ".artifacts/ios/capture-third-attachments/FAA7C8C0-AD28-4FBB-813D-2F969E38590D.png",
+              "sha256": "c7b825cb48734307062076897327b0016df8407e853f29be7855b5e4ce244dbb",
+              "capturedAt": "2026-09-29T15:19:34.952000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-4",
+              "path": ".artifacts/ios/capture-third-attachments/15ADBC2B-F3DD-4F41-B9E4-F581AD3FA749.png",
+              "sha256": "32122574782572e47ccb4516cc3acbc768053b926df02d3237b00eda81f22fca",
+              "capturedAt": "2026-09-29T15:19:38.978000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-5",
+              "path": ".artifacts/ios/capture-third-attachments/1C603EC1-992D-4880-A2F6-021D22A86618.png",
+              "sha256": "f956e56aea8ab60f4cf56446709ab2935d8ff11a879b0a12a304502b25368781",
+              "capturedAt": "2026-09-29T15:19:43.652000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-6",
+              "path": ".artifacts/ios/capture-third-attachments/83BCCC09-BE9E-4971-81C2-2A3FBFF77DA3.png",
+              "sha256": "f9741c67cb5eff382d4f88da53fd52c297fb557a760779d0bf84d967319c117b",
+              "capturedAt": "2026-09-29T15:19:48.622000+00:00"
+            },
+            {
+              "name": "ai-settings--personal--large-text--scroll-7",
+              "path": ".artifacts/ios/capture-third-attachments/C33399E8-8A02-49A1-8E33-BEE775D575A2.png",
+              "sha256": "17c9a7cc0b088375e96e6350727c88a24407a115317f7d17d2cfd23345fd7741",
+              "capturedAt": "2026-09-29T15:19:53.301000+00:00"
+            }
+          ]
+        },
+        {
+          "id": "now-note--keyboard-long",
+          "visuallyInspected": [
+            {
+              "name": "now-note--keyboard-long--top",
+              "path": ".artifacts/ios/capture-third-attachments/8E37BC7E-6A9C-4C70-B14F-E195C2386A5F.png",
+              "sha256": "55371550426c015bb488b4ea382cbe8f1a24a292cb74ee1b35a0c768d2b5f6df",
+              "capturedAt": "2026-09-29T15:28:40.600000+00:00"
+            },
+            {
+              "name": "now-note--keyboard-long--scroll-1",
+              "path": ".artifacts/ios/capture-third-attachments/BAB57345-9E91-4B6F-8F4D-BDE648586962.png",
+              "sha256": "d13d0dd4e92a0f083eaded397a865d0ae282bb1b3fae2e8e79dbff82f5d1603a",
+              "capturedAt": "2026-09-29T15:28:46.447000+00:00"
+            }
+          ]
+        },
+        {
+          "id": "now-note--keyboard-long--large-text",
+          "visuallyInspected": [
+            {
+              "name": "now-note--keyboard-long--large-text--top",
+              "path": ".artifacts/ios/capture-third-attachments/46EB9FF3-CA03-40CD-B2D7-CE25AB20B86E.png",
+              "sha256": "def4e190656d6a9e52de5b4fc0dd11d3bbd8a30ba6f1d5244d80f7b3107aa0ef",
+              "capturedAt": "2026-09-29T15:29:07.213000+00:00"
+            },
+            {
+              "name": "now-note--keyboard-long--large-text--editor--scroll-54",
+              "path": ".artifacts/ios/capture-third-attachments/7A07503F-1C52-46D6-91AD-BF3CD70296F4.png",
+              "sha256": "e198c483aa4627d42443eb2d8a9466fd5ccb69cb5c69048cd25fc88e7e1e1b36",
+              "capturedAt": "2026-09-29T15:35:23.510000+00:00"
+            }
+          ]
+        }
+      ],
+      "localConclusions": [
+        "Home calm: complete centered planet, peripheral labels readable, selected calm label separated from hint, primary button fully visible. Earlier sampled V1/V2 improvements persist. This is one calm default state and says nothing about live motion or all moods.",
+        "AI personal large text: all8 original images reviewed. Service/model/address/API-key field and consent/privacy descriptions wrap within horizontal margins; final Test connection/Delete saved key actions fully visible above Save. Content cut at intermediate scroll edges is revealed in adjacent images. Previous horizontal-clipping finding remains resolved for this state.",
+        "Default and large-text keyboard originals show Done in its own row above Save with clear separation; both action labels and software keyboard are fully visible. V4 is resolved in these four sampled originals. This does not establish whole editor content or insertion-tail visibility.",
+        "Default keyboard receipts show outer offset0 then411 with viewport320, hence missing overlap and a91pt unobserved interval (the validator additionally requires overlap, yielding a289pt maximum allowed step). Both bracket flags are true. The first image already displays the editor rather than the page title/planet even though its outer receipt says0; matching two readings alone therefore does not establish image/geometry correspondence. Do not use this failed series to approve continuous coverage.",
+        "Large-text final receipt is editor offset6843.3333 of max8077 with196pt visible viewport. Thus approximately1233.6667pt remain before bottom; the60-image cap was reached. The sampled last image contains an interior portion of repeated text and does not prove the true last line. Existing V5 from the real typing journey remains unresolved."
+      ],
+      "newProductP2Findings": [],
+      "limits": [
+        "Only13 images across these4 states inspected in this task; no other state reviewed now.",
+        "No all53 visual, whole product, real device or motion acceptance. Parent reports51/53 capture and8/11 journeys; motion3 stale test bundle is invalid for current-test acceptance.",
+        "Failed keyboard evidence stays failed. No fourth run, assertion relaxation, metadata repair or source change made by this reviewer."
+      ],
+      "acceptanceGranted": false
+    }
+  ],
+  "additionalFirstCaptureSample": {
+    "reviewedAt": "2026-09-29T14:56:04.881674+00:00",
+    "scope": "Ten additional first-run default-size states; eleven native originals and nine actual Web screenshot candidates visually inspected. Native app/test/source unchanged by reviewer.",
+    "cases": [
+      {
+        "id": "home--words-empty",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/165FDA2F-99CC-4988-B6C9-D274807AC20A.png",
+            "sha256": "85e53dda22c6bb0aeb81277de8fabeb84fc4833597743ab54902da7bcc9e6bfd",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/home--words-empty.png",
+          "sha256": "d429524e1132896bcb426a743c71d1a73621155b72d23d2396001bafd994b400",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/home--words-empty.json",
+          "sha256": "3e2237627d968a5d22e8e9227c22287a1fe1a36d4202d9f9f7d0b078afdb3908",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:44:25.238Z",
+            "action": "Selected calm and clicked 就是这种感觉; no word selected."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:44:25.238Z"
+      },
+      {
+        "id": "now-note--empty",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/620E0374-9741-4E2A-84B0-ADFACA137908.png",
+            "sha256": "eb14dd2861f7274fafaca6a3fd11d348460b9c59f0531880b10bc120150b17a3",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/now-note--empty.png",
+          "sha256": "f519ac0e51883bc10d5fec9293bf3117b218baf0531e9ffcd8ccf2aaa2f4f232",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/now-note--empty.json",
+          "sha256": "d7db88c29a951a14859117c5a6d5df792ac1d15e323b7e71ef1a094bf359ec42",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:44:43.645Z",
+            "action": "Clicked 它属于此刻; empty editor visible."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:44:43.645Z"
+      },
+      {
+        "id": "now-note--written",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/5143CF6B-B193-4B65-8254-F9ED4AC949AE.png",
+            "sha256": "28ef02cb791c42d6d6a01c7874abab9dd66fd7f73c481568ac348c07641deb37",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/now-note--written.png",
+          "sha256": "0838e827cb5b17c8cd478dce27f1b3c124852cb17c46a1471f787552530683a1",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/now-note--written.json",
+          "sha256": "491375e40876f278402dafdea506f171ea1c69a27e532355b0835d0c01e783fc",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:44:43.749Z",
+            "action": "Typed synthetic note 今天慢慢走了一段路，风很温柔。; did not save a new entry."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:44:43.749Z"
+      },
+      {
+        "id": "chat--opening",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/38C6AF80-97F5-478E-AAFD-3A3B6E145280.png",
+            "sha256": "2dd2d3b57dfc903f7cc7bb8590d5a59aae30dd45dc453d648bf11f20471787ca",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/chat--opening.png",
+          "sha256": "f88b42edd3dd5c448023b514e8fe9e2b31a08209a1c99666efc4681fd1610f2c",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/chat--opening.json",
+          "sha256": "3d77d944de3317be7519b5278e978c329854ae72c064f83adf681323e16818f9",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:45:13.995Z",
+            "action": "Selected 去年夏天 and entered recall; observed opening guide."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:45:13.995Z"
+      },
+      {
+        "id": "diary--enabled",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/7C7CEF25-CE0E-4912-A091-7C2CC24F95B8.png",
+            "sha256": "96a9523ef8e277374009b2e0209f4bc22c5f0568cf118d48ba28d2df8a31c53a",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/diary--enabled.png",
+          "sha256": "68f1ee1d49648f3fa548143412da406cce89c5c59558bd00caed210f827bc46b",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/diary--enabled.json",
+          "sha256": "995af513be6e32fd53bfd2b37978ab76f07e66b5f5b9fb40ef7b0168a5d0b8bb",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:46:17.667Z",
+            "action": "Clicked 沉淀这段回忆; enabled diary displays the actual synthetic memory."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:46:17.667Z"
+      },
+      {
+        "id": "diary--disabled",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/F38F6556-AF28-4498-A96E-2BEC8027A27C.png",
+            "sha256": "798c7b14d3e748ea3f556f632f0c45c715a929d154c8d1178d74f5881121c503",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/diary--disabled.png",
+          "sha256": "e5509aba33df6371f171c5d98db2f2d10966dcbc17d34ee58b17662e45068fc5",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/diary--disabled.json",
+          "sha256": "f47eb443b7cfc14ca0fdd02dc634b8e9644e4370961d6d78452eebdc6215ad97",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:46:27.906Z",
+            "action": "Finished editing and disabled diary; transcript-only state visible."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:46:27.906Z"
+      },
+      {
+        "id": "timeline--empty",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/36ABDD6C-30C3-436F-BADA-C7198E6A2FB4.png",
+            "sha256": "845e4f69dd6d984e817b1f689da262f6b4c81842b94329752b614cc166a26283",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": null
+      },
+      {
+        "id": "timeline--populated",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/A2404553-BA75-40E3-9934-17AA4438696F.png",
+            "sha256": "08efe4abbcfbe2892c58a8089d02ad856d28f743455ebb2b57d85fdce00bf698",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/timeline--populated.png",
+          "sha256": "c1752566352c747925f392a4e4af6566d2a71c454c6560b43dd6cce6056ae76f",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/timeline--populated.json",
+          "sha256": "1b8830a96530633dc8e65cf082ca4d33f19aaf2115c67f4ea95c5bb7bed75708",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:47:20.504Z",
+            "action": "Saved synthetic past note; collection has two test-created entries dated September29 rather than native fixed September26."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:47:20.504Z"
+      },
+      {
+        "id": "detail--now",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/1F15C0C0-3194-4ACF-9DD3-256A88ACF98C.png",
+            "sha256": "2855365e750b81a32390cf375e5b9907684b2b8b027a9c559fa97bf3b7c5cf6c",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/detail--now.png",
+          "sha256": "c43212389dfc632833f4ea232e0a0dd5f972433221560edecd2042a32c4425f3",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/detail--now.json",
+          "sha256": "980c5b46b7a5c0c282d1f3e011f9af7251b2ab0d21e10b0ef9d733ca31305776",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:48:05.093Z",
+            "action": "Opened previously test-created short present note; actual date September29; 放下 is direct-delete affordance without confirmed modal, not activated."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:48:05.093Z"
+      },
+      {
+        "id": "card--planet-letter",
+        "nativeOriginals": [
+          {
+            "path": ".artifacts/ios/capture-first-attachments/E7637407-AD64-49CB-ABE2-7D022AE3520B.png",
+            "sha256": "4c15746f25ab9e6f5c1177935dbfa6c248199cee5b032b5c2b3b39f0efa7e3b0",
+            "actualSignature": "PNG"
+          },
+          {
+            "path": ".artifacts/ios/capture-first-attachments/36EC32EE-4182-43DD-86C8-B1016BED6BBA.png",
+            "sha256": "41ce06c3058ee9603f477c04e861e943cf98b6af59099a3f31e13b9148b05718",
+            "actualSignature": "PNG"
+          }
+        ],
+        "webOriginal": {
+          "path": ".artifacts/ios/web-cases-20260929/card--planet-letter.png",
+          "sha256": "cf1c28f5b972a01dd3498971ac791a8e2ef54f34dad203d804f30876aeadaf83",
+          "actualSignature": "JPEG"
+        },
+        "webActionRecord": {
+          "path": ".artifacts/ios/web-cases-20260929/card--planet-letter.json",
+          "sha256": "2f0daa3b013cfe3679d876fedf8304da62d59ed5fe4916514b3a42069aa83ce2",
+          "actualSignature": "metadata"
+        },
+        "reportedActions": [
+          {
+            "observedAt": "2026-09-29T14:48:16.608Z",
+            "action": "Switched orbit→planet using actual template button; synthetic short note and actual date retained."
+          }
+        ],
+        "reportedCapturedAt": "2026-09-29T14:48:16.608Z"
+      }
+    ],
+    "newP2Findings": [],
+    "observations": [
+      "The word-selection ring, optional note placeholder/written text, chat opening composer, diary toggle and save action, timeline rows, detail body and card text are visibly available; no new definite clipping, overlap or hidden actionable content identified.",
+      "The card top viewport partly hides the next template section behind the fixed footer, but the inspected bottom screenshot exposes the full two template choices and both captions; this is scroll position rather than a new unreachable-content finding. Existing selected-card elevation finding and run2 card failures remain separate.",
+      "Native now-note, diary and detail put the primary action in a bottom action bar, whereas Web lays it immediately after the content. Native word-ring content is lower on the page than Web. These are visible composition differences, not a claim of exact page fidelity or aesthetic superiority.",
+      "Native detail uses a complete calm planet illustration while this Web detail candidate shows a different face/pose. Static captures are insufficient to distinguish intended image selection from animated-frame timing; this needs image-bound parity review, not a speculative layout repair.",
+      "Several fixture strings, dates and word counts differ across supplied Web/native candidates. These comparisons can catch layout defects but cannot establish equal-fixture acceptance. The timeline-empty sample has no matching actual Web image in the inspected candidate directory."
+    ],
+    "limits": [
+      "Not current run2 evidence and not all53 acceptance. No large-text or keyboard proof added by this sample.",
+      "Web screenshots have JPEG magic despite historical .png names; byte-preserving .jpg rename/symlink aliases are acknowledged. Image inspection used actual bytes; format-aware Web gate repair is pending separate review. Native originals have PNG magic."
+    ],
+    "acceptanceGranted": false
+  },
+  "diagnosticProposals": [
+    {
+      "createdAt": "2026-09-29T15:35:40.568431+00:00",
+      "status": "read_only_proposal_not_implemented_or_verified",
+      "relatedFinding": "V5",
+      "files": [
+        {
+          "path": "apps/ios/App/Journey/RecallViews.swift",
+          "sha256": "f1a8c5f630b7aaa5af4cb8c72b8e6d7a0eb5d9d38e8d4ab77d0111ad9b6abd7f"
+        },
+        {
+          "path": "apps/ios/App/Design/ParityScrollMetrics.swift",
+          "sha256": "99acef7b5ccac89200e3d88828544cea5a797d37427063dc0b408dcfa1eea688"
+        },
+        {
+          "path": "apps/ios/App/JournalView.swift",
+          "sha256": "6f64e647ea4a309c9ec5b825c50ab93c710339668ca039e631fb24d59bbabb9f"
+        },
+        {
+          "path": "apps/ios/UITests/ParityCaptureGeometry.swift",
+          "sha256": "55f77e77c0f67f2833bba4981d4435f34059c3f955185edf36d675f89faea0f5"
+        },
+        {
+          "path": "apps/ios/UITests/MiloUITests.swift",
+          "sha256": "af380d0abe28349758d618b395a1de1a86730afda0e2d6246f4372810874f650"
+        }
+      ],
+      "establishedFacts": [
+        "Third-run typed value equality succeeded, but final sentence was absent from the original final video frame; measured caret end451.667 exceeded visible end273 (+1 test tolerance gives274).",
+        "NowNoteView sets focused editor height from GeometryReader.size.height minus48; its footer is a safeAreaInset. Outer reveal only reacts to focus, viewport.size and Dynamic Type, while UITextView independently owns text scrolling.",
+        "ParityScrollMetrics reads public UITextView bounds, adjustedContentInset and insertion caret in window coordinates on a150ms timer. It does not mutate scrolling. The test clips this raw frame to root and outer visible regions."
+      ],
+      "hypothesis": "The expanded Done/Save footer reduces the actual visible region while an editor-size or nested-scroll reveal assumption leaves the insertion point below it. This is consistent with the artifacts but not a proven single UIKit/SwiftUI root cause. A transient stale metric is insufficient to explain the absent last sentence in the final rendered video.",
+      "minimalRepairDirection": [
+        "First restrict production changes to NowNoteView: express content region and existing two-row footer as explicit vertical siblings so the GeometryReader receives the remaining keyboard-safe height, rather than assuming safeAreaInset changes its size proposal. Keep footer controls fully Dynamic Type-aware, retain44pt minimum hit target, and preserve V4 separation.",
+        "Derive TextEditor capacity from that actual content region with its existing panel padding. Preserve focus on text changes. Reveal the outer editor only when focus or available region changes; do not scroll the outer page on every keystroke. Avoid fixed keyboard heights or subtracting the observed177pt delta.",
+        "If the corrected real UITextView bounds are fully visible but selection still escapes during input, add a narrowly scoped production editor caret-reveal mechanism after actual text/selection/layout updates. Only scroll when first responder, insertion selection is empty, composition is not active, and caret is outside the effective visible area. Scroll the caret rectangle into view without replacing text or moving selection. Keep this out of the read-only DEBUG probe.",
+        "Before a future assertion abort, attach the original screenshot and raw inner/outer/root geometry plus caret/selection state so the failure is diagnosable. Do not alter or enlarge the accepted visible frame. Preserve current strict tail visibility, full typed-value equality, Done dismissal, save/relaunch persistence and coverage requirements."
+      ],
+      "risks": [
+        "Changing parent layout can alter non-editing spacing and outer scroll position; compare empty/written/default/large notes with keyboard shown and hidden.",
+        "Forcing a jump to text.endIndex on every edit breaks middle-of-document editing, selection and Chinese marked text. Conditional caret reveal must preserve insertion position and composition.",
+        "Duplicate safe-area or footer subtraction can reduce editor height twice; measure the actual region once. Small screens and large text must still leave a usable editor.",
+        "SwiftUI TextEditor introspection is fragile. If explicit UITextView ownership becomes necessary, scope it to this editor and preserve bindings, accessibility identifier, Dynamic Type, keyboard behavior and input method state.",
+        "Changing DEBUG geometry to drive the production scroll would both mask the product defect and invalidate evidence; probes remain read-only."
+      ],
+      "futureVerificationAfterAuthorization": [
+        "Run only after additional execution budget is explicitly granted; do not start another attempt under this proposal.",
+        "Use the original failing end-to-end large-text tail journey without manual corrective scroll and retain its exact source-bound screenshot/metric receipts, then validate default-size entry and keyboard coverage.",
+        "A passed geometry assertion alone is insufficient: inspect the actual last sentence and caret in the original image and verify save/relaunch equality."
+      ],
+      "acceptanceGranted": false,
+      "priorConclusionsPreserved": true
+    }
+  ]
+}

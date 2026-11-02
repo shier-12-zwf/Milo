@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/web_native_review",
+  "reviewType": "independent-code-review",
+  "reviewedAt": "2026-09-29T14:16:24.439920+00:00",
+  "verdict": "changes_requested",
+  "visualAcceptance": false,
+  "mergeAcceptance": false,
+  "scope": "Read-only review of current iOS/workflow/Web evidence-gate changes and supporting files. No app, browser, test or build executed; source freeze preserved. Unrelated user Web/Harmony/gateway modifications were not reviewed or edited. Only this review JSON was written.",
+  "plan": {
+    "path": "docs/visual-parity/web-native-plan-2026-09-29.md",
+    "sha256": "251ced34c30426640d1b5ff4c748dc946ad33d9385dbe639cea9dd14163c5c13"
+  },
+  "files": [
+    {
+      "path": ".github/workflows/ios-specdrive.yml",
+      "sha256": "a4a7ccac0d8c45bc58c23d1a1a3e5f10c84f85fc2749a52d27d3f38c81e44c77"
+    },
+    {
+      "path": "apps/ios/App/Design/MiloGalaxy.swift",
+      "sha256": "ee3b63547e3166dd56646ce2d672393b6c7dd45c1c5379e71c51226d8ad27c6a"
+    },
+    {
+      "path": "apps/ios/Resources/MiloGalaxy.metal.txt",
+      "sha256": "710338ce568455cf0f9d8e5aceafea36f6b318a179af545d59cfe6bfe16e54e0"
+    },
+    {
+      "path": "apps/ios/App/Design/MiloTheme.swift",
+      "sha256": "fc63830af426ec4807ddf4f67a7a05bbd73bf244bd1a413fdd15e74ccf972852"
+    },
+    {
+      "path": "apps/ios/App/Design/ParityScrollMetrics.swift",
+      "sha256": "99acef7b5ccac89200e3d88828544cea5a797d37427063dc0b408dcfa1eea688"
+    },
+    {
+      "path": "apps/ios/App/JournalView.swift",
+      "sha256": "6f64e647ea4a309c9ec5b825c50ab93c710339668ca039e631fb24d59bbabb9f"
+    },
+    {
+      "path": "apps/ios/App/Journey/HomeView.swift",
+      "sha256": "3e65ac8d9d51a7bb472a753edb0f6991e43bd293879d497bf51b9ad30a639fd2"
+    },
+    {
+      "path": "apps/ios/App/Collection/MemoryCardView.swift",
+      "sha256": "3f6757224ed373bd2784298eede96b79a61ff2048205bb7f093e7f869da417cd"
+    },
+    {
+      "path": "apps/ios/App/Account/AISettingsView.swift",
+      "sha256": "f1ab62a4fcbf1c4a4b20d0344a43304870394fa5aaff418e8f4084106e4ecdbf"
+    },
+    {
+      "path": "apps/ios/App/Account/AccountView.swift",
+      "sha256": "158d8b6de3c362c36a671fd128acbcc940c476028a4fd35941615411aba42c40"
+    },
+    {
+      "path": "apps/ios/App/Account/LoginView.swift",
+      "sha256": "1f9dbe22b39ea463693578b53204195202ae490a72c49c2a66d8becfd75b3093"
+    },
+    {
+      "path": "apps/ios/Milo.xcodeproj/project.pbxproj",
+      "sha256": "8c1e6d920de8cee0d642afe559988e89b96167df9e54cc6587f053f543c14162"
+    },
+    {
+      "path": "apps/ios/UITests/MiloUITests.swift",
+      "sha256": "74526543f21ea9737706ddb663c3a33895b4409711b1ac11937922cb58a99f0f"
+    },
+    {
+      "path": "apps/ios/UITests/ParityCaptureTests.swift",
+      "sha256": "ddffee19b76615ed65bf160eb4f4a7d48ee7869741120b7735d4607c5582cfbc"
+    },
+    {
+      "path": "apps/ios/UITests/GalaxyMotionTests.swift",
+      "sha256": "4fc3f321e0f5c001e73a0c48c12d20cf18da61d6e9408d62b4c7945974625dc2"
+    },
+    {
+      "path": "apps/ios/scripts/parity-native.mjs",
+      "sha256": "be21b94dd9c37788cacd2fd0512eeefb27d425dad550e6d03fcdf9902620ac02"
+    },
+    {
+      "path": "apps/ios/scripts/web-parity-gate.mjs",
+      "sha256": "84c1e2b66868021c2e89955aadce245762c778b09a4bfcd14fea6aef090c0622"
+    },
+    {
+      "path": "apps/ios/scripts/test-journal-ai.sh",
+      "sha256": "cca947956dd18da9387a992ea94bc439debdd0cad465057d88edf20747fb2c58"
+    },
+    {
+      "path": "apps/ios/specdrive.web-native.json",
+      "sha256": "d32c81d1cb30b688979ed2a89009f48856ac1bb3a056f3523b3be5090ab5229d"
+    }
+  ],
+  "findings": [
+    {
+      "id": "C1",
+      "priority": "P1",
+      "path": "apps/ios/scripts/web-parity-gate.mjs",
+      "line": 19,
+      "title": "New Web gate drops required image, coverage and review-binding validation",
+      "finding": "checkArtifact only validates a generic file path/hash. The gate accepts a single arbitrary text file per case, no actual PNG dimensions, no scroll geometry/checkpoints/end anchors, no actual Dynamic Type, no fixture equality or source-bound build receipt. A review artifact is merely hashed and its contents are never bound to the exact case/capture metadata. Relabeling a shared row native-only also bypasses its Web evidence. These conditions can produce an acceptance success while required pages or long-page content have never been captured. The existing 24 regression tests exercise the old validator, not this replacement.",
+      "requiredChange": "Preserve the old validator invariants in the Web schema, supporting page/editor regions and explicit reviewed category mapping: complete PNGs and dimensions, source/build/capture receipts and fixture/locale/size metadata, real overlapping top-to-bottom coverage, and independent case reviews bound to exact capture metadata/hashes. Add negative tests for missing middle/end, wrong text size/fixture, stale build, non-image artifact, category downgrades and stale review. Keep gate blocked until evidence meets the schema."
+    },
+    {
+      "id": "C2",
+      "priority": "P2",
+      "path": "apps/ios/UITests/GalaxyMotionTests.swift",
+      "line": 9,
+      "title": "Reduced-motion test bypasses the actual system preference",
+      "finding": "launch(reduced:true) supplies --reduce-motion-test, whose branch returns paused=true before the production accessibilityReduceMotion value is consulted. The test therefore passes even if production system-preference wiring is broken. It also does not put MiloPressStyle into its Reduce Motion path. The approved plan explicitly requires actual setting transitions and usable controls.",
+      "requiredChange": "Exercise actual simulator/device Reduce Motion setting with the override absent, record the observed setting and restore it afterwards; retain this injected test only under an explicit forced-pause description. Until actual execution exists, record reduceMotion as unpassed in final temporal review."
+    },
+    {
+      "id": "C3",
+      "priority": "P2",
+      "path": "apps/ios/UITests/GalaxyMotionTests.swift",
+      "line": 44,
+      "title": "Resume assertion cannot detect animation advancing while inactive",
+      "finding": "The only animation-time assertion is resumed>=prior, while inactiveDuration is accumulated separately by setSceneActive. Both assertions pass if animation time incorrectly advances during the entire inactive interval. They also do not assert that time subsequently resumes or that the return has no large jump.",
+      "requiredChange": "Record animation time at actual inactive/active transitions and assert the inactive delta is zero, then verify advancement after returning active; keep source-bound frames/video for the no-jump visual criterion. Do not infer paused animation from wall-clock inactiveDuration alone."
+    }
+  ],
+  "positiveAssessments": [
+    "Runtime Metal compilation uses only a bundled source-controlled resource, cached device/library/pipeline; the architecture is a reasonable fallback to the unavailable optional offline compiler. Reported actual GPU compilation was not rerun here.",
+    "Passive window gesture recognizer does not cancel or delay original touches, cannot prevent/be prevented by other recognizers, permits simultaneous recognition, clears tracked touch on ended/cancelled/reset, and detaches on view/window lifecycle. No definite recognizer lifecycle defect found by static inspection.",
+    "Production pause resets prior timestamp and touch activity, display link respects paused state, observers clean up their links/recognizers. Runtime/system verification still required.",
+    "Template preview gets a fixed width/1.6 height independent of equal-height columns; new journey checks inspect real bidirectional transitions, title/subtitle bounds, footer avoidance and largest text. Geometry observations request selector visibility after preview-height changes.",
+    "Scroll diagnostic UIKit leaf preserves its identifier and remains 1x1, noninteractive and DEBUG-isolated; no code driving offsets was added.",
+    "All 53 original native IDs map one-to-one to independent XCTest methods; one failed state no longer aborts the entire case loop. Existing real state assertions, gesture measurements and nested editor coverage remain.",
+    "Historical run states are not edited by the reviewed code; new profile retains three executions/two no-progress/90-minute bounds. Real AGC remains an explicit blocked required check, not a claimed pass."
+  ],
+  "caseMethodCheck": {
+    "count": 53,
+    "unique": 53,
+    "missing": [],
+    "extra": []
+  },
+  "remainingEvidence": [
+    "Inspect actual original Web/iOS page images and template transition captures; this review grants no visual approval.",
+    "Motion suite currently performs blank/control presses but does not exercise a mood change, a long-page drag or text entry while the live observer runs; these require additional real temporal evidence for the corresponding final criteria. During-touch video is required because attached stills bracket the press.",
+    "Actual Reduce Motion, original before/during/after touch visuals, cancellation behavior and lifecycle timing must be evidenced rather than inferred from implementation.",
+    "Fallback failure currently leaves a black background plus a log; main functionality remains usable, but stars require renderReady and original-frame verification on the target device."
+  ],
+  "repairGuidance": {
+    "alreadyExported": [
+      "metadataHash",
+      "captureMetadataHash",
+      "fixtureHash",
+      "hashIOSSource",
+      "hashBuild",
+      "REQUIRED_CASE_IDS"
+    ],
+    "privateReusablePrimitives": {
+      "checkProvenance": "Source/build/log receipts with matching timestamps and actual current app bytes",
+      "pngSize": "Complete PNG parsing, CRC/decompression, dimensions",
+      "validateCapture": "Exact case/fixture/locale/text setting/source/build/capture-time binding, image dimensions, scroll overlap and measured final anchor",
+      "validateReview": "Case/source/build/fixture and full capture metadata/image hash binding, review timing and concrete per-criterion notes"
+    },
+    "implementationAdvice": "Expose narrow reusable wrappers or factor shared primitives with old semantics intact. Add explicit page/editor regions rather than merging coordinate spaces. Write a Web-specific source provenance contract instead of pretending a local source hash identifies the public deployment. Preserve old validator regressions and add tests for the new gate.",
+    "deleteConfirmationDeviation": "Integration owner reports actual Web 放下 action deletes directly, while native intentionally confirms. This review did not operate that action. Preserve native case and original Web source-action screenshot; bind its sourceCaseId/action/hash and a concrete safety-improvement accepted-deviation verdict. Do not create a nonexistent Web modal or silently reclassify the shared row. The existing duplicate-image/sourceAction deviation rule provides a suitable pattern."
+  },
+  "followUpReviews": [
+    {
+      "reviewedAt": "2026-09-29T14:51:33.649188+00:00",
+      "scope": "Follow-up focused on C1 Web-gate repair while second native capture runs; no tests/build/apps operated.",
+      "files": [
+        {
+          "path": "apps/ios/scripts/web-parity-gate.mjs",
+          "sha256": "b7bd0254cedef39be199b1f520c671aa0242f3805b7fc1e29c7e08e3f1fc0fec"
+        },
+        {
+          "path": "apps/ios/scripts/parity-evidence.mjs",
+          "sha256": "81bffcc58e089e13ea6d5d669a85d18a61acbd59546ee95aa238e1aff97b2869"
+        },
+        {
+          "path": "apps/ios/tests/web-parity-gate.test.mjs",
+          "sha256": "7fb6321d576f0051e53f1e3b7e37278d2d9b5027b82c18e3c870a0664b05c478"
+        },
+        {
+          "path": ".artifacts/ios/web-gate-integrated-test-1.log",
+          "sha256": "d1d18b5326526961b6f389a26efd07d325608fed0047eb94d7abbe979e09b434"
+        }
+      ],
+      "findingStatus": {
+        "C1": "resolved",
+        "C2": "unpassed_actual_execution_pending",
+        "C3": "unpassed_actual_execution_pending"
+      },
+      "resolution": "The Web gate now shares strict native PNG/provenance/capture validation while preserving default legacy behavior; enforces exact case categories, successful source/build-bound run receipts, actual AX Dynamic Type, raw-geometry-backed page/editor coverage, Web screenshot action provenance, and case/motion review metadata hashes plus independent author records. The inspected test log records33 passes and0 failures; negative test code explicitly targets the prior text-as-image, stale build, category downgrade, wrong actual text setting, missing/gapped coverage and stale/self-authored review holes. Existing predicate scope was read, not independently executed.",
+      "remainingLimits": [
+        "This closes the C1 structural regression, not actual visual acceptance. Local author records and logs are not cryptographic authentication.",
+        "Actual Reduce Motion and background/resume execution failures remain owned by the motion worker. Full temporal criterion approval requires successful real evidence and review.",
+        "No current case ledger row or product milestone is approved by this code review."
+      ],
+      "verdict": "C1_fixed_other_required_work_incomplete",
+      "ciFollowup": {
+        "reviewedAt": "2026-09-29T14:52:15.730527+00:00",
+        "path": ".github/workflows/ios-specdrive.yml",
+        "sha256": "1da8f00cda3da2fc76a9ed90987c97ed6f877e19bd4bd128be49fa53cab1e7f0",
+        "assessment": "Required Web gate regression test step executes node --test apps/ios/tests/web-parity-gate.test.mjs after dependency installation and before package resolution/runner initialization; no continue-on-error on this step. This keeps the new gate regressions in CI. Workflow read only; CI was not executed by this reviewer."
+      }
+    },
+    {
+      "reviewedAt": "2026-09-29T15:05:20.847757+00:00",
+      "scope": "Final staged JPEG/card/motion repairs, subsequently applied by parent; no reviewer builds, tests, or app operations. Pending editor repair excluded.",
+      "files": [
+        {
+          "path": ".artifacts/ios/web-jpeg-repair/repair.patch",
+          "sha256": "32cab5357fa1938c46e949d16f73183a18bf8a500c19b3f3604b0b6221c443cf"
+        },
+        {
+          "path": ".artifacts/ios/card-final-repair/repair.patch",
+          "sha256": "2aef6858350e7ad22fe5a75a3854cadf51142a351f30fce4bccbd29bf5cb1f23"
+        },
+        {
+          "path": ".artifacts/ios/motion-final-repair/GalaxyMotionTests.swift",
+          "sha256": "4f7b06544394ddcffaf30c25e1e02911c6b47c9f899e6876f42982a50e349a58"
+        },
+        {
+          "path": ".artifacts/ios/motion-final-repair/MiloGalaxy.swift",
+          "sha256": "5f9f68472b3e358d85b36c476a20e01295d1d693c37ae8f2a4eea77c3b92b8d6"
+        },
+        {
+          "path": ".artifacts/ios/motion-final-repair/README.md",
+          "sha256": "104fee5d4e896fa0995af21311c0b4353ebefc0087b6abb8145aa6d4352db79f"
+        },
+        {
+          "path": ".artifacts/ios/motion-final-repair/source-base.json",
+          "sha256": "d730fa4eff72dd5ce5fed61baa51d5d0fca7f90926e3450f845c0af45dd545bf"
+        },
+        {
+          "path": "apps/ios/scripts/web-parity-gate.mjs",
+          "sha256": "cd9d4f0ca05360c74cc19717e6d959f237ab475e77d99f87160fd1de582a1cde"
+        },
+        {
+          "path": "apps/ios/tests/web-parity-gate.test.mjs",
+          "sha256": "eef0aeab6131ec4a73611fef1e0246a76a3ac25e95db0f2d880280cf64996437"
+        },
+        {
+          "path": "apps/ios/App/Collection/MemoryCardView.swift",
+          "sha256": "9b9130d9aa8c9d13944e0c71477c9f20801dee55fceb8d6f7db725d719efad38"
+        },
+        {
+          "path": "apps/ios/UITests/MiloUITests.swift",
+          "sha256": "af380d0abe28349758d618b395a1de1a86730afda0e2d6246f4372810874f650"
+        },
+        {
+          "path": "apps/ios/UITests/GalaxyMotionTests.swift",
+          "sha256": "4f7b06544394ddcffaf30c25e1e02911c6b47c9f899e6876f42982a50e349a58"
+        },
+        {
+          "path": "apps/ios/App/Design/MiloGalaxy.swift",
+          "sha256": "5f9f68472b3e358d85b36c476a20e01295d1d693c37ae8f2a4eea77c3b92b8d6"
+        },
+        {
+          "path": ".artifacts/ios/web-gate-final-integrated.log",
+          "sha256": "0932aa985a08e73b25476de174f9854c317014e344325c28794db84108551778"
+        }
+      ],
+      "newP2CodeFindings": [],
+      "assessment": [
+        "Web original image selection is based on magic bytes. JPEG framing, complete ImageIO source and index status, full bitmap decode, source hash and exact measured dimensions are required. Browser bytes are never converted or rewritten. Native captures still call strict PNG validation. Thirty-three existing gate tests are retained and nine format tests added; integration log inspected below.",
+        "Card patch removes broad press-state animation and disables selection/row/scroll placement animation. Public app.snapshot provides all comparative rectangles at one instant. One-point alignment tolerance, 1.6 preview ratio, full title/subtitle containment, footer/heading clearance and bidirectional actual taps remain; no retry or compensating scroll added to geometry assertions.",
+        "Motion test uses actual runningBackground/foreground transitions and requires a new resumeCount and same clock instance before comparing exact pause/resume times. It preserves >2s inactive duration and advancing-after-resume assertions. Real Settings toggle target uses the observed trailing switch area, followed by actual value verification; registered XCTest teardown restores prior state. Live diary drag and keyboard typing additionally exercise controls while shader time advances.",
+        "Production lifecycle adds owning-UIWindowScene-scoped notifications and removes observers through existing stopObserving lifecycle. DEBUG probes expose real clock/application state; no synthetic elapsed time or settings bypass introduced."
+      ],
+      "verdict": "No new P2 code defect found in scoped patches; runtime and visual evidence required",
+      "findingStatus": {
+        "C1": "resolved_with_format_correctness_extension",
+        "C2": "implementation_repaired_actual_execution_unpassed",
+        "C3": "implementation_repaired_actual_execution_unpassed"
+      },
+      "acceptanceGranted": false,
+      "testLogTail": " Web JPEG: missing end marker\n  ---\n  duration_ms: 1.943792\n  type: 'test'\n  ...\n# Subtest: reject Web JPEG: only JPEG magic surrounding text\nok 41 - reject Web JPEG: only JPEG magic surrounding text\n  ---\n  duration_ms: 3528.497875\n  type: 'test'\n  ...\n# Subtest: reject Web JPEG: truncated scan with a forged end marker\nok 42 - reject Web JPEG: truncated scan with a forged end marker\n  ---\n  duration_ms: 2695.108083\n  type: 'test'\n  ...\n1..42\n# tests 42\n# suites 0\n# pass 42\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 48399.692167\n"
+    },
+    {
+      "reviewedAt": "2026-09-29T15:10:14.501678+00:00",
+      "scope": "Final staged editor repair only; source read, no build/test/app operations.",
+      "files": [
+        {
+          "path": ".artifacts/ios/editor-final-repair/RecallViews.swift",
+          "sha256": "f1a8c5f630b7aaa5af4cb8c72b8e6d7a0eb5d9d38e8d4ab77d0111ad9b6abd7f"
+        },
+        {
+          "path": ".artifacts/ios/editor-final-repair/ParityCaptureGeometry.swift",
+          "sha256": "55f77e77c0f67f2833bba4981d4435f34059c3f955185edf36d675f89faea0f5"
+        },
+        {
+          "path": ".artifacts/ios/editor-final-repair/ParityCaptureTests.swift",
+          "sha256": "c6dbc7dc7661377a9a48b6a4cf423146a3597a5aca5f380712bdfcb659a12bc0"
+        }
+      ],
+      "newP2CodeFindings": [],
+      "assessment": [
+        "Done and save occupy distinct rows in the same bottom safe-area inset; min44 completion target and explicit inter-row spacing address V4 structurally. Actual large/default keyboard geometry still requires runtime evidence.",
+        "Keyboard capture measurements require consecutive settled geometry, still use real gestures to reach top and progress, and preserve 60-step and overlap/gap assertions. Post-screenshot measurement must match the recorded pre-screenshot measurement. Failed screenshot, accessibility tree and both geometry records are retained before asserting. No retries hide a failed bracket and no acceptance count or tolerance is relaxed."
+      ],
+      "verdict": "No new P2 code issue identified; V4 code-addressed, runtime pending",
+      "acceptanceGranted": false
+    }
+  ]
+}

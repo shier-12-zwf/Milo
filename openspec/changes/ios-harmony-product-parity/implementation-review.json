@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "status": "in-progress",
+  "productAcceptance": "pending",
+  "reviewers": [
+    "/root/ios_parity_core",
+    "/root/ios_parity_gap"
+  ],
+  "findings": [
+    {
+      "id": "APP-1",
+      "priority": "P1",
+      "problem": "New mood could reuse old past conversation",
+      "resolution": "A new mood confirmation starts a fresh draft and clears context.",
+      "evidence": "Core reset tests; descriptor UI passes; full current UI run pending"
+    },
+    {
+      "id": "APP-2",
+      "priority": "P1",
+      "problem": "Returning from account or timeline discarded an unfinished draft",
+      "resolution": "Navigation returnHome is separate from explicit startHome/reset.",
+      "evidence": "Source repair; draft restart UI passed"
+    },
+    {
+      "id": "APP-3",
+      "priority": "P2",
+      "problem": "Time choice was not persisted before entering chat",
+      "resolution": "Persist the selected/custom time and clear changed context while staying on time page.",
+      "evidence": "Context reset/restart UI passed"
+    },
+    {
+      "id": "APP-4",
+      "priority": "P2",
+      "problem": "Disabling AI or leaving a page could accept late results",
+      "resolution": "Generation tokens, route/context checks, cancellation and editing guards.",
+      "evidence": "11 isolated asynchronous checks passed"
+    },
+    {
+      "id": "APP-5",
+      "priority": "P2",
+      "problem": "Corrupt draft had no retry path",
+      "resolution": "Retry revalidates draft before allowing writes.",
+      "evidence": "Original file protection retained; future-schema core tests passed"
+    },
+    {
+      "id": "APP-6",
+      "priority": "P2",
+      "problem": "Speech partial result could overwrite concurrent typing",
+      "resolution": "Disable text editing only while recording; stop remains available and keyboard works after stop.",
+      "evidence": "Native typecheck passed; actual speech/device verification pending"
+    },
+    {
+      "id": "APP-7",
+      "priority": "P2",
+      "problem": "Empty past-time fixture missed its kind",
+      "resolution": "All past-time fixtures set kind; startConversation validates transition.",
+      "evidence": "Current source; capture run pending"
+    },
+    {
+      "id": "APP-8",
+      "priority": "P2",
+      "problem": "Draft-clear failure could hide errors and duplicate a saved memory",
+      "resolution": "Persist pendingEntryID separately before save; retry upserts; preserve cleanup error.",
+      "evidence": "31 core tests include pending-ID restoration and atomic delete-all"
+    },
+    {
+      "id": "UI-1",
+      "priority": "P2",
+      "problem": "Page AX identifier concealed a child back button",
+      "resolution": "Explicit accessible container preserves child controls.",
+      "evidence": "Targeted empty-collection UI test passed"
+    },
+    {
+      "id": "UI-2",
+      "priority": "P1",
+      "problem": "Diary keyboard hid save action",
+      "resolution": "Move save to bottom safe-area inset and add keyboard dismissal.",
+      "evidence": "Targeted test reached saved card after repair"
+    },
+    {
+      "id": "UI-3",
+      "priority": "P2",
+      "problem": "Card template accessibility group concealed the actionable button identifier",
+      "resolution": "Keep identifier on button and remove overriding group.",
+      "evidence": "Second UI run selected template, returned and restored saved diary successfully."
+    },
+    {
+      "id": "VIS-1",
+      "priority": "P1",
+      "problem": "Planet absent in real detail screenshot despite present source asset",
+      "resolution": "Use cached UIKit viewport rasterization of original PNG, matching the working card renderer.",
+      "evidence": "Two actual prior detail screenshots failed; fresh UIKit implementation typechecks; screenshot pending"
+    },
+    {
+      "id": "DATA-1",
+      "priority": "P1",
+      "problem": "Clearing a time field could retain a previously saved pending entry ID and overwrite that memory.",
+      "resolution": "Clear pending entry ID with time context.",
+      "evidence": "26 real-coordinator offline checks passed (11 AI, 15 persistence/recovery); independently rerun/reviewed by /root/ios_parity_gap with no remaining P1/P2."
+    },
+    {
+      "id": "DATA-2",
+      "priority": "P1",
+      "problem": "Retry after an unreadable draft or failed write did not hydrate or flush it, risking lost text.",
+      "resolution": "Separate initial recovery from failed writes; preserve both versions on recovery conflict.",
+      "evidence": "26 real-coordinator offline checks passed (11 AI, 15 persistence/recovery); independently rerun/reviewed by /root/ios_parity_gap with no remaining P1/P2."
+    },
+    {
+      "id": "DATA-3",
+      "priority": "P2",
+      "problem": "Deleting local data left private temporary card/export files.",
+      "resolution": "Clean only app-owned temporary exports and recovered draft backups; isolate fixture exports.",
+      "evidence": "26 real-coordinator offline checks passed (11 AI, 15 persistence/recovery); independently rerun/reviewed by /root/ios_parity_gap with no remaining P1/P2."
+    },
+    {
+      "id": "VIS-2",
+      "priority": "P2",
+      "problem": "Template thumbnail height affected parent layout, overlapping the template count.",
+      "resolution": "Fixed-ratio thumbnail viewport and top-aligned template row.",
+      "evidence": "Native typecheck passed; fresh screenshot pending"
+    },
+    {
+      "id": "TEST-1",
+      "priority": "P2",
+      "problem": "Journey helper only scrolled down and transcript assertion ignored the accessible speaker prefix.",
+      "resolution": "Scroll toward action and verify the complete spoken-role label.",
+      "evidence": "Second UI run reached restored transcript; final rerun pending"
+    }
+  ],
+  "validatorReview": {
+    "status": "passed",
+    "tests": 24,
+    "reviewer": "/root/ios_parity_core",
+    "scope": "Evidence validation implementation and synthetic negative/edge tests only. Actual paired screenshots remain pending."
+  },
+  "dataRecoveryReview": {
+    "reviewer": "/root/ios_parity_gap",
+    "status": "passed",
+    "sourceHash": "c7880b99b8b54dd444714e0cebbbc8d9f33def89f880968055fb48336385dcb1",
+    "testHash": "93a65a786773458359405420ee5a1d89620bba5fe1b7338e3d40dbb072e19c47"
+  }
+}

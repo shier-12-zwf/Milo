@@ -1,0 +1,68 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "51F5467F-16A9-4296-9C05-A74F91234967",
+        "deviceName" : "iPhone 16e",
+        "exportedFileName" : "84828E0F-6DF9-47C9-99C0-C37BB7638760.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "detail-large-text-Dark_0_C5CEA877-CA83-4AF3-82F3-59C4F88C9334.png",
+        "timestamp" : 1790353645.41
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "51F5467F-16A9-4296-9C05-A74F91234967",
+        "deviceName" : "iPhone 16e",
+        "exportedFileName" : "4DC2A7CA-0B19-45AA-86C7-890BD796EA55.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "capture-large-text-keyboard-Dark_0_FE2D0F95-D568-4251-A7D1-D15566501ACD.png",
+        "timestamp" : 1790353640.332
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "51F5467F-16A9-4296-9C05-A74F91234967",
+        "deviceName" : "iPhone 16e",
+        "exportedFileName" : "131FABAE-A1CA-41EB-B262-8F65462BF0A0.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "detail-large-text-Light_0_8A8F8B77-B6C3-4DC3-87B2-87E19A2054B9.png",
+        "timestamp" : 1790353611.39
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "51F5467F-16A9-4296-9C05-A74F91234967",
+        "deviceName" : "iPhone 16e",
+        "exportedFileName" : "DD605181-52D0-4CB0-994B-3577FB6D734D.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "capture-large-text-keyboard-Light_0_5D4F219B-590D-4D7C-9059-F5CE36B8ACB7.png",
+        "timestamp" : 1790353605.228
+      }
+    ],
+    "testIdentifier" : "MiloUITests/testLongNoteAndLargeTextScreenshots()",
+    "testIdentifierURL" : "test://com.apple.xcode/Milo/MiloUITests/MiloUITests/testLongNoteAndLargeTextScreenshots"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "51F5467F-16A9-4296-9C05-A74F91234967",
+        "deviceName" : "iPhone 16e",
+        "exportedFileName" : "78B98153-DB1B-48AA-A963-1D9A68439DE2.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "home-standard-text-Dark_0_4A694959-C0F1-44D5-9993-78A24402835B.png",
+        "timestamp" : 1790353662.288
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "51F5467F-16A9-4296-9C05-A74F91234967",
+        "deviceName" : "iPhone 16e",
+        "exportedFileName" : "AAD51AD6-CC99-402E-8780-A479FD9AF11C.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "home-standard-text-Light_0_03C2DDAF-CCA6-4F9B-ACE5-9FA0FFFE656F.png",
+        "timestamp" : 1790353654.425
+      }
+    ],
+    "testIdentifier" : "MiloUITests/testNormalSizeHomeScreenshots()",
+    "testIdentifierURL" : "test://com.apple.xcode/Milo/MiloUITests/MiloUITests/testNormalSizeHomeScreenshots"
+  }
+]

@@ -1,0 +1,13 @@
+# Design
+
+The previous ios-speech-input-stability run remains intact; it passed only callback safety and keyboard fallback. This is a new user-required usability criterion, not a reset of exhausted checks. Preserve that evidence and use a separate bounded run (3 attempts per check, 2 unchanged failures, 40 minutes active commands).
+
+Simulator uses SFSpeechRecognizer's default routing, since supportsOnDeviceRecognition does not certify installed models. Physical devices retain local preference. No private MobileAsset edits and no transcript injection. Return distinct user-facing service errors and log only NSError domain/code, never recognized text or audio.
+
+The first strict run still failed with kLSRErrorDomain 300 and the same absent mini.json. One bounded environment repair may inspect SpeechTranscriber/DictationTranscriber public supported/installed locales and request AssetInventory download only for a supported Chinese locale. This is diagnostic preparation, not a recognition success assertion. Unsupported or failed download must remain a blocker. The first config accidentally passed two change names to OpenSpec validate; preserve its consumed attempts and create a corrected configuration with only two remaining attempts and its elapsed time subtracted, rather than gaining a fresh three-attempt budget.
+
+After the public inventory reported installed, real recognition still failed with the same missing configuration. The final remaining repair disables the writable public SFSpeechRecognizer.supportsOnDeviceRecognition property only on Simulator to request the existing authorized Apple network route. This is an empirical supported-API routing attempt, not a claim that the setter guarantees server use. No change to provider, permissions, physical-device local preference or acceptance.
+
+Verification: signed simulator build and preserving cover install; existing permission/stale-callback tests; actual XCUI keyboard existence and typing/send in UUID fixture; strict real recording start and sustained recording for at least 5 seconds. If system service is unavailable, the strict check must fail and the feature stays incomplete. Real Chinese microphone transcription requires separately identified observation or actual audio recognition test, not mocked data. Preserve ordinary user data and do not uninstall the production app.
+
+Keyboard preference has already been adjusted through Simulator I/O > Keyboard > Connect Hardware Keyboard; an actual screenshot shows software keys after tapping custom-time. Verify the chat input too. No physical device is connected, so physical/Bluetooth behavior is excluded from the simulator milestone.

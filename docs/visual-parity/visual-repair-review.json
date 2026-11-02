@@ -1,0 +1,45 @@
+{
+  "status": "plan-approved",
+  "rounds": [
+    {
+      "status": "plan-approved",
+      "reviewer": "/root/specdrive_runtime",
+      "planSha256": "2ddfe814409816d604da1277bfbf378690d19c9b463006d0fc52769f71159f41",
+      "scope": "Two concrete iOS visual repairs and stronger assertions; not screenshot or cross-platform acceptance.",
+      "priorRun": "apps/ios/.specdrive/parity-20260926",
+      "requirements": [
+        "Complete prior capture and independent image review first",
+        "Preserve prior state, counters and images",
+        "No weakening of 9 journey checks or 53-case parity contract",
+        "New bounded phase: 3 attempts, 2 without progress, 1 hour active execution"
+      ],
+      "knownFailureImages": [
+        "apps/ios/evidence/parity/journeys-3-images/1BE60F02-70E8-4B6B-A869-ECDFEF6782A1.png",
+        "apps/ios/evidence/parity/journeys-3-images/4A8C9C8A-70AB-48C0-956F-85ABFC3928EF.png"
+      ]
+    },
+    {
+      "status": "plan-approved",
+      "round": 2,
+      "reviewer": "/root/visual_plan_review",
+      "planSha256": "ea06fdf75d18aacd9fd578f406a13c234134de11def6dcf9959a4d1ac80b3459",
+      "scope": "Six concrete visual/capture repairs, original checks retained; not cross-platform acceptance",
+      "priorRun": "apps/ios/.specdrive/parity-20260926",
+      "evidenceAudit": {
+        "cases": 53,
+        "attachments": 183,
+        "viewedPerCaseDistinct": 97,
+        "globallyDistinctSHA256": 91,
+        "verifiedAllHashes": true
+      },
+      "requirements": [
+        "Preserve old state, counters and raw images",
+        "Same limits: 3 executions/check, 2 no progress, 1 hour active",
+        "State landmarks before/after captures, modal cases remain modal",
+        "Use actual safe visible viewport; assert overlap and actual bottom"
+      ],
+      "editorialClarificationSha256": "7b17d750c08c40ab4a9779969e6b3def5b545946063ef05773bba4a638436882",
+      "editorialClarification": "Reviewer-requested exact counting clarification only"
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+Fetching https://github.com/swiftlang/swift-testing.git
+Fetching https://github.com/swiftlang/swift-syntax.git
+[1/43699] Fetching swift-testing
+[36709/123767] Fetching swift-testing, swift-syntax
+Fetched https://github.com/swiftlang/swift-testing.git from cache (5.29s)
+Fetched https://github.com/swiftlang/swift-syntax.git from cache (5.29s)
+Creating working copy for https://github.com/swiftlang/swift-syntax.git
+Working copy of https://github.com/swiftlang/swift-syntax.git resolved at 602.0.0
+Creating working copy for https://github.com/swiftlang/swift-testing.git
+Working copy of https://github.com/swiftlang/swift-testing.git resolved at 6.2.4
+Building for debugging...
+[0/32] /Users/runner/work/milo/milo/apps/ios/MiloCore/.build/arm64-apple-macosx/debug/MiloCorePackageTests.derived/runner.swift
+[1/32] Write swift-version--79AA4F9932D1E87A.txt
+[2/32] Compiling _TestingInternals Versions.cpp
+[3/32] Write sources
+[4/32] Compiling _TestingInternals Discovery.cpp
+[5/32] Write sources
+[12/32] Compiling _TestingInternals WillThrow.cpp
+[14/36] Emitting module SwiftSyntax601
+[14/36] Compiling _SwiftSyntaxCShims PlatformMutex.c
+[16/36] Emitting module SwiftSyntax602
+[17/36] Compiling SwiftSyntax602 Empty.swift
+[17/36] Write sources
+[32/36] Compiling SwiftSyntax601 Empty.swift
+[33/45] Emitting module SwiftSyntax600
+[34/45] Compiling SwiftSyntax600 Empty.swift
+[35/45] Compiling SwiftSyntax510 Empty.swift
+[36/45] Emitting module SwiftSyntax510
+[37/50] Compiling SwiftSyntax509 Empty.swift
+[38/50] Emitting module SwiftSyntax509
+[39/98] Compiling SwiftSyntax AbsolutePosition.swift
+[40/98] Compiling SwiftSyntax AbsoluteSyntaxInfo.swift
+[41/98] Emitting module _TestDiscovery
+[42/98] Compiling SwiftSyntax ArenaAllocatedBuffer.swift
+[43/98] Compiling SwiftSyntax Assert.swift
+[44/99] Compiling _TestDiscovery TestContentRecord.swift
+[45/99] Compiling MiloCore JournalRepository.swift
+[46/100] Emitting module MiloCore
+[47/100] Compiling MiloCore JournalEntry.swift
+[48/100] Compiling MiloCore Mood.swift
+[49/100] Emitting module SwiftSyntax
+[50/123] Compiling SwiftSyntax SyntaxCollection.swift
+[51/123] Compiling SwiftSyntax SyntaxHashable.swift
+[52/123] Compiling SwiftSyntax SyntaxIdentifier.swift
+[53/123] Compiling SwiftSyntax SyntaxNodeStructure.swift
+[54/123] Compiling SwiftSyntax SyntaxProtocol.swift
+[55/123] Compiling SwiftSyntax SyntaxText.swift
+[56/123] Compiling SwiftSyntax SyntaxTreeViewMode.swift
+[57/123] Compiling SwiftSyntax TokenDiagnostic.swift
+[58/123] Compiling SwiftSyntax TokenSequence.swift
+[59/123] Compiling SwiftSyntax TokenSyntax.swift
+[60/123] Compiling SwiftSyntax Trivia.swift
+[61/123] Compiling SwiftSyntax Utils.swift
+[62/123] Compiling SwiftSyntax ChildNameForKeyPath.swift
+[63/123] Compiling SwiftSyntax Keyword.swift
+[64/123] Compiling SwiftSyntax RenamedChildrenCompatibility.swift
+[65/123] Compiling SwiftSyntax RenamedNodesCompatibility.swift
+[66/123] Compiling SwiftSyntax SyntaxAnyVisitor.swift
+[67/123] Compiling SwiftSyntax SyntaxBaseNodes.swift
+[68/123] Compiling SwiftSyntax SyntaxCollections.swift
+[69/123] Compiling SwiftSyntax SyntaxEnum.swift
+[70/123] Compiling SwiftSyntax SyntaxKind.swift
+[71/123] Compiling SwiftSyntax SyntaxRewriter.swift
+[72/123] Compiling SwiftSyntax SyntaxTraits.swift
+[77/123] Compiling SwiftSyntax BumpPtrAllocator.swift
+[78/123] Compiling SwiftSyntax CommonAncestor.swift
+[79/123] Compiling SwiftSyntax Convenience.swift
+[80/123] Compiling SwiftSyntax CustomTraits.swift
+[81/123] Compiling SwiftSyntax EditorPlaceholder.swift
+[82/123] Compiling SwiftSyntax Identifier.swift
+[83/123] Compiling SwiftSyntax MemoryLayout.swift
+[84/123] Compiling SwiftSyntax MissingNodeInitializers.swift
+[85/123] Compiling SwiftSyntax RawSyntax.swift
+[86/123] Compiling SwiftSyntax RawSyntaxArena.swift
+[87/123] Compiling SwiftSyntax RawSyntaxLayoutView.swift
+[88/123] Compiling SwiftSyntax RawSyntaxNodeProtocol.swift
+[89/123] Compiling SwiftSyntax RawSyntaxTokenView.swift
+[90/123] Compiling SwiftSyntax SourceEdit.swift
+[91/123] Compiling SwiftSyntax SourceLength.swift
+[92/123] Compiling SwiftSyntax SourceLocation.swift
+[93/123] Compiling SwiftSyntax SourcePresence.swift
+[94/123] Compiling SwiftSyntax SwiftSyntaxCompatibility.swift
+[95/123] Compiling SwiftSyntax Syntax.swift
+[96/123] Compiling SwiftSyntax SyntaxChildren.swift
+[97/123] Compiling SwiftSyntax SyntaxVisitor.swift
+[98/123] Compiling SwiftSyntax TokenKind.swift
+[99/123] Compiling SwiftSyntax Tokens.swift
+[100/123] Compiling SwiftSyntax TriviaPieces.swift
+[101/123] Compiling SwiftSyntax RawSyntaxNodesAB.swift
+[102/123] Compiling SwiftSyntax RawSyntaxNodesC.swift
+[103/123] Compiling SwiftSyntax RawSyntaxNodesD.swift
+[104/123] Compiling SwiftSyntax RawSyntaxNodesEF.swift
+[105/123] Compiling SwiftSyntax RawSyntaxNodesGHI.swift
+[106/123] Compiling SwiftSyntax RawSyntaxNodesJKLMN.swift
+[107/123] Compiling SwiftSyntax RawSyntaxNodesOP.swift
+[108/123] Compiling SwiftSyntax RawSyntaxNodesQRS.swift
+[109/123] Compiling SwiftSyntax RawSyntaxNodesTUVWXYZ.swift
+[110/123] Compiling SwiftSyntax RawSyntaxValidation.swift
+[111/123] Compiling SwiftSyntax SyntaxNodesAB.swift
+[112/123] Compiling SwiftSyntax SyntaxNodesC.swift
+[113/123] Compiling SwiftSyntax SyntaxNodesD.swift
+[114/123] Compiling SwiftSyntax SyntaxNodesEF.swift
+[115/123] Compiling SwiftSyntax SyntaxNodesGHI.swift
+[116/123] Compiling SwiftSyntax SyntaxNodesJKLMN.swift
+[117/123] Compiling SwiftSyntax SyntaxNodesOP.swift
+[118/123] Compiling SwiftSyntax SyntaxNodesQRS.swift
+[119/123] Compiling SwiftSyntax SyntaxNodesTUVWXYZ.swift
+[120/168] Emitting module SwiftDiagnostics
+[121/171] Compiling SwiftParser Attributes.swift
+[122/171] Compiling SwiftParser Availability.swift
+[125/173] Compiling SwiftParser CharacterInfo.swift
+[126/173] Compiling SwiftParser CollectionNodes+Parsable.swift
+[127/173] Compiling SwiftBasicFormat SyntaxProtocol+Formatted.swift
+[128/173] Compiling SwiftBasicFormat Trivia+FormatExtensions.swift
+[129/173] Compiling SwiftParser Directives.swift
+[132/173] Emitting module SwiftBasicFormat
+[135/173] Compiling SwiftDiagnostics GroupedDiagnostics.swift
+[136/173] Compiling SwiftDiagnostics Message.swift
+[137/173] Compiling SwiftDiagnostics Note.swift
+[138/173] Compiling SwiftParser UnicodeScalarExtensions.swift
+[139/173] Compiling SwiftParser Lookahead.swift
+[140/173] Compiling SwiftParser LoopProgressCondition.swift
+[141/173] Compiling SwiftParser Modifiers.swift
+[142/173] Compiling SwiftParser Names.swift
+[143/173] Compiling SwiftParser Nominals.swift
+[144/173] Compiling SwiftParser Parameters.swift
+[145/173] Compiling SwiftParser ParseSourceFile.swift
+[146/173] Compiling SwiftParser Parser.swift
+[147/173] Compiling SwiftParser Patterns.swift
+[148/173] Compiling SwiftParser Recovery.swift
+[149/173] Compiling SwiftParser Specifiers.swift
+[150/173] Compiling SwiftParser Statements.swift
+[151/173] Compiling SwiftParser StringLiteralRepresentedLiteralValue.swift
+[152/173] Compiling SwiftParser StringLiterals.swift
+[153/188] Emitting module SwiftParser
+[164/188] Compiling SwiftParser IsValidIdentifier.swift
+[165/188] Compiling SwiftParser Cursor.swift
+[166/188] Compiling SwiftParser Lexeme.swift
+[167/188] Compiling SwiftParser LexemeSequence.swift
+[168/188] Compiling SwiftParser Lexer.swift
+[169/188] Compiling SwiftParser RegexLiteralLexer.swift
+[170/188] Compiling SwiftParser SwiftParserCompatibility.swift
+[171/188] Compiling SwiftParser SwiftVersion.swift
+[172/188] Compiling SwiftParser SyntaxUtils.swift
+[173/188] Compiling SwiftParser TokenConsumer.swift
+[174/188] Compiling SwiftParser TokenPrecedence.swift
+[175/188] Compiling SwiftParser TokenSpec.swift
+[176/188] Compiling SwiftParser TokenSpecSet.swift
+[177/188] Compiling SwiftParser TopLevel.swift
+[178/188] Compiling SwiftParser TriviaParser.swift
+[179/188] Compiling SwiftParser Types.swift
+[180/188] Compiling SwiftParser ExperimentalFeatures.swift
+[181/188] Compiling SwiftParser IsLexerClassified.swift
+[182/188] Compiling SwiftParser LayoutNodes+Parsable.swift
+[183/188] Compiling SwiftParser Parser+TokenSpecSet.swift
+[184/188] Compiling SwiftParser TokenSpecStaticMembers.swift
+[185/206] Compiling SwiftOperators Operator.swift
+[186/206] Compiling SwiftOperators OperatorError+Diagnostics.swift
+[187/206] Compiling SwiftOperators OperatorError.swift
+[188/206] Compiling SwiftOperators OperatorTable+Defaults.swift
+[189/209] Compiling SwiftOperators PrecedenceGraph.swift
+[190/209] Compiling SwiftOperators PrecedenceGroup.swift
+[191/209] Compiling SwiftOperators SyntaxSynthesis.swift
+[192/209] Emitting module SwiftOperators
+[193/209] Compiling SwiftOperators OperatorTable+Folding.swift
+[194/209] Compiling SwiftOperators OperatorTable+Semantics.swift
+[195/209] Compiling SwiftOperators OperatorTable.swift
+[200/209] Emitting module SwiftParserDiagnostics
+[206/213] Compiling SwiftParserDiagnostics Utils.swift
+[207/213] Compiling SwiftParserDiagnostics ChildNameForDiagnostics.swift
+[208/213] Compiling SwiftParserDiagnostics SyntaxKindNameForDiagnostics.swift
+[209/213] Compiling SwiftParserDiagnostics TokenNameForDiagnostics.swift
+[210/224] Compiling SwiftSyntaxBuilder ConvenienceInitializers.swift
+[211/224] Compiling SwiftSyntaxBuilder DeclSyntaxParseable.swift
+[212/224] Compiling SwiftSyntaxBuilder Indenter.swift
+[213/224] Compiling SwiftSyntaxBuilder ListBuilder.swift
+[214/224] Compiling SwiftSyntaxBuilder ResultBuilderExtensions.swift
+[215/224] Emitting module SwiftSyntaxBuilder
+[216/224] Compiling SwiftSyntaxBuilder SwiftSyntaxBuilderCompatibility.swift
+[217/224] Compiling SwiftSyntaxBuilder Syntax+StringInterpolation.swift
+[218/224] Compiling SwiftSyntaxBuilder SyntaxNodeWithBody.swift
+[219/224] Compiling SwiftSyntaxBuilder SyntaxParsable+ExpressibleByStringInterpolation.swift
+[220/224] Compiling SwiftSyntaxBuilder ValidatingSyntaxNodes.swift
+[221/229] Compiling SwiftSyntaxBuilder WithTrailingCommaSyntax+EnsuringTrailingComma.swift
+[222/229] Compiling SwiftSyntaxBuilder BuildableNodes.swift
+[223/229] Compiling SwiftSyntaxBuilder RenamedChildrenBuilderCompatibility.swift
+[224/229] Compiling SwiftSyntaxBuilder ResultBuilders.swift
+[225/229] Compiling SwiftSyntaxBuilder SyntaxExpressibleByStringInterpolationConformances.swift
+[226/242] Compiling SwiftSyntaxMacros CodeItemMacro.swift
+[227/242] Compiling SwiftSyntaxMacros DeclarationMacro.swift
+[228/242] Compiling SwiftSyntaxMacros ExpressionMacro.swift
+[229/242] Compiling SwiftSyntaxMacros ExtensionMacro.swift
+[230/242] Compiling SwiftSyntaxMacros FreestandingMacro.swift
+[231/242] Compiling SwiftSyntaxMacros Macro+Format.swift
+[232/248] Emitting module SwiftSyntaxMacros
+[233/248] Compiling SwiftSyntaxMacros AbstractSourceLocation.swift
+[234/248] Compiling SwiftSyntaxMacros MacroExpansionContext.swift
+[235/248] Compiling SwiftSyntaxMacros MacroExpansionDiagnosticMessages.swift
+[236/248] Compiling SwiftSyntaxMacros AccessorMacro.swift
+[237/248] Compiling SwiftSyntaxMacros AttachedMacro.swift
+[238/248] Compiling SwiftSyntaxMacros BodyMacro.swift
+[239/248] Compiling SwiftSyntaxMacros Macro.swift
+[240/248] Compiling SwiftSyntaxMacros MemberAttributeMacro.swift
+[241/248] Compiling SwiftSyntaxMacros MemberMacro.swift
+[242/248] Compiling SwiftSyntaxMacros PeerMacro.swift
+[243/248] Compiling SwiftSyntaxMacros PreambleMacro.swift
+[244/248] Compiling SwiftSyntaxMacros Syntax+LexicalContext.swift
+[245/255] Compiling SwiftSyntaxMacroExpansion BasicMacroExpansionContext.swift
+[246/255] Compiling SwiftSyntaxMacroExpansion FunctionParameterUtils.swift
+[247/255] Compiling SwiftSyntaxMacroExpansion IndentationUtils.swift
+[248/258] Emitting module SwiftSyntaxMacroExpansion
+[249/258] Compiling SwiftSyntaxMacroExpansion MacroArgument.swift
+[250/258] Compiling SwiftSyntaxMacroExpansion MacroExpansion.swift
+[251/258] Compiling SwiftSyntaxMacroExpansion MacroExpansionDiagnosticMessages.swift
+[252/258] Compiling SwiftSyntaxMacroExpansion MacroReplacement.swift
+[253/258] Compiling SwiftSyntaxMacroExpansion MacroSpec.swift
+[254/258] Compiling SwiftSyntaxMacroExpansion MacroSystem.swift
+[255/267] Emitting module SwiftCompilerPluginMessageHandling
+[256/267] Compiling SwiftCompilerPluginMessageHandling JSONDecoding.swift
+[257/267] Compiling SwiftCompilerPluginMessageHandling JSONEncoding.swift
+[258/267] Compiling SwiftCompilerPluginMessageHandling LRUCache.swift
+[259/267] Compiling SwiftCompilerPluginMessageHandling Macros.swift
+[260/267] Compiling SwiftCompilerPluginMessageHandling CompilerPluginMessageHandler.swift
+[261/267] Compiling SwiftCompilerPluginMessageHandling Diagnostics.swift
+[262/267] Compiling SwiftCompilerPluginMessageHandling CodingUtilities.swift
+[263/267] Compiling SwiftCompilerPluginMessageHandling JSON.swift
+[264/271] Compiling SwiftCompilerPluginMessageHandling PluginMacroExpansionContext.swift
+[265/271] Compiling SwiftCompilerPluginMessageHandling PluginMessageCompatibility.swift
+[266/271] Compiling SwiftCompilerPluginMessageHandling PluginMessages.swift
+[267/271] Compiling SwiftCompilerPluginMessageHandling StandardIOMessageConnection.swift
+[268/273] Emitting module SwiftCompilerPlugin
+[269/273] Compiling SwiftCompilerPlugin CompilerPlugin.swift
+[270/295] Compiling TestingMacros TriviaPieceAdditions.swift
+[271/295] Compiling TestingMacros TypeSyntaxProtocolAdditions.swift
+[272/295] Compiling TestingMacros VersionTupleSyntaxAdditions.swift
+[273/295] Compiling TestingMacros WithAttributesSyntaxAdditions.swift
+[274/295] Compiling TestingMacros Argument.swift
+[275/295] Compiling TestingMacros AttributeDiscovery.swift
+[276/295] Compiling TestingMacros AvailabilityGuards.swift
+[277/295] Compiling TestingMacros ClosureCaptureListParsing.swift
+[278/295] Compiling TestingMacros CommentParsing.swift
+[279/295] Compiling TestingMacros ConditionArgumentParsing.swift
+[280/295] Emitting module TestingMacros
+[281/295] Compiling TestingMacros ConditionMacro.swift
+[282/295] Compiling TestingMacros ExitTestCapturedValueMacro.swift
+[283/295] Compiling TestingMacros PragmaMacro.swift
+[284/295] Compiling TestingMacros SourceLocationMacro.swift
+[285/295] Compiling TestingMacros SuiteDeclarationMacro.swift
+[286/295] Compiling TestingMacros DeclGroupSyntaxAdditions.swift
+[287/295] Compiling TestingMacros EditorPlaceholderExprSyntaxAdditions.swift
+[288/295] Compiling TestingMacros FunctionDeclSyntaxAdditions.swift
+[289/295] Compiling TestingMacros IntegerLiteralExprSyntaxAdditions.swift
+[290/295] Compiling TestingMacros MacroExpansionContextAdditions.swift
+[291/295] Compiling TestingMacros TokenSyntaxAdditions.swift
+[292/305] Compiling TestingMacros DiagnosticMessage+Diagnosing.swift
+[293/305] Compiling TestingMacros DiagnosticMessage.swift
+[294/305] Compiling TestingMacros EffectfulExpressionHandling.swift
+[295/305] Compiling TestingMacros SHA256.swift
+[296/305] Compiling TestingMacros SourceCodeCapturing.swift
+[297/305] Compiling TestingMacros SourceLocationGeneration.swift
+[298/305] Compiling TestingMacros TestContentGeneration.swift
+[299/305] Compiling TestingMacros TagMacro.swift
+[300/305] Compiling TestingMacros TestDeclarationMacro.swift
+[301/305] Compiling TestingMacros TestingMacrosMain.swift
+[301/305] Write Objects.LinkFileList
+[302/305] Linking TestingMacros-tool
+[304/356] Compiling Testing ABI.Record+Streaming.swift
+[305/356] Compiling Testing ABI.Record.swift
+[306/356] Compiling Testing ABI.swift
+[307/356] Compiling Testing ABI.EncodedAttachment.swift
+[308/356] Compiling Testing ABI.EncodedBacktrace.swift
+[309/356] Compiling Testing ABI.EncodedError.swift
+[310/356] Compiling Testing ABI.EncodedEvent.swift
+[311/356] Compiling Testing ABI.EncodedInstant.swift
+[312/356] Compiling Testing ABI.EncodedIssue.swift
+[313/356] Compiling Testing ABI.EncodedMessage.swift
+[314/356] Compiling Testing ABI.EncodedTest.swift
+[315/356] Compiling Testing ABIEntryPoint.swift
+[316/356] Compiling Testing EntryPoint.swift
+[317/356] Compiling Testing SwiftPMEntryPoint.swift
+[318/356] Compiling Testing Attachable.swift
+[319/356] Compiling Testing AttachableWrapper.swift
+[320/356] Compiling Testing Attachment.swift
+[321/356] Compiling Testing Discovery+Macro.swift
+[322/356] Compiling Testing Clock.swift
+[323/356] Compiling Testing Event.swift
+[324/356] Compiling Testing Event.ConsoleOutputRecorder.swift
+[325/356] Compiling Testing Event.HumanReadableOutputRecorder.swift
+[326/356] Compiling Testing Event.JUnitXMLRecorder.swift
+[327/356] Compiling Testing Event.Symbol.swift
+[328/356] Compiling Testing TimeValue.swift
+[329/381] Compiling Testing ExitStatus.swift
+[330/381] Compiling Testing ExitTest.CapturedValue.swift
+[331/381] Compiling Testing ExitTest.Condition.swift
+[332/381] Compiling Testing ExitTest.Result.swift
+[333/381] Compiling Testing ExitTest.swift
+[334/381] Compiling Testing SpawnProcess.swift
+[335/381] Compiling Testing WaitFor.swift
+[336/381] Compiling Testing Expectation+Macro.swift
+[337/381] Compiling Testing Expectation.swift
+[338/381] Compiling Testing ExpectationChecking+Macro.swift
+[339/381] Compiling Testing Confirmation.swift
+[340/381] Compiling Testing ErrorSnapshot.swift
+[341/381] Compiling Testing Issue+Recording.swift
+[342/381] Compiling Testing Issue.swift
+[343/381] Compiling Testing KnownIssue.swift
+[344/381] Compiling Testing CustomTestArgumentEncodable.swift
+[345/381] Compiling Testing Test.Case.Generator.swift
+[346/381] Compiling Testing Test.Case.ID.swift
+[347/381] Compiling Testing Test.Case.swift
+[348/381] Compiling Testing TypeInfo.swift
+[349/381] Compiling Testing Configuration+EventHandling.swift
+[350/381] Compiling Testing Configuration.TestFilter.swift
+[351/381] Compiling Testing Configuration.swift
+[352/381] Compiling Testing Runner.Plan+Dumping.swift
+[353/381] Compiling Testing Runner.Plan.swift
+[354/381] Emitting module Testing
+[355/406] Compiling Testing Locked+Platform.swift
+[356/406] Compiling Testing Locked.swift
+[357/406] Compiling Testing Versions.swift
+[358/406] Compiling Testing Test+Discovery+Legacy.swift
+[359/406] Compiling Testing Test+Discovery.swift
+[360/406] Compiling Testing Test+Macro.swift
+[361/406] Compiling Testing Test.ID.Selection.swift
+[362/406] Compiling Testing Test.ID.swift
+[363/406] Compiling Testing Test.swift
+[364/406] Compiling Testing Bug.swift
+[365/406] Compiling Testing Comment+Macro.swift
+[366/406] Compiling Testing Comment.swift
+[367/406] Compiling Testing ConditionTrait+Macro.swift
+[368/406] Compiling Testing ConditionTrait.swift
+[369/406] Compiling Testing HiddenTrait.swift
+[370/406] Compiling Testing IssueHandlingTrait.swift
+[371/406] Compiling Testing ParallelizationTrait.swift
+[372/406] Compiling Testing Tag+Macro.swift
+[373/406] Compiling Testing Tag+Predefined.swift
+[374/406] Compiling Testing Tag.Color+Loading.swift
+[375/406] Compiling Testing Tag.Color.swift
+[376/406] Compiling Testing Tag.List.swift
+[377/406] Compiling Testing Tag.swift
+[378/406] Compiling Testing TimeLimitTrait.swift
+[379/406] Compiling Testing Trait.swift
+[380/406] Compiling Testing Runner.RuntimeState.swift
+[381/406] Compiling Testing Runner.swift
+[382/406] Compiling Testing SkipInfo.swift
+[383/406] Compiling Testing Backtrace+Symbolication.swift
+[384/406] Compiling Testing Backtrace.swift
+[385/406] Compiling Testing CustomTestStringConvertible.swift
+[386/406] Compiling Testing Expression+Macro.swift
+[387/406] Compiling Testing Expression.swift
+[388/406] Compiling Testing SourceContext.swift
+[389/406] Compiling Testing SourceLocation+Macro.swift
+[390/406] Compiling Testing SourceLocation.swift
+[391/406] Compiling Testing ArrayAdditions.swift
+[392/406] Compiling Testing CollectionDifferenceAdditions.swift
+[393/406] Compiling Testing CommandLineAdditions.swift
+[394/406] Compiling Testing NumericAdditions.swift
+[395/406] Compiling Testing ResultAdditions.swift
+[396/406] Compiling Testing WinSDKAdditions.swift
+[397/406] Compiling Testing CError.swift
+[398/406] Compiling Testing CartesianProduct.swift
+[399/406] Compiling Testing CustomIssueRepresentable.swift
+[400/406] Compiling Testing Environment.swift
+[401/406] Compiling Testing FileHandle.swift
+[402/406] Compiling Testing GetSymbol.swift
+[403/406] Compiling Testing Graph.swift
+[404/406] Compiling Testing JSON.swift
+[405/408] Compiling MiloCoreTests JournalRepositoryTests.swift
+[406/408] Emitting module MiloCoreTests
+[407/410] Compiling MiloCorePackageTests runner.swift
+[408/410] Emitting module MiloCorePackageTests
+[408/410] Write Objects.LinkFileList
+[409/410] Linking MiloCorePackageTests
+Build complete! (122.83s)
+Test Suite 'All tests' started at 2026-09-25 16:14:02.383.
+Test Suite 'All tests' passed at 2026-09-25 16:14:02.386.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.003) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.2.4
+◇ Test historyIsNewestFirstWithAscendingIDForEqualTimes() started.
+◇ Test eachSaveReadsTheCurrentFileInsteadOfAStaleCache() started.
+◇ Test newInstallationDoesNotCreateADataFileWhenReading() started.
+◇ Test failedReadNeverOverwritesExistingDataAndRetryRecovers() started.
+◇ Test acceptedTimestampBoundsRoundTrip() started.
+◇ Test savingSameIDReplacesRatherThanDuplicates() started.
+◇ Test invalidRecordFieldsAreRejectedWithoutDataLoss() started.
+◇ Test longUnicodeNoteKeepsEveryInteriorCharacter() started.
+◇ Test blankNotesPreserveMoodAndUseQuietPreview(input:) started.
+◇ Test writtenNoteSurvivesANewRepositoryInstance() started.
+◇ Test primaryMoodContractMatchesExistingMilo() started.
+◇ Test malformedDataIsReportedAndNeverOverwritten(json:) started.
+◇ Test failedWriteKeepsOriginalBytesAndRecordsThenCanBeRetried() started.
+◇ Test invalidNewEntriesCannotTouchStorage() started.
+◇ Test unsupportedSchemaIsReportedAndNeverOverwritten() started.
+◇ Test duplicateIDsAreRejectedIncludingUUIDCaseVariants() started.
+◇ Test realReadErrorIsNotTreatedAsAnAbsentFile() started.
+◇ Test case passing 1 argument input → "" to blankNotesPreserveMoodAndUseQuietPreview(input:) started.
+◇ Test case passing 1 argument input → " 	
+ " to blankNotesPreserveMoodAndUseQuietPreview(input:) started.
+◇ Test case passing 1 argument json → "" to malformedDataIsReportedAndNeverOverwritten(json:) started.
+◇ Test case passing 1 argument json → "not JSON" to malformedDataIsReportedAndNeverOverwritten(json:) started.
+◇ Test case passing 1 argument json → "[]" to malformedDataIsReportedAndNeverOverwritten(json:) started.
+◇ Test case passing 1 argument input → "　
+" to blankNotesPreserveMoodAndUseQuietPreview(input:) started.
+◇ Test case passing 1 argument json → "null" to malformedDataIsReportedAndNeverOverwritten(json:) started.
+◇ Test case passing 1 argument json → "{}" to malformedDataIsReportedAndNeverOverwritten(json:) started.
+◇ Test case passing 1 argument json → "{"schemaVersion":1,"entries":null}" to malformedDataIsReportedAndNeverOverwritten(json:) started.
+✔ Test historyIsNewestFirstWithAscendingIDForEqualTimes() passed after 0.018 seconds.
+✔ Test newInstallationDoesNotCreateADataFileWhenReading() passed after 0.017 seconds.
+✔ Test acceptedTimestampBoundsRoundTrip() passed after 0.020 seconds.
+✔ Test failedReadNeverOverwritesExistingDataAndRetryRecovers() passed after 0.020 seconds.
+✔ Test eachSaveReadsTheCurrentFileInsteadOfAStaleCache() passed after 0.020 seconds.
+✔ Test savingSameIDReplacesRatherThanDuplicates() passed after 0.020 seconds.
+✔ Test invalidRecordFieldsAreRejectedWithoutDataLoss() passed after 0.020 seconds.
+✔ Test primaryMoodContractMatchesExistingMilo() passed after 0.019 seconds.
+✔ Test longUnicodeNoteKeepsEveryInteriorCharacter() passed after 0.020 seconds.
+✔ Test writtenNoteSurvivesANewRepositoryInstance() passed after 0.019 seconds.
+✔ Test blankNotesPreserveMoodAndUseQuietPreview(input:) with 3 test cases passed after 0.020 seconds.
+✔ Test malformedDataIsReportedAndNeverOverwritten(json:) with 6 test cases passed after 0.020 seconds.
+✔ Test failedWriteKeepsOriginalBytesAndRecordsThenCanBeRetried() passed after 0.020 seconds.
+✔ Test invalidNewEntriesCannotTouchStorage() passed after 0.020 seconds.
+✔ Test unsupportedSchemaIsReportedAndNeverOverwritten() passed after 0.019 seconds.
+✔ Test duplicateIDsAreRejectedIncludingUUIDCaseVariants() passed after 0.019 seconds.
+✔ Test realReadErrorIsNotTreatedAsAnAbsentFile() passed after 0.032 seconds.
+✔ Test run with 17 tests in 0 suites passed after 0.034 seconds.

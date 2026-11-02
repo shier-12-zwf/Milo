@@ -1,33 +1,32 @@
 {
-  "name": "demo",
+  "name": "milo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "apps/web",
+    "services/ai-gateway"
+  ],
   "scripts": {
-    "dev": "vite",
+    "dev": "npm -w apps/web run dev",
     "server": "node server/acp-bridge.mjs",
-    "dev:all": "concurrently -k -n web,acp \"vite\" \"node server/acp-bridge.mjs\"",
-    "test": "node --test tests/*.test.ts",
-    "build": "tsc -b && vite build",
+    "dev:all": "concurrently -k -n web,acp \"npm -w apps/web run dev\" \"node server/acp-bridge.mjs\"",
+    "gateway": "npm -w services/ai-gateway run dev",
+    "test": "npm -w apps/web test",
+    "test:gateway": "npm -w services/ai-gateway test",
+    "build": "npm -w apps/web run build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "npm -w apps/web run preview"
   },
   "dependencies": {
     "@zed-industries/agent-client-protocol": "^0.4.5",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
     "ws": "^8.21.1"
   },
   "devDependencies": {
-    "@types/node": "^24.13.2",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
     "@types/ws": "^8.18.1",
-    "@vitejs/plugin-react": "^6.0.3",
     "@zed-industries/codex-acp": "^0.16.0",
     "concurrently": "^10.0.3",
     "oxlint": "^1.71.0",
-    "typescript": "~6.0.2",
-    "vite": "^8.1.1"
+    "typescript": "~6.0.2"
   }
 }

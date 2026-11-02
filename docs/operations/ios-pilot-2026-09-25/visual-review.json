@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "runId": "36159042524",
+  "headSha": "e650fef889ae2569a563886d25e489afa6ff2a1b",
+  "sourceHash": "020231a34793dcdb91c06fb4e0d3444c7ce1835f8730f6f0727bc191df66e796",
+  "bundle": "/Users/runner/work/milo/milo/apps/ios/evidence/ui-test-2026-09-25T16-14-57-409Z.xcresult",
+  "reviewer": "Codex independent visual reviewer /root/runtime_forward_test",
+  "reviewedAt": "2026-09-25T16:30:30Z",
+  "verdict": "pass",
+  "checks": {
+    "keyboardReachable": true,
+    "longChineseText": true,
+    "accessibilityText": true,
+    "lightAppearance": true,
+    "darkAppearance": true
+  },
+  "screenshots": [
+    "/Users/runner/work/milo/milo/apps/ios/evidence/screenshots/AAD51AD6-CC99-402E-8780-A479FD9AF11C.png",
+    "/Users/runner/work/milo/milo/apps/ios/evidence/screenshots/78B98153-DB1B-48AA-A963-1D9A68439DE2.png",
+    "/Users/runner/work/milo/milo/apps/ios/evidence/screenshots/DD605181-52D0-4CB0-994B-3577FB6D734D.png",
+    "/Users/runner/work/milo/milo/apps/ios/evidence/screenshots/4DC2A7CA-0B19-45AA-86C7-890BD796EA55.png",
+    "/Users/runner/work/milo/milo/apps/ios/evidence/screenshots/131FABAE-A1CA-41EB-B262-8F65462BF0A0.png",
+    "/Users/runner/work/milo/milo/apps/ios/evidence/screenshots/84828E0F-6DF9-47C9-99C0-C37BB7638760.png"
+  ],
+  "reviewedScreenshots": [
+    {
+      "path": "screenshots/AAD51AD6-CC99-402E-8780-A479FD9AF11C.png",
+      "sha256": "795ae53ac10ae9360ebc25003e2e6443e665e00aacdb6218ef8e9d4b24f044fc"
+    },
+    {
+      "path": "screenshots/78B98153-DB1B-48AA-A963-1D9A68439DE2.png",
+      "sha256": "9cfb63cf0164ff15dbfb6176d3ef2274876aeed7905b691f6a121e936375948a"
+    },
+    {
+      "path": "screenshots/DD605181-52D0-4CB0-994B-3577FB6D734D.png",
+      "sha256": "67d6bdc0ebc2f28c9aae0bb26a4daee39fd4220637bc1a6616df5f507049d28e"
+    },
+    {
+      "path": "screenshots/4DC2A7CA-0B19-45AA-86C7-890BD796EA55.png",
+      "sha256": "66551c5b0bb8b4141f40d312719fe9462b4103ba4ae4702a0e49d09d2130c71d"
+    },
+    {
+      "path": "screenshots/131FABAE-A1CA-41EB-B262-8F65462BF0A0.png",
+      "sha256": "3eb9993630e9e8b5b4397c14e52b66e90dc1fa47cefb8a608630c1a340a8ef80"
+    },
+    {
+      "path": "screenshots/84828E0F-6DF9-47C9-99C0-C37BB7638760.png",
+      "sha256": "582d7d829f56164a370fccf25d11557b02cdbf2b6ba642646b35c55ef6443f2b"
+    }
+  ]
+}

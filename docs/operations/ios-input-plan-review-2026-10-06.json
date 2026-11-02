@@ -1,0 +1,132 @@
+{
+  "reviewedAtUTC": "2026-10-05T16:21:16.343690+00:00",
+  "reviewer": "independent speech_review agent",
+  "reviewRound": 2,
+  "verdict": "PASS",
+  "scope": "Read-only planning review of new user-required visible keyboard, sustained native recording and separately observed real Chinese transcription acceptance. No implementation or runtime acceptance yet.",
+  "artifacts": [
+    {
+      "path": "openspec/changes/ios-input-usability/design.md",
+      "sha256": "cd107bf407d9d5b1aaa51fb0c11c2be8134010cfbd97792c821428e728b59ff9"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/proposal.md",
+      "sha256": "94973fe4adc7c380962a3849b71f292f40435612af6871de043886138cb9e3a7"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/specs/ios-input-usability/spec.md",
+      "sha256": "c0d009becabbb2f3906c224440093142aaad32699071d8b0390566ef19fdb031"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/tasks.md",
+      "sha256": "baffe05d51fc4a7c441637597a451227491ae6b7f76316b32f1429c3b7b4fd33"
+    },
+    {
+      "path": "apps/ios/specdrive.input.json",
+      "sha256": "5a8efd54ee0045b59fa41666a15a9ba1f997462a1bb1c90b70cd63e68e9f94c6"
+    },
+    {
+      "path": "apps/ios/tests/SpeechInputTests.swift",
+      "sha256": "3be868c2c8053c40a05cd684d1d663f3f33a1b69e6fa481ca5e6ebb3beab76fe"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/state.json",
+      "sha256": "842bf0d6b76c4b09788c4492ecefa73dec7aa6bb38abcd478481c8a014d478ce"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/config-correction.txt",
+      "sha256": "6c3d2ede7a23b2959e61cb194b9c344d815b318a6c66e812f0c073d22c5fc375"
+    }
+  ],
+  "findings": [],
+  "assessment": {
+    "changedAcceptance": "Previous speech repair demonstrated callback safety and usable keyboard fallback. New plan explicitly requires actual voice usability; service failure remains failure for usable speech. This is a new user correction milestone, not a reset of old exhausted verification.",
+    "supportedRouting": "Simulator default SFSpeechRecognizer routing avoids explicitly forcing missing local recognition assets; physical local preference is retained. This may still fail if system service/assets are unavailable and is not success proof. No private asset modifications or transcript injection are planned.",
+    "keyboard": "Simulator hardware-keyboard preference fix has only preliminary observed field evidence; required chat XCUI keyboard existence, append to prior draft, actual send and observed sent text remain in execution task.",
+    "strictSpeech": "Authorized native voice must reach recording and remain active for five seconds, then stop while retaining prior text. Mere safe service failure cannot pass this requirement.",
+    "transcription": "Actual Chinese result requires real speech API/microphone or actual audio recognition, separately from sustained recording and mock state tests. No fabricated transcript acceptance is allowed.",
+    "bounds": "Separate scoped run limited to three attempts per check, two identical no-progress failures and forty minutes active commands. Previous state/evidence preserved; production app uninstall/data reset excluded.",
+    "privacyAndScope": "Diagnostics use only NSError domain/code; no audio/transcript logging. Physical-device and Bluetooth behavior remain excluded."
+  },
+  "finalReviewFocus": [
+    "Verify chat software keyboard is visible and prior fixture text survives actual append/send.",
+    "Verify production native backend truly reaches and sustains recording for full five seconds; no recording-state injection or failure fallback accepted.",
+    "Retain separate real audio/recognized-Chinese result provenance; default routing or an available recognizer flag alone does not prove transcription.",
+    "If service/models remain unavailable, mark strict speech/transcription incomplete with original failure logs and an actionable limitation.",
+    "Preserve prior exhausted run, current user data and all unrelated dirty files; record new run limits and attempts honestly.",
+    "Count public asset diagnostic separately from12 behavioral speech unit tests and never report diagnostic pass as native voice recognition. Retain actual unsupported locales/download status and current strict native failure if blocked."
+  ],
+  "reviewHistory": [
+    {
+      "snapshotSha256": "efe22727a80d266f72ec2adece6048a372571a0d0a710c07acb7a9057bc3a317",
+      "review": {
+        "reviewedAtUTC": "2026-10-05T16:17:25.334247+00:00",
+        "reviewer": "independent speech_review agent",
+        "reviewRound": 1,
+        "verdict": "PASS",
+        "scope": "Read-only planning review of new user-required visible keyboard, sustained native recording and separately observed real Chinese transcription acceptance. No implementation or runtime acceptance yet.",
+        "artifacts": [
+          {
+            "path": "openspec/changes/ios-input-usability/design.md",
+            "sha256": "1b5dc54043a1a6e019efd1e1adc55f69514566f5221615c21557f8671e07b032"
+          },
+          {
+            "path": "openspec/changes/ios-input-usability/proposal.md",
+            "sha256": "94973fe4adc7c380962a3849b71f292f40435612af6871de043886138cb9e3a7"
+          },
+          {
+            "path": "openspec/changes/ios-input-usability/specs/ios-input-usability/spec.md",
+            "sha256": "c0d009becabbb2f3906c224440093142aaad32699071d8b0390566ef19fdb031"
+          },
+          {
+            "path": "openspec/changes/ios-input-usability/tasks.md",
+            "sha256": "b62fdc26dd35218ffadcccbe8c6c6c10e4666f4d86cecb9e93e82e4e98e91175"
+          }
+        ],
+        "findings": [],
+        "assessment": {
+          "changedAcceptance": "Previous speech repair demonstrated callback safety and usable keyboard fallback. New plan explicitly requires actual voice usability; service failure remains failure for usable speech. This is a new user correction milestone, not a reset of old exhausted verification.",
+          "supportedRouting": "Simulator default SFSpeechRecognizer routing avoids explicitly forcing missing local recognition assets; physical local preference is retained. This may still fail if system service/assets are unavailable and is not success proof. No private asset modifications or transcript injection are planned.",
+          "keyboard": "Simulator hardware-keyboard preference fix has only preliminary observed field evidence; required chat XCUI keyboard existence, append to prior draft, actual send and observed sent text remain in execution task.",
+          "strictSpeech": "Authorized native voice must reach recording and remain active for five seconds, then stop while retaining prior text. Mere safe service failure cannot pass this requirement.",
+          "transcription": "Actual Chinese result requires real speech API/microphone or actual audio recognition, separately from sustained recording and mock state tests. No fabricated transcript acceptance is allowed.",
+          "bounds": "Separate scoped run limited to three attempts per check, two identical no-progress failures and forty minutes active commands. Previous state/evidence preserved; production app uninstall/data reset excluded.",
+          "privacyAndScope": "Diagnostics use only NSError domain/code; no audio/transcript logging. Physical-device and Bluetooth behavior remain excluded."
+        },
+        "finalReviewFocus": [
+          "Verify chat software keyboard is visible and prior fixture text survives actual append/send.",
+          "Verify production native backend truly reaches and sustains recording for full five seconds; no recording-state injection or failure fallback accepted.",
+          "Retain separate real audio/recognized-Chinese result provenance; default routing or an available recognizer flag alone does not prove transcription.",
+          "If service/models remain unavailable, mark strict speech/transcription incomplete with original failure logs and an actionable limitation.",
+          "Preserve prior exhausted run, current user data and all unrelated dirty files; record new run limits and attempts honestly."
+        ]
+      }
+    }
+  ],
+  "secondRoundAssessment": {
+    "publicAssetDiagnostic": "testNativeAssetPreparationDiagnostic calls documented public DictationTranscriber supported/installed locale lookup, supported Chinese equivalent locale, AssetInventory status/request and downloadAndInstall. Availability gate and caught domain/code diagnostics are preparation only, with explicit NOT speech acceptance messages.",
+    "diagnosticDoesNotMaskStrictCheck": "The diagnostic test may return normally on unsupported Chinese/download error; this may count as completion of a diagnostic unit test only. Separate native-voice strict actual recording criterion and real transcript observation remain unchanged and incomplete unless actual evidence succeeds.",
+    "firstStrictFailurePreserved": "Original state contains one failed specification check and one actual failed native-voice check; remaining five checks passed, including native keyboard. Original state/evidence retained rather than overwritten.",
+    "correctedConfig": "OpenSpec argv now validates exactly ios-input-usability with strict mode. Corrected config limits only two further attempts/check, preserving original one attempt/check consumption.",
+    "exactBudget": "Original executed report76920ms differs from frozen state76943ms by23ms final bookkeeping. Corrected maxWallTimeMs now2323057; frozen original+new remaining exactly2400000ms. Correction receipt explicitly records both snapshots.",
+    "acceptance": "Default legacy Speech routing and asset download do not prove transcription. Unavailable or unsupported real service must remain voice/transcription blocker; keyboard success can be delivered independently. No private MobileAsset edits or transcript injection."
+  },
+  "boundedConsumption": {
+    "originalStateElapsedMs": 76943,
+    "originalAttempts": {
+      "specification": 1,
+      "native-preflight": 1,
+      "native-build": 1,
+      "native-install": 1,
+      "native-unit": 1,
+      "native-keyboard": 1,
+      "native-voice": 1
+    },
+    "remainingLimits": {
+      "maxAttemptsPerCheck": 2,
+      "maxNoProgress": 2,
+      "maxWallTimeMs": 2323057
+    },
+    "aggregateMaximumMs": 2400000
+  }
+}

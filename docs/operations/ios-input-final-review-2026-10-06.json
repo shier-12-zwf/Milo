@@ -1,0 +1,565 @@
+{
+  "reviewedAtUTC": "2026-10-05T16:29:45.840192+00:00",
+  "reviewer": "independent speech_review agent",
+  "verdict": "PARTIAL_KEYBOARD_ACCEPTED_VOICE_AND_TRANSCRIPTION_BLOCKED",
+  "planStatus": "ACTIVE_INCOMPLETE",
+  "acceptance": {
+    "visibleKeyboard": "PASS: actual native XCUI keyboard exists/isHittable, typing preserves original fixture and actual sent text observed; ordinary Demo final original screenshot shows Chinese Pinyin keyboard.",
+    "sustainedRecording": "FAIL: all three bounded real strict attempts fail at idle != recording before the five-second recording interval.",
+    "realChineseTranscription": "NOT_OBSERVED_NOT_ACCEPTED",
+    "dataPreservation": "PASS: all original production data files preserved across all three covered installs and live ordinary Demo.",
+    "callbackRegression": "PASS: twelve speech behavior tests, nineteen existing account/keychain tests.",
+    "publicAssetDiagnostic": "COMPLETED_DIAGNOSTIC_ONLY; one additional unit test reports installed inventory but does not recognize audio."
+  },
+  "independentProvenance": {
+    "method": "Recomputed production source fingerprint, complete built bundle hash, full actual simctl-installed bundle hash and direct unit/UI binary SHA256; actual loaded test log hashes checked.",
+    "sourceHash": "65877662c561582029ceb5f3c93db61b3ab85859d47c8c815af0855c077dfb04",
+    "builtAndInstalledAppSHA256": "e025d9435386829d1b1b1861e49831dd649918e56deb042c71f84d4a1aec9619",
+    "unitTestSHA256": "fdc1dc82ca5449c4464fc3d61d207f0780a12a36fcbddbd0c95ee9975c69b8db",
+    "uiTestSHA256": "4a2c15d15760c5a827dd6b9e499d40f83575837944c53e7c5fe054a45d16eb21",
+    "ordinaryProcess": "PID10782 checked alive02:58, actual executable only, no fixture/parity/test args"
+  },
+  "tests": {
+    "unit": {
+      "result": "Passed",
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "resultBundle": "apps/ios/evidence/stability/unit-2026-10-05T16-22-48-376Z.xcresult",
+      "actualLoadedTestHashes": [
+        "fdc1dc82ca5449c4464fc3d61d207f0780a12a36fcbddbd0c95ee9975c69b8db",
+        "fdc1dc82ca5449c4464fc3d61d207f0780a12a36fcbddbd0c95ee9975c69b8db",
+        "fdc1dc82ca5449c4464fc3d61d207f0780a12a36fcbddbd0c95ee9975c69b8db"
+      ],
+      "originalLogHashVerified": true,
+      "failures": []
+    },
+    "keyboard": {
+      "result": "Passed",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "resultBundle": "apps/ios/evidence/stability/keyboard-2026-10-05T16-22-55-138Z.xcresult",
+      "actualLoadedTestHashes": [
+        "4a2c15d15760c5a827dd6b9e499d40f83575837944c53e7c5fe054a45d16eb21"
+      ],
+      "originalLogHashVerified": true,
+      "failures": []
+    },
+    "voice": {
+      "result": "Failed",
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "resultBundle": "apps/ios/evidence/stability/voice-2026-10-05T16-23-21-984Z.xcresult",
+      "actualLoadedTestHashes": [
+        "4a2c15d15760c5a827dd6b9e499d40f83575837944c53e7c5fe054a45d16eb21"
+      ],
+      "originalLogHashVerified": true,
+      "failures": [
+        {
+          "failureText": "XCTAssertEqual failed: (\"Optional(\"idle\")\") is not equal to (\"Optional(\"recording\")\") - A fallback error is not usable speech",
+          "targetName": "MiloUITests",
+          "testIdentifier": 1,
+          "testIdentifierString": "SpeechInputUITests/testDRealRecordingRemainsActive()",
+          "testIdentifierURL": "test://com.apple.xcode/Milo/MiloUITests/SpeechInputUITests/testDRealRecordingRemainsActive",
+          "testName": "testDRealRecordingRemainsActive()"
+        }
+      ]
+    }
+  },
+  "unitCountExplanation": {
+    "total": 32,
+    "accountAndKeychainBehavior": 19,
+    "speechCallbackAndLifecycleBehavior": 12,
+    "publicAssetDiagnostic": 1,
+    "voiceSuccessTests": 0
+  },
+  "boundedRuns": {
+    "input-usability-20261006": {
+      "status": "failed",
+      "elapsedMs": 76943,
+      "limits": {
+        "maxAttemptsPerCheck": 3,
+        "maxNoProgress": 2,
+        "maxWallTimeMs": 2400000
+      },
+      "checks": {
+        "specification": {
+          "status": "failed",
+          "attempts": [
+            "failed"
+          ]
+        },
+        "native-preflight": {
+          "status": "passed",
+          "attempts": [
+            "passed"
+          ]
+        },
+        "native-build": {
+          "status": "passed",
+          "attempts": [
+            "passed"
+          ]
+        },
+        "native-install": {
+          "status": "passed",
+          "attempts": [
+            "passed"
+          ]
+        },
+        "native-unit": {
+          "status": "passed",
+          "attempts": [
+            "passed"
+          ]
+        },
+        "native-keyboard": {
+          "status": "passed",
+          "attempts": [
+            "passed"
+          ]
+        },
+        "native-voice": {
+          "status": "failed",
+          "attempts": [
+            "failed"
+          ]
+        }
+      },
+      "allOriginalAttemptLogHashesVerified": true
+    },
+    "input-usability-20261006-corrected": {
+      "status": "failed",
+      "elapsedMs": 137001,
+      "limits": {
+        "maxAttemptsPerCheck": 2,
+        "maxNoProgress": 2,
+        "maxWallTimeMs": 2323057
+      },
+      "checks": {
+        "specification": {
+          "status": "passed",
+          "attempts": [
+            "passed",
+            "passed"
+          ]
+        },
+        "native-preflight": {
+          "status": "passed",
+          "attempts": [
+            "passed",
+            "passed"
+          ]
+        },
+        "native-build": {
+          "status": "passed",
+          "attempts": [
+            "passed",
+            "passed"
+          ]
+        },
+        "native-install": {
+          "status": "passed",
+          "attempts": [
+            "passed",
+            "passed"
+          ]
+        },
+        "native-unit": {
+          "status": "passed",
+          "attempts": [
+            "passed",
+            "passed"
+          ]
+        },
+        "native-keyboard": {
+          "status": "passed",
+          "attempts": [
+            "passed",
+            "passed"
+          ]
+        },
+        "native-voice": {
+          "status": "failed",
+          "attempts": [
+            "failed",
+            "failed"
+          ]
+        }
+      },
+      "allOriginalAttemptLogHashesVerified": true
+    }
+  },
+  "boundedAccounting": {
+    "originalPlusCorrectedElapsedMs": 213944,
+    "aggregateCommandBudgetMs": 2400000,
+    "totalAttemptsPerCheck": 3,
+    "allAllowedAttemptsConsumed": true,
+    "correctedRemainingLimitMs": 2323057,
+    "originalAndPriorSpeechStatesPreserved": true
+  },
+  "implementationAssessment": [
+    "Simulator initial default recognition routing and final explicit public supportsOnDeviceRecognition=false attempt leave physical local preference intact; both attempts failed honestly. Public routing flag does not certify repaired recognizer.",
+    "NSError domain/code diagnostics distinguish service failure from silence; no recognized text or audio is logged in product callback.",
+    "Callback actor isolation, generation cancellation and owned audio cleanup remain intact.",
+    "Keyboard presentation uses actual Simulator preferences/menu plus Chinese keyboard selection; root normal receipt records hardware connection enabled and explicit Toggle Software Keyboard after ordinary automation did not reliably reopen keys. Final acceptance is visible current ordinary keyboard, not hardware-off alone or guaranteed persistence across future Simulator restarts.",
+    "Strict native test explicitly rejects service failure; it cannot reach five-second check or manual-stop assertions while backend fails. Future successful voice test should separately assert retained prior input after stop."
+  ],
+  "reviewedImages": [
+    {
+      "path": ".artifacts/ios/input-usability-20261006/keyboard-final/864136DE-B873-41FF-BE3A-2FFDDF53E332.png",
+      "sha256": "0ed12f9728718cb74c51b98085d6e4bd03f960ad3f7f9072ecf1cbbde56b7561",
+      "personallyViewedOriginal": true,
+      "observation": "Actual full keyboard shown, prior fixture survives typing new text and Send control visible. New text inserted before fixture due caret; no tail-append claim."
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/60A365A2-2C08-4028-8989-A6C6CE574F22.png",
+      "sha256": "b7c71e60c1578223a5652c6c4285c8f292fd06a17b07adc65d17d2deb9a1ba51",
+      "personallyViewedOriginal": true,
+      "observation": "Actual final native voice entry immediately presents service-unavailable reason and idle voice control, prior text retained. No recording or recognition success."
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/EC65799C-0AE6-4658-89F6-6B43F794145D.png",
+      "sha256": "b7c71e60c1578223a5652c6c4285c8f292fd06a17b07adc65d17d2deb9a1ba51",
+      "personallyViewedOriginal": true,
+      "observation": "Original first strict voice failure shows same explicit service unavailable; retained rather than erased."
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/normal-chinese-keyboard-final.png",
+      "sha256": "79fd51fdb23a62b6344041c827b94903961b226ca89d725ea716c3a01cccab61",
+      "personallyViewedOriginal": true,
+      "observation": "Ordinary non-test demo visibly shows Chinese Pinyin software keyboard, focused real chat input and real existing conversation. No fixture/test text substituted."
+    }
+  ],
+  "dataPreservation": {
+    "threeLiveFilesMatch": true,
+    "productionFiles": {
+      "Library/Application Support/MILO/draft.json": "2bd4f99aed3f61dd934d5b055f7e403f05dae8edf62a46c6c1d4d46e0cd466f7",
+      "Library/Application Support/MILO/account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+      "Library/Application Support/MILO/journal.json": "3a7d1919886db4c071880890588b1de1587c0edd6d98320e03b1017fe71f8d1d"
+    },
+    "coveredInstalls": [
+      {
+        "receipt": "apps/ios/evidence/stability/install-2026-10-05T16-18-05-492Z.json",
+        "persistedFilesPreserved": 992,
+        "productionFiles": {
+          "Library/Application Support/MILO/account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+          "Library/Application Support/MILO/draft.json": "2bd4f99aed3f61dd934d5b055f7e403f05dae8edf62a46c6c1d4d46e0cd466f7",
+          "Library/Application Support/MILO/journal.json": "3a7d1919886db4c071880890588b1de1587c0edd6d98320e03b1017fe71f8d1d"
+        }
+      },
+      {
+        "receipt": "apps/ios/evidence/stability/install-2026-10-05T16-21-06-413Z.json",
+        "persistedFilesPreserved": 994,
+        "productionFiles": {
+          "Library/Application Support/MILO/account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+          "Library/Application Support/MILO/draft.json": "2bd4f99aed3f61dd934d5b055f7e403f05dae8edf62a46c6c1d4d46e0cd466f7",
+          "Library/Application Support/MILO/journal.json": "3a7d1919886db4c071880890588b1de1587c0edd6d98320e03b1017fe71f8d1d"
+        }
+      },
+      {
+        "receipt": "apps/ios/evidence/stability/install-2026-10-05T16-22-46-586Z.json",
+        "persistedFilesPreserved": 996,
+        "productionFiles": {
+          "Library/Application Support/MILO/account.json": "cb971f20cc08c5c58c3ebafa8b96595954f00b643762fd20b732982a33356312",
+          "Library/Application Support/MILO/draft.json": "2bd4f99aed3f61dd934d5b055f7e403f05dae8edf62a46c6c1d4d46e0cd466f7",
+          "Library/Application Support/MILO/journal.json": "3a7d1919886db4c071880890588b1de1587c0edd6d98320e03b1017fe71f8d1d"
+        }
+      }
+    ],
+    "protectedBaselineFiles": 207,
+    "unchangedProtectedFiles": 203,
+    "onlyAuthorizedChangedExistingFiles": [
+      "apps/ios/App/Journey/NativeSpeechInputBackend.swift",
+      "apps/ios/UITests/SpeechInputUITests.swift",
+      "apps/ios/tests/SpeechInputTests.swift",
+      "apps/ios/scripts/stability-native.mjs"
+    ]
+  },
+  "reviewedFiles": [
+    {
+      "path": ".artifacts/ios/input-usability-20261006/before-files.json",
+      "sha256": "a9d577d7a01db2992551fbc0f7ced55323f80f0b3085d352459e1d3cad7b8196"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/config-correction.txt",
+      "sha256": "6c3d2ede7a23b2959e61cb194b9c344d815b318a6c66e812f0c073d22c5fc375"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/evidence-index.json",
+      "sha256": "34a4ace2a919a18041771a03698a8c2cea4f3acf34cd16744653a78531c3c7d4"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/keyboard-final/7EF5C2EE-E244-4AA2-B183-DC095C8C6309.txt",
+      "sha256": "bf36b6dc90a67d2448db55ed53faac15e7e2a1a135e8859a8e854afa71e6c32f"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/keyboard-final/manifest.json",
+      "sha256": "84bc091a477dd27b3eeaa10a23fd8cd1712617c9432e6853142a7b923a03f92b"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/normal-demo.json",
+      "sha256": "e188224e719178330db44a0ef3023dd898ad874a9bc4fd0041c89e6614f8e97c"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/speech-system.log",
+      "sha256": "07288f80d6b3e868afd946d3c71e0af32757d280145128ae75072081201ed9ec"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/8733202D-7C85-42B0-A780-2B4232895B59.txt",
+      "sha256": "53370b5229b083aff50f53de4ba6b3bd12137ee2db4880fa2c760633a7b8e996"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/992BEDBB-7376-4B63-B3BE-5CBFA0A86694.txt",
+      "sha256": "ab2e0a8dc81ae59db4ff2fef48cc844376a3b2ea8c142cf79cc19b2b84d8594d"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/ACB08601-E597-4D05-84B5-FB16FDEC8AA7.txt",
+      "sha256": "53370b5229b083aff50f53de4ba6b3bd12137ee2db4880fa2c760633a7b8e996"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/B973FBB1-65DF-44D1-9BE3-1C046A50C69C.txt",
+      "sha256": "53370b5229b083aff50f53de4ba6b3bd12137ee2db4880fa2c760633a7b8e996"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/FC208144-CEA3-43C2-8980-272F0061086E.txt",
+      "sha256": "1165477eb39b76ee3e79586b1707ff2ba05c29b8bd02b6b5e739248bf611cb25"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-final/manifest.json",
+      "sha256": "3b6d6132d3d21a128fbadf8cfe1b57059425eea6dbd7b2051d7e02d3b91ea586"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/184074CE-06CE-4F77-AB09-EEC53AA79343.txt",
+      "sha256": "f05ec0e5c041304d7dd67ab2bda6f904b0cd7bb78a92a0b62fac80b9f151a93c"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/7810B946-1681-4F77-998F-B84BB3EDED9F.txt",
+      "sha256": "53370b5229b083aff50f53de4ba6b3bd12137ee2db4880fa2c760633a7b8e996"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/97A1D270-C6DB-4B54-8D90-1E08235A1B7D.txt",
+      "sha256": "53370b5229b083aff50f53de4ba6b3bd12137ee2db4880fa2c760633a7b8e996"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/C7FAA8E1-86AD-4D06-9EA3-1C075F953B5F.txt",
+      "sha256": "1a595cff56d2a2e7cb27c0063c6ef2832e38e61becac82ee40524b44f54f6c2e"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/E6B437A7-987F-4642-AEA2-B0FC4C2C650E.txt",
+      "sha256": "53370b5229b083aff50f53de4ba6b3bd12137ee2db4880fa2c760633a7b8e996"
+    },
+    {
+      "path": ".artifacts/ios/input-usability-20261006/voice-first/manifest.json",
+      "sha256": "3d86d850784da352cbebaa02ebc98386c7e3702bc804a6a09315dacc6b29e5fa"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/native-build-1.log",
+      "sha256": "ca9747c50d6cd0c6d7099b59bf7ae6d3ba486b06d5dfe1e19332156d2cb688c3"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/native-install-1.log",
+      "sha256": "6427785f173473c7d23f6c468eb275cdcbb889805ac426e440a9c8a4af1a896b"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/native-keyboard-1.log",
+      "sha256": "bfb3f30bf83cc8ec11ee45058fe4df2f0d152150d061e2e708263be4dd332623"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/native-preflight-1.log",
+      "sha256": "29271caefad2e9df58700194a5ea1253079a3dd134b8890752a00c2a5e520dc8"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/native-unit-1.log",
+      "sha256": "1c544f022ef13dd3e3818014a926f9f32081584ba5d335d3b80aa898df71ef2e"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/native-voice-1.log",
+      "sha256": "b26723a3a649635ebe9e5b20f1e40af01cd14f6637cbc54fc33f8c0f59e87f31"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/logs/specification-1.log",
+      "sha256": "7a42b00d4b05b7ef6947a0ab26d0ad05e6d9b4a4f22943b1adef31f2b5408197"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006/state.json",
+      "sha256": "842bf0d6b76c4b09788c4492ecefa73dec7aa6bb38abcd478481c8a014d478ce"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-build-1.log",
+      "sha256": "ca9747c50d6cd0c6d7099b59bf7ae6d3ba486b06d5dfe1e19332156d2cb688c3"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-build-2.log",
+      "sha256": "ca9747c50d6cd0c6d7099b59bf7ae6d3ba486b06d5dfe1e19332156d2cb688c3"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-install-1.log",
+      "sha256": "6427785f173473c7d23f6c468eb275cdcbb889805ac426e440a9c8a4af1a896b"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-install-2.log",
+      "sha256": "6427785f173473c7d23f6c468eb275cdcbb889805ac426e440a9c8a4af1a896b"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-keyboard-1.log",
+      "sha256": "47f59da108b184db5f05c5e97289e9557dfe1c42f1cdd6e5d75f375916792764"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-keyboard-2.log",
+      "sha256": "3ffc948bb9d3631779b4de1c5b3b47227d2b9a81c78ede9100dbfc6e8062110c"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-preflight-1.log",
+      "sha256": "29271caefad2e9df58700194a5ea1253079a3dd134b8890752a00c2a5e520dc8"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-preflight-2.log",
+      "sha256": "29271caefad2e9df58700194a5ea1253079a3dd134b8890752a00c2a5e520dc8"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-unit-1.log",
+      "sha256": "cff16d2bcc67a5532574deb05e0a61b9cc0ef9fb7f3800536d8717bf210a2b1a"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-unit-2.log",
+      "sha256": "3eea0eff3708b9851e7fc491a8163c6e5a27773fc5622762ef0c3278e84cce68"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-voice-1.log",
+      "sha256": "d8bb69d86c6117cc12d61f6009fd14691678ebec74cb581e2bd0e2ea3aa24485"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/native-voice-2.log",
+      "sha256": "8e65643339ab298368ff402ebf519f45ca71e39a2533694cb9c40b9046a608c4"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/specification-1.log",
+      "sha256": "79cc7cece52e24ec5cf68dbc740a2f7d1b647a07dcbb58c9d9baaff7fe35120c"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/logs/specification-2.log",
+      "sha256": "79cc7cece52e24ec5cf68dbc740a2f7d1b647a07dcbb58c9d9baaff7fe35120c"
+    },
+    {
+      "path": ".specdrive/input-usability-20261006-corrected/state.json",
+      "sha256": "e548fca31f375b19964927419c3ebda98fe0f629bc5aed95b661c2420e974cc7"
+    },
+    {
+      "path": "apps/ios/App/Journey/NativeSpeechInputBackend.swift",
+      "sha256": "325dbf22b7cb18efe820e36cca9762df1616685b04788b52bf5d7b52b6f79027"
+    },
+    {
+      "path": "apps/ios/UITests/SpeechInputUITests.swift",
+      "sha256": "1f645d3072c2acadbe0a0bf3b4c2bbbc67b3d92135cf095c9666765d9b44f9f4"
+    },
+    {
+      "path": "apps/ios/evidence/stability/install-2026-10-05T16-18-05-492Z.json",
+      "sha256": "340666c115e96fe71dd855ae045a6f6145845390f83fdc5458d684a8ab9eed57"
+    },
+    {
+      "path": "apps/ios/evidence/stability/install-2026-10-05T16-21-06-413Z.json",
+      "sha256": "6ece42ec75b2e8c2b5c2b310afacaa2d2f0480dfeddc5a6b1eaf3f2fb509c1c4"
+    },
+    {
+      "path": "apps/ios/evidence/stability/install-2026-10-05T16-22-46-586Z.json",
+      "sha256": "234ff42e441d597d9dccd151f7a62c01ae4b8962d4bc0c0691bc598206b0e0d9"
+    },
+    {
+      "path": "apps/ios/evidence/stability/keyboard-2026-10-05T16-22-55-138Z.log",
+      "sha256": "8cff6ff6280dfb99cae71f661cda8d9296202c5c7fe839ef481f5a820e95610c"
+    },
+    {
+      "path": "apps/ios/evidence/stability/keyboard-2026-10-05T16-22-55-138Z.xcresult/Info.plist",
+      "sha256": "40568268cec6e59cf0ded9e508bc01c6a91e8d28847f8a2dce6654f1c90bff86"
+    },
+    {
+      "path": "apps/ios/evidence/stability/unit-2026-10-05T16-22-48-376Z.log",
+      "sha256": "4a0da4ee66603676e845ca33147e1485bde2d5ab73a019c289e5094172f4cb9f"
+    },
+    {
+      "path": "apps/ios/evidence/stability/unit-2026-10-05T16-22-48-376Z.xcresult/Info.plist",
+      "sha256": "c064b8ab71b196dd719811b23dfe0fcd898bc7b634ac8822f76ab92abcc34961"
+    },
+    {
+      "path": "apps/ios/evidence/stability/voice-2026-10-05T16-23-21-984Z.log",
+      "sha256": "917eee3f8c2d51d21f70536f7a8c0e4b4521122671ebddaefb9140564c9668c9"
+    },
+    {
+      "path": "apps/ios/evidence/stability/voice-2026-10-05T16-23-21-984Z.xcresult/Info.plist",
+      "sha256": "b79901561e22e5a31e5d840ad03192d7ade7e93de2ebd65148e1c95c2981db23"
+    },
+    {
+      "path": "apps/ios/scripts/stability-native.mjs",
+      "sha256": "3ffc63f2f03cd65a82950ac9a776d025ed608ed5c42cba0b676964b4859970e6"
+    },
+    {
+      "path": "apps/ios/specdrive.input.json",
+      "sha256": "5a8efd54ee0045b59fa41666a15a9ba1f997462a1bb1c90b70cd63e68e9f94c6"
+    },
+    {
+      "path": "apps/ios/tests/SpeechInputTests.swift",
+      "sha256": "825ac67e8b7ee20564d1a54d89466e606a6f0b0d6b157034de4c1e87a4674ed9"
+    },
+    {
+      "path": "docs/operations/ios-input-plan-review-2026-10-06.json",
+      "sha256": "7690b9efae719739b3f2003b0e05cd7cbcb8bb0ba883df1e4be329b57e3ad007"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/design.md",
+      "sha256": "7aa504cbc863ae28822ad0040bbaf033497e9e0fd2e9e114ca4afd8ff6b37650"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/proposal.md",
+      "sha256": "94973fe4adc7c380962a3849b71f292f40435612af6871de043886138cb9e3a7"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/specs/ios-input-usability/spec.md",
+      "sha256": "c0d009becabbb2f3906c224440093142aaad32699071d8b0390566ef19fdb031"
+    },
+    {
+      "path": "openspec/changes/ios-input-usability/tasks.md",
+      "sha256": "baffe05d51fc4a7c441637597a451227491ae6b7f76316b32f1429c3b7b4fd33"
+    },
+    {
+      "path": "docs/operations/ios-input-usability-2026-10-06.md",
+      "sha256": "f6ce7a04525e860267a806601ac90e463beba1597ca7881f057b4b84c66ad98d"
+    }
+  ],
+  "blockers": [
+    {
+      "priority": "P1",
+      "capability": "Usable speech entry",
+      "evidence": "Strict actual voice returns idle and visible service unavailable; actual system log reports kLSRErrorDomain code300 and absent mini.json.",
+      "status": "UNRESOLVED; do not archive change or label voice working."
+    },
+    {
+      "priority": "P1",
+      "capability": "Real Chinese transcription",
+      "evidence": "No nonempty real recognized Chinese result; no five-second active recording success. AssetInventory reports zh_CN/en_US installed and SpeechTranscriber unavailable, while legacy recognition model files still missing.",
+      "status": "UNVERIFIED; asset diagnostic pass is not transcription."
+    }
+  ],
+  "limitations": [
+    "No physical iPhone/Bluetooth acceptance.",
+    "Software keyboard is verified visibly in native fixture and current ordinary Demo; future Simulator preference/service persistence not asserted.",
+    "Typing test inserts at existing caret, preserving text; it does not prove tail append specifically.",
+    "Three public routing/environment repair attempts failed; budget remains consumed and must not be reset to claim progress.",
+    "Stored speech-sample audio file alone is not real recognized-result evidence."
+  ],
+  "conclusions": [
+    "Accept only current visible keyboard usability, preserved typing/sending, clearer service diagnostics and existing safety regressions.",
+    "Do not approve sustained voice, real transcription, full product release or completion of ios-input-usability.",
+    "Leave ordinary Demo with visible Chinese keyboard and keep original failures/active plan."
+  ],
+  "incidentReportAssessment": {
+    "verdict": "ACCURATE_PARTIAL_SCOPE",
+    "ordinaryKeyboard": "Matches personally viewed ordinary Chinese Pinyin keyboard and normal receipt; describes hardware enabled plus explicit software keyboard toggle, not hardware-off alone.",
+    "voice": "Explicitly remains unavailable; all three strict attempts fail before sustained recording, actual Chinese transcript absent; inventory installed status not success.",
+    "countsAndBudget": "19 account/keychain +12 speech behavior +1 asset diagnostic matches original native logs/result counts; original76943ms plus remaining2323057ms budget exact, one original+two corrected attempts retained.",
+    "completion": "Tasks4/5 remain incomplete, change active; no voice or release completion claimed.",
+    "preservation": "Three production files live hashes and covered install receipts verified; other203of207baseline files unchanged, only4authorized source/test/driver changes."
+  }
+}
