@@ -1,7 +1,7 @@
 import { componentSnapshot, curves, display } from '@kit.ArkUI';
 import { common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
+import { fileIo as fs, fileUri } from '@kit.CoreFileKit';
 import { image } from '@kit.ImageKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 import {
@@ -212,16 +212,41 @@ export struct CardScreen {
       await packer.release();
       await pixelMap.release();
       const path: string = `${context.cacheDir}/milo-card-${Date.now()}.png`;
-      const file = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC);
+      const temp = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC);
       try {
-        fs.writeSync(file.fd, data);
+        fs.writeSync(temp.fd, data);
+      } finally {
+        try { fs.closeSync(temp); } catch (_closeError) {}
+      }
+      try {
+        // The system save dialog grants write access to the target URI, so the
+        // restricted ohos.permission.WRITE_IMAGEVIDEO is not needed.
         const helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-        const request: photoAccessHelper.MediaAssetChangeRequest =
-          photoAccessHelper.MediaAssetChangeRequest.createImageAssetRequest(context, `file://${path}`);
-        await helper.applyChanges(request);
+        const config: photoAccessHelper.PhotoCreationConfig = {
+          title: `MILO-${Date.now()}`,
+          fileNameExtension: 'png',
+          photoType: photoAccessHelper.PhotoType.IMAGE,
+        };
+        const targets: Array<string> = await helper.showAssetsCreationDialog([fileUri.getUriFromPath(path)], [config]);
+        if (targets.length === 0) {
+          // The user cancelled the system dialog: clear the status, not an error.
+          this.saveState = '';
+          return;
+        }
+        const source = fs.openSync(path, fs.OpenMode.READ_ONLY);
+        try {
+          const target = fs.openSync(targets[0], fs.OpenMode.WRITE_ONLY);
+          try {
+            fs.copyFileSync(source.fd, target.fd);
+          } finally {
+            try { fs.closeSync(target); } catch (_closeError) {}
+          }
+        } finally {
+          try { fs.closeSync(source); } catch (_closeError) {}
+        }
         this.saveState = 'saved';
       } finally {
-        try { fs.closeSync(file); } catch (_closeError) {}
+        try { fs.unlinkSync(path); } catch (_unlinkError) {}
       }
     } catch (e) {
       this.saveState = 'failed';
