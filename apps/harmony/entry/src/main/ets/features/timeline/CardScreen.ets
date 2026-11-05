@@ -1,7 +1,7 @@
 import { componentSnapshot, curves, display } from '@kit.ArkUI';
 import { common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
+import { fileIo as fs, fileUri } from '@kit.CoreFileKit';
 import { image } from '@kit.ImageKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 import {
@@ -92,7 +92,7 @@ export struct CardScreen {
       return;
     }
     try {
-      const context = getContext(this) as common.UIAbilityContext;
+      const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const raw: Uint8Array = context.resourceManager.getMediaContentSync(SHEET_RESOURCES[asset.sheet]);
       console.info(`milo-card: sheet=${asset.sheet} bytes=${raw.byteLength} offset=${raw.byteOffset}`);
       // getMediaContentSync may return a view into a larger buffer; hand the
@@ -200,7 +200,7 @@ export struct CardScreen {
     }
     this.saveState = 'saving';
     try {
-      const context = getContext(this) as common.UIAbilityContext;
+      const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const density: number = display.getDefaultDisplaySync().densityPixels;
       const exportScale: number = Math.max(1, CARD_DESIGN_WIDTH / (this.previewWidth * density));
       const pixelMap: image.PixelMap = await componentSnapshot.get('miloCardPreview', {
@@ -212,14 +212,42 @@ export struct CardScreen {
       await packer.release();
       await pixelMap.release();
       const path: string = `${context.cacheDir}/milo-card-${Date.now()}.png`;
-      const file = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC);
-      fs.writeSync(file.fd, data);
-      fs.closeSync(file);
-      const helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-      const request: photoAccessHelper.MediaAssetChangeRequest =
-        photoAccessHelper.MediaAssetChangeRequest.createImageAssetRequest(context, `file://${path}`);
-      await helper.applyChanges(request);
-      this.saveState = 'saved';
+      const temp = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC);
+      try {
+        fs.writeSync(temp.fd, data);
+      } finally {
+        try { fs.closeSync(temp); } catch (_closeError) {}
+      }
+      try {
+        // The system save dialog grants write access to the target URI, so the
+        // restricted ohos.permission.WRITE_IMAGEVIDEO is not needed.
+        const helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+        const config: photoAccessHelper.PhotoCreationConfig = {
+          title: `MILO-${Date.now()}`,
+          fileNameExtension: 'png',
+          photoType: photoAccessHelper.PhotoType.IMAGE,
+        };
+        const targets: Array<string> = await helper.showAssetsCreationDialog([fileUri.getUriFromPath(path)], [config]);
+        if (targets.length === 0) {
+          // The user cancelled the system dialog: clear the status, not an error.
+          this.saveState = '';
+          return;
+        }
+        const source = fs.openSync(path, fs.OpenMode.READ_ONLY);
+        try {
+          const target = fs.openSync(targets[0], fs.OpenMode.WRITE_ONLY);
+          try {
+            fs.copyFileSync(source.fd, target.fd);
+          } finally {
+            try { fs.closeSync(target); } catch (_closeError) {}
+          }
+        } finally {
+          try { fs.closeSync(source); } catch (_closeError) {}
+        }
+        this.saveState = 'saved';
+      } finally {
+        try { fs.unlinkSync(path); } catch (_unlinkError) {}
+      }
     } catch (e) {
       this.saveState = 'failed';
     }

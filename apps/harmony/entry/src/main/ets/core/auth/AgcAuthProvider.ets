@@ -40,7 +40,8 @@ function initAgcOnce(context: common.Context): boolean {
   }
   try {
     const raw = context.resourceManager.getRawFileContentSync(AGC_CONFIG_FILE);
-    const json = buffer.from(raw.buffer).toString();
+    const exact = raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.byteLength);
+    const json = buffer.from(exact).toString('utf8');
     auth.init(context, json);
     agcInitialized = true;
     return true;

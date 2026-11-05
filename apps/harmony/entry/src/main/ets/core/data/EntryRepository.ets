@@ -16,13 +16,45 @@ export interface EntryEnvelope {
 
 export const ENTRIES_STORAGE_KEY = 'milo.entries.v1';
 export const ENTRY_SCHEMA_VERSION = 1;
+/** Used by tests and any caller that has not bound a signed-in account yet. */
+export const DEFAULT_STORAGE_UID = 'local';
+
+export function scopedEntriesKey(uid: string): string {
+  const trimmed = uid.trim();
+  const owner = trimmed.length > 0 ? trimmed : DEFAULT_STORAGE_UID;
+  return `${ENTRIES_STORAGE_KEY}.${owner}`;
+}
 
 export class EntryRepository {
   private storage: KVStorage;
   private cache: DiaryEntry[] | undefined;
+  private key: string;
+  private migrated: boolean = false;
 
-  constructor(storage: KVStorage) {
+  constructor(storage: KVStorage, uid: string = DEFAULT_STORAGE_UID) {
     this.storage = storage;
+    this.key = scopedEntriesKey(uid);
+  }
+
+  /**
+   * Older builds stored every diary under one device key. The first signed-in
+   * account to read that blob takes it, then the legacy key is removed so a
+   * later account cannot see the same entries.
+   */
+  private migrateLegacy(): void {
+    if (this.migrated) {
+      return;
+    }
+    this.migrated = true;
+    if (this.storage.read(this.key) !== undefined) {
+      return;
+    }
+    const legacy = this.storage.read(ENTRIES_STORAGE_KEY);
+    if (legacy === undefined) {
+      return;
+    }
+    this.storage.write(this.key, legacy);
+    this.storage.remove(ENTRIES_STORAGE_KEY);
   }
 
   /** Replace the in-memory cache with a freshly-read payload. */
@@ -30,7 +62,8 @@ export class EntryRepository {
     if (this.cache !== undefined) {
       return this.cache;
     }
-    const raw = this.storage.read(ENTRIES_STORAGE_KEY);
+    this.migrateLegacy();
+    const raw = this.storage.read(this.key);
     if (raw === undefined) {
       this.cache = [];
       return this.cache;
@@ -44,11 +77,12 @@ export class EntryRepository {
     if (this.cache === undefined) {
       return;
     }
+    this.migrateLegacy();
     const envelope: EntryEnvelope = {
       schemaVersion: ENTRY_SCHEMA_VERSION,
       entries: this.cache.slice(),
     };
-    this.storage.write(ENTRIES_STORAGE_KEY, JSON.stringify(envelope));
+    this.storage.write(this.key, JSON.stringify(envelope));
   }
 
   /** Return every saved entry, newest first. Tolerates malformed records. */
@@ -56,9 +90,10 @@ export class EntryRepository {
     return this.refresh().slice();
   }
 
-  /** Clear persisted entries and their in-memory cache after account deletion. */
+  /** Clear this account's entries and their in-memory cache after deletion. */
   clear(): void {
-    this.storage.remove(ENTRIES_STORAGE_KEY);
+    this.migrateLegacy();
+    this.storage.remove(this.key);
     this.cache = [];
   }
 

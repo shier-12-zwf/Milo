@@ -12,6 +12,7 @@ import { SpeechInput, mergeRecognizedText, speechFeedback, type SpeechResult } f
 import { HarmonySpeechPlatform } from '../../core/system/HarmonySpeechPlatform';
 import { MiloBackNode, MiloPrimaryButton, pathPx } from '../ui/MiloButtons';
 import { AI_AVAILABLE, effectiveAiEnabled } from '../../core/config/FeatureFlags';
+import { GATEWAY_MAX_TEXT_LENGTH } from '../../core/network/AiGatewayClient';
 
 /** Web `cubic-bezier(0.22, 1, 0.36, 1)` — the signature Milo ease. */
 const MILO_EASE: ICurve = curves.cubicBezierCurve(0.22, 1, 0.36, 1);
@@ -42,6 +43,7 @@ export struct ChatScreen {
   private scroller: Scroller = new Scroller();
   private speech: SpeechInput | null = null;
   private speechTurn: number = 0;
+  private draftTimer: number = -1;
   controller: ConversationController | null = null;
   draft: Draft = { mood: { valence: 0, labels: [] }, transcript: [], diaryEnabled: true };
   onFinish: (transcript: ChatMessage[]) => void = () => {};
@@ -57,7 +59,7 @@ export struct ChatScreen {
     const timeMark = this.draft.timeMark ?? '过去的某一天';
     this.guide = new FallbackGuide(timeMark);
     this.speech = new SpeechInput({
-      platform: new HarmonySpeechPlatform(getContext(this) as common.UIAbilityContext),
+      platform: new HarmonySpeechPlatform(this.getUIContext().getHostContext() as common.UIAbilityContext),
     });
     if (this.controller !== null) {
       this.controller.restoreState(this.conversationState);
@@ -90,6 +92,7 @@ export struct ChatScreen {
 
   aboutToDisappear(): void {
     this.active = false;
+    this.flushChat();
     this.speechTurn += 1;
     if (this.speech !== null) {
       void this.speech.dispose();
@@ -129,7 +132,7 @@ export struct ChatScreen {
       this.conversationState.source = 'script';
       this.controller?.restoreState(this.conversationState);
     }
-    this.persistChat();
+    this.flushChat();
   }
 
   private finish(): void {
@@ -143,13 +146,34 @@ export struct ChatScreen {
     } else {
       this.controller?.restoreState({ source: 'ai', fallbackStep: this.guide?.currentStep() ?? 0, lastError: undefined });
     }
+    this.flushChat();
     this.active = false;
     this.onFinish(this.messages);
   }
 
   private persistChat(): void {
+    if (this.input.length > GATEWAY_MAX_TEXT_LENGTH) {
+      this.input = this.input.slice(0, GATEWAY_MAX_TEXT_LENGTH);
+    }
     const preference = AI_AVAILABLE ? this.aiMode : (this.draft.aiEnabled ?? this.defaultAiEnabled);
     this.onChatChange(this.messages, this.input, preference);
+  }
+
+  /** Keystrokes wait briefly so preferences are not flushed on every character. */
+  private scheduleChat(): void {
+    if (this.draftTimer >= 0) clearTimeout(this.draftTimer);
+    this.draftTimer = setTimeout(() => {
+      this.draftTimer = -1;
+      this.persistChat();
+    }, 400);
+  }
+
+  private flushChat(): void {
+    if (this.draftTimer >= 0) {
+      clearTimeout(this.draftTimer);
+      this.draftTimer = -1;
+    }
+    this.persistChat();
   }
 
   private pushMessage(message: ChatMessage): void {
@@ -159,7 +183,7 @@ export struct ChatScreen {
     }
     next.push(message);
     this.messages = next;
-    this.persistChat();
+    this.flushChat();
     this.scrollToEnd();
   }
 
@@ -205,7 +229,7 @@ export struct ChatScreen {
         this.speechStatus = speechFeedback(result);
         if (result.text.trim().length > 0) {
           this.input = mergeRecognizedText(prior, result.text);
-          this.persistChat();
+          this.flushChat();
         }
       })
       .catch(() => {
@@ -302,7 +326,7 @@ export struct ChatScreen {
             (this.aiMode ? (this.conversationState.lastError?.message ?? 'AI 已开启，下一条消息将使用当前模型。') : 'AI 已关闭，正在使用本地引导。'))
             .fontSize(12).fontColor('#c9befc').layoutWeight(1).maxLines(3)
           Text('AI 设置').fontSize(13).fontColor('#b9aefc').padding(8)
-            .enabled(!this.busy).onClick(() => { this.persistChat(); this.onAiSettings(); })
+            .enabled(!this.busy).onClick(() => { this.flushChat(); this.onAiSettings(); })
         }.width('100%').margin({ bottom: 10 })
       }
 
@@ -414,9 +438,10 @@ export struct ChatScreen {
             text: this.input,
           })
             .enabled(!this.listening)
+            .maxLength(GATEWAY_MAX_TEXT_LENGTH)
             .onChange((value: string) => {
-              this.input = value;
-              this.persistChat();
+              this.input = value.length > GATEWAY_MAX_TEXT_LENGTH ? value.slice(0, GATEWAY_MAX_TEXT_LENGTH) : value;
+              this.scheduleChat();
             })
             .enterKeyType(EnterKeyType.NEW_LINE)
             .layoutWeight(1)

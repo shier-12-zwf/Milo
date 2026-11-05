@@ -80,6 +80,7 @@ function newController(storage: MapKVStorage): AuthController {
   return new AuthController({
     provider: new FakeAuthProvider(),
     store: new AuthSessionStore(storage),
+    allowOwnerBackdoor: true,
   });
 }
 
@@ -152,7 +153,7 @@ function authControllerSuite() {
       expect(await controller.changeAccountPassword(FAKE_AUTH_CODE, 'NewPass123!')).assertFalse();
       expect(controller.getSession()!.uid).assertEqual(BACKDOOR_SESSION.uid);
     });
-    it('an uncertain remote deletion retains data and requires explicit local-only cleanup', 0, async () => {
+    it('an explicit remote deletion failure rolls the marker back and can be retried', 0, async () => {
       const store = new AuthSessionStore(new MapKVStorage());
       store.save({ uid: 'test-user', email: 'test@example.com', provider: 'agc' });
       const provider = new FakeAuthProvider();
@@ -164,16 +165,48 @@ function authControllerSuite() {
       expect(cleanupCalls).assertEqual(0);
       expect(store.load()!.uid).assertEqual('test-user');
       expect(controller.getPhase()).assertEqual('signedIn');
-      expect(controller.isDeletionOutcomeUnknown()).assertTrue();
+      expect(controller.isDeletionPending()).assertFalse();
+      expect(controller.isDeletionOutcomeUnknown()).assertFalse();
+      expect(store.loadDeletionRecovery()).assertEqual(undefined);
+      expect(controller.getError()!.message).assertEqual('网络连接失败，请检查后重试。');
       provider.deleteFails = false;
-      expect(await controller.deleteAccount(() => { cleanupCalls += 1; })).assertFalse();
-      expect(cleanupCalls).assertEqual(0);
-      expect(provider.deleteCalls).assertEqual(1);
-      expect(await controller.clearLocalAfterUnknown(() => { cleanupCalls += 1; })).assertTrue();
+      expect(await controller.deleteAccount(() => { cleanupCalls += 1; })).assertTrue();
       expect(cleanupCalls).assertEqual(1);
-      expect(provider.deleteCalls).assertEqual(1);
+      expect(provider.deleteCalls).assertEqual(2);
       expect(store.load()).assertEqual(undefined);
       expect(controller.getSession()).assertEqual(undefined);
+    });
+
+    it('a restarted requested marker stays unknown until an explicit remote retry', 0, async () => {
+      const storage = new MapKVStorage();
+      const store = new AuthSessionStore(storage);
+      const session: AuthSession = { uid: 'unknown-user', email: 'test@example.com', provider: 'agc' };
+      store.save(session);
+      store.saveDeletionRequested(session);
+      storage.write('entries', 'synthetic diary');
+      const provider = new FakeAuthProvider();
+      const restarted = new AuthController({ provider: provider, store: new AuthSessionStore(storage) });
+      expect(restarted.restore()!.uid).assertEqual('unknown-user');
+      expect(restarted.isDeletionOutcomeUnknown()).assertTrue();
+      let cleanupCalls = 0;
+      const cleanup = (): void => { cleanupCalls += 1; storage.remove('entries'); };
+      expect(await restarted.deleteAccount(cleanup)).assertFalse();
+      expect(provider.deleteCalls).assertEqual(0);
+      expect(cleanupCalls).assertEqual(0);
+      provider.deleteFails = true;
+      expect(await restarted.retryRemoteDeletion(cleanup)).assertFalse();
+      expect(provider.deleteCalls).assertEqual(1);
+      expect(cleanupCalls).assertEqual(0);
+      expect(restarted.isDeletionOutcomeUnknown()).assertTrue();
+      expect(storage.read('entries')).assertEqual('synthetic diary');
+      expect(restarted.getError()!.message).assertEqual('网络连接失败，请检查后重试。');
+      provider.deleteFails = false;
+      expect(await restarted.retryRemoteDeletion(cleanup)).assertTrue();
+      expect(provider.deleteCalls).assertEqual(2);
+      expect(cleanupCalls).assertEqual(1);
+      expect(storage.read('entries')).assertEqual(undefined);
+      expect(restarted.getSession()).assertEqual(undefined);
+      expect(store.loadDeletionRecovery()).assertEqual(undefined);
     });
 
     it('deleting a local owner session never deletes a remote account', 0, async () => {
@@ -351,6 +384,7 @@ function authControllerSuite() {
       const controller = new AuthController({
         provider: provider,
         store: new AuthSessionStore(storage),
+        allowOwnerBackdoor: true,
       });
       controller.restore();
 
@@ -483,13 +517,33 @@ function authControllerSuite() {
       const controller = new AuthController({
         provider: provider,
         store: new AuthSessionStore(storage),
+        allowOwnerBackdoor: true,
       });
       controller.restore();
       await controller.submitEmail(BACKDOOR_EMAIL);
 
-      await controller.signOut();
+      expect(await controller.signOut()).assertTrue();
       expect(provider.signOutCallCount()).assertEqual(0);
       expect(newController(storage).restore()).assertEqual(undefined);
+    });
+
+    it('release builds reject the owner backdoor as an invalid email', 0, async () => {
+      const provider = new FakeAuthProvider();
+      const controller = new AuthController({
+        provider: provider,
+        store: new AuthSessionStore(new MapKVStorage()),
+        allowOwnerBackdoor: false,
+      });
+      controller.restore();
+      expect(controller.allowsOwnerBackdoor()).assertFalse();
+      expect(await controller.submitEmail(BACKDOOR_EMAIL)).assertEqual(undefined);
+      expect(controller.getPhase()).assertEqual('signedOut');
+      expect(controller.getSession()).assertEqual(undefined);
+      expect(controller.getError()!.reason).assertEqual('invalid-email');
+      expect(await controller.submitPassword('  Milo  ', 'anything')).assertEqual(undefined);
+      expect(controller.getError()!.reason).assertEqual('invalid-email');
+      expect(provider.codesSentTo('milo')).assertEqual(0);
+      expect(provider.deleteCalls).assertEqual(0);
     });
 
     it('a real email like milo@example.com is not treated as the backdoor', 0, async () => {

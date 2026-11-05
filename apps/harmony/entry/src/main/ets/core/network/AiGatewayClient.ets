@@ -17,12 +17,17 @@ export interface DraftSummary {
 }
 
 export type GatewayErrorCode =
+  | 'AI_DISABLED'
   | 'AI_UNAVAILABLE'
   | 'RATE_LIMITED'
   | 'INVALID_REQUEST'
   | 'CONTENT_BLOCKED'
   | 'OFFLINE'
   | 'UNKNOWN';
+
+/** Gateway contract: time marks are 1–64 characters; chat text is at most 2000. */
+export const GATEWAY_MAX_TIME_MARK_LENGTH = 64;
+export const GATEWAY_MAX_TEXT_LENGTH = 2000;
 
 export interface GatewayError {
   code: GatewayErrorCode;
@@ -143,9 +148,13 @@ function toHeaders(h: RequestHeaders): Record<string, string> {
   };
 }
 
+function clampText(text: string, max: number): string {
+  return text.length > max ? text.slice(0, max) : text;
+}
+
 /** Trim a ChatMessage down to the wire shape accepted by the gateway. */
 function toSummaryMessage(message: ChatMessage): ChatMessage {
-  return { role: message.role, text: message.text, ts: message.ts };
+  return { role: message.role, text: clampText(message.text, GATEWAY_MAX_TEXT_LENGTH), ts: message.ts };
 }
 
 function cloneMood(mood: MoodSummary): MoodSummary {
@@ -165,7 +174,10 @@ function toSummary(draft: DraftSummary): DraftSummary {
     transcript: draft.transcript.map(toSummaryMessage),
   };
   if (draft.timeMark !== undefined) {
-    out.timeMark = draft.timeMark;
+    const timeMark = clampText(draft.timeMark, GATEWAY_MAX_TIME_MARK_LENGTH);
+    if (timeMark.length > 0) {
+      out.timeMark = timeMark;
+    }
   }
   return out;
 }
@@ -185,7 +197,7 @@ export class HttpAiGatewayClient implements AiGatewayClient {
   async respond(request: RespondRequestBody, options?: RequestOptions): Promise<GatewayResult> {
     const body: RespondRequestBody = {
       draft: toSummary(request.draft),
-      userText: request.userText,
+      userText: clampText(request.userText, GATEWAY_MAX_TEXT_LENGTH),
     };
     return this.post('/v1/recall/respond', body, options);
   }
@@ -202,27 +214,40 @@ export class HttpAiGatewayClient implements AiGatewayClient {
       authorization: `Bearer ${this.config.bearerToken}`,
       requestId: requestId,
     };
+    const linked = new CancelSignalImpl();
+    const adopt = (): void => {
+      linked.fire();
+    };
+    if (options?.signal !== undefined) {
+      if (options.signal.cancelled) {
+        adopt();
+      } else {
+        options.signal.onCancel(adopt);
+      }
+    }
     let timedOut = false;
     const timer = setTimeout(() => {
       timedOut = true;
+      adopt();
       if (options?.signal !== undefined) {
         fireCancel(options.signal);
       }
     }, this.config.timeoutMs);
     try {
+      if (linked.cancelled) {
+        return this.failure('AI_UNAVAILABLE', 'AI 服务暂未响应。', requestId);
+      }
       const init: FetchInit = {
         method: 'POST',
         headers: toHeaders(headers),
         body: JSON.stringify(body),
+        signal: linked,
       };
-      if (options?.signal !== undefined) {
-        init.signal = options.signal;
-      }
       const response = await this.config.fetcher.fetch(`${this.config.baseUrl}${path}`, init);
       return await this.parse(response, requestId);
     } catch (error) {
       void error;
-      if (timedOut || (options?.signal !== undefined && options.signal.cancelled)) {
+      if (timedOut || linked.cancelled || (options?.signal !== undefined && options.signal.cancelled)) {
         return this.failure('AI_UNAVAILABLE', 'AI 服务暂未响应。', requestId);
       }
       return this.failure('OFFLINE', '网络连接不可用。', requestId);
@@ -256,9 +281,41 @@ export class HttpAiGatewayClient implements AiGatewayClient {
         requestId: typeof responseId === 'string' ? responseId : requestId,
       };
     }
-    const code = this.errorCodeFromStatus(response.status);
-    const responseId = parsed && typeof parsed['requestId'] === 'string' ? parsed['requestId'] : requestId;
-    return this.failure(code, this.errorMessage(code, response.status), responseId);
+    const envelopeCode = this.knownCode(parsed !== undefined ? parsed['code'] : undefined);
+    const code = envelopeCode ?? this.errorCodeFromStatus(response.status);
+    const serverMessage = parsed !== undefined && typeof parsed['message'] === 'string'
+      && (parsed['message'] as string).trim().length > 0
+      ? parsed['message'] as string
+      : undefined;
+    const responseId = parsed !== undefined && typeof parsed['requestId'] === 'string'
+      ? parsed['requestId'] as string
+      : requestId;
+    const retryable = parsed !== undefined && typeof parsed['retryable'] === 'boolean'
+      ? parsed['retryable'] as boolean
+      : this.defaultRetryable(code);
+    return {
+      ok: false,
+      error: { code: code, retryable: retryable, requestId: responseId, message: serverMessage ?? this.errorMessage(code, response.status) },
+    };
+  }
+
+  private knownCode(value: Object | undefined): GatewayErrorCode | undefined {
+    if (typeof value !== 'string') {
+      return undefined;
+    }
+    const text = value as string;
+    if (text === 'AI_DISABLED') return 'AI_DISABLED';
+    if (text === 'AI_UNAVAILABLE') return 'AI_UNAVAILABLE';
+    if (text === 'RATE_LIMITED') return 'RATE_LIMITED';
+    if (text === 'INVALID_REQUEST') return 'INVALID_REQUEST';
+    if (text === 'CONTENT_BLOCKED') return 'CONTENT_BLOCKED';
+    if (text === 'OFFLINE') return 'OFFLINE';
+    if (text === 'UNKNOWN') return 'UNKNOWN';
+    return undefined;
+  }
+
+  private defaultRetryable(code: GatewayErrorCode): boolean {
+    return code === 'AI_UNAVAILABLE' || code === 'RATE_LIMITED' || code === 'OFFLINE';
   }
 
   private errorCodeFromStatus(status: number): GatewayErrorCode {
@@ -271,6 +328,7 @@ export class HttpAiGatewayClient implements AiGatewayClient {
 
   private errorMessage(code: GatewayErrorCode, status: number): string {
     switch (code) {
+      case 'AI_DISABLED': return 'AI 功能暂未开放。';
       case 'RATE_LIMITED': return '请求过于频繁，请稍后再试。';
       case 'CONTENT_BLOCKED': return '对话内容触发了内容策略，请换个方向。';
       case 'INVALID_REQUEST': return `请求参数无效 (HTTP ${status})。`;
@@ -281,7 +339,7 @@ export class HttpAiGatewayClient implements AiGatewayClient {
   }
 
   private failure(code: GatewayErrorCode, message: string, requestId: string): GatewayResult {
-    const retryable = code === 'AI_UNAVAILABLE' || code === 'RATE_LIMITED' || code === 'OFFLINE';
+    const retryable = this.defaultRetryable(code);
     return {
       ok: false,
       error: { code: code, retryable: retryable, requestId: requestId, message: message },

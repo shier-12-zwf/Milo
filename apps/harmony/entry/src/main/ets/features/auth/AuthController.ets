@@ -23,10 +23,9 @@ import {
 import { AuthSessionStore, type DeletionPhase } from '../../core/auth/AuthSessionStore';
 
 /**
- * Owner backdoor: submitting this exact string as the email skips remote auth
- * entirely and signs in a persistent local manager session. It exists so the
- * app owner can never be locked out by the first-launch login gate (e.g. no
- * network on a fresh install). A real address like `milo@x.com` is unaffected.
+ * Debug-only owner backdoor: submitting this exact string as the email skips
+ * remote auth and signs in a persistent local manager session. Release builds
+ * must not enable it. A real address like `milo@x.com` is unaffected.
  */
 export const BACKDOOR_EMAIL = 'milo';
 
@@ -48,13 +47,16 @@ export interface AuthControllerDeps {
   provider: AuthProvider;
   store: AuthSessionStore;
   now?: () => number;
+  /** Debug builds only. Release must leave this unset or false. */
+  allowOwnerBackdoor?: boolean;
 }
 
 /**
  * State machine behind the first-launch login gate:
  * checking → signedOut → sendingCode → awaitingCode → signingIn → signedIn.
- * The UI reads phase/error/session after each await; the controller never
- * touches the network for the owner backdoor.
+ * The UI reads phase/error/session after each await. The owner backdoor is
+ * available only when `allowOwnerBackdoor` is set, which production wires
+ * from the debug build flag.
  */
 export class AuthController {
   private deps: AuthControllerDeps;
@@ -114,6 +116,15 @@ export class AuthController {
     this.errorValue = undefined;
   }
 
+  /** True only for debug builds that explicitly enable the local owner bypass. */
+  allowsOwnerBackdoor(): boolean {
+    return this.deps.allowOwnerBackdoor === true;
+  }
+
+  private isOwnerBackdoor(email: string): boolean {
+    return this.allowsOwnerBackdoor() && email.trim().toLowerCase() === BACKDOOR_EMAIL;
+  }
+
   getResendSeconds(email: string, purpose: CodePurpose = 'sign-in'): number {
     if (this.codeSentAt === undefined || this.codeSentEmail !== email.trim().toLowerCase()
       || this.codeSentPurpose !== purpose) {
@@ -147,7 +158,7 @@ export class AuthController {
       return undefined;
     }
     const trimmed = email.trim();
-    if (trimmed.toLowerCase() === BACKDOOR_EMAIL) {
+    if (this.isOwnerBackdoor(trimmed)) {
       this.deps.store.save(BACKDOOR_SESSION);
       this.sessionValue = BACKDOOR_SESSION;
       this.errorValue = undefined;
@@ -229,7 +240,7 @@ export class AuthController {
       return undefined;
     }
     const trimmed = email.trim();
-    if (trimmed.toLowerCase() === BACKDOOR_EMAIL) {
+    if (this.isOwnerBackdoor(trimmed)) {
       this.deps.store.save(BACKDOOR_SESSION);
       this.sessionValue = BACKDOOR_SESSION;
       this.errorValue = undefined;
@@ -306,12 +317,16 @@ export class AuthController {
     return session;
   }
 
-  /** Forget the session locally and sign out from the remote provider. */
-  async signOut(): Promise<void> {
-    if (this.isBusy()) return;
+  /**
+   * Forget the session locally and sign out from the remote provider.
+   * Returns false when a deletion is in flight or still needs recovery, so
+   * the UI must not treat the account as signed out.
+   */
+  async signOut(): Promise<boolean> {
+    if (this.isBusy()) return false;
     if (this.deletionPendingSession !== undefined) {
       this.errorValue = this.deletionRecoveryError(this.deletionPendingSession);
-      return;
+      return false;
     }
     const session = this.sessionValue;
     if (session !== undefined && session.provider !== 'local') {
@@ -321,6 +336,7 @@ export class AuthController {
     this.sessionValue = undefined;
     this.errorValue = undefined;
     this.phaseValue = 'signedOut';
+    return true;
   }
 
   private pendingEmail: string = '';
@@ -400,7 +416,19 @@ export class AuthController {
           this.deletionPhase = 'requested';
           const result = await this.deps.provider.deleteAccount();
           if (!result.ok) {
-            this.errorValue = this.deletionRecoveryError(session);
+            // The SDK answered in this process. Roll the intent marker back
+            // so the user can retry remote deletion. Keep the marker only when
+            // the rollback itself cannot be flushed, or the process died
+            // before any answer arrived.
+            const failure = result as SendCodeFailure;
+            try {
+              this.deps.store.clearDeletionPending();
+              this.deletionPendingSession = undefined;
+              this.deletionPhase = undefined;
+              this.errorValue = failure.error;
+            } catch (_rollback) {
+              this.errorValue = this.deletionRecoveryError(session);
+            }
             return false;
           }
         }
@@ -416,6 +444,38 @@ export class AuthController {
       this.errorValue = this.deletionPendingSession !== undefined
         ? this.deletionRecoveryError(session)
         : { reason: 'unknown', message: '注销尚未完成，账号和本机数据仍保留，请重试。' };
+      return false;
+    } finally {
+      this.deletionInProgress = false;
+    }
+  }
+
+  /**
+   * User-requested retry after a restart left the remote result unknown.
+   * An explicit SDK failure keeps the unknown marker. Success continues with
+   * the same local cleanup as a confirmed deletion.
+   */
+  async retryRemoteDeletion(cleanupLocalData: () => void): Promise<boolean> {
+    const session = this.sessionValue;
+    if (session === undefined || this.isBusy() || !this.isDeletionOutcomeUnknown()) return false;
+    this.deletionInProgress = true;
+    this.errorValue = undefined;
+    try {
+      if (session.provider !== 'local') {
+        const result = await this.deps.provider.deleteAccount();
+        if (!result.ok) {
+          const failure = result as SendCodeFailure;
+          this.errorValue = failure.error;
+          return false;
+        }
+      }
+      this.deletionPendingSession = session;
+      this.deletionPhase = 'confirmed-deleted';
+      this.deps.store.saveDeletionPending(session);
+      this.finishLocalDeletion(cleanupLocalData);
+      return true;
+    } catch (_error) {
+      this.errorValue = this.deletionRecoveryError(session);
       return false;
     } finally {
       this.deletionInProgress = false;

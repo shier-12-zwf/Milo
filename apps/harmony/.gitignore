@@ -1,5 +1,5 @@
 /node_modules
-/oh_modules
+**/oh_modules
 /local.properties
 /.idea
 **/build
@@ -14,4 +14,5 @@
 **/.test
 /.appanalyzer
 /entry/src/main/resources/rawfile/gateway-credentials.local.json
+/signing-configs.local.json
 /.release-private/

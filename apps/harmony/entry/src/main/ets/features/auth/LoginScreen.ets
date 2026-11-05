@@ -41,7 +41,8 @@ export struct LoginScreen {
   }
 
   private isBackdoor(): boolean {
-    return this.email.trim().toLowerCase() === BACKDOOR_EMAIL;
+    return (this.controller?.allowsOwnerBackdoor() ?? false)
+      && this.email.trim().toLowerCase() === BACKDOOR_EMAIL;
   }
 
   private canSubmitEmail(): boolean {

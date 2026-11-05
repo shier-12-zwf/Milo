@@ -153,6 +153,25 @@ export struct AccountScreen {
     this.onClearLocalData();
   }
 
+  private async retryRemoteDeletion(): Promise<void> {
+    if (this.busy || this.controller === null || !this.deletionOutcomeUnknown) return;
+    this.busy = true;
+    this.errorText = '';
+    try {
+      if (await this.controller.retryRemoteDeletion(() => this.clearCurrentLocalData())) {
+        this.onDeleted();
+      } else {
+        this.errorText = this.controller.getError()?.message ?? '云端注销仍未完成，请重试或选择仅清理本机数据。';
+      }
+    } catch (e) {
+      this.errorText = '云端注销仍未完成，请重试。';
+    } finally {
+      this.deletionPending = this.controller?.isDeletionPending() ?? false;
+      this.deletionOutcomeUnknown = this.controller?.isDeletionOutcomeUnknown() ?? false;
+      this.busy = false;
+    }
+  }
+
   private confirmUnknownLocalCleanup(): void {
     if (this.busy || !this.deletionOutcomeUnknown) return;
     this.getUIContext().showAlertDialog({
@@ -201,8 +220,10 @@ export struct AccountScreen {
         Column({ space: 20 }) {
           if (this.deletionPending) {
             if (this.deletionOutcomeUnknown) {
-              Text('云端注销结果尚无法确认，请核对。本机记录不会自动删除，你仍可先导出记录，再选择仅清理本机数据并退出。这不代表云端账号已注销，如需确认请联系 1972375139@qq.com。')
+              Text('云端注销结果尚无法确认，请核对。本机记录不会自动删除。可以重试云端注销，或先导出记录，再选择仅清理本机数据并退出。清理本机不代表云端账号已注销，如需确认请联系 1972375139@qq.com。')
                 .fontSize(14).lineHeight(24).fontColor('#efc38e')
+              MiloPrimaryButton({ label: '重试云端注销', active: !this.busy,
+                onTap: () => { void this.retryRemoteDeletion(); } })
               MiloPrimaryButton({ label: '选择清理本机数据并退出', active: !this.busy,
                 onTap: () => this.confirmUnknownLocalCleanup() })
             } else {
@@ -291,7 +312,7 @@ export struct AccountScreen {
               .fontSize(13).lineHeight(22).fontColor(MILO_COLORS.inkDim)
             MiloBackLink({ label: '导出 Markdown（方便阅读）', onTap: () => { void this.exportDiaries('md'); } }).enabled(!this.busy)
             MiloBackLink({ label: '导出 JSON（完整数据）', onTap: () => { void this.exportDiaries('json'); } }).enabled(!this.busy)
-            Text('日记和草稿保存在当前设备，暂不支持账号间同步。退出登录不会删除本机回忆。')
+            Text('日记和草稿只保存在当前设备的这个账号下，暂不支持云同步。退出登录不会删除这个账号的回忆；切换账号看不到彼此的记录。')
               .fontSize(13).lineHeight(22).fontColor(MILO_COLORS.inkDim)
             Text('注销账号会同时删除本机日记与草稿，请提前保存想留下的回忆卡片。')
               .fontSize(13).lineHeight(22).fontColor(MILO_COLORS.inkDim)
@@ -321,7 +342,7 @@ export struct AccountScreen {
       }
       MiloPrimaryButton({ label: '退出登录', onTap: () => {
         this.getUIContext().showAlertDialog({
-          title: '退出登录？', message: '本机回忆会保留，再次使用时需要登录。',
+          title: '退出登录？', message: '这个账号的本机回忆会保留。换用其他账号时不会看到这些记录。',
           primaryButton: { value: '取消', action: () => {} },
           secondaryButton: { value: '退出登录', action: () => this.onSignOut() },
         });
