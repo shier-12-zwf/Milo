@@ -7,7 +7,8 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const sdkRoot = '/Applications/DevEco-Studio.app/Contents/sdk';
+const studioHome = process.env.DEVECO_STUDIO_HOME || '/Applications/DevEco-Studio.app/Contents';
+const sdkRoot = join(studioHome, 'sdk');
 const bundledSdk = join(sdkRoot, 'default');
 
 function gatewayGuardFixture(t) {
@@ -95,7 +96,7 @@ test('gateway release guard allows release packaging without a local credential'
   assert.match(result.stdout, /FAKE_HVIGOR_INVOKED/);
 });
 
-test('hvigorw prepares the bundled API 24 SDK layout before invoking Hvigor', () => {
+test('hvigorw prepares the bundled SDK layout (API 24 or newer) before invoking Hvigor', () => {
   const result = spawnSync(join(projectRoot, 'hvigorw'), ['--version'], {
     cwd: projectRoot,
     encoding: 'utf8'
@@ -107,12 +108,17 @@ test('hvigorw prepares the bundled API 24 SDK layout before invoking Hvigor', ()
     `sdk.dir=${sdkRoot}\n`
   );
   const sdkPkg = JSON.parse(readFileSync(join(bundledSdk, 'sdk-pkg.json'), 'utf8'));
-  assert.equal(sdkPkg.data.apiVersion, '24');
-  assert.equal(sdkPkg.data.platformVersion, '6.1.1');
+  assert.ok(Number(sdkPkg.data.apiVersion) >= 24, `bundled SDK API ${sdkPkg.data.apiVersion} is older than the minimum API 24`);
+  const buildProfile = readFileSync(join(projectRoot, 'build-profile.json5'), 'utf8');
+  // Compile against the SDK bundled with DevEco, but keep API 24 devices supported.
+  assert.doesNotMatch(buildProfile, /compileSdkVersion/);
+  const compatible = [...buildProfile.matchAll(/compatibleSdkVersion:\s*'([^']+)'/g)].map((m) => m[1]);
+  assert.ok(compatible.length >= 2, 'every product must declare compatibleSdkVersion');
+  for (const version of compatible) assert.equal(version, '6.1.1(24)');
   for (const component of ['ets', 'js', 'native', 'previewer', 'toolchains']) {
     assert.ok(
       existsSync(join(bundledSdk, 'openharmony', component, 'oh-uni-package.json')),
-      `Missing OpenHarmony API 24 component: ${component}`
+      `Missing OpenHarmony SDK component: ${component}`
     );
   }
 });
