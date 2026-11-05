@@ -300,11 +300,17 @@ export class HttpAiGatewayClient implements AiGatewayClient {
   }
 
   private knownCode(value: Object | undefined): GatewayErrorCode | undefined {
-    if (value === 'AI_DISABLED' || value === 'AI_UNAVAILABLE' || value === 'RATE_LIMITED'
-      || value === 'INVALID_REQUEST' || value === 'CONTENT_BLOCKED' || value === 'OFFLINE'
-      || value === 'UNKNOWN') {
-      return value;
+    if (typeof value !== 'string') {
+      return undefined;
     }
+    const text = value as string;
+    if (text === 'AI_DISABLED') return 'AI_DISABLED';
+    if (text === 'AI_UNAVAILABLE') return 'AI_UNAVAILABLE';
+    if (text === 'RATE_LIMITED') return 'RATE_LIMITED';
+    if (text === 'INVALID_REQUEST') return 'INVALID_REQUEST';
+    if (text === 'CONTENT_BLOCKED') return 'CONTENT_BLOCKED';
+    if (text === 'OFFLINE') return 'OFFLINE';
+    if (text === 'UNKNOWN') return 'UNKNOWN';
     return undefined;
   }
 
