@@ -92,7 +92,7 @@ export struct CardScreen {
       return;
     }
     try {
-      const context = getContext(this) as common.UIAbilityContext;
+      const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const raw: Uint8Array = context.resourceManager.getMediaContentSync(SHEET_RESOURCES[asset.sheet]);
       console.info(`milo-card: sheet=${asset.sheet} bytes=${raw.byteLength} offset=${raw.byteOffset}`);
       // getMediaContentSync may return a view into a larger buffer; hand the
@@ -200,7 +200,7 @@ export struct CardScreen {
     }
     this.saveState = 'saving';
     try {
-      const context = getContext(this) as common.UIAbilityContext;
+      const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const density: number = display.getDefaultDisplaySync().densityPixels;
       const exportScale: number = Math.max(1, CARD_DESIGN_WIDTH / (this.previewWidth * density));
       const pixelMap: image.PixelMap = await componentSnapshot.get('miloCardPreview', {

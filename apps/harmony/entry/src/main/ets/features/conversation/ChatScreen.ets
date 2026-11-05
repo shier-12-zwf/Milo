@@ -59,7 +59,7 @@ export struct ChatScreen {
     const timeMark = this.draft.timeMark ?? '过去的某一天';
     this.guide = new FallbackGuide(timeMark);
     this.speech = new SpeechInput({
-      platform: new HarmonySpeechPlatform(getContext(this) as common.UIAbilityContext),
+      platform: new HarmonySpeechPlatform(this.getUIContext().getHostContext() as common.UIAbilityContext),
     });
     if (this.controller !== null) {
       this.controller.restoreState(this.conversationState);

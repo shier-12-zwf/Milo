@@ -147,7 +147,7 @@ struct Index {
     if (!AI_AVAILABLE) return new UnavailableAiClient('');
     const settings = this.aiRepository().load();
     if (settings.source === 'milo') {
-      return hostedAiClient(readLocalGatewayConfig(getContext(this)), settings.consent, new HarmonyHttpFetcher());
+      return hostedAiClient(readLocalGatewayConfig(this.getUIContext().getHostContext() as Context), settings.consent, new HarmonyHttpFetcher());
     }
     if (!settings.consent) return new UnavailableAiClient('请先到 AI 设置配置模型，并确认发送当前对话。');
     try {
@@ -166,7 +166,7 @@ struct Index {
   }
 
   private personalFiles(): PersonalFiles {
-    return new PersonalFiles(getContext(this) as common.UIAbilityContext, this.storage, this.authController.getSession()?.uid ?? 'guest');
+    return new PersonalFiles(this.getUIContext().getHostContext() as common.UIAbilityContext, this.storage, this.authController.getSession()?.uid ?? 'guest');
   }
 
   private refreshEntries(): void {
