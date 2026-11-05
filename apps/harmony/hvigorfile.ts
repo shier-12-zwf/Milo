@@ -3,8 +3,8 @@ import { getNode } from '@ohos/hvigor';
 import { createRequire } from 'module';
 import { dirname } from 'path';
 
-const require = createRequire(__filename);
-const signing = require('./tools/local-signing.cjs');
+const localRequire = createRequire(__filename);
+const signing = localRequire('./tools/local-signing.cjs');
 
 /**
  * Signing material stays off git. When signing-configs.local.json (or
