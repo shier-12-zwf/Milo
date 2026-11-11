@@ -11,6 +11,7 @@ import conversationControllerTest from '../ohosTest/ets/test/ConversationControl
 import authControllerTest from '../ohosTest/ets/test/AuthController.test';
 import systemAdaptersTest from '../ohosTest/ets/test/SystemAdapters.test';
 import cardRendererTest from '../ohosTest/ets/test/CardRenderer.test';
+import wordRingLayoutTest from '../ohosTest/ets/test/WordRingLayout.test';
 
 export default function testsuite() {
   localUnitTest();
@@ -26,4 +27,5 @@ export default function testsuite() {
   authControllerTest();
   systemAdaptersTest();
   cardRendererTest();
+  wordRingLayoutTest();
 }
