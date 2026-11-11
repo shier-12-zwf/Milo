@@ -214,22 +214,25 @@ function conversationSuite() {
       expect(gateway.respondCalls).assertEqual(0);
     });
 
-    it('uses a complete short AI question instead of displaying a long paragraph', 0, async () => {
+    it('keeps a long AI reply instead of extracting one short question', 0, async () => {
       const gateway = new FakeGateway();
-      gateway.respondReply = success('听起来那是一段让人难忘的时光。河边有什么让你记得很清楚？你和朋友后来还有联系吗？');
+      const full = '听起来那是一段让人难忘的时光。河边有什么让你记得很清楚？你和朋友后来还有联系吗？';
+      gateway.respondReply = success(full);
       const controller = newController(gateway);
       const reply = await controller.respond(draft('去年夏天'), '和朋友去了河边', 1);
       expect(reply.usedAi).assertTrue();
-      expect(reply.message.text).assertEqual('河边有什么让你记得很清楚？');
-      expect(conciseReply('很长的内容'.repeat(20))).assertEqual(undefined);
+      expect(reply.message.text).assertEqual(full);
+      expect(conciseReply('很长的内容'.repeat(20))).assertEqual('很长的内容'.repeat(20));
+      expect(conciseReply('  **只剩标记**  ')).assertEqual('只剩标记');
+      expect(conciseReply('***')).assertEqual(undefined);
     });
 
-    it('falls back on oversized replies and thrown provider errors', 0, async () => {
+    it('keeps oversized replies and falls back when the provider throws', 0, async () => {
       const gateway = new FakeGateway();
       gateway.respondReply = success('很长的内容'.repeat(20));
       const oversized = await newController(gateway).respond(draft('去年夏天'), '那天是雨季', 1);
-      expect(oversized.usedAi).assertEqual(false);
-      expect(oversized.message.text.length <= 24).assertTrue();
+      expect(oversized.usedAi).assertTrue();
+      expect(oversized.message.text).assertEqual('很长的内容'.repeat(20));
       gateway.throwOnRespond = true;
       const failed = await newController(gateway).respond(draft('去年夏天'), '那天是雨季', 1);
       expect(failed.usedAi).assertEqual(false);

@@ -20,7 +20,8 @@ export function readLocalGatewayConfig(context: common.Context): AppConfigSnapsh
   try {
     const raw = context.resourceManager.getRawFileContentSync(LOCAL_GATEWAY_RESOURCE);
     if (raw.byteLength > 8192) return config;
-    const saved = JSON.parse(buffer.from(raw).toString('utf8')) as LocalGatewayCredential;
+    const exact = raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.byteLength);
+    const saved = JSON.parse(buffer.from(exact).toString('utf8')) as LocalGatewayCredential;
     if (saved.schemaVersion !== 1 || saved.gatewayBaseUrl !== config.gatewayBaseUrl
       || typeof saved.gatewayBearerToken !== 'string'
       || saved.gatewayBearerToken.length < 32 || saved.gatewayBearerToken.length > 4096

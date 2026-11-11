@@ -1,6 +1,6 @@
 import { type KVStorage } from '../data/KVStorage';
 
-export const PRIVACY_POLICY_VERSION = '2026-10-11';
+export const PRIVACY_POLICY_VERSION = '2026-11-02';
 export const PRIVACY_CONSENT_KEY = 'milo.privacy.accepted-version';
 
 /** A missing or older consent never permits SDK initialization. Diary data is untouched. */

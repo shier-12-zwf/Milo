@@ -5,7 +5,7 @@ import { createRequire } from 'node:module';
 import vm from 'node:vm';
 
 const require = createRequire(import.meta.url);
-const ts = require('/Applications/DevEco-Studio.app/Contents/tools/ohpm/node_modules/typescript/lib/typescript.js');
+const ts = require(`${process.env.DEVECO_STUDIO_HOME || '/Applications/DevEco-Studio.app/Contents'}/tools/ohpm/node_modules/typescript/lib/typescript.js`);
 const sourceRoot = new URL('../entry/src/main/ets/', import.meta.url);
 
 // Run the actual non-UI ArkTS adapter, with only device APIs substituted.

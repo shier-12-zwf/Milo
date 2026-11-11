@@ -37,6 +37,13 @@ interface PersistedChatMessage {
 
 export const DRAFT_STORAGE_KEY = 'milo.recall.draft.v1';
 export const DRAFT_SCHEMA_VERSION = 1;
+export const DEFAULT_DRAFT_UID = 'local';
+
+export function scopedDraftKey(uid: string): string {
+  const trimmed = uid.trim();
+  const owner = trimmed.length > 0 ? trimmed : DEFAULT_DRAFT_UID;
+  return `${DRAFT_STORAGE_KEY}.${owner}`;
+}
 
 const VALID_KINDS: ReadonlyArray<'now' | 'past'> = ['now', 'past'];
 const VALID_ROLES: ReadonlyArray<'user' | 'ai'> = ['user', 'ai'];
@@ -54,23 +61,45 @@ const VALID_SCREEN_NAMES: ReadonlyArray<ScreenName> = [
 
 export class RecallSessionRepository {
   private storage: KVStorage;
+  private key: string;
+  private migrated: boolean = false;
 
-  constructor(storage: KVStorage) {
+  constructor(storage: KVStorage, uid: string = DEFAULT_DRAFT_UID) {
     this.storage = storage;
+    this.key = scopedDraftKey(uid);
+  }
+
+  /** Move a pre-account draft onto the first account that reads it. */
+  private migrateLegacy(): void {
+    if (this.migrated) {
+      return;
+    }
+    this.migrated = true;
+    if (this.storage.read(this.key) !== undefined) {
+      return;
+    }
+    const legacy = this.storage.read(DRAFT_STORAGE_KEY);
+    if (legacy === undefined) {
+      return;
+    }
+    this.storage.write(this.key, legacy);
+    this.storage.remove(DRAFT_STORAGE_KEY);
   }
 
   saveDraft(state: RecallState): void {
+    this.migrateLegacy();
     const envelope: DraftEnvelope = {
       schemaVersion: DRAFT_SCHEMA_VERSION,
       state: serialiseState(state),
     };
-    this.storage.write(DRAFT_STORAGE_KEY, JSON.stringify(envelope));
+    this.storage.write(this.key, JSON.stringify(envelope));
   }
 
   /** Returns `undefined` when nothing is saved, the payload is corrupt, or the
    *  screen name is unrecognised. Never throws. */
   loadDraft(): RecallState | undefined {
-    const raw = this.storage.read(DRAFT_STORAGE_KEY);
+    this.migrateLegacy();
+    const raw = this.storage.read(this.key);
     if (raw === undefined) {
       return undefined;
     }
@@ -78,7 +107,8 @@ export class RecallSessionRepository {
   }
 
   clearDraft(): void {
-    this.storage.remove(DRAFT_STORAGE_KEY);
+    this.migrateLegacy();
+    this.storage.remove(this.key);
   }
 }
 

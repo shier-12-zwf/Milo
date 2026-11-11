@@ -307,16 +307,12 @@ function cloneDraftWith(draft: Draft, transcript: ChatMessage[]): Draft {
   return next;
 }
 
-/** Choose one complete short sentence; never show a clipped paragraph. */
+/**
+ * Keep the model's reply. Strip lightweight markdown markers, but do not
+ * discard a long answer or cut it down to a single short question.
+ */
 export function conciseReply(text: string): string | undefined {
   const cleaned = text.trim().replace(/[*_`#]/g, '');
-  const sentences = cleaned.match(/[^。！？!?\n]+[。！？!?]?/g);
-  if (sentences === null) return undefined;
-  for (let index = 0; index < sentences.length; index += 1) {
-    const sentence = sentences[index].trim();
-    if (sentence.length <= 48 && /[？?]$/.test(sentence)) return sentence;
-  }
-  const first = sentences[0].trim();
-  if (first.length > 0 && first.length <= 48) return first;
-  return undefined;
+  if (cleaned.length === 0) return undefined;
+  return cleaned;
 }

@@ -34,9 +34,14 @@ export struct DetailScreen {
           .fontColor('#8b87a6')
           .padding({ left: 4, right: 4, top: 6, bottom: 6 })
           .onClick(() => {
-            if (this.entry !== undefined) {
-              this.onRemove(this.entry.id);
-            }
+            if (this.entry === undefined) return;
+            const entryId = this.entry.id;
+            this.getUIContext().showAlertDialog({
+              title: '放下这段回忆？',
+              message: '这段记录会从本机删除，无法恢复。',
+              primaryButton: { value: '取消', action: () => {} },
+              secondaryButton: { value: '放下', action: () => { this.onRemove(entryId); } },
+            });
           })
       }
       .width('100%')

@@ -5,6 +5,7 @@ import { MoodPlanet } from '../mood/MoodPlanet';
 import { MiloBackLink, MiloBackNode, MiloPrimaryButton, MILO_EASE } from '../ui/MiloButtons';
 import { Haptics } from '../../core/system/Haptics';
 import { gestureLocalPoint } from '../mood/GesturePoint';
+import { wordRingPoint, wordRingStepAngle } from './WordRingLayout';
 
 // Web word ring: 360px dial, 136px word radius — scaled to the 377vp screen.
 const RING_SIZE = 330;
@@ -45,8 +46,7 @@ export struct HomeScreen {
   }
 
   private wordStepAngle(): number {
-    const count = this.descriptorWords().length;
-    return count > 0 ? 360 / count : 360;
+    return wordRingStepAngle(this.descriptorWords().length);
   }
 
   private focusIndex(): number {
@@ -324,12 +324,11 @@ export struct HomeScreen {
   }
 
   private wordX(index: number): number {
-    const angle = (index * this.wordStepAngle() - 90 + this.ringAngle) * Math.PI / 180;
-    return RING_CENTER + Math.cos(angle) * WORD_RADIUS;
+    return wordRingPoint(index, this.descriptorWords().length, this.ringAngle, RING_CENTER, WORD_RADIUS).x;
   }
 
+  // Top/bottom words share their neighbours' baseline (see WordRingLayout).
   private wordY(index: number): number {
-    const angle = (index * this.wordStepAngle() - 90 + this.ringAngle) * Math.PI / 180;
-    return RING_CENTER + Math.sin(angle) * WORD_RADIUS;
+    return wordRingPoint(index, this.descriptorWords().length, this.ringAngle, RING_CENTER, WORD_RADIUS).y;
   }
 }
